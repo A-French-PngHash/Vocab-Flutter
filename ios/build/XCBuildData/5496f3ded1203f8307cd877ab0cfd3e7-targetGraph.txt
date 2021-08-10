@@ -1,0 +1,23 @@
+Target dependency graph (9 targets)
+DKImagePickerController-DKImagePickerController in Pods
+DKPhotoGallery-DKPhotoGallery in Pods
+SDWebImage in Pods
+SwiftyGif in Pods
+DKPhotoGallery in Pods, depends on:
+DKPhotoGallery-DKPhotoGallery in Pods (explicit)
+SDWebImage in Pods (explicit)
+SwiftyGif in Pods (explicit)
+DKImagePickerController in Pods, depends on:
+DKImagePickerController-DKImagePickerController in Pods (explicit)
+DKPhotoGallery in Pods (explicit)
+Flutter in Pods
+file_picker in Pods, depends on:
+DKImagePickerController in Pods (explicit)
+Flutter in Pods (explicit)
+Pods-Runner in Pods, depends on:
+DKImagePickerController in Pods (explicit)
+DKPhotoGallery in Pods (explicit)
+Flutter in Pods (explicit)
+SDWebImage in Pods (explicit)
+SwiftyGif in Pods (explicit)
+file_picker in Pods (explicit)

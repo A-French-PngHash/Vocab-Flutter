@@ -1,0 +1,63 @@
+{
+  "buildCommand" : "prepareForIndexing",
+  "configuredTargets" : [
+    {
+      "guid" : "7e399025b56ac6cbc3d7e8ef67e408e95fd5cdb9993b1816141f0c012ffa62bd"
+    },
+    {
+      "guid" : "7e399025b56ac6cbc3d7e8ef67e408e998fccba7a2febdedb43dddbf2e949fc3"
+    },
+    {
+      "guid" : "7e399025b56ac6cbc3d7e8ef67e408e99d0a1858a86fd6e6731ed20f88a1e515"
+    },
+    {
+      "guid" : "7e399025b56ac6cbc3d7e8ef67e408e9d3f65728b12dd217475d1283ee417937"
+    },
+    {
+      "guid" : "7e399025b56ac6cbc3d7e8ef67e408e99da425bb6d6d5d8dbb95e4afffb82217"
+    },
+    {
+      "guid" : "7e399025b56ac6cbc3d7e8ef67e408e9312b4bc59bbbe2c06c205bf4da6737f5"
+    },
+    {
+      "guid" : "7e399025b56ac6cbc3d7e8ef67e408e9c46180aea4e87057640961e6db37df0d"
+    },
+    {
+      "guid" : "7e399025b56ac6cbc3d7e8ef67e408e972eabefc63c14dfe52fb0c95ad90294e"
+    },
+    {
+      "guid" : "7e399025b56ac6cbc3d7e8ef67e408e9bf75f71a2aa7fdc38a7d7d70e6c200c1"
+    }
+  ],
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/titouan/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/titouan/Library/Developer/Xcode/DerivedData/Pods-driclrutcnwwohfrwwrjaxkymafh/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/titouan/Library/Developer/Xcode/DerivedData/Pods-driclrutcnwwohfrwwrjaxkymafh/Index/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : false
+}

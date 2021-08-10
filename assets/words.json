@@ -1,0 +1,11 @@
+{
+    "Restaurant" : {
+        "cook" : {
+            "english" : "cook",
+            "french" : "cuisinier",
+            "spanish" : "cocinero",
+            "comment" : "ceci est un commentaire",
+            "grammarRule" : "ma regle de grammaire"
+        }
+    }
+}
