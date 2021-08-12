@@ -24,9 +24,13 @@ class LanguagePicker extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () async {
-        Language chosenLanguage = await Navigator.of(context)
+        Language? chosenLanguage = await Navigator.of(context)
             .push(CupertinoPageRoute(builder: (context) => SelectLanguage(currentlySelected)));
-        onSelect(chosenLanguage);
+        if (chosenLanguage == null) {
+          onSelect(currentlySelected);
+        } else {
+          onSelect(chosenLanguage);
+        }
       },
       child: Row(
         children: [

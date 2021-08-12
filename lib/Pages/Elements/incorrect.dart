@@ -36,7 +36,6 @@ class Incorrect extends StatelessWidget {
             correctWord,
             style: TextStyle(fontSize: 35),
           ),
-          if (grammarRule != null) Text("Commentaire : " + this.grammarRule!),
           GradientButton(
             onPressed: () {
               context.read<TrainingCubit>().nextButtonPressed();

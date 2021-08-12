@@ -2,7 +2,7 @@ class Words {
   String english;
   String spanish;
   String french;
-  int score;
+  double score;
   String? comment;
   String? grammarRule;
 

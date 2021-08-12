@@ -11,7 +11,7 @@ class WordRepo {
     } else {
       List<Words> _words = [];
 
-      final fullWord = await json.decode(await rootBundle.loadString("assets/words.json"));
+      final fullWord = await json.decode(await rootBundle.loadString("assets/data.json"));
       int numberOfWords = 0;
 
       for (Map<String, dynamic> element in fullWord.values) {
@@ -21,14 +21,8 @@ class WordRepo {
       for (Map<String, dynamic> element in fullWord.values) {
         for (Map<String, dynamic> word in element.values) {
           _words.add(
-            Words(
-              word["english"]! as String,
-              word["spanish"]! as String,
-              word["french"]! as String,
-              numberOfWords,
-              comment: word["comment"] as String?,
-              grammarRule: word["grammarRule"] as String?
-            ),
+            Words(word["english"]! as String, word["spanish"]! as String, word["french"]! as String, numberOfWords.toDouble(),
+                comment: word["comment"] as String?, grammarRule: word["grammarRule"] as String?),
           );
         }
       }

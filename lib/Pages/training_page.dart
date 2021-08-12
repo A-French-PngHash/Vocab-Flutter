@@ -4,20 +4,26 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vocab/Cubits/training_cubit/cubit/training_cubit.dart';
 import 'package:vocab/Pages/Elements/button/gradient_button.dart';
 import 'package:vocab/Pages/Elements/correct.dart';
+import 'package:vocab/Pages/Elements/custom_text_field.dart';
 import 'package:vocab/Pages/Elements/incorrect.dart';
+import 'package:vocab/Pages/Elements/progress_bar.dart';
 
 class TrainingPage extends StatelessWidget {
-  String translateToLanguage;
+  final String translateToLanguage;
   String wordInputed = "";
+  final int numberOfTranslationToDo;
+  int? dialogShowedAt;
 
-  TrainingPage(this.translateToLanguage);
+  /// Delay before the dialog can be dismissed. In milliseconds.
+  int dialogDelay = 1500;
+
+  TrainingPage(this.translateToLanguage, this.numberOfTranslationToDo);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        automaticallyImplyLeading: true,
         previousPageTitle: "Menu",
         middle: Text(
           "Training",
@@ -25,22 +31,65 @@ class TrainingPage extends StatelessWidget {
         ),
         backgroundColor: Color(0xFF121212),
       ),
-      child: BlocBuilder<TrainingCubit, TrainingState>(builder: (context, state) {
-        return state.maybeWhen(initial: () {
-          return loadingView();
-        }, word: (String wordToTranslate, String? comment) {
-          return buildWordView(context, wordToTranslate, comment);
-        }, correction:
-            (String wordToTranslate, bool correct, String correctTranslation, String? comment, String? grammarRule) {
-          if (correct) {
-            return buildCorrectView(context, wordToTranslate, comment, grammarRule);
-          } else {
-            return buildIncorrectView(context, wordToTranslate, correctTranslation, comment, grammarRule);
-          }
-        }, orElse: () {
-          return Text("Unknown state");
-        });
-      }),
+      child: BlocConsumer<TrainingCubit, TrainingState>(
+        builder: (context, state) {
+          return state.maybeWhen(initial: () {
+            return loadingView();
+          }, word: (String wordToTranslate, String? comment, int wordNumber) {
+            return buildWordView(context, wordToTranslate, comment, wordNumber);
+          }, correction: (String wordToTranslate, bool correct, String correctTranslation, String translationInputed,
+              int wordNumber, String? comment, String? grammarRule) {
+            if (correct) {
+              return buildCorrectView(context, wordToTranslate, translationInputed, wordNumber, comment, grammarRule);
+            } else {
+              return buildIncorrectView(
+                  context, wordToTranslate, correctTranslation, translationInputed, wordNumber, comment, grammarRule);
+            }
+          }, finished: (int correct, int incorrect) {
+            return buildFinishedView(context, correct, incorrect);
+          }, orElse: () {
+            return Text("Unknown state");
+          });
+        },
+        listener: (context, state) {
+          state.maybeWhen(
+              correction: (String wordToTranslate, bool correct, String correctTranslation, String translationInputed,
+                  int wordNumber, String? comment, String? grammarRule) {
+                if (grammarRule != null) {
+                  dialogShowedAt = DateTime.now().millisecondsSinceEpoch;
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return Flex(
+                        direction: Axis.vertical,
+                        children: [
+                          Expanded(
+                            child: CupertinoAlertDialog(
+                              title: Text("Règle de grammaire :"),
+                              content: Text(grammarRule),
+                              actions: [
+                                CupertinoDialogAction(
+                                  child: Text("Ok"),
+                                  isDefaultAction: true,
+                                  onPressed: () {
+                                    if ((dialogShowedAt! + dialogDelay) < DateTime.now().millisecondsSinceEpoch) {
+                                      // Waiting the delay before allowing the user to dismiss the popup.
+                                      Navigator.of(context).pop();
+                                    }
+                                  },
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                }
+              },
+              orElse: () {});
+        },
+      ),
     ));
   }
 
@@ -50,32 +99,22 @@ class TrainingPage extends StatelessWidget {
 
   /// Return the word view that contains, the word info (which word to translate
   ///  and in which language), the text field and the validation button.
-  Widget buildWordView(BuildContext context, String wordToTranslate, String? comment) {
+  Widget buildWordView(BuildContext context, String wordToTranslate, String? comment, int wordNumber) {
     return Column(
       children: [
-        buildWordInfo(context, wordToTranslate, comment),
-        Padding(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 5),
-          child: CupertinoTextField(
-            decoration: BoxDecoration(
-              color: Colors.black,
-              border: Border.all(color: Color(0xFF3F3F3F), width: 0.6),
-              borderRadius: BorderRadius.circular(10),
-            ), // OutlineInputBorder(borderSide: BorderSide(color: Colors.white)), borderRadius: 10)
-            placeholder: "Translation",
-            placeholderStyle: TextStyle(color: Color(0xFF3F3F3F)),
-            style: TextStyle(color: Colors.white),
-            autocorrect: false,
-            textCapitalization: TextCapitalization.none,
-            onChanged: (String word) {
-              wordInputed = word;
-            },
-          ),
+        _buildWordInfo(context, wordToTranslate, wordNumber, comment: comment),
+        CustomTextField(
+          autofocus: true,
+          onChanged: (String word) {
+            wordInputed = word;
+          },
         ),
         GradientButton(
           onPressed: () {
-            final cubit = context.read<TrainingCubit>();
-            cubit.userInputedWord(wordInputed);
+            if (wordInputed.length > 0) {
+              final cubit = context.read<TrainingCubit>();
+              cubit.userInputedWord(wordInputed);
+            }
           },
           text: "Validate",
         ),
@@ -84,11 +123,20 @@ class TrainingPage extends StatelessWidget {
   }
 
   /// Return the word info column, consists of which word to translate, and in which language.
-  Widget buildWordInfo(BuildContext context, String wordToTranslate, [String? comment]) {
+  Widget _buildWordInfo(BuildContext context, String wordToTranslate, int wordNumber, {String? comment}) {
+    wordInputed = "";
     return Column(
       children: [
         Row(
           children: [Spacer()],
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(vertical: 3),
+          child: SegmentedProgressBar(
+            nbElement: numberOfTranslationToDo,
+            currentSegment: wordNumber,
+            fullWidth: MediaQuery.of(context).size.width - 50,
+          ),
         ),
         Text(
           "Translate to $translateToLanguage the word : ",
@@ -103,20 +151,71 @@ class TrainingPage extends StatelessWidget {
     );
   }
 
-  Widget buildCorrectView(BuildContext context, String wordToTranslate, String? comment, String? grammarRule) {
+  Widget buildCorrectView(BuildContext context, String wordToTranslate, String translationInputed, int wordNumber,
+      String? comment, String? grammarRule) {
     return Column(children: [
-      buildWordInfo(context, wordToTranslate),
-      SizedBox(height: 500, child: Correct(grammarRule)),
+      _buildWordInfo(context, wordToTranslate, wordNumber),
+      CustomTextField(autofocus: true, initialValue: translationInputed, readOnly: true),
+      SizedBox(height: 350, child: Correct(grammarRule)),
     ]);
   }
 
-  Widget buildIncorrectView(
-      BuildContext context, String wordToTranslate, String correctWord, String? comment, String? grammarRule) {
+  Widget buildIncorrectView(BuildContext context, String wordToTranslate, String correctTranslation,
+      String translationInputed, int wordNumber, String? comment, String? grammarRule) {
     return Column(children: [
-      Text("e"),
-      buildWordInfo(context, wordToTranslate),
-      SizedBox(height: 500, child: Incorrect(correctWord, grammarRule))
+      _buildWordInfo(context, wordToTranslate, wordNumber),
+      CustomTextField(autofocus: true, initialValue: translationInputed, readOnly: true),
+      SizedBox(height: 350, child: Incorrect(correctTranslation, grammarRule))
     ]);
+  }
+
+  Widget buildFinishedView(BuildContext context, int correct, int incorrect) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Vous avez terminé votre série de $numberOfTranslationToDo mots!",
+                style: TextStyle(fontSize: 30),
+                textAlign: TextAlign.center,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.done_rounded,
+                    size: 50,
+                    color: Colors.green,
+                  ),
+                  Text(
+                    " : $correct",
+                    style: TextStyle(fontSize: 20),
+                  )
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.close,
+                    size: 50,
+                    color: Colors.red,
+                  ),
+                  Text(
+                    " : $incorrect",
+                    style: TextStyle(fontSize: 20),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      ],
+    );
   }
 }
 

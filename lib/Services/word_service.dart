@@ -5,16 +5,19 @@ import 'package:vocab/Data/Repositories/word_repo.dart';
 
 class WordService {
   WordRepo _wordRepo;
-  late List<Words> _words;
-  late int _currentWordIndex;
+  late final List<Words> _words;
+  int _currentWordIndex = -1;
+  late final int _wordCount;
+  final int _wordDoneInSession; // The number of word the user will do in this session.
 
   Words get current {
     return _words[_currentWordIndex];
   }
 
-  WordService(this._wordRepo, Function loaded) {
+  WordService(this._wordRepo, this._wordDoneInSession, Function loaded) {
     _wordRepo.words().then((value) {
       this._words = value;
+      this._wordCount = value.length;
       _pickWord();
       loaded();
     });
@@ -22,9 +25,9 @@ class WordService {
 
   void next(bool success) {
     if (success) {
-      _words[_currentWordIndex].score -= 1;
+      _words[_currentWordIndex].score -= (_wordCount / (_wordDoneInSession)) * 1;
     } else {
-      _words[_currentWordIndex].score += 2;
+      _words[_currentWordIndex].score += (_wordCount / (_wordDoneInSession)) * 3;
     }
     _pickWord();
   }
@@ -32,7 +35,9 @@ class WordService {
   void _pickWord() {
     double totalProbabilityCount =
         _words.map((e) => e.score).fold(0, (previousValue, element) => previousValue + element);
+
     List<double> probs = _words.map((e) => e.score / totalProbabilityCount).toList();
+
     double currentInterval = 0;
     List<List<double>> probabilities = [];
     for (final e in probs) {
@@ -41,12 +46,17 @@ class WordService {
     }
     probabilities.last[1] += 1;
 
-    final rnd = Random();
-    final randNum = Random().nextDouble();
-    for (final prob in probabilities) {
-      if (prob[0] <= randNum && randNum < prob[1]) {
-        _currentWordIndex = probabilities.indexOf(prob);
+    int new_index = _currentWordIndex;
+    while (new_index == _currentWordIndex) {
+      final rnd = Random();
+      final randNum = Random().nextDouble();
+      for (final prob in probabilities) {
+        if (prob[0] <= randNum && randNum < prob[1]) {
+          new_index = probabilities.indexOf(prob);
+        }
       }
     }
+
+    _currentWordIndex = new_index;
   }
 }

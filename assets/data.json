@@ -1,0 +1,49 @@
+{
+    "mots": {
+        "who?": {
+            "english": "who?",
+            "french": "qui?",
+            "spanish": ""
+        },
+        "spaces": {
+            "english": "spaces",
+            "french": "espaces",
+            "spanish": ""
+        },
+        "to hunt": {
+            "english": "to hunt",
+            "french": "chasser",
+            "spanish": ""
+        },
+        "official": {
+            "english": "official",
+            "french": "officiel",
+            "spanish": ""
+        },
+        "too": {
+            "english": "too",
+            "french": "aussi",
+            "spanish": ""
+        },
+        "too ": {
+            "english": "too ",
+            "french": "trop",
+            "spanish": ""
+        },
+        "to write": {
+            "english": "to write",
+            "french": "\u00e9crire",
+            "spanish": ""
+        },
+        "a picture": {
+            "english": "a picture",
+            "french": "une image",
+            "spanish": ""
+        },
+        "first": {
+            "english": "first",
+            "french": "premier",
+            "spanish": ""
+        }
+    }
+}

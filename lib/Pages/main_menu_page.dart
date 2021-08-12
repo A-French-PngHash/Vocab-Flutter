@@ -11,6 +11,8 @@ import '../Data/Model/language.dart';
 import 'Elements/language_picker/language_picker.dart';
 
 class MainMenuPage extends StatelessWidget {
+  int nbTranslationToDo = 5;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,8 +96,8 @@ class MainMenuPage extends StatelessWidget {
 
     Navigator.of(context).push(CupertinoPageRoute(builder: (_) {
       return BlocProvider(
-        create: (context) => TrainingCubit(WordRepo(), cubit.originLanguage, cubit.outputLanguage),
-        child: TrainingPage(representationFor(cubit.outputLanguage)),
+        create: (context) => TrainingCubit(WordRepo(), cubit.originLanguage, cubit.outputLanguage, nbTranslationToDo),
+        child: TrainingPage(representationFor(cubit.outputLanguage), nbTranslationToDo),
       );
     }));
   }

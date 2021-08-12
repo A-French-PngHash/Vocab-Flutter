@@ -27,7 +27,6 @@ class Correct extends StatelessWidget {
             color: Colors.green,
             size: 150,
           ),
-          if (grammarRule != null) Text("Commentaire : " + grammarRule!),
           GradientButton(
             onPressed: () {
               context.read<TrainingCubit>().nextButtonPressed();

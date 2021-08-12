@@ -20,21 +20,37 @@ class _$TrainingStateTearOff {
     return const _Initial();
   }
 
-  _Word word(String wordToTranslate, String? comment) {
+  _Word word(String wordToTranslate, String? comment, int wordNumber) {
     return _Word(
       wordToTranslate,
       comment,
+      wordNumber,
     );
   }
 
-  _Correct correction(String wordToTranslate, bool correct,
-      String correctTranslation, String? comment, String? grammarRule) {
+  _Correct correction(
+      String wordToTranslate,
+      bool correct,
+      String correctTranslation,
+      String translationInputed,
+      int wordNumber,
+      String? comment,
+      String? grammarRule) {
     return _Correct(
       wordToTranslate,
       correct,
       correctTranslation,
+      translationInputed,
+      wordNumber,
       comment,
       grammarRule,
+    );
+  }
+
+  _Finished finished(int nbCorrect, int nbIncorrect) {
+    return _Finished(
+      nbCorrect,
+      nbIncorrect,
     );
   }
 }
@@ -47,19 +63,36 @@ mixin _$TrainingState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String wordToTranslate, String? comment) word,
-    required TResult Function(String wordToTranslate, bool correct,
-            String correctTranslation, String? comment, String? grammarRule)
+    required TResult Function(
+            String wordToTranslate, String? comment, int wordNumber)
+        word,
+    required TResult Function(
+            String wordToTranslate,
+            bool correct,
+            String correctTranslation,
+            String translationInputed,
+            int wordNumber,
+            String? comment,
+            String? grammarRule)
         correction,
+    required TResult Function(int nbCorrect, int nbIncorrect) finished,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String wordToTranslate, String? comment)? word,
-    TResult Function(String wordToTranslate, bool correct,
-            String correctTranslation, String? comment, String? grammarRule)?
+    TResult Function(String wordToTranslate, String? comment, int wordNumber)?
+        word,
+    TResult Function(
+            String wordToTranslate,
+            bool correct,
+            String correctTranslation,
+            String translationInputed,
+            int wordNumber,
+            String? comment,
+            String? grammarRule)?
         correction,
+    TResult Function(int nbCorrect, int nbIncorrect)? finished,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -68,6 +101,7 @@ mixin _$TrainingState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Word value) word,
     required TResult Function(_Correct value) correction,
+    required TResult Function(_Finished value) finished,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,6 +109,7 @@ mixin _$TrainingState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Word value)? word,
     TResult Function(_Correct value)? correction,
+    TResult Function(_Finished value)? finished,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -135,10 +170,19 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String wordToTranslate, String? comment) word,
-    required TResult Function(String wordToTranslate, bool correct,
-            String correctTranslation, String? comment, String? grammarRule)
+    required TResult Function(
+            String wordToTranslate, String? comment, int wordNumber)
+        word,
+    required TResult Function(
+            String wordToTranslate,
+            bool correct,
+            String correctTranslation,
+            String translationInputed,
+            int wordNumber,
+            String? comment,
+            String? grammarRule)
         correction,
+    required TResult Function(int nbCorrect, int nbIncorrect) finished,
   }) {
     return initial();
   }
@@ -147,10 +191,18 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String wordToTranslate, String? comment)? word,
-    TResult Function(String wordToTranslate, bool correct,
-            String correctTranslation, String? comment, String? grammarRule)?
+    TResult Function(String wordToTranslate, String? comment, int wordNumber)?
+        word,
+    TResult Function(
+            String wordToTranslate,
+            bool correct,
+            String correctTranslation,
+            String translationInputed,
+            int wordNumber,
+            String? comment,
+            String? grammarRule)?
         correction,
+    TResult Function(int nbCorrect, int nbIncorrect)? finished,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -165,6 +217,7 @@ class _$_Initial implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Word value) word,
     required TResult Function(_Correct value) correction,
+    required TResult Function(_Finished value) finished,
   }) {
     return initial(this);
   }
@@ -175,6 +228,7 @@ class _$_Initial implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Word value)? word,
     TResult Function(_Correct value)? correction,
+    TResult Function(_Finished value)? finished,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -192,7 +246,7 @@ abstract class _Initial implements TrainingState {
 abstract class _$WordCopyWith<$Res> {
   factory _$WordCopyWith(_Word value, $Res Function(_Word) then) =
       __$WordCopyWithImpl<$Res>;
-  $Res call({String wordToTranslate, String? comment});
+  $Res call({String wordToTranslate, String? comment, int wordNumber});
 }
 
 /// @nodoc
@@ -208,6 +262,7 @@ class __$WordCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
   $Res call({
     Object? wordToTranslate = freezed,
     Object? comment = freezed,
+    Object? wordNumber = freezed,
   }) {
     return _then(_Word(
       wordToTranslate == freezed
@@ -218,6 +273,10 @@ class __$WordCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
               as String?,
+      wordNumber == freezed
+          ? _value.wordNumber
+          : wordNumber // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -225,16 +284,18 @@ class __$WordCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Word implements _Word {
-  _$_Word(this.wordToTranslate, this.comment);
+  _$_Word(this.wordToTranslate, this.comment, this.wordNumber);
 
   @override
   final String wordToTranslate;
   @override
   final String? comment;
+  @override
+  final int wordNumber;
 
   @override
   String toString() {
-    return 'TrainingState.word(wordToTranslate: $wordToTranslate, comment: $comment)';
+    return 'TrainingState.word(wordToTranslate: $wordToTranslate, comment: $comment, wordNumber: $wordNumber)';
   }
 
   @override
@@ -245,14 +306,19 @@ class _$_Word implements _Word {
                 const DeepCollectionEquality()
                     .equals(other.wordToTranslate, wordToTranslate)) &&
             (identical(other.comment, comment) ||
-                const DeepCollectionEquality().equals(other.comment, comment)));
+                const DeepCollectionEquality()
+                    .equals(other.comment, comment)) &&
+            (identical(other.wordNumber, wordNumber) ||
+                const DeepCollectionEquality()
+                    .equals(other.wordNumber, wordNumber)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(wordToTranslate) ^
-      const DeepCollectionEquality().hash(comment);
+      const DeepCollectionEquality().hash(comment) ^
+      const DeepCollectionEquality().hash(wordNumber);
 
   @JsonKey(ignore: true)
   @override
@@ -263,26 +329,43 @@ class _$_Word implements _Word {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String wordToTranslate, String? comment) word,
-    required TResult Function(String wordToTranslate, bool correct,
-            String correctTranslation, String? comment, String? grammarRule)
+    required TResult Function(
+            String wordToTranslate, String? comment, int wordNumber)
+        word,
+    required TResult Function(
+            String wordToTranslate,
+            bool correct,
+            String correctTranslation,
+            String translationInputed,
+            int wordNumber,
+            String? comment,
+            String? grammarRule)
         correction,
+    required TResult Function(int nbCorrect, int nbIncorrect) finished,
   }) {
-    return word(wordToTranslate, comment);
+    return word(wordToTranslate, comment, wordNumber);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String wordToTranslate, String? comment)? word,
-    TResult Function(String wordToTranslate, bool correct,
-            String correctTranslation, String? comment, String? grammarRule)?
+    TResult Function(String wordToTranslate, String? comment, int wordNumber)?
+        word,
+    TResult Function(
+            String wordToTranslate,
+            bool correct,
+            String correctTranslation,
+            String translationInputed,
+            int wordNumber,
+            String? comment,
+            String? grammarRule)?
         correction,
+    TResult Function(int nbCorrect, int nbIncorrect)? finished,
     required TResult orElse(),
   }) {
     if (word != null) {
-      return word(wordToTranslate, comment);
+      return word(wordToTranslate, comment, wordNumber);
     }
     return orElse();
   }
@@ -293,6 +376,7 @@ class _$_Word implements _Word {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Word value) word,
     required TResult Function(_Correct value) correction,
+    required TResult Function(_Finished value) finished,
   }) {
     return word(this);
   }
@@ -303,6 +387,7 @@ class _$_Word implements _Word {
     TResult Function(_Initial value)? initial,
     TResult Function(_Word value)? word,
     TResult Function(_Correct value)? correction,
+    TResult Function(_Finished value)? finished,
     required TResult orElse(),
   }) {
     if (word != null) {
@@ -313,10 +398,12 @@ class _$_Word implements _Word {
 }
 
 abstract class _Word implements TrainingState {
-  factory _Word(String wordToTranslate, String? comment) = _$_Word;
+  factory _Word(String wordToTranslate, String? comment, int wordNumber) =
+      _$_Word;
 
   String get wordToTranslate => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
+  int get wordNumber => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$WordCopyWith<_Word> get copyWith => throw _privateConstructorUsedError;
 }
@@ -329,6 +416,8 @@ abstract class _$CorrectCopyWith<$Res> {
       {String wordToTranslate,
       bool correct,
       String correctTranslation,
+      String translationInputed,
+      int wordNumber,
       String? comment,
       String? grammarRule});
 }
@@ -347,6 +436,8 @@ class __$CorrectCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
     Object? wordToTranslate = freezed,
     Object? correct = freezed,
     Object? correctTranslation = freezed,
+    Object? translationInputed = freezed,
+    Object? wordNumber = freezed,
     Object? comment = freezed,
     Object? grammarRule = freezed,
   }) {
@@ -363,6 +454,14 @@ class __$CorrectCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
           ? _value.correctTranslation
           : correctTranslation // ignore: cast_nullable_to_non_nullable
               as String,
+      translationInputed == freezed
+          ? _value.translationInputed
+          : translationInputed // ignore: cast_nullable_to_non_nullable
+              as String,
+      wordNumber == freezed
+          ? _value.wordNumber
+          : wordNumber // ignore: cast_nullable_to_non_nullable
+              as int,
       comment == freezed
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
@@ -379,7 +478,7 @@ class __$CorrectCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
 
 class _$_Correct implements _Correct {
   _$_Correct(this.wordToTranslate, this.correct, this.correctTranslation,
-      this.comment, this.grammarRule);
+      this.translationInputed, this.wordNumber, this.comment, this.grammarRule);
 
   @override
   final String wordToTranslate;
@@ -388,13 +487,17 @@ class _$_Correct implements _Correct {
   @override
   final String correctTranslation;
   @override
+  final String translationInputed;
+  @override
+  final int wordNumber;
+  @override
   final String? comment;
   @override
   final String? grammarRule;
 
   @override
   String toString() {
-    return 'TrainingState.correction(wordToTranslate: $wordToTranslate, correct: $correct, correctTranslation: $correctTranslation, comment: $comment, grammarRule: $grammarRule)';
+    return 'TrainingState.correction(wordToTranslate: $wordToTranslate, correct: $correct, correctTranslation: $correctTranslation, translationInputed: $translationInputed, wordNumber: $wordNumber, comment: $comment, grammarRule: $grammarRule)';
   }
 
   @override
@@ -410,6 +513,12 @@ class _$_Correct implements _Correct {
             (identical(other.correctTranslation, correctTranslation) ||
                 const DeepCollectionEquality()
                     .equals(other.correctTranslation, correctTranslation)) &&
+            (identical(other.translationInputed, translationInputed) ||
+                const DeepCollectionEquality()
+                    .equals(other.translationInputed, translationInputed)) &&
+            (identical(other.wordNumber, wordNumber) ||
+                const DeepCollectionEquality()
+                    .equals(other.wordNumber, wordNumber)) &&
             (identical(other.comment, comment) ||
                 const DeepCollectionEquality()
                     .equals(other.comment, comment)) &&
@@ -424,6 +533,8 @@ class _$_Correct implements _Correct {
       const DeepCollectionEquality().hash(wordToTranslate) ^
       const DeepCollectionEquality().hash(correct) ^
       const DeepCollectionEquality().hash(correctTranslation) ^
+      const DeepCollectionEquality().hash(translationInputed) ^
+      const DeepCollectionEquality().hash(wordNumber) ^
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(grammarRule);
 
@@ -436,28 +547,45 @@ class _$_Correct implements _Correct {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(String wordToTranslate, String? comment) word,
-    required TResult Function(String wordToTranslate, bool correct,
-            String correctTranslation, String? comment, String? grammarRule)
+    required TResult Function(
+            String wordToTranslate, String? comment, int wordNumber)
+        word,
+    required TResult Function(
+            String wordToTranslate,
+            bool correct,
+            String correctTranslation,
+            String translationInputed,
+            int wordNumber,
+            String? comment,
+            String? grammarRule)
         correction,
+    required TResult Function(int nbCorrect, int nbIncorrect) finished,
   }) {
-    return correction(
-        wordToTranslate, correct, correctTranslation, comment, grammarRule);
+    return correction(wordToTranslate, correct, correctTranslation,
+        translationInputed, wordNumber, comment, grammarRule);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String wordToTranslate, String? comment)? word,
-    TResult Function(String wordToTranslate, bool correct,
-            String correctTranslation, String? comment, String? grammarRule)?
+    TResult Function(String wordToTranslate, String? comment, int wordNumber)?
+        word,
+    TResult Function(
+            String wordToTranslate,
+            bool correct,
+            String correctTranslation,
+            String translationInputed,
+            int wordNumber,
+            String? comment,
+            String? grammarRule)?
         correction,
+    TResult Function(int nbCorrect, int nbIncorrect)? finished,
     required TResult orElse(),
   }) {
     if (correction != null) {
-      return correction(
-          wordToTranslate, correct, correctTranslation, comment, grammarRule);
+      return correction(wordToTranslate, correct, correctTranslation,
+          translationInputed, wordNumber, comment, grammarRule);
     }
     return orElse();
   }
@@ -468,6 +596,7 @@ class _$_Correct implements _Correct {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Word value) word,
     required TResult Function(_Correct value) correction,
+    required TResult Function(_Finished value) finished,
   }) {
     return correction(this);
   }
@@ -478,6 +607,7 @@ class _$_Correct implements _Correct {
     TResult Function(_Initial value)? initial,
     TResult Function(_Word value)? word,
     TResult Function(_Correct value)? correction,
+    TResult Function(_Finished value)? finished,
     required TResult orElse(),
   }) {
     if (correction != null) {
@@ -492,15 +622,173 @@ abstract class _Correct implements TrainingState {
       String wordToTranslate,
       bool correct,
       String correctTranslation,
+      String translationInputed,
+      int wordNumber,
       String? comment,
       String? grammarRule) = _$_Correct;
 
   String get wordToTranslate => throw _privateConstructorUsedError;
   bool get correct => throw _privateConstructorUsedError;
   String get correctTranslation => throw _privateConstructorUsedError;
+  String get translationInputed => throw _privateConstructorUsedError;
+  int get wordNumber => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
   String? get grammarRule => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$CorrectCopyWith<_Correct> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$FinishedCopyWith<$Res> {
+  factory _$FinishedCopyWith(_Finished value, $Res Function(_Finished) then) =
+      __$FinishedCopyWithImpl<$Res>;
+  $Res call({int nbCorrect, int nbIncorrect});
+}
+
+/// @nodoc
+class __$FinishedCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
+    implements _$FinishedCopyWith<$Res> {
+  __$FinishedCopyWithImpl(_Finished _value, $Res Function(_Finished) _then)
+      : super(_value, (v) => _then(v as _Finished));
+
+  @override
+  _Finished get _value => super._value as _Finished;
+
+  @override
+  $Res call({
+    Object? nbCorrect = freezed,
+    Object? nbIncorrect = freezed,
+  }) {
+    return _then(_Finished(
+      nbCorrect == freezed
+          ? _value.nbCorrect
+          : nbCorrect // ignore: cast_nullable_to_non_nullable
+              as int,
+      nbIncorrect == freezed
+          ? _value.nbIncorrect
+          : nbIncorrect // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_Finished implements _Finished {
+  _$_Finished(this.nbCorrect, this.nbIncorrect);
+
+  @override
+  final int nbCorrect;
+  @override
+  final int nbIncorrect;
+
+  @override
+  String toString() {
+    return 'TrainingState.finished(nbCorrect: $nbCorrect, nbIncorrect: $nbIncorrect)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Finished &&
+            (identical(other.nbCorrect, nbCorrect) ||
+                const DeepCollectionEquality()
+                    .equals(other.nbCorrect, nbCorrect)) &&
+            (identical(other.nbIncorrect, nbIncorrect) ||
+                const DeepCollectionEquality()
+                    .equals(other.nbIncorrect, nbIncorrect)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(nbCorrect) ^
+      const DeepCollectionEquality().hash(nbIncorrect);
+
+  @JsonKey(ignore: true)
+  @override
+  _$FinishedCopyWith<_Finished> get copyWith =>
+      __$FinishedCopyWithImpl<_Finished>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(
+            String wordToTranslate, String? comment, int wordNumber)
+        word,
+    required TResult Function(
+            String wordToTranslate,
+            bool correct,
+            String correctTranslation,
+            String translationInputed,
+            int wordNumber,
+            String? comment,
+            String? grammarRule)
+        correction,
+    required TResult Function(int nbCorrect, int nbIncorrect) finished,
+  }) {
+    return finished(nbCorrect, nbIncorrect);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String wordToTranslate, String? comment, int wordNumber)?
+        word,
+    TResult Function(
+            String wordToTranslate,
+            bool correct,
+            String correctTranslation,
+            String translationInputed,
+            int wordNumber,
+            String? comment,
+            String? grammarRule)?
+        correction,
+    TResult Function(int nbCorrect, int nbIncorrect)? finished,
+    required TResult orElse(),
+  }) {
+    if (finished != null) {
+      return finished(nbCorrect, nbIncorrect);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Word value) word,
+    required TResult Function(_Correct value) correction,
+    required TResult Function(_Finished value) finished,
+  }) {
+    return finished(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Word value)? word,
+    TResult Function(_Correct value)? correction,
+    TResult Function(_Finished value)? finished,
+    required TResult orElse(),
+  }) {
+    if (finished != null) {
+      return finished(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Finished implements TrainingState {
+  factory _Finished(int nbCorrect, int nbIncorrect) = _$_Finished;
+
+  int get nbCorrect => throw _privateConstructorUsedError;
+  int get nbIncorrect => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$FinishedCopyWith<_Finished> get copyWith =>
       throw _privateConstructorUsedError;
 }
