@@ -6,7 +6,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 class WordRepo {
-  List<Theme>? _themes;
+  List<Words>? _themes;
 
   /// The current user of the application. This is set by the user, and depending on
   /// this, the same words won't be loaded.
@@ -14,7 +14,7 @@ class WordRepo {
 
   WordRepo(this._currentUser);
 
-  Future<List<Theme>> words() async {
+  Future<List<Words>> words() async {
     if (_themes != null) {
       return _themes!;
     } else {
@@ -26,21 +26,18 @@ class WordRepo {
       for (Map<String, dynamic> element in fullWord.values) {
         numberOfWords += element.length;
       }
-      for (Map<String, dynamic> theme in fullWord){
-        //final _themeName = theme
-        for (Map<String, dynamic> element in theme.values) {
-          List<Words> _words = [];
-          for (Map<String, dynamic> word in element.values) {
-            _words.add(
-              Words(word["english"]! as String, word["spanish"]! as String, word["french"]! as String,
-                  numberOfWords.toDouble(),
-                  comment: word["comment"] as String?, grammarRule: word["grammarRule"] as String?),
-            );
-          }
+      List<Words> _words = [];
+      for (Map<String, dynamic> element in fullWord.values) {
+        for (Map<String, dynamic> word in element.values) {
+          _words.add(
+            Words(word["english"]! as String, word["spanish"]! as String, word["french"]! as String,
+                numberOfWords.toDouble(),
+                comment: word["comment"] as String?, grammarRule: word["grammarRule"] as String?),
+          );
         }
-      } 
-      this._themes = _themes;
-      return _themes;
+      }
+      this._themes = _words;
+      return _words;
     }
   }
 }
