@@ -17,10 +17,13 @@ class _$MainMenuCubitStateTearOff {
   const _$MainMenuCubitStateTearOff();
 
   _MainMenuCubitState menu(
-      {Language? originLanguage, Language? outputLanguage}) {
+      {required Language originLanguage,
+      required Language outputLanguage,
+      required User currentUser}) {
     return _MainMenuCubitState(
       originLanguage: originLanguage,
       outputLanguage: outputLanguage,
+      currentUser: currentUser,
     );
   }
 }
@@ -30,19 +33,22 @@ const $MainMenuCubitState = _$MainMenuCubitStateTearOff();
 
 /// @nodoc
 mixin _$MainMenuCubitState {
-  Language? get originLanguage => throw _privateConstructorUsedError;
-  Language? get outputLanguage => throw _privateConstructorUsedError;
+  Language get originLanguage => throw _privateConstructorUsedError;
+  Language get outputLanguage => throw _privateConstructorUsedError;
+  User get currentUser => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            Language? originLanguage, Language? outputLanguage)
+            Language originLanguage, Language outputLanguage, User currentUser)
         menu,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Language? originLanguage, Language? outputLanguage)? menu,
+    TResult Function(
+            Language originLanguage, Language outputLanguage, User currentUser)?
+        menu,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -68,7 +74,8 @@ abstract class $MainMenuCubitStateCopyWith<$Res> {
   factory $MainMenuCubitStateCopyWith(
           MainMenuCubitState value, $Res Function(MainMenuCubitState) then) =
       _$MainMenuCubitStateCopyWithImpl<$Res>;
-  $Res call({Language? originLanguage, Language? outputLanguage});
+  $Res call(
+      {Language originLanguage, Language outputLanguage, User currentUser});
 }
 
 /// @nodoc
@@ -84,16 +91,21 @@ class _$MainMenuCubitStateCopyWithImpl<$Res>
   $Res call({
     Object? originLanguage = freezed,
     Object? outputLanguage = freezed,
+    Object? currentUser = freezed,
   }) {
     return _then(_value.copyWith(
       originLanguage: originLanguage == freezed
           ? _value.originLanguage
           : originLanguage // ignore: cast_nullable_to_non_nullable
-              as Language?,
+              as Language,
       outputLanguage: outputLanguage == freezed
           ? _value.outputLanguage
           : outputLanguage // ignore: cast_nullable_to_non_nullable
-              as Language?,
+              as Language,
+      currentUser: currentUser == freezed
+          ? _value.currentUser
+          : currentUser // ignore: cast_nullable_to_non_nullable
+              as User,
     ));
   }
 }
@@ -105,7 +117,8 @@ abstract class _$MainMenuCubitStateCopyWith<$Res>
           _MainMenuCubitState value, $Res Function(_MainMenuCubitState) then) =
       __$MainMenuCubitStateCopyWithImpl<$Res>;
   @override
-  $Res call({Language? originLanguage, Language? outputLanguage});
+  $Res call(
+      {Language originLanguage, Language outputLanguage, User currentUser});
 }
 
 /// @nodoc
@@ -123,16 +136,21 @@ class __$MainMenuCubitStateCopyWithImpl<$Res>
   $Res call({
     Object? originLanguage = freezed,
     Object? outputLanguage = freezed,
+    Object? currentUser = freezed,
   }) {
     return _then(_MainMenuCubitState(
       originLanguage: originLanguage == freezed
           ? _value.originLanguage
           : originLanguage // ignore: cast_nullable_to_non_nullable
-              as Language?,
+              as Language,
       outputLanguage: outputLanguage == freezed
           ? _value.outputLanguage
           : outputLanguage // ignore: cast_nullable_to_non_nullable
-              as Language?,
+              as Language,
+      currentUser: currentUser == freezed
+          ? _value.currentUser
+          : currentUser // ignore: cast_nullable_to_non_nullable
+              as User,
     ));
   }
 }
@@ -140,16 +158,21 @@ class __$MainMenuCubitStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_MainMenuCubitState implements _MainMenuCubitState {
-  _$_MainMenuCubitState({this.originLanguage, this.outputLanguage});
+  _$_MainMenuCubitState(
+      {required this.originLanguage,
+      required this.outputLanguage,
+      required this.currentUser});
 
   @override
-  final Language? originLanguage;
+  final Language originLanguage;
   @override
-  final Language? outputLanguage;
+  final Language outputLanguage;
+  @override
+  final User currentUser;
 
   @override
   String toString() {
-    return 'MainMenuCubitState.menu(originLanguage: $originLanguage, outputLanguage: $outputLanguage)';
+    return 'MainMenuCubitState.menu(originLanguage: $originLanguage, outputLanguage: $outputLanguage, currentUser: $currentUser)';
   }
 
   @override
@@ -161,14 +184,18 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
                     .equals(other.originLanguage, originLanguage)) &&
             (identical(other.outputLanguage, outputLanguage) ||
                 const DeepCollectionEquality()
-                    .equals(other.outputLanguage, outputLanguage)));
+                    .equals(other.outputLanguage, outputLanguage)) &&
+            (identical(other.currentUser, currentUser) ||
+                const DeepCollectionEquality()
+                    .equals(other.currentUser, currentUser)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(originLanguage) ^
-      const DeepCollectionEquality().hash(outputLanguage);
+      const DeepCollectionEquality().hash(outputLanguage) ^
+      const DeepCollectionEquality().hash(currentUser);
 
   @JsonKey(ignore: true)
   @override
@@ -179,20 +206,22 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            Language? originLanguage, Language? outputLanguage)
+            Language originLanguage, Language outputLanguage, User currentUser)
         menu,
   }) {
-    return menu(originLanguage, outputLanguage);
+    return menu(originLanguage, outputLanguage, currentUser);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Language? originLanguage, Language? outputLanguage)? menu,
+    TResult Function(
+            Language originLanguage, Language outputLanguage, User currentUser)?
+        menu,
     required TResult orElse(),
   }) {
     if (menu != null) {
-      return menu(originLanguage, outputLanguage);
+      return menu(originLanguage, outputLanguage, currentUser);
     }
     return orElse();
   }
@@ -220,13 +249,16 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
 
 abstract class _MainMenuCubitState implements MainMenuCubitState {
   factory _MainMenuCubitState(
-      {Language? originLanguage,
-      Language? outputLanguage}) = _$_MainMenuCubitState;
+      {required Language originLanguage,
+      required Language outputLanguage,
+      required User currentUser}) = _$_MainMenuCubitState;
 
   @override
-  Language? get originLanguage => throw _privateConstructorUsedError;
+  Language get originLanguage => throw _privateConstructorUsedError;
   @override
-  Language? get outputLanguage => throw _privateConstructorUsedError;
+  Language get outputLanguage => throw _privateConstructorUsedError;
+  @override
+  User get currentUser => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MainMenuCubitStateCopyWith<_MainMenuCubitState> get copyWith =>

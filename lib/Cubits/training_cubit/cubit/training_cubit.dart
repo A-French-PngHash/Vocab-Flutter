@@ -26,12 +26,12 @@ class TrainingCubit extends Cubit<TrainingState> {
   }
 
   String get correctTranslation {
-    switch (outputLanguage) {
-      case Language.french:
+    switch (outputLanguage.currentlySelected) {
+      case "french":
         return currentWord.french.trim();
-      case Language.english:
+      case "english":
         return currentWord.english.trim();
-      case Language.spanish:
+      case "spanish":
         return currentWord.spanish.trim();
       default:
         return "Unknown Language";
@@ -39,12 +39,12 @@ class TrainingCubit extends Cubit<TrainingState> {
   }
 
   String get wordToTranslate {
-    switch (originLanguage) {
-      case Language.french:
+    switch (originLanguage.currentlySelected) {
+      case "french":
         return currentWord.french.trim();
-      case Language.english:
+      case "english":
         return currentWord.english.trim();
-      case Language.spanish:
+      case "spanish":
         return currentWord.spanish.trim();
       default:
         return "Unknown Language";
@@ -61,8 +61,8 @@ class TrainingCubit extends Cubit<TrainingState> {
   }
 
   void userInputedWord(String word) {
-    final success = word.toLowerCase().trim().replaceAll(RegExp(r'’'), '').replaceAll(RegExp(r"'"), '') ==
-        correctTranslation.toLowerCase().trim().replaceAll(RegExp(r'’'), '').replaceAll(RegExp(r"'"), '');
+    final success = word.toLowerCase().trim().replaceAll(RegExp(r"'"), '’') ==
+        correctTranslation.toLowerCase().trim().replaceAll(RegExp(r"'"), '’');
     if (success) {
       correct += 1;
     } else {

@@ -1,7 +1,7 @@
 part of 'training_cubit.dart';
 
 @freezed
-abstract class TrainingState with _$TrainingState {
+class TrainingState with _$TrainingState {
   const factory TrainingState.initial() = _Initial;
 
   factory TrainingState.word(String wordToTranslate, String? comment, int wordNumber) = _Word;

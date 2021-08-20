@@ -1,0 +1,21 @@
+{
+    "cuisine": {
+        "cook" : {
+            "english" : "cook",
+            "french" : "cuisinier",
+            "spanish" : "cocinero"
+        },
+        "oven" : {
+            "english" : "oven",
+            "french" : "four",
+            "spanish" : "horno"
+        }
+    },
+    "Technologie": {
+        "phone" : {
+            "english" : "phone",
+            "spanish" : "mobil",
+            "french" : "téléphone"
+        }
+    }
+}

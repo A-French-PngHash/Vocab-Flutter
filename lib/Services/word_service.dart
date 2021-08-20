@@ -16,7 +16,7 @@ class WordService {
 
   WordService(this._wordRepo, this._wordDoneInSession, Function loaded) {
     _wordRepo.words().then((value) {
-      this._words = value;
+      //this._words = value;
       this._wordCount = value.length;
       _pickWord();
       loaded();

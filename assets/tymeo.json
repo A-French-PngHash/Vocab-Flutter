@@ -1565,13 +1565,13 @@
         },
         "a woman": {
             "english": "a woman",
-            "french": "une dame",
+            "french": "une femme",
             "spanish": "",
             "grammarRule": "Au pluriel, WOMAN devient WOMEN."
         },
         "women": {
             "english": "women",
-            "french": "dames",
+            "french": "femmes",
             "spanish": "",
             "grammarRule": "Au pluriel, WOMAN devient WOMEN."
         },
@@ -2696,6 +2696,242 @@
         "strict": {
             "english": "strict",
             "french": "s\u00e9v\u00e8re",
+            "spanish": ""
+        },
+        "like": {
+            "french": "comme",
+            "english": "like",
+            "spanish": "",
+            "comment": "Pas dans le sens aimer."
+        },
+        "the rest of": {
+            "french": "le reste de",
+            "english": "the rest of",
+            "spanish": ""
+        },
+        "something": {
+            "french": "quelquechose",
+            "english": "something",
+            "spanish": ""
+        },
+        "a triumph": {
+            "french": "une victoire",
+            "english": "a triumph",
+            "spanish": ""
+        },
+        "while": {
+            "french": "pendant que",
+            "english": "while",
+            "spanish": "",
+            "comment": "Synonyme: tandis que"
+        },
+        "the common room": {
+            "french": "la salle commune",
+            "english": "the common room",
+            "spanish": ""
+        },
+        "free time": {
+            "french": "temps libre",
+            "english": "free time",
+            "spanish": ""
+        },
+        "to fight": {
+            "french": "se bagarrer",
+            "english": "to fight",
+            "spanish": ""
+        },
+        "don\u2019t play!": {
+            "french": "ne joue pas!",
+            "english": "don\u2019t play!",
+            "spanish": "",
+            "comment": "Impératif!",
+            "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction."
+        },
+        "to play": {
+            "french": "jouer",
+            "english": "to play",
+            "spanish": "",
+            "comment": "Impératif!",
+            "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction."
+        },
+        "play!": {
+            "french": "joue!",
+            "english": "play!",
+            "spanish": "",
+            "comment": "Impératif!",
+            "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction."
+        },
+        "let\u2019s play!": {
+            "french": "jouons!",
+            "english": "let\u2019s play!",
+            "spanish": "",
+            "comment": "Impératif!",
+            "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction. Let’s indique que l’on parle à la 2ème personne du pluriel (nous)."
+        },
+        "to earn": {
+            "french": "gagner",
+            "english": "to earn",
+            "spanish": "",
+            "comment": "Gagner des points, de l'argent"
+        },
+        "to win": {
+            "french": "gagner",
+            "english": "to win",
+            "spanish": "",
+            "comment": "Gagner un jeu"
+        },
+        "a point": {
+            "french": "un point",
+            "english": "a point",
+            "spanish": ""
+        },
+        "a dormitory": {
+            "french": "un dortoir",
+            "english": "a dormitory",
+            "spanish": "",
+            "grammarRule": "Au pluriel, DORMITORIES"
+        },
+        "to lose": {
+            "french": "perdre",
+            "english": "to lose",
+            "spanish": ""
+        },
+        "rule breaking": {
+            "french": "violation des r\u00e8gles",
+            "english": "rule breaking",
+            "spanish": ""
+        },
+        "to break": {
+            "french": "casser",
+            "english": "to break",
+            "spanish": ""
+        },
+        "a trainer": {
+            "french": "un jogging",
+            "english": "a trainer",
+            "spanish": "",
+            "comment": "Tenue de sport"
+        },
+        "to wear": {
+            "french": "porter",
+            "english": "to wear",
+            "spanish": "",
+            "comment": "Un vêtement"
+        },
+        "to fill in": {
+            "french": "remplir",
+            "english": "to fill in",
+            "spanish": ""
+        },
+        "everyday": {
+            "french": "tous les jours",
+            "english": "everyday",
+            "spanish": ""
+        },
+        "the class rules": {
+            "french": "les r\u00e8gles de la classe",
+            "english": "the class rules",
+            "spanish": ""
+        },
+        "to introduce": {
+            "french": "se pr\u00e9senter",
+            "english": "to introduce",
+            "spanish": ""
+        },
+        "to cross": {
+            "french": "traverser",
+            "english": "to cross",
+            "spanish": ""
+        },
+        "a hangman": {
+            "french": "un pendu",
+            "english": "a hangman",
+            "spanish": "",
+            "comment": "Le jeu du pendu"
+        },
+        "a glue stick": {
+            "french": "un tube de colle",
+            "english": "a glue stick",
+            "spanish": ""
+        },
+        "to hang": {
+            "french": "pendre",
+            "english": "to hang",
+            "spanish": ""
+        },
+        "see you soon!": {
+            "french": "a bient\u00f4t!",
+            "english": "see you soon!",
+            "spanish": ""
+        },
+        "to respect": {
+            "french": "respecter",
+            "english": "to respect",
+            "spanish": ""
+        },
+        "a museum": {
+            "french": "un mus\u00e9e",
+            "english": "a museum",
+            "spanish": ""
+        },
+        "alone": {
+            "french": "tout seul",
+            "english": "alone",
+            "spanish": ""
+        },
+        "to sort": {
+            "french": "trier",
+            "english": "to sort",
+            "spanish": ""
+        },
+        "during": {
+            "french": "pendant",
+            "english": "during",
+            "spanish": ""
+        },
+        "colored": {
+            "french": "color\u00e9",
+            "english": "colored",
+            "spanish": ""
+        },
+        "to use": {
+            "french": "utiliser",
+            "english": "to use",
+            "spanish": ""
+        },
+        "to cut": {
+            "french": "couper",
+            "english": "to cut",
+            "spanish": ""
+        },
+        "the scissors": {
+            "french": "les ciseaux",
+            "english": "the scissors",
+            "spanish": ""
+        },
+        "the playground": {
+            "french": "l\u2019aire de jeux",
+            "english": "the playground",
+            "spanish": ""
+        },
+        "a crosswalk": {
+            "french": "un passage pi\u00e9ton",
+            "english": "a crosswalk",
+            "spanish": ""
+        },
+        "crosswords": {
+            "french": "mots crois\u00e9s",
+            "english": "crosswords",
+            "spanish": ""
+        },
+        "to appear": {
+            "french": "appara\u00eetre",
+            "english": "to appear",
+            "spanish": ""
+        },
+        "a boarding school": {
+            "french": "un internat",
+            "english": "a boarding school",
             "spanish": ""
         }
     }

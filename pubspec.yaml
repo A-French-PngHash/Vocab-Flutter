@@ -58,7 +58,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/data.json
+    - assets/tymeo.json
+    - assets/titouan.json
 
   fonts:
     - family: SanFrancisco

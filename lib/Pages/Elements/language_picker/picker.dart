@@ -2,34 +2,34 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_material_pickers/helpers/show_scroll_picker.dart';
 import 'package:vocab/Data/Model/language.dart';
-import 'package:vocab/Pages/Elements/language_picker/select_language.dart';
+import 'package:vocab/Data/Model/picker_enum_asbtract.dart';
+import 'package:vocab/Pages/Elements/language_picker/select_data.dart';
 
-/// The whole picker element to pick a language.
+/// The whole picker element to pick data from a PickerData.
 ///
 /// Contains both the picking preview and the transition to the screen that
 /// actually picks the language.
-class LanguagePicker extends StatelessWidget {
-  /// The currently selected language.
-  final Language currentlySelected;
-
+class Picker extends StatelessWidget {
   /// Text to be displayed on the picker preview.
   final String text;
 
   /// Callback when the user selected its language.
-  final Function(Language) onSelect;
+  final Function(String) onSelect;
 
-  LanguagePicker(this.currentlySelected, this.text, this.onSelect);
+  final PickerData elements;
+
+  Picker(this.text, this.elements, this.onSelect);
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () async {
-        Language? chosenLanguage = await Navigator.of(context)
-            .push(CupertinoPageRoute(builder: (context) => SelectLanguage(currentlySelected)));
-        if (chosenLanguage == null) {
-          onSelect(currentlySelected);
+        String? chosenData = await Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (context) => SelectFromData(elements)));
+        if (chosenData == null) {
+          onSelect(elements.currentlySelected);
         } else {
-          onSelect(chosenLanguage);
+          onSelect(chosenData);
         }
       },
       child: Row(
@@ -40,7 +40,7 @@ class LanguagePicker extends StatelessWidget {
           ),
           Spacer(),
           Text(
-            representationFor(this.currentlySelected),
+            this.elements.nameFor(this.elements.currentlySelected),
             style: TextStyle(color: Color(0xFF94949B), fontSize: 17),
           ),
           Icon(
