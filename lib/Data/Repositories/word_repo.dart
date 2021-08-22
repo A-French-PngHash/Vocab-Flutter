@@ -14,7 +14,10 @@ class WordRepo {
 
   WordRepo(this._currentUser);
 
-  Future<List<Theme>> words() async {
+  /// Returns a list of themes.
+  ///
+  /// The theme objects contains the words.
+  Future<List<Theme>> get words_with_theme async {
     if (_themes != null) {
       return _themes!;
     } else {
@@ -26,21 +29,31 @@ class WordRepo {
       for (Map<String, dynamic> element in fullWord.values) {
         numberOfWords += element.length;
       }
-      for (Map<String, dynamic> theme in fullWord){
-        //final _themeName = theme
-        for (Map<String, dynamic> element in theme.values) {
-          List<Words> _words = [];
-          for (Map<String, dynamic> word in element.values) {
-            _words.add(
-              Words(word["english"]! as String, word["spanish"]! as String, word["french"]! as String,
-                  numberOfWords.toDouble(),
-                  comment: word["comment"] as String?, grammarRule: word["grammarRule"] as String?),
-            );
-          }
+      for (dynamic theme in fullWord.values) {
+        final List<Words> _words = [];
+        for (Map<String, dynamic> word in theme["words"]) {
+          _words.add(
+            Words(word["english"]! as String, word["spanish"]! as String, word["french"]! as String,
+                numberOfWords.toDouble(),
+                comment: word["comment"] as String?, grammarRule: word["grammarRule"] as String?),
+          );
         }
-      } 
+        _themes.add(Theme(theme["name"], _words));
+      }
       this._themes = _themes;
       return _themes;
     }
+  }
+
+  /// Return a list of themes where the name matches the names provided.
+  Future<List<Theme>> get_themes({required List<String> names}) async {
+    final all_themes = await words_with_theme;
+    return all_themes.where((element) => names.contains(element.name)).toList();
+  }
+
+  /// Returns a list of all the theme as string.
+  Future<List<String>> get theme_names async {
+    final themes = await this.words_with_theme;
+    return themes.map((e) => e.name).toList();
   }
 }
