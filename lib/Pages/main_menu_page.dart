@@ -4,18 +4,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_material_pickers/flutter_material_pickers.dart';
 import 'package:vocab/Cubits/main_menu_cubit/main_menu_cubit.dart';
 import 'package:vocab/Cubits/training_cubit/cubit/training_cubit.dart';
-import 'package:vocab/Data/Model/picker_enum_asbtract.dart';
-import 'package:vocab/Data/Model/user.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
 import 'package:vocab/Pages/Elements/button/gradient_button.dart';
 import 'package:vocab/Pages/training_page.dart';
-import '../Data/Model/language.dart';
+import 'package:vocab/Services/format_strings.dart';
 import 'Elements/language_picker/picker.dart';
 
 class MainMenuPage extends StatelessWidget {
   int nbTranslationToDo = 65;
-  final List<String> users = ["Tyméo", "Titouan"];
-  String userSelected = "Tyméo";
+  final List<String> users = ["tymeo", "titouan"];
+  final List<String> languageList = ["french", "english", "spanish"];
+  String userSelected = "tymeo";
+  final List<String> themesChosen = [];
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class MainMenuPage extends StatelessWidget {
     );
   }
 
-  Widget buildMainMenu(BuildContext context, Language originLanguage, Language outputLanguage, User currentUser) {
+  Widget buildMainMenu(BuildContext context, String originLanguage, String outputLanguage, String currentUser) {
     return Column(
       children: [
         Padding(
@@ -52,9 +52,15 @@ class MainMenuPage extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Picker("Original Language", originLanguage, (String language) {
-                selectedLanguage(context, language, original: true);
-              }),
+              Picker(
+                text: "Original Language",
+                elements: languageList,
+                currentlySelected: originLanguage,
+                onSelect: (String language) {
+                  selectedLanguage(context, language, original: true);
+                },
+                format_func: language_name_for,
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Divider(
@@ -63,9 +69,15 @@ class MainMenuPage extends StatelessWidget {
                   thickness: 1,
                 ),
               ),
-              Picker("Translation Language", outputLanguage, (String language) {
-                selectedLanguage(context, language, translation: true);
-              }),
+              Picker(
+                text: "Translation Language",
+                elements: languageList,
+                currentlySelected: outputLanguage,
+                onSelect: (String language) {
+                  selectedLanguage(context, language, translation: true);
+                },
+                format_func: language_name_for,
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Divider(
@@ -74,10 +86,16 @@ class MainMenuPage extends StatelessWidget {
                   thickness: 1,
                 ),
               ),
-              Picker("Current user", currentUser, (String user) {
-                final cubit = context.read<MainMenuCubit>();
-                cubit.currentUserSelected(user);
-              })
+              Picker(
+                text: "Current user",
+                elements: users,
+                currentlySelected: currentUser,
+                onSelect: (String user) {
+                  final cubit = context.read<MainMenuCubit>();
+                  cubit.currentUserSelected(user);
+                },
+                format_func: user_name_for,
+              ),
             ],
           ),
         ),
@@ -107,14 +125,15 @@ class MainMenuPage extends StatelessWidget {
     }
   }
 
+  /// Push the training view where the user will be asked words to translate.
   void pushTrainingView(BuildContext context) {
     final cubit = context.read<MainMenuCubit>();
 
     Navigator.of(context).push(CupertinoPageRoute(builder: (_) {
       return BlocProvider(
-        create: (context) =>
-            TrainingCubit(WordRepo(cubit.currentUser), cubit.originLanguage, cubit.outputLanguage, nbTranslationToDo),
-        child: TrainingPage(cubit.outputLanguage.nameFor(cubit.outputLanguage.currentlySelected), nbTranslationToDo),
+        create: (context) => TrainingCubit(
+            WordRepo(cubit.currentUser), cubit.originLanguage, cubit.outputLanguage, nbTranslationToDo, themesChosen),
+        child: TrainingPage(language_name_for(cubit.outputLanguage), nbTranslationToDo),
       );
     }));
   }

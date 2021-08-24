@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:vocab/Data/Model/theme.dart';
-import 'package:vocab/Data/Model/user.dart';
 import 'package:vocab/Data/Model/words.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
@@ -10,26 +9,26 @@ class WordRepo {
 
   /// The current user of the application. This is set by the user, and depending on
   /// this, the same words won't be loaded.
-  User _currentUser;
+  String _currentUser;
 
   WordRepo(this._currentUser);
 
   /// Returns a list of themes.
   ///
-  /// The theme objects contains the words.
+  /// Note : The theme objects contains the words in a property called words.
   Future<List<Theme>> get words_with_theme async {
     if (_themes != null) {
       return _themes!;
     } else {
       List<Theme> _themes = [];
 
-      final fullWord = await jsonDecode(await rootBundle.loadString("assets/${_currentUser.currentlySelected}.json"));
+      final fullWord = await jsonDecode(await rootBundle.loadString("assets/${_currentUser}.json"));
       int numberOfWords = 0;
 
-      for (Map<String, dynamic> element in fullWord.values) {
-        numberOfWords += element.length;
+      for (Map<String, dynamic> element in fullWord["themes"]) {
+        numberOfWords += element["words"]!.length as int;
       }
-      for (dynamic theme in fullWord.values) {
+      for (dynamic theme in fullWord["themes"]) {
         final List<Words> _words = [];
         for (Map<String, dynamic> word in theme["words"]) {
           _words.add(

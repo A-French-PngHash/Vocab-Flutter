@@ -1,15 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:vocab/Data/Model/language.dart';
-import 'package:vocab/Data/Model/picker_enum_asbtract.dart';
 
 /// Page that displays a list of available languages.
 ///
 /// Pops as soon as the user selects a language/hits the back button.
 class SelectFromData extends StatelessWidget {
-  PickerData data;
+  List<String> data;
+  String currentlySelected;
+  final String Function(String) format;
 
-  SelectFromData(this.data);
+  SelectFromData(
+    this.data,
+    this.currentlySelected,
+    this.format
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +27,7 @@ class SelectFromData extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            for (var data_element in data.values)
+            for (var data_element in data)
               Form(
                 child: TextButton(
                   onPressed: () {
@@ -31,9 +35,12 @@ class SelectFromData extends StatelessWidget {
                   },
                   child: Row(
                     children: [
-                      Text(data.nameFor(data_element), style: TextStyle(color: Colors.white),),
+                      Text(
+                        format(data_element),
+                        style: TextStyle(color: Colors.white),
+                      ),
                       Spacer(),
-                      if (data.currentlySelected == data_element) Icon(Icons.check),
+                      if (currentlySelected == data_element) Icon(Icons.check),
                     ],
                   ),
                 ),
