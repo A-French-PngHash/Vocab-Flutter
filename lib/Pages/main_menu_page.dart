@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_material_pickers/flutter_material_pickers.dart';
 import 'package:vocab/Cubits/main_menu_cubit/main_menu_cubit.dart';
 import 'package:vocab/Cubits/training_cubit/cubit/training_cubit.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
@@ -23,13 +22,23 @@ class MainMenuPage extends StatelessWidget {
       body: CupertinoPageScaffold(
         backgroundColor: Colors.black,
         child: BlocBuilder<MainMenuCubit, MainMenuCubitState>(builder: (context, state) {
-          return buildMainMenu(context, state.originLanguage, state.outputLanguage, state.currentUser);
+          return state.when(
+            loading: buildLoadingView,
+            menu: (String originLanguage, String outputLanguage, String currentUser, List<String> themes) {
+              return buildMainMenu(context, originLanguage, outputLanguage, currentUser, themes);
+            },
+          );
         }),
       ),
     );
   }
 
-  Widget buildMainMenu(BuildContext context, String originLanguage, String outputLanguage, String currentUser) {
+  Widget buildLoadingView() {
+    return Container();
+  }
+
+  Widget buildMainMenu(
+      BuildContext context, String originLanguage, String outputLanguage, String currentUser, List<String> themes, String currentlySelectedTheme) {
     return Column(
       children: [
         Padding(
@@ -96,6 +105,9 @@ class MainMenuPage extends StatelessWidget {
                 },
                 format_func: user_name_for,
               ),
+              Picker(text: "Themes", elements: [], currentlySelected: currentlySelectedTheme, onSelect: (String theme_selected) {
+
+              })
             ],
           ),
         ),

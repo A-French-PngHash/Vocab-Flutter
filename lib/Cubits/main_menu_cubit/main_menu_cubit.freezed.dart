@@ -16,14 +16,20 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$MainMenuCubitStateTearOff {
   const _$MainMenuCubitStateTearOff();
 
+  _Loading loading() {
+    return _Loading();
+  }
+
   _MainMenuCubitState menu(
       {required String originLanguage,
       required String outputLanguage,
-      required String currentUser}) {
+      required String currentUser,
+      required List<String> themes}) {
     return _MainMenuCubitState(
       originLanguage: originLanguage,
       outputLanguage: outputLanguage,
       currentUser: currentUser,
+      themes: themes,
     );
   }
 }
@@ -33,39 +39,35 @@ const $MainMenuCubitState = _$MainMenuCubitStateTearOff();
 
 /// @nodoc
 mixin _$MainMenuCubitState {
-  String get originLanguage => throw _privateConstructorUsedError;
-  String get outputLanguage => throw _privateConstructorUsedError;
-  String get currentUser => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String originLanguage, String outputLanguage, String currentUser)
+    required TResult Function() loading,
+    required TResult Function(String originLanguage, String outputLanguage,
+            String currentUser, List<String> themes)
         menu,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String originLanguage, String outputLanguage, String currentUser)?
+    TResult Function()? loading,
+    TResult Function(String originLanguage, String outputLanguage,
+            String currentUser, List<String> themes)?
         menu,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
     required TResult Function(_MainMenuCubitState value) menu,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
     TResult Function(_MainMenuCubitState value)? menu,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $MainMenuCubitStateCopyWith<MainMenuCubitState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -74,7 +76,6 @@ abstract class $MainMenuCubitStateCopyWith<$Res> {
   factory $MainMenuCubitStateCopyWith(
           MainMenuCubitState value, $Res Function(MainMenuCubitState) then) =
       _$MainMenuCubitStateCopyWithImpl<$Res>;
-  $Res call({String originLanguage, String outputLanguage, String currentUser});
 }
 
 /// @nodoc
@@ -85,38 +86,106 @@ class _$MainMenuCubitStateCopyWithImpl<$Res>
   final MainMenuCubitState _value;
   // ignore: unused_field
   final $Res Function(MainMenuCubitState) _then;
-
-  @override
-  $Res call({
-    Object? originLanguage = freezed,
-    Object? outputLanguage = freezed,
-    Object? currentUser = freezed,
-  }) {
-    return _then(_value.copyWith(
-      originLanguage: originLanguage == freezed
-          ? _value.originLanguage
-          : originLanguage // ignore: cast_nullable_to_non_nullable
-              as String,
-      outputLanguage: outputLanguage == freezed
-          ? _value.outputLanguage
-          : outputLanguage // ignore: cast_nullable_to_non_nullable
-              as String,
-      currentUser: currentUser == freezed
-          ? _value.currentUser
-          : currentUser // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
-abstract class _$MainMenuCubitStateCopyWith<$Res>
-    implements $MainMenuCubitStateCopyWith<$Res> {
+abstract class _$LoadingCopyWith<$Res> {
+  factory _$LoadingCopyWith(_Loading value, $Res Function(_Loading) then) =
+      __$LoadingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$LoadingCopyWithImpl<$Res>
+    extends _$MainMenuCubitStateCopyWithImpl<$Res>
+    implements _$LoadingCopyWith<$Res> {
+  __$LoadingCopyWithImpl(_Loading _value, $Res Function(_Loading) _then)
+      : super(_value, (v) => _then(v as _Loading));
+
+  @override
+  _Loading get _value => super._value as _Loading;
+}
+
+/// @nodoc
+
+class _$_Loading implements _Loading {
+  _$_Loading();
+
+  @override
+  String toString() {
+    return 'MainMenuCubitState.loading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _Loading);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function(String originLanguage, String outputLanguage,
+            String currentUser, List<String> themes)
+        menu,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function(String originLanguage, String outputLanguage,
+            String currentUser, List<String> themes)?
+        menu,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_MainMenuCubitState value) menu,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
+    TResult Function(_MainMenuCubitState value)? menu,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Loading implements MainMenuCubitState {
+  factory _Loading() = _$_Loading;
+}
+
+/// @nodoc
+abstract class _$MainMenuCubitStateCopyWith<$Res> {
   factory _$MainMenuCubitStateCopyWith(
           _MainMenuCubitState value, $Res Function(_MainMenuCubitState) then) =
       __$MainMenuCubitStateCopyWithImpl<$Res>;
-  @override
-  $Res call({String originLanguage, String outputLanguage, String currentUser});
+  $Res call(
+      {String originLanguage,
+      String outputLanguage,
+      String currentUser,
+      List<String> themes});
 }
 
 /// @nodoc
@@ -135,6 +204,7 @@ class __$MainMenuCubitStateCopyWithImpl<$Res>
     Object? originLanguage = freezed,
     Object? outputLanguage = freezed,
     Object? currentUser = freezed,
+    Object? themes = freezed,
   }) {
     return _then(_MainMenuCubitState(
       originLanguage: originLanguage == freezed
@@ -149,6 +219,10 @@ class __$MainMenuCubitStateCopyWithImpl<$Res>
           ? _value.currentUser
           : currentUser // ignore: cast_nullable_to_non_nullable
               as String,
+      themes: themes == freezed
+          ? _value.themes
+          : themes // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -159,7 +233,8 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
   _$_MainMenuCubitState(
       {required this.originLanguage,
       required this.outputLanguage,
-      required this.currentUser});
+      required this.currentUser,
+      required this.themes});
 
   @override
   final String originLanguage;
@@ -167,10 +242,12 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
   final String outputLanguage;
   @override
   final String currentUser;
+  @override
+  final List<String> themes;
 
   @override
   String toString() {
-    return 'MainMenuCubitState.menu(originLanguage: $originLanguage, outputLanguage: $outputLanguage, currentUser: $currentUser)';
+    return 'MainMenuCubitState.menu(originLanguage: $originLanguage, outputLanguage: $outputLanguage, currentUser: $currentUser, themes: $themes)';
   }
 
   @override
@@ -185,7 +262,9 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
                     .equals(other.outputLanguage, outputLanguage)) &&
             (identical(other.currentUser, currentUser) ||
                 const DeepCollectionEquality()
-                    .equals(other.currentUser, currentUser)));
+                    .equals(other.currentUser, currentUser)) &&
+            (identical(other.themes, themes) ||
+                const DeepCollectionEquality().equals(other.themes, themes)));
   }
 
   @override
@@ -193,7 +272,8 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(originLanguage) ^
       const DeepCollectionEquality().hash(outputLanguage) ^
-      const DeepCollectionEquality().hash(currentUser);
+      const DeepCollectionEquality().hash(currentUser) ^
+      const DeepCollectionEquality().hash(themes);
 
   @JsonKey(ignore: true)
   @override
@@ -203,23 +283,25 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String originLanguage, String outputLanguage, String currentUser)
+    required TResult Function() loading,
+    required TResult Function(String originLanguage, String outputLanguage,
+            String currentUser, List<String> themes)
         menu,
   }) {
-    return menu(originLanguage, outputLanguage, currentUser);
+    return menu(originLanguage, outputLanguage, currentUser, themes);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String originLanguage, String outputLanguage, String currentUser)?
+    TResult Function()? loading,
+    TResult Function(String originLanguage, String outputLanguage,
+            String currentUser, List<String> themes)?
         menu,
     required TResult orElse(),
   }) {
     if (menu != null) {
-      return menu(originLanguage, outputLanguage, currentUser);
+      return menu(originLanguage, outputLanguage, currentUser, themes);
     }
     return orElse();
   }
@@ -227,6 +309,7 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
     required TResult Function(_MainMenuCubitState value) menu,
   }) {
     return menu(this);
@@ -235,6 +318,7 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
     TResult Function(_MainMenuCubitState value)? menu,
     required TResult orElse(),
   }) {
@@ -249,15 +333,13 @@ abstract class _MainMenuCubitState implements MainMenuCubitState {
   factory _MainMenuCubitState(
       {required String originLanguage,
       required String outputLanguage,
-      required String currentUser}) = _$_MainMenuCubitState;
+      required String currentUser,
+      required List<String> themes}) = _$_MainMenuCubitState;
 
-  @override
   String get originLanguage => throw _privateConstructorUsedError;
-  @override
   String get outputLanguage => throw _privateConstructorUsedError;
-  @override
   String get currentUser => throw _privateConstructorUsedError;
-  @override
+  List<String> get themes => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$MainMenuCubitStateCopyWith<_MainMenuCubitState> get copyWith =>
       throw _privateConstructorUsedError;

@@ -6,14 +6,12 @@ import 'package:flutter/material.dart';
 /// Pops as soon as the user selects a language/hits the back button.
 class SelectFromData extends StatelessWidget {
   List<String> data;
-  String currentlySelected;
+  List<String> currentlySelected;
   final String Function(String) format;
+  final int minElements;
+  final int maxElements;
 
-  SelectFromData(
-    this.data,
-    this.currentlySelected,
-    this.format
-  );
+  SelectFromData(this.data, this.currentlySelected, this.format, this.minElements, this.maxElements);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +38,7 @@ class SelectFromData extends StatelessWidget {
                         style: TextStyle(color: Colors.white),
                       ),
                       Spacer(),
-                      if (currentlySelected == data_element) Icon(Icons.check),
+                      if (currentlySelected.contains(data_element)) Icon(Icons.check),
                     ],
                   ),
                 ),

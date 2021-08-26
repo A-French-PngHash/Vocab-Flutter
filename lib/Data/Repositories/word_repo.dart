@@ -9,7 +9,7 @@ class WordRepo {
 
   /// The current user of the application. This is set by the user, and depending on
   /// this, the same words won't be loaded.
-  String _currentUser;
+  final String _currentUser;
 
   WordRepo(this._currentUser);
 

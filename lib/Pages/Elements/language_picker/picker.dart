@@ -11,13 +11,33 @@ class Picker extends StatelessWidget {
   /// Text to be displayed on the picker preview.
   final String text;
 
-  /// Callback when the user selected its language.
-  final Function(String) onSelect;
+  /// The minimal number of element the user must select.
+  final int minElements;
+
+  /// The maximal number of element the user may select.
+  final int maxElements;
+
+  /// Callback when the user made its choice. The list of string is all the
+  /// elements he chose. Is at least the length of [minElements] and at max the
+  /// length of [maxElements].
+  final Function(List<String>) onSelect;
 
   final List<String> elements;
-  String currentlySelected;
 
-  /// Formatting function to display elements. This function will be applied to 
+  /// List of all the elements currently selected. Must be at least of length
+  /// one.
+  List<String> currentlySelected;
+
+  String get _currentlySelectedDisplayed {
+    final firstElementFormated = format(currentlySelected[0]);
+    if (currentlySelected.length == 1) {
+      return firstElementFormated;
+    } else {
+      return firstElementFormated + " +" + (currentlySelected.length - 1).toString() + " more...";
+    }
+  }
+
+  /// Formatting function to display elements. This function will be applied to
   /// every element before showing them on the screen. If it is not set in the
   /// constructor, it will return the string as is.
   String Function(String) format = (String e) => e;
@@ -27,9 +47,12 @@ class Picker extends StatelessWidget {
     required this.elements,
     required this.currentlySelected,
     required this.onSelect,
+    required this.minElements,
+    required this.maxElements,
     String Function(String)? format_func,
   }) {
-    if (format_func != null) { // The format func parameter is optional.
+    if (format_func != null) {
+      // The format func parameter is optional.
       format = format_func;
     }
   }
@@ -38,7 +61,7 @@ class Picker extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () async {
-        String? chosenData = await Navigator.of(context)
+        List<String>? chosenData = await Navigator.of(context)
             .push(CupertinoPageRoute(builder: (context) => SelectFromData(elements, currentlySelected, format)));
         if (chosenData == null) {
           onSelect(currentlySelected);
@@ -54,7 +77,7 @@ class Picker extends StatelessWidget {
           ), // Text describing what the picker is selecting.
           Spacer(),
           Text(
-            format(this.currentlySelected),
+            _currentlySelectedDisplayed,
             style: TextStyle(color: Color(0xFF94949B), fontSize: 17),
           ),
           Icon(
