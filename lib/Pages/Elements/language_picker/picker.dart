@@ -28,7 +28,9 @@ class Picker extends StatelessWidget {
       required this.format,
       required this.description,
       required this.minElements,
-      required this.maxElements});
+      required this.maxElements}) {
+    print("Creatin picker : $description");
+  }
 
   @override
   Widget build(BuildContext context) {

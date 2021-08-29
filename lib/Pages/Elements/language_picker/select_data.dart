@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vocab/Cubits/main_menu_cubit/main_menu_cubit.dart';
 import 'package:vocab/Cubits/picker_cubit/picker_cubit.dart';
 import 'package:vocab/Pages/Elements/language_picker/picker.dart';
 
@@ -22,7 +23,9 @@ class SelectFromData extends StatelessWidget {
             onPressed: () {
               final cubit = context.read<PickerCubit>();
               cubit.popView();
-              Navigator.of(context).pop();
+              if (cubit.isPresented == false) {
+                Navigator.of(context).pop(cubit.currentlySelected);
+              }
             },
           ),
         ),

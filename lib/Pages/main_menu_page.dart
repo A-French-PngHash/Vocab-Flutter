@@ -29,6 +29,7 @@ class MainMenuPage extends StatelessWidget {
         backgroundColor: Colors.black,
         child: BlocBuilder<MainMenuCubit, MainMenuCubitState>(
           builder: (context, state) {
+            print("builder : $state");
             return state.when(
               loading: buildLoadingView,
               menu: (List<String> themes, List<String> currentlySelectedTheme, String originLanguage,
@@ -37,9 +38,6 @@ class MainMenuPage extends StatelessWidget {
                     context, themes, currentlySelectedTheme, originLanguage, outputLanguage, currentUser);
               },
             );
-          },
-          buildWhen: (_, __) {
-            return true;
           },
         ),
       ),
@@ -52,6 +50,8 @@ class MainMenuPage extends StatelessWidget {
 
   Widget buildMainMenu(BuildContext context, List<String> themes, List<String> currentlySelectedTheme,
       String originLanguage, String outputLanguage, String currentUser) {
+
+    print(currentlySelectedTheme);
     if (currentlySelectedTheme.length == 0) {
       // If there is no themes currently selected
       currentlySelectedTheme = [themes[0]]; // Set the currently selected themes to the first element of themes.

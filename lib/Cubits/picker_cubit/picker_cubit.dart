@@ -54,6 +54,8 @@ class PickerCubit extends Cubit<PickerState> {
 
   void popView() {
     this.isPresented = false;
+    currentlySelectedFormated = currentlySelected.map((e) => _format(e)).toList();
+
     _emitState();
   }
 
