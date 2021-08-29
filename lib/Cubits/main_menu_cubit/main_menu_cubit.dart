@@ -8,10 +8,17 @@ part 'main_menu_state.dart';
 part 'main_menu_cubit.freezed.dart';
 
 class MainMenuCubit extends Cubit<MainMenuCubitState> {
-  String originLanguage = "french";
-  String outputLanguage = "english";
   String currentUser = "tymeo";
-  List<String> themes = [];
+  List<String> themes = ["Loading..."];
+
+  /// Original language. Default value.
+  String originLanguage = "french";
+
+  /// Output language. Default value.
+  String outputLanguage = "english";
+
+  /// List of themes chosen by the user.
+  List<String> themesChosen = [];
 
   MainMenuCubit() : super(MainMenuCubitState.loading()) {
     refreshThemes().then((value) => emitState());
@@ -20,12 +27,7 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   /// Refresh [themes] by fetching them from a new wordRepo instance.
   Future<void> refreshThemes() async {
     final wordRepo = WordRepo(this.currentUser);
-    themes = await wordRepo.theme_names;
-  }
-
-  void originLanguageSelected(String language) {
-    this.originLanguage = language;
-    emitState();
+    this.themes = await wordRepo.theme_names;
   }
 
   void outputLanguageSelected(String language) {
@@ -33,17 +35,31 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
     emitState();
   }
 
-  void currentUserSelected(String user) {
+  void originLanguageSelected(String language) {
+    this.originLanguage = language;
+    emitState();
+  }
+
+  void currentUserSelected(String user) async {
     if (this.currentUser != user) {
       this.currentUser = user;
-      refreshThemes();
+      await refreshThemes();
       emitState();
     }
+  }
+
+  void themesSelected(List<String> themes) {
+    this.themesChosen = themes;
+    emitState();
   }
 
   /// Emit the current state by using the data available in the class.
   void emitState() {
     emit(MainMenuCubitState.menu(
-        originLanguage: originLanguage, outputLanguage: outputLanguage, currentUser: currentUser, themes: themes));
+        themes: this.themes,
+        currentUser: currentUser,
+        currentlySelectedTheme: themesChosen,
+        originLanguage: originLanguage,
+        outputLanguage: outputLanguage));
   }
 }

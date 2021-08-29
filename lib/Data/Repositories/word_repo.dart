@@ -28,7 +28,7 @@ class WordRepo {
       for (Map<String, dynamic> element in fullWord["themes"]) {
         numberOfWords += element["words"]!.length as int;
       }
-      for (dynamic theme in fullWord["themes"]) {
+      for (Map<String, dynamic> theme in fullWord["themes"]) {
         final List<Words> _words = [];
         for (Map<String, dynamic> word in theme["words"]) {
           _words.add(

@@ -16,13 +16,6 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$PickerStateTearOff {
   const _$PickerStateTearOff();
 
-  _Initial initial(String description_text, String currentlySelected) {
-    return _Initial(
-      description_text,
-      currentlySelected,
-    );
-  }
-
   _Presented presented(List<String> elements, List<String> currentlySelected) {
     return _Presented(
       elements,
@@ -36,10 +29,11 @@ const $PickerState = _$PickerStateTearOff();
 
 /// @nodoc
 mixin _$PickerState {
+  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get currentlySelected => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String description_text, String currentlySelected)
-        initial,
     required TResult Function(
             List<String> elements, List<String> currentlySelected)
         presented,
@@ -47,8 +41,6 @@ mixin _$PickerState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String description_text, String currentlySelected)?
-        initial,
     TResult Function(List<String> elements, List<String> currentlySelected)?
         presented,
     required TResult orElse(),
@@ -56,16 +48,18 @@ mixin _$PickerState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
     required TResult Function(_Presented value) presented,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
     TResult Function(_Presented value)? presented,
     required TResult orElse(),
   }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $PickerStateCopyWith<PickerState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -74,6 +68,7 @@ abstract class $PickerStateCopyWith<$Res> {
   factory $PickerStateCopyWith(
           PickerState value, $Res Function(PickerState) then) =
       _$PickerStateCopyWithImpl<$Res>;
+  $Res call({List<String> elements, List<String> currentlySelected});
 }
 
 /// @nodoc
@@ -83,146 +78,31 @@ class _$PickerStateCopyWithImpl<$Res> implements $PickerStateCopyWith<$Res> {
   final PickerState _value;
   // ignore: unused_field
   final $Res Function(PickerState) _then;
-}
-
-/// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
-  $Res call({String description_text, String currentlySelected});
-}
-
-/// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$PickerStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
-
-  @override
-  _Initial get _value => super._value as _Initial;
 
   @override
   $Res call({
-    Object? description_text = freezed,
+    Object? elements = freezed,
     Object? currentlySelected = freezed,
   }) {
-    return _then(_Initial(
-      description_text == freezed
-          ? _value.description_text
-          : description_text // ignore: cast_nullable_to_non_nullable
-              as String,
-      currentlySelected == freezed
+    return _then(_value.copyWith(
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      currentlySelected: currentlySelected == freezed
           ? _value.currentlySelected
           : currentlySelected // ignore: cast_nullable_to_non_nullable
-              as String,
+              as List<String>,
     ));
   }
 }
 
 /// @nodoc
-
-class _$_Initial implements _Initial {
-  const _$_Initial(this.description_text, this.currentlySelected);
-
-  @override
-  final String description_text;
-  @override
-  final String currentlySelected;
-
-  @override
-  String toString() {
-    return 'PickerState.initial(description_text: $description_text, currentlySelected: $currentlySelected)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _Initial &&
-            (identical(other.description_text, description_text) ||
-                const DeepCollectionEquality()
-                    .equals(other.description_text, description_text)) &&
-            (identical(other.currentlySelected, currentlySelected) ||
-                const DeepCollectionEquality()
-                    .equals(other.currentlySelected, currentlySelected)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(description_text) ^
-      const DeepCollectionEquality().hash(currentlySelected);
-
-  @JsonKey(ignore: true)
-  @override
-  _$InitialCopyWith<_Initial> get copyWith =>
-      __$InitialCopyWithImpl<_Initial>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String description_text, String currentlySelected)
-        initial,
-    required TResult Function(
-            List<String> elements, List<String> currentlySelected)
-        presented,
-  }) {
-    return initial(description_text, currentlySelected);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String description_text, String currentlySelected)?
-        initial,
-    TResult Function(List<String> elements, List<String> currentlySelected)?
-        presented,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(description_text, currentlySelected);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Presented value) presented,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Presented value)? presented,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements PickerState {
-  const factory _Initial(String description_text, String currentlySelected) =
-      _$_Initial;
-
-  String get description_text => throw _privateConstructorUsedError;
-  String get currentlySelected => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  _$InitialCopyWith<_Initial> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$PresentedCopyWith<$Res> {
+abstract class _$PresentedCopyWith<$Res> implements $PickerStateCopyWith<$Res> {
   factory _$PresentedCopyWith(
           _Presented value, $Res Function(_Presented) then) =
       __$PresentedCopyWithImpl<$Res>;
+  @override
   $Res call({List<String> elements, List<String> currentlySelected});
 }
 
@@ -294,8 +174,6 @@ class _$_Presented implements _Presented {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String description_text, String currentlySelected)
-        initial,
     required TResult Function(
             List<String> elements, List<String> currentlySelected)
         presented,
@@ -306,8 +184,6 @@ class _$_Presented implements _Presented {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String description_text, String currentlySelected)?
-        initial,
     TResult Function(List<String> elements, List<String> currentlySelected)?
         presented,
     required TResult orElse(),
@@ -321,7 +197,6 @@ class _$_Presented implements _Presented {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
     required TResult Function(_Presented value) presented,
   }) {
     return presented(this);
@@ -330,7 +205,6 @@ class _$_Presented implements _Presented {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
     TResult Function(_Presented value)? presented,
     required TResult orElse(),
   }) {
@@ -345,8 +219,11 @@ abstract class _Presented implements PickerState {
   const factory _Presented(
       List<String> elements, List<String> currentlySelected) = _$_Presented;
 
+  @override
   List<String> get elements => throw _privateConstructorUsedError;
+  @override
   List<String> get currentlySelected => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$PresentedCopyWith<_Presented> get copyWith =>
       throw _privateConstructorUsedError;
