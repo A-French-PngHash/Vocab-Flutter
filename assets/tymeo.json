@@ -1,78 +1,8 @@
 {
     "themes": [
         {
-            "name": "mots",
+            "name": "CM2",
             "words": [
-                {
-                    "english": "from...to",
-                    "french": "de... \u00e0",
-                    "spanish": ""
-                },
-                {
-                    "english": "famous",
-                    "french": "c\u00e9l\u00e8bre",
-                    "spanish": ""
-                },
-                {
-                    "english": "who?",
-                    "french": "qui?",
-                    "spanish": ""
-                },
-                {
-                    "english": "spaces",
-                    "french": "espaces",
-                    "spanish": ""
-                },
-                {
-                    "english": "treasure hunt",
-                    "french": "chasse au tr\u00e9sor",
-                    "spanish": ""
-                },
-                {
-                    "english": "to hunt",
-                    "french": "chasser",
-                    "spanish": ""
-                },
-                {
-                    "english": "official",
-                    "french": "officiel",
-                    "spanish": ""
-                },
-                {
-                    "english": "new year's day",
-                    "french": "nouvel an",
-                    "spanish": ""
-                },
-                {
-                    "english": "the recording",
-                    "french": "l'enregistrement",
-                    "spanish": ""
-                },
-                {
-                    "english": "to record",
-                    "french": "enregistrer",
-                    "spanish": ""
-                },
-                {
-                    "english": "too",
-                    "french": "aussi",
-                    "spanish": ""
-                },
-                {
-                    "english": "too ",
-                    "french": "trop",
-                    "spanish": ""
-                },
-                {
-                    "english": "to write",
-                    "french": "\u00e9crire",
-                    "spanish": ""
-                },
-                {
-                    "english": "a picture",
-                    "french": "une image",
-                    "spanish": ""
-                },
                 {
                     "english": "first",
                     "french": "premier",
@@ -99,64 +29,8 @@
                     "spanish": ""
                 },
                 {
-                    "english": "to mix",
-                    "french": "m\u00e9langer",
-                    "spanish": ""
-                },
-                {
-                    "english": "can",
-                    "french": "pouvoir",
-                    "spanish": ""
-                },
-                {
-                    "english": "a date",
-                    "french": "une date",
-                    "spanish": ""
-                },
-                {
-                    "english": "to read",
-                    "french": "lire",
-                    "spanish": ""
-                },
-                {
-                    "english": "to celebrate",
-                    "french": "f\u00eater",
-                    "spanish": ""
-                },
-                {
-                    "english": "a celebration",
-                    "french": "une f\u00eate",
-                    "spanish": "",
-                    "comment": "officielle"
-                },
-                {
-                    "english": "to be",
-                    "french": "\u00eatre",
-                    "spanish": ""
-                },
-                {
-                    "english": "ireland",
-                    "french": "irlande",
-                    "spanish": ""
-                },
-                {
-                    "english": "irish",
-                    "french": "irlandais",
-                    "spanish": ""
-                },
-                {
                     "english": "a day",
                     "french": "un jour",
-                    "spanish": ""
-                },
-                {
-                    "english": "what is that?",
-                    "french": "qu'est ce que c'est?",
-                    "spanish": ""
-                },
-                {
-                    "english": "to escape",
-                    "french": "s'\u00e9chapper",
                     "spanish": ""
                 },
                 {
@@ -215,18 +89,256 @@
                     "spanish": ""
                 },
                 {
-                    "english": "a week",
-                    "french": "une semaine",
+                    "english": "a month",
+                    "french": "un mois",
+                    "spanish": ""
+                },
+                {
+                    "english": "a head",
+                    "french": "une t\u00eate",
+                    "spanish": ""
+                },
+                {
+                    "english": "year",
+                    "french": "ann\u00e9e",
+                    "spanish": ""
+                },
+                {
+                    "english": "the days of the week",
+                    "french": "les jours de la semaine",
+                    "spanish": ""
+                },
+                {
+                    "english": "monday",
+                    "french": "lundi",
+                    "spanish": ""
+                },
+                {
+                    "english": "tuesday",
+                    "french": "mardi",
+                    "spanish": ""
+                },
+                {
+                    "english": "wednesday",
+                    "french": "mercredi",
+                    "spanish": ""
+                },
+                {
+                    "english": "thursday",
+                    "french": "jeudi",
+                    "spanish": ""
+                },
+                {
+                    "english": "friday",
+                    "french": "vendredi",
+                    "spanish": ""
+                },
+                {
+                    "english": "saturday",
+                    "french": "samedi",
+                    "spanish": ""
+                },
+                {
+                    "english": "sunday",
+                    "french": "dimanche",
+                    "spanish": ""
+                },
+                {
+                    "english": "the months of the year",
+                    "french": "les mois de l'ann\u00e9e",
+                    "spanish": ""
+                },
+                {
+                    "english": "january",
+                    "french": "janvier",
+                    "spanish": ""
+                },
+                {
+                    "english": "february",
+                    "french": "f\u00e9vrier",
+                    "spanish": ""
+                },
+                {
+                    "english": "march",
+                    "french": "mars",
+                    "spanish": ""
+                },
+                {
+                    "english": "april",
+                    "french": "avril",
+                    "spanish": ""
+                },
+                {
+                    "english": "may",
+                    "french": "mai",
+                    "spanish": ""
+                },
+                {
+                    "english": "june",
+                    "french": "juin",
+                    "spanish": ""
+                },
+                {
+                    "english": "july",
+                    "french": "juillet",
+                    "spanish": ""
+                },
+                {
+                    "english": "august",
+                    "french": "aout",
+                    "spanish": ""
+                },
+                {
+                    "english": "september",
+                    "french": "septembre",
+                    "spanish": ""
+                },
+                {
+                    "english": "october",
+                    "french": "octobre",
+                    "spanish": ""
+                },
+                {
+                    "english": "november",
+                    "french": "novembre",
+                    "spanish": ""
+                },
+                {
+                    "english": "december",
+                    "french": "d\u00e9cembre",
+                    "spanish": ""
+                },
+                {
+                    "english": "age",
+                    "french": "\u00e2ge",
+                    "spanish": ""
+                },
+                {
+                    "english": "good bye",
+                    "french": "au revoir",
+                    "spanish": ""
+                },
+                {
+                    "english": "good afternoon",
+                    "french": "bon apr\u00e8s-midi",
+                    "spanish": ""
+                },
+                {
+                    "english": "good evening",
+                    "french": "bonsoir",
+                    "spanish": ""
+                },
+                {
+                    "english": "good day",
+                    "french": "bonjour",
+                    "spanish": ""
+                }
+                
+            ]
+        },
+        {
+            "name" : "mots connus",
+            "words" : [
+                {
+                    "english": "spaces",
+                    "french": "espaces",
+                    "spanish": ""
+                },
+                {
+                    "english": "from...to",
+                    "french": "de... \u00e0",
+                    "spanish": ""
+                },
+                {
+                    "english": "famous",
+                    "french": "c\u00e9l\u00e8bre",
+                    "spanish": ""
+                },
+                {
+                    "english": "official",
+                    "french": "officiel",
+                    "spanish": ""
+                },
+                {
+                    "english": "the recording",
+                    "french": "l'enregistrement",
+                    "spanish": ""
+                },
+                {
+                    "english": "to record",
+                    "french": "enregistrer",
+                    "spanish": ""
+                },
+                {
+                    "english": "too",
+                    "french": "aussi",
+                    "spanish": ""
+                },
+                {
+                    "english": "to write",
+                    "french": "\u00e9crire",
+                    "spanish": ""
+                },
+                {
+                    "english": "a picture",
+                    "french": "une image",
+                    "spanish": ""
+                },
+                
+                {
+                    "english": "to mix",
+                    "french": "m\u00e9langer",
+                    "spanish": ""
+                },
+                {
+                    "english": "can",
+                    "french": "pouvoir",
+                    "spanish": ""
+                },
+                {
+                    "english": "a date",
+                    "french": "une date",
+                    "spanish": ""
+                },
+                {
+                    "english": "to read",
+                    "french": "lire",
+                    "spanish": ""
+                },
+                {
+                    "english": "to celebrate",
+                    "french": "f\u00eater",
+                    "spanish": ""
+                },
+                {
+                    "english": "a celebration",
+                    "french": "une f\u00eate",
+                    "spanish": "",
+                    "comment": "officielle"
+                },
+                {
+                    "english": "to be",
+                    "french": "\u00eatre",
+                    "spanish": ""
+                },
+                {
+                    "english": "to escape",
+                    "french": "s'\u00e9chapper",
+                    "spanish": ""
+                },
+                {
+                    "english": "a treasure",
+                    "french": "un tr\u00e9sor",
+                    "spanish": ""
+                },
+                {
+                    "english": "beautiful",
+                    "french": "joli",
                     "spanish": ""
                 },
                 {
                     "english": "to identify",
                     "french": "identifier",
-                    "spanish": ""
-                },
-                {
-                    "english": "a month",
-                    "french": "un mois",
                     "spanish": ""
                 },
                 {
@@ -241,21 +353,6 @@
                     "grammarRule": "DON'T est la contraction de DO NOT. Il s'utilise dans les phrases n\u00e9gatives. Attention! A la troisi\u00e8me personne du singulier, on dit HE DOESN'T UNDERSTAND."
                 },
                 {
-                    "english": "a treasure",
-                    "french": "un tr\u00e9sor",
-                    "spanish": ""
-                },
-                {
-                    "english": "beautiful",
-                    "french": "joli",
-                    "spanish": ""
-                },
-                {
-                    "english": "to hide",
-                    "french": "cacher",
-                    "spanish": ""
-                },
-                {
                     "english": "a map",
                     "french": "une carte",
                     "spanish": ""
@@ -268,16 +365,6 @@
                 {
                     "english": "to translate",
                     "french": "traduire",
-                    "spanish": ""
-                },
-                {
-                    "english": "a rainbow",
-                    "french": "un arc en ciel",
-                    "spanish": ""
-                },
-                {
-                    "english": "a mountain",
-                    "french": "une montagne",
                     "spanish": ""
                 },
                 {
@@ -306,11 +393,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "a head",
-                    "french": "une t\u00eate",
-                    "spanish": ""
-                },
-                {
                     "english": "a game",
                     "french": "un jeu",
                     "spanish": ""
@@ -318,31 +400,6 @@
                 {
                     "english": "a sentence",
                     "french": "une phrase",
-                    "spanish": ""
-                },
-                {
-                    "english": "the seasons ",
-                    "french": "les saisons",
-                    "spanish": ""
-                },
-                {
-                    "english": "winter ",
-                    "french": "hiver",
-                    "spanish": ""
-                },
-                {
-                    "english": "spring",
-                    "french": "printemps",
-                    "spanish": ""
-                },
-                {
-                    "english": "automn",
-                    "french": "automne",
-                    "spanish": ""
-                },
-                {
-                    "english": "summer",
-                    "french": "\u00e9t\u00e9",
                     "spanish": ""
                 },
                 {
@@ -358,11 +415,6 @@
                 {
                     "english": "a poem",
                     "french": "un po\u00e8me",
-                    "spanish": ""
-                },
-                {
-                    "english": "to swim",
-                    "french": "nager",
                     "spanish": ""
                 },
                 {
@@ -382,11 +434,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "want   ",
-                    "french": "vouloir",
-                    "spanish": ""
-                },
-                {
                     "english": "to miss",
                     "french": "manquer",
                     "spanish": ""
@@ -399,23 +446,6 @@
                 {
                     "english": "to look for",
                     "french": "chercher",
-                    "spanish": ""
-                },
-                {
-                    "english": "there is",
-                    "french": "il y a ",
-                    "spanish": "",
-                    "comment": "suivi d'un nom au singulier"
-                },
-                {
-                    "english": "there are",
-                    "french": "il y a",
-                    "spanish": "",
-                    "comment": "suivi d'un nom au pluriel"
-                },
-                {
-                    "english": "to ask",
-                    "french": "demander",
                     "spanish": ""
                 },
                 {
@@ -439,28 +469,13 @@
                     "spanish": ""
                 },
                 {
-                    "english": "where?",
-                    "french": "o\u00f9?",
-                    "spanish": ""
-                },
-                {
                     "english": "to know",
                     "french": "savoir",
                     "spanish": ""
                 },
                 {
-                    "english": "year",
-                    "french": "ann\u00e9e",
-                    "spanish": ""
-                },
-                {
                     "english": "but",
                     "french": "mais",
-                    "spanish": ""
-                },
-                {
-                    "english": "christmas day",
-                    "french": "nooel",
                     "spanish": ""
                 },
                 {
@@ -536,18 +551,8 @@
                     "spanish": ""
                 },
                 {
-                    "english": "a square",
-                    "french": "un carr\u00e9",
-                    "spanish": ""
-                },
-                {
                     "english": "to drink",
                     "french": "boire",
-                    "spanish": ""
-                },
-                {
-                    "english": "a partner",
-                    "french": "un partenaire",
                     "spanish": ""
                 },
                 {
@@ -566,113 +571,8 @@
                     "spanish": ""
                 },
                 {
-                    "english": "the days of the week",
-                    "french": "les jours de la semaine",
-                    "spanish": ""
-                },
-                {
-                    "english": "monday",
-                    "french": "lundi",
-                    "spanish": ""
-                },
-                {
-                    "english": "tuesday",
-                    "french": "mardi",
-                    "spanish": ""
-                },
-                {
-                    "english": "wednesday",
-                    "french": "mercredi",
-                    "spanish": ""
-                },
-                {
-                    "english": "thursday",
-                    "french": "jeudi",
-                    "spanish": ""
-                },
-                {
-                    "english": "friday",
-                    "french": "vendredi",
-                    "spanish": ""
-                },
-                {
-                    "english": "saturday",
-                    "french": "samedi",
-                    "spanish": ""
-                },
-                {
-                    "english": "sunday",
-                    "french": "dimanche",
-                    "spanish": ""
-                },
-                {
                     "english": "a state",
                     "french": "un \u00e9tat",
-                    "spanish": ""
-                },
-                {
-                    "english": "the months of the year",
-                    "french": "les mois de l'ann\u00e9e",
-                    "spanish": ""
-                },
-                {
-                    "english": "january",
-                    "french": "janvier",
-                    "spanish": ""
-                },
-                {
-                    "english": "february",
-                    "french": "f\u00e9vrier",
-                    "spanish": ""
-                },
-                {
-                    "english": "march",
-                    "french": "mars",
-                    "spanish": ""
-                },
-                {
-                    "english": "april",
-                    "french": "avril",
-                    "spanish": ""
-                },
-                {
-                    "english": "may",
-                    "french": "mai",
-                    "spanish": ""
-                },
-                {
-                    "english": "june",
-                    "french": "juin",
-                    "spanish": ""
-                },
-                {
-                    "english": "july",
-                    "french": "juillet",
-                    "spanish": ""
-                },
-                {
-                    "english": "august",
-                    "french": "aout",
-                    "spanish": ""
-                },
-                {
-                    "english": "september",
-                    "french": "septembre",
-                    "spanish": ""
-                },
-                {
-                    "english": "october",
-                    "french": "octobre",
-                    "spanish": ""
-                },
-                {
-                    "english": "november",
-                    "french": "novembre",
-                    "spanish": ""
-                },
-                {
-                    "english": "december",
-                    "french": "d\u00e9cembre",
                     "spanish": ""
                 },
                 {
@@ -691,23 +591,8 @@
                     "spanish": ""
                 },
                 {
-                    "english": "age",
-                    "french": "\u00e2ge",
-                    "spanish": ""
-                },
-                {
-                    "english": "also",
-                    "french": "aussi",
-                    "spanish": ""
-                },
-                {
                     "english": "a river",
                     "french": "une rivi\u00e8re",
-                    "spanish": ""
-                },
-                {
-                    "english": "why?",
-                    "french": "pourquoi?",
                     "spanish": ""
                 },
                 {
@@ -721,12 +606,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "how many?",
-                    "french": "combien?",
-                    "spanish": "",
-                    "grammarRule": "HOW MANY est suivi d'un nom au pluriel. HOW MANY BOOKS do you have?"
-                },
-                {
                     "english": "little",
                     "french": "petit",
                     "spanish": ""
@@ -735,17 +614,6 @@
                     "english": "to count",
                     "french": "compter",
                     "spanish": ""
-                },
-                {
-                    "english": "partly",
-                    "french": "partiellement",
-                    "spanish": ""
-                },
-                {
-                    "english": "to have",
-                    "french": "avoir",
-                    "spanish": "",
-                    "grammarRule": "I have, you have, he/she/it HAS, we have, you have, they have"
                 },
                 {
                     "english": "the right answer",
@@ -770,17 +638,8 @@
                 {
                     "english": "to tell",
                     "french": "dire",
-                    "spanish": ""
-                },
-                {
-                    "english": "to say",
-                    "french": "dire",
-                    "spanish": ""
-                },
-                {
-                    "english": "to choose",
-                    "french": "choisir",
-                    "spanish": ""
+                    "spanish": "",
+                    "comment": "synonyme de to say"
                 },
                 {
                     "english": "with",
@@ -809,11 +668,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "good bye",
-                    "french": "au revoir",
-                    "spanish": ""
-                },
-                {
                     "english": "i'm lost",
                     "french": "je suis perdu",
                     "spanish": ""
@@ -826,44 +680,6 @@
                 {
                     "english": "a star",
                     "french": "une c\u00e9l\u00e9brit\u00e9",
-                    "spanish": ""
-                },
-                {
-                    "english": "a textbook",
-                    "french": "un livre d'\u00e9cole",
-                    "spanish": ""
-                },
-                {
-                    "english": "a school uniform",
-                    "french": "un uniforme scolaire",
-                    "spanish": ""
-                },
-                {
-                    "english": "a uniform",
-                    "french": "un uniforme",
-                    "spanish": "",
-                    "grammarRule": "Le U se prononce 'YOU' et on met A devant (au lieu de an) - Idem pour A university"
-                },
-                {
-                    "english": "an hour",
-                    "french": "une heure",
-                    "spanish": "",
-                    "grammarRule": "Le H \u00e9tant muet, on dit AN hour (et non a hour)"
-                },
-                {
-                    "english": "a university",
-                    "french": "une universit\u00e9",
-                    "spanish": "",
-                    "grammarRule": "Le U se prononce 'YOU' et on met A devant (au lieu de an) - Idem pour A uniform"
-                },
-                {
-                    "english": "a lesson",
-                    "french": "une le\u00e7on",
-                    "spanish": ""
-                },
-                {
-                    "english": "a football pitch",
-                    "french": "un terrain de football",
                     "spanish": ""
                 },
                 {
@@ -884,17 +700,8 @@
                 {
                     "english": "pretty",
                     "french": "belle",
-                    "spanish": ""
-                },
-                {
-                    "english": "good afternoon",
-                    "french": "bon apr\u00e8s-midi",
-                    "spanish": ""
-                },
-                {
-                    "english": "to underline",
-                    "french": "souligner",
-                    "spanish": ""
+                    "spanish": "",
+                    "comment": "synonyme de beautiful et nice"
                 },
                 {
                     "english": "to meet",
@@ -902,24 +709,16 @@
                     "spanish": ""
                 },
                 {
-                    "english": "to answer",
-                    "french": "r\u00e9pondre",
-                    "spanish": ""
-                },
-                {
-                    "english": "how?",
-                    "french": "comment?",
-                    "spanish": ""
-                },
-                {
                     "english": "afraid",
                     "french": "effray\u00e9",
-                    "spanish": ""
+                    "spanish": "",
+                    "comment": "synonyme de scared"
                 },
                 {
                     "english": "scared",
                     "french": "effray\u00e9",
-                    "spanish": ""
+                    "spanish": "",
+                    "comment": "synonyme de afraid"
                 },
                 {
                     "english": "in",
@@ -934,37 +733,6 @@
                 {
                     "english": "to describe",
                     "french": "d\u00e9crire",
-                    "spanish": ""
-                },
-                {
-                    "english": "a library",
-                    "french": "une biblioth\u00e8que",
-                    "spanish": "",
-                    "grammarRule": "Au pluriel, le Y devient IES. LIBRARIES"
-                },
-                {
-                    "english": "good evening",
-                    "french": "bonsoir",
-                    "spanish": ""
-                },
-                {
-                    "english": "i like swimming",
-                    "french": "j'aime nager",
-                    "spanish": ""
-                },
-                {
-                    "english": "a cantine",
-                    "french": "une cantine",
-                    "spanish": ""
-                },
-                {
-                    "english": "pupils",
-                    "french": "\u00e9l\u00e8ves",
-                    "spanish": ""
-                },
-                {
-                    "english": "noon",
-                    "french": "midi",
                     "spanish": ""
                 },
                 {
@@ -983,11 +751,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "morning break",
-                    "french": "pause du matin",
-                    "spanish": ""
-                },
-                {
                     "english": "because",
                     "french": "parce que",
                     "spanish": ""
@@ -1001,18 +764,6 @@
                     "english": "new",
                     "french": "nouveau",
                     "spanish": ""
-                },
-                {
-                    "english": "i have got",
-                    "french": "j'ai",
-                    "spanish": "",
-                    "grammarRule": "Le mot GOT indique la possession. HAVE YOU GOT A RULER? YES, I HAVE GOT A RULER - NO, I HAVEN'T GOT A RULER - Attention, on dit HE HAS GOT - HE HASN'T GOT \u00e0 la 3\u00e8me personne du singulier."
-                },
-                {
-                    "english": "i haven't got",
-                    "french": "je n'ai pas",
-                    "spanish": "",
-                    "grammarRule": "Le mot GOT indique la possession. HAVEN'T = contraction de HAVE NOT. HAVE YOU GOT A RULER? YES, I HAVE GOT A RULER - NO, I HAVEN'T GOT A RULER - Attention, on dit HE HAS GOT - HE HASN'T GOT \u00e0 la 3\u00e8me personne du singulier."
                 },
                 {
                     "english": "feelings",
@@ -1030,18 +781,8 @@
                     "spanish": ""
                 },
                 {
-                    "english": "i'm worried",
-                    "french": "je suis inquiet",
-                    "spanish": ""
-                },
-                {
                     "english": "a swimming pool",
                     "french": "une piscine",
-                    "spanish": ""
-                },
-                {
-                    "english": "to sing",
-                    "french": "chanter",
                     "spanish": ""
                 },
                 {
@@ -1060,23 +801,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "afternoon break",
-                    "french": "pause de l'apr\u00e8s-midi",
-                    "spanish": ""
-                },
-                {
-                    "english": "to watch tv",
-                    "french": "regarder la tv",
-                    "spanish": "",
-                    "grammarRule": "les verbes se terminant par CH, SH, SS ou O, prendront ES \u00e0 la 3\u00e8me personne du singulier. HE WATCHES TV."
-                },
-                {
-                    "english": "to watch a video",
-                    "french": "regarder une vid\u00e9o",
-                    "spanish": "",
-                    "grammarRule": "les verbes se terminant par CH, SH, SS ou O, prendront ES \u00e0 la 3\u00e8me personne du singulier. HE WATCHES a video."
-                },
-                {
                     "english": "again",
                     "french": "encore",
                     "spanish": ""
@@ -1084,26 +808,6 @@
                 {
                     "english": "to be born",
                     "french": "\u00eatre n\u00e9",
-                    "spanish": ""
-                },
-                {
-                    "english": "middle school",
-                    "french": "coll\u00e8ge",
-                    "spanish": ""
-                },
-                {
-                    "english": "together",
-                    "french": "ensemble",
-                    "spanish": ""
-                },
-                {
-                    "english": "a workbook",
-                    "french": "un livre d'exercice",
-                    "spanish": ""
-                },
-                {
-                    "english": "students",
-                    "french": "\u00e9tudiants",
                     "spanish": ""
                 },
                 {
@@ -1142,23 +846,8 @@
                     "spanish": ""
                 },
                 {
-                    "english": "the facilities",
-                    "french": "les installations",
-                    "spanish": ""
-                },
-                {
-                    "english": "to highlight",
-                    "french": "surligner",
-                    "spanish": ""
-                },
-                {
                     "english": "for",
                     "french": "pour",
-                    "spanish": ""
-                },
-                {
-                    "english": "to put up your hand",
-                    "french": "lever ta main",
                     "spanish": ""
                 },
                 {
@@ -1189,34 +878,8 @@
                     "grammarRule": "les verbes se terminant par CH, SH, SS ou O, prendront ES \u00e0 la 3\u00e8me personne du singulier. HE GUESSES."
                 },
                 {
-                    "english": "forever",
-                    "french": "pour toujours",
-                    "spanish": ""
-                },
-                {
-                    "english": "to try",
-                    "french": "essayer",
-                    "spanish": "",
-                    "grammarRule": "A la 3\u00e8me personne du singulier, le Y se transforme en IES. HE TRIES"
-                },
-                {
-                    "english": "all",
-                    "french": "tous",
-                    "spanish": ""
-                },
-                {
                     "english": "the side",
                     "french": "le c\u00f4t\u00e9",
-                    "spanish": ""
-                },
-                {
-                    "english": "to check",
-                    "french": "v\u00e9rifier",
-                    "spanish": ""
-                },
-                {
-                    "english": "to borrow",
-                    "french": "emprunter",
                     "spanish": ""
                 },
                 {
@@ -1230,30 +893,14 @@
                     "spanish": ""
                 },
                 {
-                    "english": "or",
-                    "french": "ou",
-                    "spanish": ""
-                },
-                {
                     "english": "everything",
                     "french": "tout",
-                    "spanish": ""
-                },
-                {
-                    "english": "each",
-                    "french": "chaque",
                     "spanish": ""
                 },
                 {
                     "english": "to show",
                     "french": "montrer",
                     "spanish": ""
-                },
-                {
-                    "english": "let's do it",
-                    "french": "faisons-le",
-                    "spanish": "",
-                    "grammarRule": "Let's ne se traduit pas. Il s'agit de la marque de l'imp\u00e9ratif (pour donner un ordre)."
                 },
                 {
                     "english": "to put",
@@ -1266,78 +913,8 @@
                     "spanish": ""
                 },
                 {
-                    "english": "between",
-                    "french": "entre",
-                    "spanish": ""
-                },
-                {
-                    "english": "better",
-                    "french": "mieux",
-                    "spanish": ""
-                },
-                {
-                    "english": "to throw away",
-                    "french": "jeter",
-                    "spanish": ""
-                },
-                {
-                    "english": "luchtime",
-                    "french": "repas du midi",
-                    "spanish": ""
-                },
-                {
-                    "english": "a rubber",
-                    "french": "une gomme",
-                    "spanish": ""
-                },
-                {
-                    "english": "an eraser",
-                    "french": "une gomme",
-                    "spanish": ""
-                },
-                {
-                    "english": "computer studies",
-                    "french": "informatique",
-                    "spanish": ""
-                },
-                {
-                    "english": "the subjects",
-                    "french": "les mati\u00a7\u00e8res",
-                    "spanish": ""
-                },
-                {
-                    "english": "to erase",
-                    "french": "effacer",
-                    "spanish": ""
-                },
-                {
-                    "english": "a diary",
-                    "french": "un agenda",
-                    "spanish": ""
-                },
-                {
-                    "english": "what?",
-                    "french": "quoi?",
-                    "spanish": ""
-                },
-                {
-                    "english": "then",
-                    "french": "puis",
-                    "spanish": ""
-                },
-                {
-                    "english": "a lunchbox",
-                    "french": "une bo\u00eete \u00e0 d\u00e9jeuner",
-                    "spanish": ""
-                },
-                {
                     "english": "on the top",
                     "french": "sur le dessus",
-                    "spanish": ""
-                },
-                {
-                    "english": "a thing",
-                    "french": "une chose",
                     "spanish": ""
                 },
                 {
@@ -1351,34 +928,323 @@
                     "spanish": ""
                 },
                 {
-                    "english": "rubbish",
-                    "french": "d\u00e9chets",
+                    "english": "a pile",
+                    "french": "une pile",
                     "spanish": ""
                 },
                 {
-                    "english": "a pencil",
-                    "french": "un crayon \u00e0 papier",
+                    "english": "done!",
+                    "french": "fais!",
                     "spanish": ""
                 },
                 {
-                    "english": "a snack",
-                    "french": "un go\u00fbter",
+                    "english": "give me a break",
+                    "french": "laisse moi tranquille",
                     "spanish": ""
                 },
                 {
-                    "english": "drama",
-                    "french": "th\u00e9\u00e2tre",
+                    "english": "a little bit messy",
+                    "french": "un peu en bazar",
                     "spanish": ""
                 },
                 {
-                    "english": "to give",
-                    "french": "donner",
+                    "english": "the minutes hand",
+                    "french": "l'aiguille des minutes",
                     "spanish": ""
                 },
                 {
-                    "english": "a ruler",
-                    "french": "une r\u00e8gle",
+                    "english": "the hours hand",
+                    "french": "l'aiguille des heures",
                     "spanish": ""
+                },
+                {
+                    "english": "to organise",
+                    "french": "organiser",
+                    "spanish": ""
+                },
+                {
+                    "english": "the flour",
+                    "french": "la farine",
+                    "spanish": ""
+                },
+                {
+                    "english": "a tree",
+                    "french": "un arbre",
+                    "spanish": ""
+                },
+                {
+                    "english": "a sock",
+                    "french": "une chaussette",
+                    "spanish": ""
+                },
+                {
+                    "english": "trousers",
+                    "french": "pantalons",
+                    "spanish": ""
+                },
+                {
+                    "english": "a niece",
+                    "french": "une ni\u00e8ce",
+                    "spanish": ""
+                },
+                {
+                    "english": "a nephew",
+                    "french": "un neveu",
+                    "spanish": ""
+                },
+                {
+                    "english": "the bread",
+                    "french": "le pain",
+                    "spanish": ""
+                },
+                {
+                    "english": "glasses",
+                    "french": "lunettes",
+                    "spanish": ""
+                },
+                {
+                    "english": "an airport",
+                    "french": "un a\u00e9roport",
+                    "spanish": ""
+                },
+                {
+                    "english": "vegetables",
+                    "french": "l\u00e9gumes",
+                    "spanish": ""
+                },
+                {
+                    "english": "butter",
+                    "french": "beurre",
+                    "spanish": ""
+                },
+                {
+                    "english": "an umbrella",
+                    "french": "un parapluie",
+                    "spanish": ""
+                },
+                {
+                    "english": "a horse",
+                    "french": "un cheval",
+                    "spanish": ""
+                },
+                {
+                    "english": "a plate",
+                    "french": "une assiette",
+                    "spanish": ""
+                },
+                {
+                    "english": "an armchair",
+                    "french": "un fauteuil",
+                    "spanish": ""
+                },
+                {
+                    "english": "fast",
+                    "french": "rapide",
+                    "spanish": ""
+                },
+                {
+                    "english": "an air hostess",
+                    "french": "une h\u00f4tesse de l'air",
+                    "spanish": ""
+                },
+                {
+                    "english": "toothpaste",
+                    "french": "dentifrice",
+                    "spanish": ""
+                },
+                {
+                    "english": "bread",
+                    "french": "pain",
+                    "spanish": ""
+                },
+                {
+                    "english": "well done!",
+                    "french": "bravo!",
+                    "spanish": ""
+                },
+                {
+                    "english": "plain white",
+                    "french": "blanc uni",
+                    "spanish": ""
+                },
+                {
+                    "english": "a salesman",
+                    "french": "un vendeur",
+                    "spanish": "",
+                    "grammarRule": "Au pluriel, a SALESMAN devient SALESMEN."
+                },
+                {
+                    "english": "a hairdresser",
+                    "french": "un coiffeur",
+                    "spanish": ""
+                },
+                {
+                    "english": "all right!",
+                    "french": "d'accord!",
+                    "spanish": ""
+                },
+                {
+                    "english": "an order",
+                    "french": "un ordre",
+                    "spanish": ""
+                },
+                {
+                    "english": "after",
+                    "french": "apr\u00e8s",
+                    "spanish": ""
+                },
+                {
+                    "english": "activities",
+                    "french": "activit\u00e9s",
+                    "spanish": ""
+                },
+                {
+                    "english": "to permit",
+                    "french": "permettre",
+                    "spanish": ""
+                },
+                {
+                    "english": "to wake up",
+                    "french": "se r\u00e9veiller",
+                    "spanish": ""
+                },
+                {
+                    "english": "to arrive",
+                    "french": "arriver",
+                    "spanish": ""
+                },
+                {
+                    "english": "breakfast",
+                    "french": "le petit-d\u00e9jeuner",
+                    "spanish": ""
+                },
+                {
+                    "english": "a thousand",
+                    "french": "mille",
+                    "spanish": ""
+                },
+                {
+                    "english": "yesterday",
+                    "french": "hier",
+                    "spanish": ""
+                },
+                {
+                    "english": "a bed",
+                    "french": "un lit",
+                    "spanish": ""
+                },
+                {
+                    "english": "a cloud",
+                    "french": "un nuage",
+                    "spanish": ""
+                },
+                {
+                    "english": "the sky",
+                    "french": "le ciel",
+                    "spanish": ""
+                },
+                {
+                    "english": "tonight",
+                    "french": "ce soir",
+                    "spanish": ""
+                },
+                {
+                    "english": "a lot of",
+                    "french": "beaucoup de",
+                    "spanish": ""
+                },
+                {
+                    "english": "people",
+                    "french": "les gens",
+                    "spanish": ""
+                },
+                {
+                    "english": "a boat",
+                    "french": "un bateau",
+                    "spanish": ""
+                },
+                {
+                    "english": "a letter",
+                    "french": "une lettre",
+                    "spanish": ""
+                },
+                {
+                    "english": "a tourist",
+                    "french": "un touriste",
+                    "spanish": ""
+                },
+                {
+                    "english": "money",
+                    "french": "argent",
+                    "spanish": ""
+                },
+                {
+                    "english": "mister",
+                    "french": "monsieur",
+                    "spanish": ""
+                },
+                {
+                    "english": "misses",
+                    "french": "madame",
+                    "spanish": ""
+                },
+                {
+                    "english": "fruit juice",
+                    "french": "jus de fruit",
+                    "spanish": ""
+                },
+                {
+                    "english": "the roof",
+                    "french": "le toit",
+                    "spanish": ""
+                }
+                
+            ]
+        },
+        {
+            "name" : "grammaire",
+            "words" : [
+                {
+                    "english": "how many?",
+                    "french": "combien?",
+                    "spanish": "",
+                    "grammarRule": "HOW MANY est suivi d'un nom au pluriel. HOW MANY BOOKS do you have?"
+                },
+                {
+                    "english": "to have",
+                    "french": "avoir",
+                    "spanish": "",
+                    "grammarRule": "I have, you have, he/she/it HAS, we have, you have, they have"
+                },
+                {
+                    "english": "i have got",
+                    "french": "j'ai",
+                    "spanish": "",
+                    "grammarRule": "Le mot GOT indique la possession. HAVE YOU GOT A RULER? YES, I HAVE GOT A RULER - NO, I HAVEN'T GOT A RULER - Attention, on dit HE HAS GOT - HE HASN'T GOT \u00e0 la 3\u00e8me personne du singulier."
+                },
+                {
+                    "english": "i haven't got",
+                    "french": "je n'ai pas",
+                    "spanish": "",
+                    "grammarRule": "Le mot GOT indique la possession. HAVEN'T = contraction de HAVE NOT. HAVE YOU GOT A RULER? YES, I HAVE GOT A RULER - NO, I HAVEN'T GOT A RULER - Attention, on dit HE HAS GOT - HE HASN'T GOT \u00e0 la 3\u00e8me personne du singulier."
+                },
+                {
+                    "english": "to watch tv",
+                    "french": "regarder la tv",
+                    "spanish": "",
+                    "grammarRule": "les verbes se terminant par CH, SH, SS ou O, prendront ES \u00e0 la 3\u00e8me personne du singulier. HE WATCHES TV."
+                },
+                {
+                    "english": "to watch a video",
+                    "french": "regarder une vid\u00e9o",
+                    "spanish": "",
+                    "grammarRule": "les verbes se terminant par CH, SH, SS ou O, prendront ES \u00e0 la 3\u00e8me personne du singulier. HE WATCHES a video."
+                },
+                {
+                    "english": "let's do it",
+                    "french": "faisons-le",
+                    "spanish": "",
+                    "grammarRule": "Let's ne se traduit pas. Il s'agit de la marque de l'imp\u00e9ratif (pour donner un ordre)."
                 },
                 {
                     "english": "my",
@@ -1412,117 +1278,6 @@
                     "grammarRule": "ITS s'utilise quand le possesseur est NEUTRE (chose). ITS cover (la couverture d'un livre par exemple)."
                 },
                 {
-                    "english": "a pile",
-                    "french": "une pile",
-                    "spanish": ""
-                },
-                {
-                    "english": "done!",
-                    "french": "fais!",
-                    "spanish": ""
-                },
-                {
-                    "english": "to remember",
-                    "french": "se souvenir",
-                    "spanish": ""
-                },
-                {
-                    "english": "to take",
-                    "french": "prendre",
-                    "spanish": ""
-                },
-                {
-                    "english": "good day",
-                    "french": "bonjour",
-                    "spanish": ""
-                },
-                {
-                    "english": "give me a break",
-                    "french": "laisse moi tranquille",
-                    "spanish": ""
-                },
-                {
-                    "english": "a pencil sharpener",
-                    "french": "un taille crayon",
-                    "spanish": ""
-                },
-                {
-                    "english": "to think",
-                    "french": "penser",
-                    "spanish": ""
-                },
-                {
-                    "english": "a little bit messy",
-                    "french": "un peu en bazar",
-                    "spanish": ""
-                },
-                {
-                    "english": "physical education",
-                    "french": "\u00e9ducation physique et sportive",
-                    "spanish": "",
-                    "grammarRule": "EPS en fran\u00e7ais, PE en anglais."
-                },
-                {
-                    "english": "the minutes hand",
-                    "french": "l'aiguille des minutes",
-                    "spanish": ""
-                },
-                {
-                    "english": "hour hands",
-                    "french": "l'aiguille des heures",
-                    "spanish": ""
-                },
-                {
-                    "english": "a highlighter",
-                    "french": "un surligneur",
-                    "spanish": ""
-                },
-                {
-                    "english": "a folder",
-                    "french": "une pochette",
-                    "spanish": ""
-                },
-                {
-                    "english": "a timetable",
-                    "french": "un emploi du temps",
-                    "spanish": ""
-                },
-                {
-                    "english": "to organise",
-                    "french": "organiser",
-                    "spanish": ""
-                },
-                {
-                    "english": "a period",
-                    "french": "une heure de cours",
-                    "spanish": ""
-                },
-                {
-                    "english": "a plane",
-                    "french": "un avion",
-                    "spanish": ""
-                },
-                {
-                    "english": "the eyebrows",
-                    "french": "les sourcils",
-                    "spanish": ""
-                },
-                {
-                    "english": "the flour",
-                    "french": "la farine",
-                    "spanish": ""
-                },
-                {
-                    "english": "a tree",
-                    "french": "un arbre",
-                    "spanish": ""
-                },
-                {
-                    "english": "a sock",
-                    "french": "une chaussette",
-                    "spanish": ""
-                },
-                {
                     "english": "a man",
                     "french": "un homme",
                     "spanish": "",
@@ -1533,38 +1288,6 @@
                     "french": "hommes",
                     "spanish": "",
                     "grammarRule": "Au pluriel, MAN devient MEN."
-                },
-                {
-                    "english": "the meat",
-                    "french": "la viande",
-                    "spanish": ""
-                },
-                {
-                    "english": "the skin",
-                    "french": "la peau",
-                    "spanish": ""
-                },
-                {
-                    "english": "trousers",
-                    "french": "pantalons",
-                    "spanish": ""
-                },
-                {
-                    "english": "a cheek",
-                    "french": "une joue",
-                    "spanish": ""
-                },
-                {
-                    "english": "a tooth",
-                    "french": "une dent",
-                    "spanish": "",
-                    "grammarRule": "Au pluriel, TOOTH devient TEETH."
-                },
-                {
-                    "english": "teeth",
-                    "french": "dents",
-                    "spanish": "",
-                    "grammarRule": "Au pluriel, TOOTH devient TEETH."
                 },
                 {
                     "english": "a woman",
@@ -1579,28 +1302,10 @@
                     "grammarRule": "Au pluriel, WOMAN devient WOMEN."
                 },
                 {
-                    "english": "a foot",
-                    "french": "un pied",
-                    "spanish": "",
-                    "grammarRule": "Au pluriel a FOOT devient FEET."
-                },
-                {
-                    "english": "feet",
-                    "french": "pieds",
-                    "spanish": "",
-                    "grammarRule": "Au pluriel a FOOT devient FEET."
-                },
-                {
                     "english": "a brush",
                     "french": "une brosse",
                     "spanish": "",
                     "grammarRule": "Au pluriel, A BRUSH devient BRUSHES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES \u00e0 la place de S."
-                },
-                {
-                    "english": "a dress",
-                    "french": "une robe",
-                    "spanish": "",
-                    "grammarRule": "Au pluriel, A DRESS devient DRESSES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES \u00e0 la place de S."
                 },
                 {
                     "english": "a mouse",
@@ -1627,24 +1332,10 @@
                     "grammarRule": "Au pluriel, A WATCH devient WATCHES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES \u00e0 la place de S."
                 },
                 {
-                    "english": "a shoe",
-                    "french": "une chaussure",
-                    "spanish": ""
-                },
-                {
-                    "english": "a niece",
-                    "french": "une ni\u00e8ce",
-                    "spanish": ""
-                },
-                {
-                    "english": "a nephew",
-                    "french": "un neveu",
-                    "spanish": ""
-                },
-                {
-                    "english": "the bread",
-                    "french": "le pain",
-                    "spanish": ""
+                    "english": "a dress",
+                    "french": "une robe",
+                    "spanish": "",
+                    "grammarRule": "Au pluriel, A DRESS devient DRESSES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES \u00e0 la place de S."
                 },
                 {
                     "english": "a fireman",
@@ -1695,68 +1386,792 @@
                     "grammarRule": "Au pluriel, CHILD devient CHILDREN."
                 },
                 {
-                    "english": "glasses",
-                    "french": "lunettes",
+                    "english": "il a",
+                    "french": "he has",
+                    "spanish": "",
+                    "grammarRule": "Verbe TO HAVE se conjugue I HAVE, YOU HAVE, HE HAS."
+                },
+                {
+                    "english": "do you want?",
+                    "french": "est-ce que tu veux?",
+                    "spanish": "",
+                    "grammarRule": "DO s'utilise dans les phrases interrogatives (questions?). Attention! A la 3\u00e8me personne du singulier on dit DOES HE WANT?"
+                },
+                {
+                    "english": "that is",
+                    "french": "c'est",
+                    "spanish": "",
+                    "comment": "Dans le cas o\u00f9 l'objet dont on parle est loin dans l'espace ou le temps.",
+                    "grammarRule": "THAT IS + SINGULIER. THOSE ARE + PLURIEL. L'objet dont on parle est loin dans l'espace ou le temps. THAT IS A BOOK. THOSE ARE BOOKS."
+                },
+                {
+                    "english": "these are",
+                    "french": "ce sont",
+                    "spanish": "",
+                    "comment": "Dans le cas o\u00f9 l'objet dont on parle est loin dans l'espace ou le temps.",
+                    "grammarRule": "THAT IS + SINGULIER. THOSE ARE + PLURIEL. L'objet dont on parle est loin dans l'espace ou le temps. THAT IS A BOOK. THOSE ARE BOOKS."
+                },
+                {
+                    "english": "the boy's computer",
+                    "french": "l'ordinateur du gar\u00e7on",
+                    "spanish": "",
+                    "comment": "Utilise le g\u00e9n\u00e9tif.",
+                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand m\u00eame. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE."
+                },
+                {
+                    "english": "my parents' house",
+                    "french": "la maison de mes parents",
+                    "spanish": "",
+                    "comment": "Utilise le g\u00e9n\u00e9tif.",
+                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand m\u00eame. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE."
+                },
+                {
+                    "english": "my sister's house",
+                    "french": "la maison de ma soeur",
+                    "spanish": "",
+                    "comment": "Utilise le g\u00e9n\u00e9tif.",
+                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand m\u00eame. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE."
+                },
+                {
+                    "english": "there is some milk",
+                    "french": "il y a du lait",
+                    "spanish": "",
+                    "comment": "milk est ind\u00e9nombrable",
+                    "grammarRule": "SOME s'utilise suivi d'une quantit\u00e9 INDENOMBRABLE au SINGULIER ou d'une quantit\u00e9 DENOMBRABLE au pluriel."
+                },
+                {
+                    "english": "there are some apples",
+                    "french": "il y a des pommes",
+                    "spanish": "",
+                    "comment": "pommes est au PLURIEL",
+                    "grammarRule": "SOME s'utilise suivi d'une quantit\u00e9 INDENOMBRABLE au SINGULIER ou d'une quantit\u00e9 DENOMBRABLE au pluriel."
+                },
+                {
+                    "english": "is there any chocolate?",
+                    "french": "y a-t-il du chocolat?",
+                    "spanish": "",
+                    "grammarRule": "ANY s'utilise dans une phrase interrogative pour savoir si il y a quelque chose. Peut-\u00eatre suivi d'un SINGULIER ou d'un PLURIEL."
+                },
+                {
+                    "english": "are there any apples?",
+                    "french": "y a-t-il des pommes?",
+                    "spanish": "",
+                    "grammarRule": "ANY s'utilise dans une phrase interrogative pour savoir si il y a quelque chose. Peut-\u00eatre suivi d'un SINGULIER ou d'un PLURIEL."
+                },
+                {
+                    "english": "there isn't any milk",
+                    "french": "il n'y a pas de lait",
+                    "spanish": "",
+                    "grammarRule": "There ISN'T ANY milk = There is NOT ANY milk = There is NO milk. NOT ANY ou NO s'utilise pour dire qu'il y a absence de quantit\u00e9."
+                },
+                {
+                    "english": "do you want some cake?",
+                    "french": "veux-tu du g\u00e2teau?",
+                    "spanish": "",
+                    "grammarRule": "SOME peut s'utiliser aussi dans une question quand on PROPOSE quelque chose \u00e0 quelqu'un ou quand on est certain de la pr\u00e9sence de l'objet."
+                },
+                {
+                    "english": "can I have some water?",
+                    "french": "Puis-je avoir de l'eau?",
+                    "spanish": "",
+                    "grammarRule": "SOME peut s'utiliser aussi dans une question quand on PROPOSE quelque chose \u00e0 quelqu'un ou quand on est certain de la pr\u00e9sence de l'objet."
+                },
+                {
+                    "english": "this is",
+                    "french": "c'est",
+                    "spanish": "",
+                    "comment": "Dans le cas o\u00f9 l'objet dont on parle est proche dans l'espace ou le temps.",
+                    "grammarRule": "THIS IS + SINGULIER. THESE ARE + PLURIEL. L'objet dont on parle est proche dans l'espace ou le temps. THIS IS A BOOK. THESE ARE BOOKS."
+                },
+                {
+                    "english": "these are",
+                    "french": "ce sont",
+                    "spanish": "",
+                    "comment": "Dans le cas o\u00f9 l'objet dont on parle est proche dans l'espace ou le temps.",
+                    "grammarRule": "THIS IS + SINGULIER. THESE ARE + PLURIEL. L'objet dont on parle est proche dans l'espace ou le temps. THIS IS A BOOK. THESE ARE BOOKS."
+                },
+                {
+                    "english": "our",
+                    "french": "notre",
                     "spanish": ""
                 },
                 {
-                    "english": "the blood",
-                    "french": "le sang",
+                    "english": "their",
+                    "french": "leur(s)",
                     "spanish": ""
                 },
                 {
-                    "english": "a knee",
-                    "french": "un genou",
+                    "english": "a headmistress",
+                    "french": "une directrice",
+                    "spanish": "",
+                    "grammarRule": "Au pluriel, A HEADMISTRESS devient HEADMISTRESSES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES \u00e0 la place de S."
+                },
+                {
+                    "english": "whose?",
+                    "french": "a qui?",
+                    "spanish": "",
+                    "grammarRule": "Whose house is this? A qui est cette maison?"
+                },
+                {
+                    "french": "ne joue pas!",
+                    "english": "don\u2019t play!",
+                    "spanish": "",
+                    "comment": "Imp\u00e9ratif!",
+                    "grammarRule": "L\u2019imp\u00e9ratif s\u2019utilise pour donner un ordre ou une interdiction."
+                },
+                {
+                    "french": "jouer",
+                    "english": "to play",
+                    "spanish": "",
+                    "comment": "Imp\u00e9ratif!",
+                    "grammarRule": "L\u2019imp\u00e9ratif s\u2019utilise pour donner un ordre ou une interdiction."
+                },
+                {
+                    "french": "joue!",
+                    "english": "play!",
+                    "spanish": "",
+                    "comment": "Imp\u00e9ratif!",
+                    "grammarRule": "L\u2019imp\u00e9ratif s\u2019utilise pour donner un ordre ou une interdiction."
+                },
+                {
+                    "french": "jouons!",
+                    "english": "let\u2019s play!",
+                    "spanish": "",
+                    "comment": "Imp\u00e9ratif!",
+                    "grammarRule": "L\u2019imp\u00e9ratif s\u2019utilise pour donner un ordre ou une interdiction. Let\u2019s indique que l\u2019on parle \u00e0 la 2\u00e8me personne du pluriel (nous)."
+                }
+            ]
+        },
+        {
+            "name" : "Thème de l'école",
+            "words" : [
+                {
+                    "english": "a textbook",
+                    "french": "un livre d'\u00e9cole",
                     "spanish": ""
                 },
                 {
-                    "english": "a face",
-                    "french": "un visage",
+                    "english": "a school uniform",
+                    "french": "un uniforme scolaire",
                     "spanish": ""
                 },
                 {
-                    "english": "eyelashes",
-                    "french": "cils",
+                    "english": "a uniform",
+                    "french": "un uniforme",
+                    "spanish": "",
+                    "grammarRule": "Le U se prononce 'YOU' et on met A devant (au lieu de an) - Idem pour A university"
+                },
+                {
+                    "english": "an hour",
+                    "french": "une heure",
+                    "spanish": "",
+                    "grammarRule": "Le H \u00e9tant muet, on dit AN hour (et non a hour)"
+                },
+                {
+                    "english": "a university",
+                    "french": "une universit\u00e9",
+                    "spanish": "",
+                    "grammarRule": "Le U se prononce 'YOU' et on met A devant (au lieu de an) - Idem pour A uniform"
+                },
+                {
+                    "english": "a lesson",
+                    "french": "une le\u00e7on",
+                    "spanish": ""
+                },
+                {
+                    "english": "a football pitch",
+                    "french": "un terrain de football",
+                    "spanish": ""
+                },
+                {
+                    "english": "to underline",
+                    "french": "souligner",
+                    "spanish": ""
+                },
+                {
+                    "english": "a library",
+                    "french": "une biblioth\u00e8que",
+                    "spanish": "",
+                    "grammarRule": "Au pluriel, le Y devient IES. LIBRARIES"
+                },
+                {
+                    "english": "a cantine",
+                    "french": "une cantine",
+                    "spanish": ""
+                },
+                {
+                    "english": "pupils",
+                    "french": "\u00e9l\u00e8ves",
+                    "spanish": ""
+                },
+                {
+                    "english": "noon",
+                    "french": "midi",
+                    "spanish": ""
+                },
+                {
+                    "english": "morning break",
+                    "french": "pause du matin",
+                    "spanish": ""
+                },
+                {
+                    "english": "afternoon break",
+                    "french": "pause de l'apr\u00e8s-midi",
+                    "spanish": ""
+                },
+                {
+                    "english": "middle school",
+                    "french": "coll\u00e8ge",
+                    "spanish": ""
+                },
+                {
+                    "english": "a workbook",
+                    "french": "un livre d'exercice",
+                    "spanish": ""
+                },
+                {
+                    "english": "students",
+                    "french": "\u00e9tudiants",
+                    "spanish": ""
+                },
+                {
+                    "english": "the facilities",
+                    "french": "les installations",
+                    "spanish": ""
+                },
+                {
+                    "english": "to highlight",
+                    "french": "surligner",
+                    "spanish": ""
+                },
+                {
+                    "english": "to put up your hand",
+                    "french": "lever ta main",
+                    "spanish": ""
+                },
+                {
+                    "english": "lunchtime",
+                    "french": "repas du midi",
+                    "spanish": ""
+                },
+                {
+                    "english": "a rubber",
+                    "french": "une gomme",
+                    "spanish": "",
+                    "comment": "synonyme de an eraser"
+                },
+                {
+                    "english": "an eraser",
+                    "french": "une gomme",
+                    "spanish": "",
+                    "comment": "synonyme de a rubber"
+                },
+                {
+                    "english": "computer studies",
+                    "french": "informatique",
+                    "spanish": ""
+                },
+                {
+                    "english": "the subjects",
+                    "french": "les mati\u00a7\u00e8res",
+                    "spanish": ""
+                },
+                {
+                    "english": "to erase",
+                    "french": "effacer",
+                    "spanish": ""
+                },
+                {
+                    "english": "a diary",
+                    "french": "un agenda",
+                    "spanish": ""
+                },
+                {
+                    "english": "a lunchbox",
+                    "french": "une bo\u00eete \u00e0 d\u00e9jeuner",
+                    "spanish": ""
+                },
+                {
+                    "english": "a pencil",
+                    "french": "un crayon \u00e0 papier",
+                    "spanish": ""
+                },
+                {
+                    "english": "a snack",
+                    "french": "un go\u00fbter",
+                    "spanish": ""
+                },
+                {
+                    "english": "drama",
+                    "french": "th\u00e9\u00e2tre",
+                    "spanish": ""
+                },
+                {
+                    "english": "a ruler",
+                    "french": "une r\u00e8gle",
+                    "spanish": ""
+                },
+                {
+                    "english": "a pencil sharpener",
+                    "french": "un taille crayon",
+                    "spanish": ""
+                },
+                {
+                    "english": "physical education",
+                    "french": "\u00e9ducation physique et sportive",
+                    "spanish": "",
+                    "grammarRule": "EPS en fran\u00e7ais, PE en anglais."
+                },
+                {
+                    "english": "a highlighter",
+                    "french": "un surligneur",
+                    "spanish": ""
+                },
+                {
+                    "english": "a folder",
+                    "french": "une pochette",
+                    "spanish": ""
+                },
+                {
+                    "english": "a timetable",
+                    "french": "un emploi du temps",
+                    "spanish": ""
+                },
+                {
+                    "english": "a period",
+                    "french": "une heure de cours",
+                    "spanish": ""
+                },
+                {
+                    "english": "a teacher",
+                    "french": "un professeur",
+                    "spanish": ""
+                },
+                {
+                    "english": "tights",
+                    "french": "collants",
+                    "spanish": ""
+                },
+                {
+                    "english": "a jumper",
+                    "french": "un pull",
+                    "spanish": ""
+                },
+                {
+                    "english": "a tie",
+                    "french": "une cravate",
+                    "spanish": ""
+                },
+                {
+                    "english": "a skirt",
+                    "french": "une jupe",
+                    "spanish": ""
+                },
+                {
+                    "english": "a shirt",
+                    "french": "une chemise",
+                    "spanish": "",
+                    "comment": "synonyme de blouse"
+                },
+                {
+                    "english": "a blouse",
+                    "french": "une chemise",
+                    "spanish": "",
+                    "comment": "synonyme de shirt"
+                },
+                {
+                    "english": "a blazer",
+                    "french": "une veste",
+                    "spanish": ""
+                },
+                {
+                    "english": "a schoolboy",
+                    "french": "un \u00e9colier",
+                    "spanish": ""
+                },
+                {
+                    "english": "a schoolgirl",
+                    "french": "une \u00e9coli\u00e8re",
+                    "spanish": ""
+                },
+                {
+                    "english": "a school",
+                    "french": "une \u00e9cole",
+                    "spanish": ""
+                },
+                {
+                    "english": "a school bag",
+                    "french": "un cartable",
+                    "spanish": ""
+                },
+                {
+                    "english": "a sheet of paper",
+                    "french": "une feuille de papier",
+                    "spanish": ""
+                },
+                {
+                    "english": "markers",
+                    "french": "feutres",
+                    "spanish": ""
+                },
+                {
+                    "english": "a paper",
+                    "french": "un devoir \u00e0 rendre",
+                    "spanish": ""
+                },
+                {
+                    "english": "skills",
+                    "french": "comp\u00e9tences",
+                    "spanish": ""
+                },
+                {
+                    "english": "a homework",
+                    "french": "un devoir maison",
+                    "spanish": ""
+                },
+                {
+                    "english": "crayons",
+                    "french": "crayons de couleur",
+                    "spanish": ""
+                },
+                {
+                    "english": "a desk",
+                    "french": "un bureau",
+                    "spanish": ""
+                },
+                {
+                    "english": "a badge",
+                    "french": "un badge",
+                    "spanish": ""
+                },
+                {
+                    "english": "homeworks",
+                    "french": "devoirs",
+                    "spanish": ""
+                },
+                {
+                    "english": "to study",
+                    "french": "\u00e9tudier",
+                    "spanish": ""
+                },
+                {
+                    "english": "to do your homeworks",
+                    "french": "faire tes devoirs",
+                    "spanish": ""
+                },
+                {
+                    "english": "to go to school",
+                    "french": "aller \u00e0 l'\u00e9cole",
+                    "spanish": ""
+                },
+                {
+                    "english": "a copybook",
+                    "french": "un cahier",
+                    "spanish": ""
+                }
+            ]
+        },   
+        {
+            "name" : "mots à réviser",
+            "words" : [
+                {
+                    "english": "who?",
+                    "french": "qui?",
+                    "spanish": ""
+                },
+                {
+                    "english": "treasure hunt",
+                    "french": "chasse au tr\u00e9sor",
+                    "spanish": ""
+                },
+                {
+                    "english": "to hunt",
+                    "french": "chasser",
+                    "spanish": ""
+                },
+                {
+                    "english": "new year's day",
+                    "french": "nouvel an",
+                    "spanish": ""
+                },
+                {
+                    "english": "ireland",
+                    "french": "irlande",
+                    "spanish": ""
+                },
+                {
+                    "english": "irish",
+                    "french": "irlandais",
+                    "spanish": ""
+                },
+                {
+                    "english": "what is that?",
+                    "french": "qu'est ce que c'est?",
+                    "spanish": "",
+                    "comment": "l'objet est loin"
+                },
+                {
+                    "english": "a week",
+                    "french": "une semaine",
+                    "spanish": ""
+                },
+                {
+                    "english": "to hide",
+                    "french": "cacher",
+                    "spanish": ""
+                },
+                {
+                    "english": "a rainbow",
+                    "french": "un arc en ciel",
+                    "spanish": ""
+                },
+                {
+                    "english": "a mountain",
+                    "french": "une montagne",
+                    "spanish": ""
+                },
+                {
+                    "english": "the seasons ",
+                    "french": "les saisons",
+                    "spanish": ""
+                },
+                {
+                    "english": "winter ",
+                    "french": "hiver",
+                    "spanish": ""
+                },
+                {
+                    "english": "spring",
+                    "french": "printemps",
+                    "spanish": ""
+                },
+                {
+                    "english": "automn",
+                    "french": "automne",
+                    "spanish": ""
+                },
+                {
+                    "english": "summer",
+                    "french": "\u00e9t\u00e9",
+                    "spanish": ""
+                },
+                {
+                    "english": "to swim",
+                    "french": "nager",
+                    "spanish": ""
+                },
+                {
+                    "english": "want",
+                    "french": "vouloir",
+                    "spanish": ""
+                },
+                {
+                    "english": "there is",
+                    "french": "il y a ",
+                    "spanish": "",
+                    "comment": "suivi d'un nom au singulier"
+                },
+                {
+                    "english": "there are",
+                    "french": "il y a",
+                    "spanish": "",
+                    "comment": "suivi d'un nom au pluriel"
+                },
+                {
+                    "english": "to ask",
+                    "french": "demander",
+                    "spanish": ""
+                },
+                {
+                    "english": "where?",
+                    "french": "o\u00f9?",
+                    "spanish": ""
+                },
+                {
+                    "english": "christmas day",
+                    "french": "nooel",
+                    "spanish": ""
+                },
+                {
+                    "english": "a square",
+                    "french": "un carr\u00e9",
+                    "spanish": ""
+                },
+                {
+                    "english": "a partner",
+                    "french": "un partenaire",
+                    "spanish": ""
+                },
+                {
+                    "english": "also",
+                    "french": "aussi",
+                    "spanish": ""
+                },
+                {
+                    "english": "why?",
+                    "french": "pourquoi?",
+                    "spanish": ""
+                },
+                {
+                    "english": "partly",
+                    "french": "partiellement",
+                    "spanish": ""
+                },
+                {
+                    "english": "to say",
+                    "french": "dire",
+                    "spanish": "",
+                    "comment": "synonyme de to tell"
+                },
+                {
+                    "english": "to choose",
+                    "french": "choisir",
+                    "spanish": ""
+                },
+                {
+                    "english": "to answer",
+                    "french": "r\u00e9pondre",
+                    "spanish": ""
+                },
+                {
+                    "english": "how?",
+                    "french": "comment?",
+                    "spanish": ""
+                },
+                {
+                    "english": "i like swimming",
+                    "french": "j'aime nager",
+                    "spanish": ""
+                },
+                {
+                    "english": "i'm worried",
+                    "french": "je suis inquiet",
+                    "spanish": ""
+                },
+                {
+                    "english": "to sing",
+                    "french": "chanter",
+                    "spanish": ""
+                },
+                {
+                    "english": "together",
+                    "french": "ensemble",
+                    "spanish": ""
+                },
+                {
+                    "english": "forever",
+                    "french": "pour toujours",
+                    "spanish": ""
+                },
+                {
+                    "english": "to try",
+                    "french": "essayer",
+                    "spanish": "",
+                    "grammarRule": "A la 3\u00e8me personne du singulier, le Y se transforme en IES. HE TRIES"
+                },
+                {
+                    "english": "all",
+                    "french": "tous",
+                    "spanish": ""
+                },
+                {
+                    "english": "to check",
+                    "french": "v\u00e9rifier",
+                    "spanish": ""
+                },
+                {
+                    "english": "to borrow",
+                    "french": "emprunter",
+                    "spanish": ""
+                },
+                {
+                    "english": "or",
+                    "french": "ou (bien)",
+                    "spanish": ""
+                },
+                {
+                    "english": "each",
+                    "french": "chaque",
+                    "spanish": ""
+                },
+                {
+                    "english": "between",
+                    "french": "entre",
+                    "spanish": ""
+                },
+                {
+                    "english": "better",
+                    "french": "mieux",
+                    "spanish": ""
+                },
+                {
+                    "english": "to throw away",
+                    "french": "jeter",
+                    "spanish": ""
+                },
+                {
+                    "english": "what?",
+                    "french": "quoi?",
+                    "spanish": ""
+                },
+                {
+                    "english": "then",
+                    "french": "puis",
+                    "spanish": ""
+                },
+                {
+                    "english": "a thing",
+                    "french": "une chose",
+                    "spanish": ""
+                },
+                {
+                    "english": "rubbish",
+                    "french": "d\u00e9chets",
+                    "spanish": ""
+                },
+                {
+                    "english": "to give",
+                    "french": "donner",
+                    "spanish": ""
+                },
+                {
+                    "english": "to remember",
+                    "french": "se souvenir",
+                    "spanish": ""
+                },
+                {
+                    "english": "to take",
+                    "french": "prendre",
+                    "spanish": ""
+                },
+                {
+                    "english": "to think",
+                    "french": "penser",
+                    "spanish": ""
+                },
+                {
+                    "english": "a plane",
+                    "french": "un avion",
+                    "spanish": ""
+                },
+                {
+                    "english": "the eyebrows",
+                    "french": "les sourcils",
+                    "spanish": ""
+                },
+                {
+                    "english": "the meat",
+                    "french": "la viande",
+                    "spanish": ""
+                },
+                {
+                    "english": "a shoe",
+                    "french": "une chaussure",
                     "spanish": ""
                 },
                 {
                     "english": "a glass",
                     "french": "un verre",
-                    "spanish": ""
-                },
-                {
-                    "english": "an airport",
-                    "french": "un a\u00e9roport",
-                    "spanish": ""
-                },
-                {
-                    "english": "vegetables",
-                    "french": "l\u00e9gumes",
-                    "spanish": ""
-                },
-                {
-                    "english": "butter",
-                    "french": "beurre",
-                    "spanish": ""
-                },
-                {
-                    "english": "an umbrella",
-                    "french": "un parapluie",
-                    "spanish": ""
-                },
-                {
-                    "english": "a horse",
-                    "french": "un cheval",
-                    "spanish": ""
-                },
-                {
-                    "english": "a plate",
-                    "french": "une assiette",
-                    "spanish": ""
-                },
-                {
-                    "english": "an armchair",
-                    "french": "un fauteuil",
                     "spanish": ""
                 },
                 {
@@ -1767,31 +2182,6 @@
                 {
                     "english": "a cup",
                     "french": "une tasse",
-                    "spanish": ""
-                },
-                {
-                    "english": "fast",
-                    "french": "rapide",
-                    "spanish": ""
-                },
-                {
-                    "english": "an air hostess",
-                    "french": "une h\u00f4tesse de l'air",
-                    "spanish": ""
-                },
-                {
-                    "english": "toothpaste",
-                    "french": "dentifrice",
-                    "spanish": ""
-                },
-                {
-                    "english": "bread",
-                    "french": "pain",
-                    "spanish": ""
-                },
-                {
-                    "english": "well done!",
-                    "french": "bravo!",
                     "spanish": ""
                 },
                 {
@@ -1816,77 +2206,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "plain white",
-                    "french": "blanc uni",
-                    "spanish": ""
-                },
-                {
-                    "english": "a teacher",
-                    "french": "un professeur",
-                    "spanish": ""
-                },
-                {
-                    "english": "a salesman",
-                    "french": "un vendeur",
-                    "spanish": "",
-                    "grammarRule": "Au pluriel, a SALESMAN devient SALESMEN."
-                },
-                {
-                    "english": "a hairdresser",
-                    "french": "un coiffeur",
-                    "spanish": ""
-                },
-                {
-                    "english": "all right!",
-                    "french": "d'accord!",
-                    "spanish": ""
-                },
-                {
-                    "english": "tights",
-                    "french": "collants",
-                    "spanish": ""
-                },
-                {
-                    "english": "a jumper",
-                    "french": "un pull",
-                    "spanish": ""
-                },
-                {
-                    "english": "a tie",
-                    "french": "une cravate",
-                    "spanish": ""
-                },
-                {
-                    "english": "an order",
-                    "french": "un ordre",
-                    "spanish": ""
-                },
-                {
-                    "english": "the ankle",
-                    "french": "une cheville",
-                    "spanish": ""
-                },
-                {
-                    "english": "after",
-                    "french": "apr\u00e8s",
-                    "spanish": ""
-                },
-                {
-                    "english": "a skirt",
-                    "french": "une jupe",
-                    "spanish": ""
-                },
-                {
-                    "english": "a shirt",
-                    "french": "une chemise",
-                    "spanish": ""
-                },
-                {
-                    "english": "a blouse",
-                    "french": "une chemise",
-                    "spanish": ""
-                },
-                {
                     "english": "enough",
                     "french": "assez",
                     "spanish": ""
@@ -1894,62 +2213,6 @@
                 {
                     "english": "compulsary",
                     "french": "obligatoire",
-                    "spanish": ""
-                },
-                {
-                    "english": "activities",
-                    "french": "activit\u00e9s",
-                    "spanish": ""
-                },
-                {
-                    "english": "il a",
-                    "french": "he has",
-                    "spanish": "",
-                    "grammarRule": "Verbe TO HAVE se conjugue I HAVE, YOU HAVE, HE HAS."
-                },
-                {
-                    "english": "to permit",
-                    "french": "permettre",
-                    "spanish": ""
-                },
-                {
-                    "english": "a blazer",
-                    "french": "une veste",
-                    "spanish": ""
-                },
-                {
-                    "english": "to wake up",
-                    "french": "se r\u00e9veiller",
-                    "spanish": ""
-                },
-                {
-                    "english": "to arrive",
-                    "french": "arriver",
-                    "spanish": ""
-                },
-                {
-                    "english": "breakfast",
-                    "french": "le petit-d\u00e9jeuner",
-                    "spanish": ""
-                },
-                {
-                    "english": "a schoolboy",
-                    "french": "un \u00e9colier",
-                    "spanish": ""
-                },
-                {
-                    "english": "a schoolgirl",
-                    "french": "une \u00e9coli\u00e8re",
-                    "spanish": ""
-                },
-                {
-                    "english": "a thousand",
-                    "french": "mille",
-                    "spanish": ""
-                },
-                {
-                    "english": "yesterday",
-                    "french": "hier",
                     "spanish": ""
                 },
                 {
@@ -1961,93 +2224,522 @@
                     "english": "a present",
                     "french": "un cadeau",
                     "spanish": ""
+                }
+
+            ]
+        },        
+        {
+            "name" : "le corps humain",
+            "words" : [
+                {
+                    "english": "a cheek",
+                    "french": "une joue",
+                    "spanish": ""
                 },
                 {
-                    "english": "the cheek",
-                    "french": "la joue",
+                    "english": "a tooth",
+                    "french": "une dent",
+                    "spanish": "",
+                    "grammarRule": "Au pluriel, TOOTH devient TEETH."
+                },
+                {
+                    "english": "teeth",
+                    "french": "dents",
+                    "spanish": "",
+                    "grammarRule": "Au pluriel, TOOTH devient TEETH."
+                },
+                {
+                    "english": "the skin",
+                    "french": "la peau",
+                    "spanish": ""
+                },
+                {
+                    "english": "a foot",
+                    "french": "un pied",
+                    "spanish": "",
+                    "grammarRule": "Au pluriel a FOOT devient FEET."
+                },
+                {
+                    "english": "feet",
+                    "french": "pieds",
+                    "spanish": "",
+                    "grammarRule": "Au pluriel a FOOT devient FEET."
+                },
+                {
+                    "english": "the blood",
+                    "french": "le sang",
+                    "spanish": ""
+                },
+                {
+                    "english": "a knee",
+                    "french": "un genou",
+                    "spanish": ""
+                },
+                {
+                    "english": "a face",
+                    "french": "un visage",
+                    "spanish": ""
+                },
+                {
+                    "english": "eyelashes",
+                    "french": "cils",
+                    "spanish": ""
+                },
+                {
+                    "english": "the ankle",
+                    "french": "une cheville",
                     "spanish": ""
                 },
                 {
                     "english": "eyebrows",
                     "french": "sourcils",
                     "spanish": ""
-                },
+                }
+                
+            ]
+        },
+        {
+            "name": "Voc. Septembre 2021",
+            "words": [
                 {
-                    "english": "a bed",
-                    "french": "un lit",
+                    "english": "a zebra",
+                    "french": "un zebre",
                     "spanish": ""
                 },
                 {
-                    "english": "a cloud",
-                    "french": "un nuage",
+                    "english": "the trust",
+                    "french": "la confiance",
                     "spanish": ""
                 },
                 {
-                    "english": "the sky",
-                    "french": "le ciel",
+                    "english": "a teaspoon",
+                    "french": "une cuillere a cafe",
                     "spanish": ""
                 },
                 {
-                    "english": "tonight",
-                    "french": "ce soir",
+                    "english": "respect",
+                    "french": "respect",
                     "spanish": ""
                 },
                 {
-                    "english": "a lot of",
-                    "french": "beaucoup de",
+                    "english": "delicious",
+                    "french": "delicieux",
                     "spanish": ""
                 },
                 {
-                    "english": "people",
-                    "french": "les gens",
+                    "english": "friendship",
+                    "french": "amitie",
                     "spanish": ""
                 },
                 {
-                    "english": "a boat",
-                    "french": "un bateau",
+                    "english": "a recipe",
+                    "french": "une recette",
                     "spanish": ""
                 },
                 {
-                    "english": "a letter",
-                    "french": "une lettre",
+                    "english": "if",
+                    "french": "si",
                     "spanish": ""
                 },
                 {
-                    "english": "do you want?",
-                    "french": "est-ce que tu veux?",
+                    "english": "definitly",
+                    "french": "définitivement",
+                    "spanish": ""
+                },
+                {
+                    "english": "to forgive",
+                    "french": "pardonner",
+                    "spanish": ""
+                },
+                {
+                    "english": "humour",
+                    "french": "humour",
+                    "spanish": ""
+                },
+                {
+                    "english": "love",
+                    "french": "amour",
+                    "spanish": ""
+                },
+                {
+                    "english": "go away!",
+                    "french": "va t'en!",
+                    "spanish": ""
+                },
+                {
+                    "english": "slim",
+                    "french": "mince",
+                    "spanish": ""
+                },
+                {
+                    "english": "kindness",
+                    "french": "gentillesse",
+                    "spanish": ""
+                },
+                {
+                    "english": "curly",
+                    "french": "bouclé",
+                    "spanish": ""
+                },
+                {
+                    "english": "to walk",
+                    "french": "marcher",
+                    "spanish": ""
+                },
+                {
+                    "english": "who? whose? why? what? where? when?",
+                    "french": "qui? a qui? pourquoi? quoi? ou? quand?",
+                    "spanish": ""
+                },
+                {
+                    "english": "a hat",
+                    "french": "un chapeau",
+                    "spanish": ""
+                },
+                {
+                    "english": "sunglasses",
+                    "french": "lunettes de soleil",
+                    "spanish": ""
+                },
+                {
+                    "english": "a teenager",
+                    "french": "un adolescent",
+                    "spanish": ""
+                },
+                {
+                    "english": "clothes",
+                    "french": "vetements",
+                    "spanish": ""
+                },
+                {
+                    "english": "a bathing suit",
+                    "french": "un maillot de bain",
+                    "spanish": ""
+                },
+                {
+                    "english": "an underwear",
+                    "french": "un sous-vetement",
+                    "spanish": ""
+                },
+                {
+                    "english": "expensive",
+                    "french": "cher",
+                    "spanish": ""
+                },
+                {
+                    "english": "athletic",
+                    "french": "athletique",
+                    "spanish": ""
+                },
+                {
+                    "english": "strong",
+                    "french": "fort",
+                    "spanish": ""
+                },
+                {
+                    "english": "comics",
+                    "french": "BDs",
+                    "spanish": ""
+                },
+                {
+                    "english": "a jacket",
+                    "french": "une veste",
+                    "spanish": ""
+                },
+                {
+                    "english": "funny",
+                    "french": "drole",
+                    "spanish": ""
+                },
+                {
+                    "english": "good better",
+                    "french": "bon mieux",
                     "spanish": "",
-                    "grammarRule": "DO s'utilise dans les phrases interrogatives (questions?). Attention! A la 3\u00e8me personne du singulier on dit DOES HE WANT?"
+                    "grammarRule": "le comparatif de supériorité de GOOD est BETTER"
                 },
                 {
-                    "english": "a tourist",
-                    "french": "un touriste",
+                    "english": "a cap",
+                    "french": "une casquette",
                     "spanish": ""
                 },
                 {
-                    "english": "money",
-                    "french": "argent",
+                    "english": "far farther",
+                    "french": "loin plus loin",
+                    "spanish": "",
+                    "grammarRule": "le comparatif de supériorité de FAR est FARTHER ou FURTHER"
+                },
+                {
+                    "english": "big bigger",
+                    "french": "grand plus grand",
+                    "spanish": "",
+                    "grammarRule": "le comparatif de supériorité double la consonne pour les mots avec CONSONNE VOYELLE CONSONNE"
+                },
+                {
+                    "english": "fat fatter",
+                    "french": "gros plus gros",
+                    "spanish": "",
+                    "grammarRule": "le comparatif de supériorité double la consonne pour les mots avec CONSONNE VOYELLE CONSONNE"
+                },
+                {
+                    "english": "bad worse",
+                    "french": "mauvais pire",
+                    "spanish": "",
+                    "grammarRule": "le comparatif de supériorité de BAD est WORSE"
+                },
+                {
+                    "english": "more beautiful than",
+                    "french": "plus beau que",
+                    "spanish": "",
+                    "grammarRule": "le comparatif de supériorité pour les mots de 2 syllabes et plus se construit avec MORE et THAN"
+                },
+                {
+                    "english": "faster than",
+                    "french": "plus rapide que",
+                    "spanish": "",
+                    "grammarRule": "le comparatif de supériorité des mots avec une seule syllabe se construit en rajoutant ER à la fin de l'adjectif"
+                },
+                {
+                    "english": "a bear",
+                    "french": "un ours",
                     "spanish": ""
                 },
                 {
-                    "english": "mister",
-                    "french": "monsieur",
+                    "english": "a parrot",
+                    "french": "un perroquet",
                     "spanish": ""
                 },
                 {
-                    "english": "misses",
-                    "french": "madame",
+                    "english": "an eagle",
+                    "french": "un aigle",
                     "spanish": ""
                 },
                 {
-                    "english": "fruit juice",
-                    "french": "jus de fruit",
+                    "english": "mine",
+                    "french": "le mien la mienne",
+                    "spanish": "",
+                    "grammarRule": "MINE YOURS HERS HIS ITS OURS YOURS THEIRS"
+                },
+                {
+                    "english": "yours",
+                    "french": "le tien la tienne",
+                    "spanish": "",
+                    "grammarRule": "MINE YOURS HERS HIS ITS OURS YOURS THEIRS"
+                },
+                {
+                    "english": "hers",
+                    "french": "le sien la sienne",
+                    "spanish": "",
+                    "comment": "le possesseur est féminin",
+                    "grammarRule": "MINE YOURS HERS HIS ITS OURS YOURS THEIRS"
+                },
+                {
+                    "english": "his",
+                    "french": "le sien la sienne",
+                    "spanish": "",
+                    "comment": "le possesseur est masculin",
+                    "grammarRule": "MINE YOURS HERS HIS ITS OURS YOURS THEIRS"
+                },
+                {
+                    "english": "its",
+                    "french": "le sien la sienne",
+                    "spanish": "",
+                    "comment": "le possesseur est inanimé",
+                    "grammarRule": "MINE YOURS HERS HIS ITS OURS YOURS THEIRS"
+                },
+                {
+                    "english": "ours",
+                    "french": "le notre la notre",
+                    "spanish": "",
+                    "grammarRule": "MINE YOURS HERS HIS ITS OURS YOURS THEIRS"
+                },
+                {
+                    "english": "yours",
+                    "french": "le votre la votre",
+                    "spanish": "",
+                    "grammarRule": "MINE YOURS HERS HIS ITS OURS YOURS THEIRS"
+                },
+                {
+                    "english": "theirs",
+                    "french": "le leur la leur",
+                    "spanish": "",
+                    "grammarRule": "MINE YOURS HERS HIS ITS OURS YOURS THEIRS"
+                },
+                {
+                    "english": "a zoo",
+                    "french": "un zoo",
                     "spanish": ""
                 },
                 {
-                    "english": "the roof",
-                    "french": "le toit",
+                    "english": "a panther",
+                    "french": "une panthere",
                     "spanish": ""
                 },
+                {
+                    "english": "a giraffe",
+                    "french": "une girafe",
+                    "spanish": ""
+                },
+                {
+                    "english": "the husband",
+                    "french": "le mari",
+                    "spanish": ""
+                },
+                {
+                    "english": "a sea lion",
+                    "french": "une otarie",
+                    "spanish": ""
+                },
+                {
+                    "english": "a camel",
+                    "french": "un chameau",
+                    "spanish": ""
+                },
+                {
+                    "english": "to feed",
+                    "french": "nourrir",
+                    "spanish": ""
+                },
+                {
+                    "english": "a wolf",
+                    "french": "un loup",
+                    "spanish": "",
+                    "grammarRule": "au pluriel WOLVES"
+                },
+                {
+                    "english": "as beautiful as",
+                    "french": "aussi beau que",
+                    "spanish": "",
+                    "grammarRule": "le comparatif d'égalité se construit avec AS + ADJ + AS"
+                },
+                {
+                    "english": "not as tall as",
+                    "french": "pas aussi grand que",
+                    "spanish": "",
+                    "grammarRule": "le comparatif d'inégalité se construit avec NOT AS + ADJ + AS"
+                },
+                {
+                    "english": "a snake",
+                    "french": "un serpent",
+                    "spanish": ""
+                },
+                {
+                    "english": "a penguin",
+                    "french": "un pingouin",
+                    "spanish": ""
+                },
+                {
+                    "english": "cheap",
+                    "french": "bon marche",
+                    "spanish": ""
+                },
+                {
+                    "english": "generally",
+                    "french": "generalement",
+                    "spanish": ""
+                },
+                {
+                    "english": "lazy",
+                    "french": "paresseux",
+                    "spanish": ""
+                },
+                {
+                    "english": "lazier than",
+                    "french": "plus paresseux que",
+                    "spanish": "",
+                    "grammarRule": "le comparatif de supériorité des adjectifs se finissant par Y est en IER"
+                },
+                {
+                    "english": "the weather",
+                    "french": "le temps",
+                    "spanish": ""
+                },
+                {
+                    "english": "bright",
+                    "french": "intelligent",
+                    "spanish": "",
+                    "comment": "synonyme de SMART"
+                },
+                {
+                    "english": "to think",
+                    "french": "penser",
+                    "spanish": ""
+                },
+                {
+                    "english": "comfortable",
+                    "french": "confortable",
+                    "spanish": ""
+                },
+                {
+                    "english": "as busy as a bee",
+                    "french": "debordant d'activite",
+                    "spanish": ""
+                },
+                {
+                    "english": "busy",
+                    "french": "occupe",
+                    "spanish": ""
+                },
+                {
+                    "english": "a bee",
+                    "french": "une abeille",
+                    "spanish": ""
+                },
+                {
+                    "english": "cute",
+                    "french": "mignon",
+                    "spanish": ""
+                },
+                {
+                    "english": "always",
+                    "french": "toujours",
+                    "spanish": ""
+                },
+                {
+                    "english": "a monkey",
+                    "french": "un singe",
+                    "spanish": ""
+                },
+                {
+                    "english": "a tiger",
+                    "french": "un tigre",
+                    "spanish": ""
+                },
+                {
+                    "english": "a whale",
+                    "french": "une baleine",
+                    "spanish": ""
+                },
+                {
+                    "english": "a seal",
+                    "french": "un phoque",
+                    "spanish": ""
+                },
+                {
+                    "english": "heavy",
+                    "french": "lourd",
+                    "spanish": ""
+                },
+                {
+                    "english": "fast",
+                    "french": "rapide",
+                    "spanish": ""
+                },
+                {
+                    "english": "heavier than",
+                    "french": "plus lourd que",
+                    "spanish": "",
+                    "grammarRule": "le comparatif de supériorité des adjectif se terminant par Y est en IER"
+                },
+                {
+                    "english": "a soup",
+                    "french": "une soupe",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name" : "Vocabulaire à trier",
+            "words" : [ 
                 {
                     "english": "under",
                     "french": "en-dessous",
@@ -2134,20 +2826,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "this is",
-                    "french": "c'est",
-                    "spanish": "",
-                    "comment": "Dans le cas o\u00f9 l'objet dont on parle est proche dans l'espace ou le temps.",
-                    "grammarRule": "THIS IS + SINGULIER. THESE ARE + PLURIEL. L'objet dont on parle est proche dans l'espace ou le temps. THIS IS A BOOK. THESE ARE BOOKS."
-                },
-                {
-                    "english": "these are",
-                    "french": "ce sont",
-                    "spanish": "",
-                    "comment": "Dans le cas o\u00f9 l'objet dont on parle est proche dans l'espace ou le temps.",
-                    "grammarRule": "THIS IS + SINGULIER. THESE ARE + PLURIEL. L'objet dont on parle est proche dans l'espace ou le temps. THIS IS A BOOK. THESE ARE BOOKS."
-                },
-                {
                     "english": "an egg",
                     "french": "un oeuf",
                     "spanish": ""
@@ -2156,26 +2834,17 @@
                     "english": "smart",
                     "french": "intelligent",
                     "spanish": "",
-                    "grammarRule": "Peut aussi se dire CLEVER"
+                    "note": "synonyme de CLEVER"
                 },
                 {
                     "english": "clever",
                     "french": "intelligent",
-                    "spanish": ""
+                    "spanish": "",
+                    "note": "synonyme de SMART"
                 },
                 {
                     "english": "a melon",
                     "french": "un melon",
-                    "spanish": ""
-                },
-                {
-                    "english": "our",
-                    "french": "notre",
-                    "spanish": ""
-                },
-                {
-                    "english": "their",
-                    "french": "leur(s)",
                     "spanish": ""
                 },
                 {
@@ -2214,11 +2883,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "a sheet of paper",
-                    "french": "une feuille de papier",
-                    "spanish": ""
-                },
-                {
                     "english": "quiet",
                     "french": "calme",
                     "spanish": ""
@@ -2244,11 +2908,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "a school bag",
-                    "french": "un cartable",
-                    "spanish": ""
-                },
-                {
                     "english": "the others",
                     "french": "les autres",
                     "spanish": ""
@@ -2261,11 +2920,6 @@
                 {
                     "english": "to park",
                     "french": "se garer",
-                    "spanish": ""
-                },
-                {
-                    "english": "markers",
-                    "french": "feutres",
                     "spanish": ""
                 },
                 {
@@ -2329,93 +2983,9 @@
                     "spanish": ""
                 },
                 {
-                    "english": "a school",
-                    "french": "une \u00e9cole",
-                    "spanish": ""
-                },
-                {
                     "english": "a girl",
                     "french": "une fille",
                     "spanish": ""
-                },
-                {
-                    "english": "that is",
-                    "french": "c'est",
-                    "spanish": "",
-                    "comment": "Dans le cas o\u00f9 l'objet dont on parle est loin dans l'espace ou le temps.",
-                    "grammarRule": "THAT IS + SINGULIER. THOSE ARE + PLURIEL. L'objet dont on parle est loin dans l'espace ou le temps. THAT IS A BOOK. THOSE ARE BOOKS."
-                },
-                {
-                    "english": "these are",
-                    "french": "ce sont",
-                    "spanish": "",
-                    "comment": "Dans le cas o\u00f9 l'objet dont on parle est loin dans l'espace ou le temps.",
-                    "grammarRule": "THAT IS + SINGULIER. THOSE ARE + PLURIEL. L'objet dont on parle est loin dans l'espace ou le temps. THAT IS A BOOK. THOSE ARE BOOKS."
-                },
-                {
-                    "english": "the boy's computer",
-                    "french": "l'ordinateur du gar\u00e7on",
-                    "spanish": "",
-                    "comment": "Utilise le g\u00e9n\u00e9tif.",
-                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand m\u00eame. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE."
-                },
-                {
-                    "english": "my parents' house",
-                    "french": "la maison de mes parents",
-                    "spanish": "",
-                    "comment": "Utilise le g\u00e9n\u00e9tif.",
-                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand m\u00eame. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE."
-                },
-                {
-                    "english": "my sister's house",
-                    "french": "la maison de ma soeur",
-                    "spanish": "",
-                    "comment": "Utilise le g\u00e9n\u00e9tif.",
-                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand m\u00eame. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE."
-                },
-                {
-                    "english": "there is some milk",
-                    "french": "il y a du lait",
-                    "spanish": "",
-                    "comment": "milk est ind\u00e9nombrable",
-                    "grammarRule": "SOME s'utilise suivi d'une quantit\u00e9 INDENOMBRABLE au SINGULIER ou d'une quantit\u00e9 DENOMBRABLE au pluriel."
-                },
-                {
-                    "english": "there are some apples",
-                    "french": "il y a des pommes",
-                    "spanish": "",
-                    "comment": "pommes est au PLURIEL",
-                    "grammarRule": "SOME s'utilise suivi d'une quantit\u00e9 INDENOMBRABLE au SINGULIER ou d'une quantit\u00e9 DENOMBRABLE au pluriel."
-                },
-                {
-                    "english": "is there any chocolate?",
-                    "french": "y a-t-il du chocolat?",
-                    "spanish": "",
-                    "grammarRule": "ANY s'utilise dans une phrase interrogative pour savoir si il y a quelque chose. Peut-\u00eatre suivi d'un SINGULIER ou d'un PLURIEL."
-                },
-                {
-                    "english": "are there any apples?",
-                    "french": "y a-t-il des pommes?",
-                    "spanish": "",
-                    "grammarRule": "ANY s'utilise dans une phrase interrogative pour savoir si il y a quelque chose. Peut-\u00eatre suivi d'un SINGULIER ou d'un PLURIEL."
-                },
-                {
-                    "english": "there isn't any milk",
-                    "french": "il n'y a pas de lait",
-                    "spanish": "",
-                    "grammarRule": "There ISN'T ANY milk = There is NOT ANY milk = There is NO milk. NOT ANY ou NO s'utilise pour dire qu'il y a absence de quantit\u00e9."
-                },
-                {
-                    "english": "do you want some cake?",
-                    "french": "veux-tu du g\u00e2teau?",
-                    "spanish": "",
-                    "grammarRule": "SOME peut s'utiliser aussi dans une question quand on PROPOSE quelque chose \u00e0 quelqu'un ou quand on est certain de la pr\u00e9sence de l'objet."
-                },
-                {
-                    "english": "can I have some water?",
-                    "french": "Puis-je avoir de l'eau?",
-                    "spanish": "",
-                    "grammarRule": "SOME peut s'utiliser aussi dans une question quand on PROPOSE quelque chose \u00e0 quelqu'un ou quand on est certain de la pr\u00e9sence de l'objet."
                 },
                 {
                     "english": "wednesday the 4th of september",
@@ -2429,17 +2999,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "whose?",
-                    "french": "a qui?",
-                    "spanish": "",
-                    "grammarRule": "Whose house is this? A qui est cette maison?"
-                },
-                {
-                    "english": "a copybook",
-                    "french": "un cahier",
-                    "spanish": ""
-                },
-                {
                     "english": "the bedroom",
                     "french": "la chambre",
                     "spanish": ""
@@ -2447,11 +3006,6 @@
                 {
                     "english": "a door",
                     "french": "une porte",
-                    "spanish": ""
-                },
-                {
-                    "english": "to go to school",
-                    "french": "aller \u00e0 l'\u00e9cole",
                     "spanish": ""
                 },
                 {
@@ -2510,11 +3064,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "to do your homeworks",
-                    "french": "faire tes devoirs",
-                    "spanish": ""
-                },
-                {
                     "english": "the daughter",
                     "french": "la fille",
                     "spanish": ""
@@ -2550,48 +3099,8 @@
                     "spanish": ""
                 },
                 {
-                    "english": "to study",
-                    "french": "\u00e9tudier",
-                    "spanish": ""
-                },
-                {
                     "english": "young",
                     "french": "jeune",
-                    "spanish": ""
-                },
-                {
-                    "english": "a paper",
-                    "french": "un devoir \u00e0 rendre",
-                    "spanish": ""
-                },
-                {
-                    "english": "skills",
-                    "french": "comp\u00e9tences",
-                    "spanish": ""
-                },
-                {
-                    "english": "a homework",
-                    "french": "un devoir maison",
-                    "spanish": ""
-                },
-                {
-                    "english": "crayons",
-                    "french": "crayons de couleur",
-                    "spanish": ""
-                },
-                {
-                    "english": "a desk",
-                    "french": "un bureau",
-                    "spanish": ""
-                },
-                {
-                    "english": "a badge",
-                    "french": "un badge",
-                    "spanish": ""
-                },
-                {
-                    "english": "homeworks",
-                    "french": "devoirs",
                     "spanish": ""
                 },
                 {
@@ -2613,12 +3122,6 @@
                     "english": "there",
                     "french": "l\u00e0-bas",
                     "spanish": ""
-                },
-                {
-                    "english": "a headmistress",
-                    "french": "une directrice",
-                    "spanish": "",
-                    "grammarRule": "Au pluriel, A HEADMISTRESS devient HEADMISTRESSES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES \u00e0 la place de S."
                 },
                 {
                     "english": "to get up",
@@ -2727,34 +3230,6 @@
                     "french": "se bagarrer",
                     "english": "to fight",
                     "spanish": ""
-                },
-                {
-                    "french": "ne joue pas!",
-                    "english": "don\u2019t play!",
-                    "spanish": "",
-                    "comment": "Imp\u00e9ratif!",
-                    "grammarRule": "L\u2019imp\u00e9ratif s\u2019utilise pour donner un ordre ou une interdiction."
-                },
-                {
-                    "french": "jouer",
-                    "english": "to play",
-                    "spanish": "",
-                    "comment": "Imp\u00e9ratif!",
-                    "grammarRule": "L\u2019imp\u00e9ratif s\u2019utilise pour donner un ordre ou une interdiction."
-                },
-                {
-                    "french": "joue!",
-                    "english": "play!",
-                    "spanish": "",
-                    "comment": "Imp\u00e9ratif!",
-                    "grammarRule": "L\u2019imp\u00e9ratif s\u2019utilise pour donner un ordre ou une interdiction."
-                },
-                {
-                    "french": "jouons!",
-                    "english": "let\u2019s play!",
-                    "spanish": "",
-                    "comment": "Imp\u00e9ratif!",
-                    "grammarRule": "L\u2019imp\u00e9ratif s\u2019utilise pour donner un ordre ou une interdiction. Let\u2019s indique que l\u2019on parle \u00e0 la 2\u00e8me personne du pluriel (nous)."
                 },
                 {
                     "french": "gagner",
