@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:vocab/Data/Model/theme.dart';
 import 'package:vocab/Data/Model/words.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
 
@@ -14,10 +15,14 @@ class WordService {
     return _words[_currentWordIndex];
   }
 
-  WordService(this._wordRepo, this._wordDoneInSession, Function loaded) {
-    _wordRepo.words().then((value) {
-      this._words = value;
-      this._wordCount = value.length;
+  WordService(this._wordRepo, this._wordDoneInSession, List<String> themes_chosen, Function loaded) {
+    _wordRepo.get_themes(names: themes_chosen).then((value) {
+      List<Words> word_temp = [];
+      for (Theme theme in value) {
+        word_temp.addAll(theme.words);
+      }
+      _words = word_temp;
+      this._wordCount = _words.length;
       _pickWord();
       loaded();
     });

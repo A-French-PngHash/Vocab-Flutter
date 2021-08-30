@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:vocab/Data/DatabaseHandler.dart';
-import 'package:vocab/Data/Model/language.dart';
 import 'package:vocab/Data/Model/session.dart';
 import 'package:vocab/Data/Model/words.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
@@ -12,8 +11,8 @@ part 'training_cubit.freezed.dart';
 
 class TrainingCubit extends Cubit<TrainingState> {
   late WordService _wordService;
-  Language originLanguage;
-  Language outputLanguage;
+  String originLanguage;
+  String outputLanguage;
   int wordCount = -1;
   int correct = 0;
   int incorrect = 0;
@@ -26,7 +25,7 @@ class TrainingCubit extends Cubit<TrainingState> {
   }
 
   String get correctTranslation {
-    switch (outputLanguage.currentlySelected) {
+    switch (outputLanguage) {
       case "french":
         return currentWord.french.trim();
       case "english":
@@ -39,7 +38,7 @@ class TrainingCubit extends Cubit<TrainingState> {
   }
 
   String get wordToTranslate {
-    switch (originLanguage.currentlySelected) {
+    switch (originLanguage) {
       case "french":
         return currentWord.french.trim();
       case "english":
@@ -51,10 +50,10 @@ class TrainingCubit extends Cubit<TrainingState> {
     }
   }
 
-  TrainingCubit(WordRepo _wordRepo, this.originLanguage, this.outputLanguage, this.nbTranslationToDo)
+  TrainingCubit(WordRepo _wordRepo, this.originLanguage, this.outputLanguage, this.nbTranslationToDo, List<String> themesChosen)
       : super(TrainingState.initial()) {
     this.beginTime = DateTime.now();
-    _wordService = WordService(_wordRepo, nbTranslationToDo, () {
+    _wordService = WordService(_wordRepo, nbTranslationToDo, themesChosen, () {
       // The service is loaded.
       nextButtonPressed();
     });

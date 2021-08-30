@@ -2,6 +2,12 @@
 
 📖 Vocabulary application to help you learn new words in foreign languages.
 
+## Quickstart
+
+1. Fetch packages with `flutter pub get`
+2. Generate files with `flutter pub run build_runner watch --delete-conflicting-outputs`
+3. Run it !
+
 ## Getting Started
 
 ### Config users
