@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 class WordRepo {
-  List<Theme>? _themes;
+  List<Words>? _themes;
 
   /// The current user of the application. This is set by the user, and depending on
   /// this, the same words won't be loaded.
