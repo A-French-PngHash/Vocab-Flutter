@@ -50,7 +50,6 @@ class MainMenuPage extends StatelessWidget {
 
   Widget buildMainMenu(BuildContext context, List<String> themes, List<String> currentlySelectedTheme,
       String originLanguage, String outputLanguage, String currentUser) {
-
     print(currentlySelectedTheme);
     if (currentlySelectedTheme.length == 0) {
       // If there is no themes currently selected
@@ -172,7 +171,7 @@ class MainMenuPage extends StatelessWidget {
       return BlocProvider(
         create: (context) => TrainingCubit(WordRepo(cubit.currentUser), cubit.originLanguage, cubit.outputLanguage,
             nbTranslationToDo, cubit.themesChosen),
-        child: TrainingPage(language_name_for(cubit.outputLanguage), nbTranslationToDo),
+        child: TrainingPage(language_name_for(cubit.outputLanguage), nbTranslationToDo, cubit.currentUser),
       );
     }));
   }

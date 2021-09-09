@@ -1,27 +1,303 @@
 {
     "themes": [
         {
-            "name": "cuisine",
-            "words" : [
-                {
-                    "english": "cook",
-                    "french": "cuisinier",
-                    "spanish": "cocinero"
-                },
-                {
-                    "english": "oven",
-                    "french": "four",
-                    "spanish": "horno"
-                }
-            ]
-        },
-        {
-            "name": "technology",
+            "name": "Las indígenas",
             "words": [
                 {
-                    "english": "phone",
-                    "spanish": "mobil",
-                    "french": "téléphone"
+                    "english": "",
+                    "french": "s'éloigner de",
+                    "spanish": "alejarse de"
+                },
+                {
+                    "english": "",
+                    "french": "enraciner",
+                    "spanish": "arraigar"
+                },
+                {
+                    "english": "",
+                    "french": "déraciner",
+                    "spanish": "desarraigar"
+                },
+                {
+                    "english": "",
+                    "french": "attirer l'attention",
+                    "spanish": "atraer la atención"
+                },
+                {
+                    "english": "",
+                    "french": "disparaître",
+                    "spanish": "desaparecer"
+                },
+                {
+                    "english": "",
+                    "french": "s'éteindre",
+                    "spanish": "extinguirse"
+                },
+                {
+                    "english": "",
+                    "french": "ecourager",
+                    "spanish": "fomentar"
+                },
+                {
+                    "english": "",
+                    "french": "imposer une langue",
+                    "spanish": "imponer una lengua"
+                },
+                {
+                    "english": "",
+                    "french": "lutter pou la multiculturalité",
+                    "spanish": "luchar por la multiculturalidad"
+                },
+                {
+                    "english": "",
+                    "french": "nier",
+                    "spanish": "negar"
+                },
+                {
+                    "english": "",
+                    "french": "interdire l'usage d'une langue",
+                    "spanish": "prohibir el uso de una lengua"
+                },
+                {
+                    "english": "",
+                    "french": "se rebeller",
+                    "spanish": "rebelarse"
+                },
+                {
+                    "english": "",
+                    "french": "reconnaître",
+                    "spanish": "reconocer"
+                },
+                {
+                    "english": "",
+                    "french": "revendiquer ses droits",
+                    "spanish": "reivindicar sus derechos"
+                },
+                {
+                    "english": "",
+                    "french": "respecter",
+                    "spanish": "respetar"
+                },
+                {
+                    "english": "",
+                    "french": "soutenir",
+                    "spanish": "respaldar"
+                },
+                {
+                    "english": "",
+                    "french": "revaloriser",
+                    "spanish": "revalorizar"
+                },
+                {
+                    "english": "",
+                    "french": "briser les moules",
+                    "spanish": "romper moldes"
+                },
+                {
+                    "english": "",
+                    "french": "se sentir",
+                    "spanish": "sentirse"
+                },
+                {
+                    "english": "",
+                    "french": "se montrer",
+                    "spanish": "mostrarse"
+                },
+                {
+                    "english": "",
+                    "french": "fiert",
+                    "spanish": "orgulloso"
+                },
+                {
+                    "english": "",
+                    "french": "honteux",
+                    "spanish": "avergonzado"
+                },
+                {
+                    "english": "",
+                    "french": "subir la discrimination",
+                    "spanish": "sufrir discriminación"
+                },
+                {
+                    "english": "",
+                    "french": "transmettre une langue",
+                    "spanish": "transmitir una lengua"
+                },
+                {
+                    "english": "",
+                    "french": "être menacés",
+                    "spanish": "ser amenazados"
+                },
+                {
+                    "english": "",
+                    "french": "les ancêtres",
+                    "spanish": "los antepasados"
+                },
+                {
+                    "english": "",
+                    "french": "l'attachement",
+                    "spanish": "el apego"
+                },
+                {
+                    "english": "",
+                    "french": "l'appropriation",
+                    "spanish": "la apropiación"
+                },
+                {
+                    "english": "",
+                    "french": "l'enracinement",
+                    "spanish": "el arraigo"
+                },
+                {
+                    "english": "",
+                    "french": "le désenracinement",
+                    "spanish": "el desarraigo"
+                },
+                {
+                    "english": "",
+                    "french": "autochtone",
+                    "spanish": "autóctono"
+                },
+                {
+                    "english": "",
+                    "french": "les colonisateurs",
+                    "spanish": "los colonizadores"
+                },
+                {
+                    "english": "",
+                    "french": "la cohabitation",
+                    "spanish": "la convivencia"
+                },
+                {
+                    "english": "",
+                    "french": "cohabiter",
+                    "spanish": "convivir"
+                },
+                {
+                    "english": "",
+                    "french": "les coutumes",
+                    "spanish": "las costumbres"
+                },
+                {
+                    "english": "",
+                    "french": "la baisse",
+                    "spanish": "el descenso"
+                },
+                {
+                    "english": "",
+                    "french": "les maladies",
+                    "spanish": "las enfermedades"
+                },
+                {
+                    "english": "",
+                    "french": "l'environnement",
+                    "spanish": "el entorno",
+                    "comment": "rural - urbano"
+                },
+                {
+                    "english": "",
+                    "french": "l'esprit",
+                    "spanish": "el espíritu"
+                },
+                {
+                    "english": "",
+                    "french": "étranger",
+                    "spanish": "forastero"
+                },
+                {
+                    "english": "",
+                    "french": "les indigènes",
+                    "spanish": "los indígenas"
+                },
+                {
+                    "english": "",
+                    "french": "l'héritage",
+                    "spanish": "el legado"
+                },
+                {
+                    "english": "",
+                    "french": "la langue indigène",
+                    "spanish": "la lengua indígena"
+                },
+                {
+                    "english": "",
+                    "french": "l'environnement naturel",
+                    "spanish": "et medio ambiante"
+                },
+                {
+                    "english": "",
+                    "french": "l'origine",
+                    "spanish": "el origen"
+                },
+                {
+                    "english": "",
+                    "french": "le chômage",
+                    "spanish": "el paro"
+                },
+                {
+                    "english": "",
+                    "french": "un passeur",
+                    "spanish": "un pollero"
+                },
+                {
+                    "english": "",
+                    "french": "la racine",
+                    "spanish": "la raíz"
+                },
+                {
+                    "english": "",
+                    "french": "la rébellion",
+                    "spanish": "la rebeldía"
+                },
+                {
+                    "english": "",
+                    "french": "la résistance",
+                    "spanish": "la resistencia"
+                },
+                {
+                    "english": "",
+                    "french": "les réseaux sociaux",
+                    "spanish": "las redes sociales"
+                },
+                {
+                    "english": "",
+                    "french": "soumis",
+                    "spanish": "sumiso"
+                },
+                {
+                    "english": "",
+                    "french": "insoumis",
+                    "spanish": "indómito"
+                },
+                {
+                    "english": "",
+                    "french": "la mort",
+                    "spanish": "la muerte"
+                },
+                {
+                    "english": "",
+                    "french": "la survie",
+                    "spanish": "la superviviencia"
+                },
+                {
+                    "english": "",
+                    "french": "survivre",
+                    "spanish": "sobrevivir"
+                },
+                {
+                    "english": "",
+                    "french": "le costume typique",
+                    "spanish": "el traje típico"
+                },
+                {
+                    "english": "",
+                    "french": "les tissus",
+                    "spanish": "los tejidos"
+                },
+                {
+                    "english": "",
+                    "french": "le lien",
+                    "spanish": "el vínculo"
                 }
             ]
         }

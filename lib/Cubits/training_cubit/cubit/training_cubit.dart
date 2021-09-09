@@ -17,6 +17,7 @@ class TrainingCubit extends Cubit<TrainingState> {
   int correct = 0;
   int incorrect = 0;
   int nbTranslationToDo;
+  String currentInputInTextField = "";
   late final DateTime beginTime;
   final DatabaseHandler _databaseHandler = DatabaseHandler();
 
@@ -50,7 +51,8 @@ class TrainingCubit extends Cubit<TrainingState> {
     }
   }
 
-  TrainingCubit(WordRepo _wordRepo, this.originLanguage, this.outputLanguage, this.nbTranslationToDo, List<String> themesChosen)
+  TrainingCubit(
+      WordRepo _wordRepo, this.originLanguage, this.outputLanguage, this.nbTranslationToDo, List<String> themesChosen)
       : super(TrainingState.initial()) {
     this.beginTime = DateTime.now();
     _wordService = WordService(_wordRepo, nbTranslationToDo, themesChosen, () {
@@ -59,7 +61,8 @@ class TrainingCubit extends Cubit<TrainingState> {
     });
   }
 
-  void userInputedWord(String word) {
+  void userValidatedWord(String word) {
+    currentInputInTextField = word;
     final success = word.toLowerCase().trim().replaceAll(RegExp(r"'"), '’') ==
         correctTranslation.toLowerCase().trim().replaceAll(RegExp(r"'"), '’');
     if (success) {
@@ -67,8 +70,8 @@ class TrainingCubit extends Cubit<TrainingState> {
     } else {
       incorrect += 1;
     }
-    emit(TrainingState.correction(
-        wordToTranslate, success, correctTranslation, word, wordCount, currentWord.comment, currentWord.grammarRule));
+    emit(TrainingState.correction(wordToTranslate, success, correctTranslation, currentInputInTextField, wordCount,
+        currentWord.comment, currentWord.grammarRule));
     _wordService.next(success);
   }
 
@@ -90,5 +93,9 @@ class TrainingCubit extends Cubit<TrainingState> {
         beginDate: beginTime,
         endDate: DateTime.now()));
     emit(TrainingState.finished(correct, incorrect));
+  }
+
+  void userChangedWord(String new_word) async {
+    currentInputInTextField = new_word;
   }
 }

@@ -16,6 +16,7 @@ class WordRepo {
   /// Returns a list of themes.
   ///
   /// Note : The theme objects contains the words in a property called words.
+  /// IMPORTANT NOTICE : The score is not set for words when getting this property.
   Future<List<Theme>> get words_with_theme async {
     if (_themes != null) {
       return _themes!;
@@ -33,7 +34,6 @@ class WordRepo {
         for (Map<String, dynamic> word in theme["words"]) {
           _words.add(
             Words(word["english"]! as String, word["spanish"]! as String, word["french"]! as String,
-                numberOfWords.toDouble(),
                 comment: word["comment"] as String?, grammarRule: word["grammarRule"] as String?),
           );
         }
@@ -47,10 +47,20 @@ class WordRepo {
   /// Return a list of themes where the name matches the names provided.
   Future<List<Theme>> get_themes({required List<String> names}) async {
     final all_themes = await words_with_theme;
-    return all_themes.where((element) => names.contains(element.name)).toList();
+    final selected_themes = all_themes.where((element) => names.contains(element.name)).toList();
+    int number_of_words = 0;
+    for (Theme i in selected_themes) {
+      number_of_words += i.words.length;
+    }
+    for (Theme i in selected_themes) {
+      for (Words j in i.words) {
+        j.score = number_of_words.toDouble();
+      }
+    }
+    return selected_themes;
   }
 
-  /// Returns a list of all the theme as string.
+  /// Returns a list of all the themes as string.
   Future<List<String>> get theme_names async {
     final themes = await this.words_with_theme;
     return themes.map((e) => e.name).toList();

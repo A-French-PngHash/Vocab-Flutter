@@ -9,15 +9,26 @@ import 'package:vocab/Pages/Elements/incorrect.dart';
 import 'package:vocab/Pages/Elements/progress_bar.dart';
 
 class TrainingPage extends StatelessWidget {
+  /// User currently doing the word series.
+  final String user;
+
+  /// Language the user is translating to.
   final String translateToLanguage;
+
+  /// The current input in the text field.
   String wordInputed = "";
+
+  /// The total number of translation the user will do in the series.
   final int numberOfTranslationToDo;
+
+  /// Unix timestamp where the eventual dialog showing a grammar rule showed up.
+  /// This is used to add a 1 second delay before the user can click next.
   int? dialogShowedAt;
 
   /// Delay before the dialog can be dismissed. In milliseconds.
   int dialogDelay = 1500;
 
-  TrainingPage(this.translateToLanguage, this.numberOfTranslationToDo);
+  TrainingPage(this.translateToLanguage, this.numberOfTranslationToDo, this.user);
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +124,7 @@ class TrainingPage extends StatelessWidget {
           onPressed: () {
             if (wordInputed.length > 0) {
               final cubit = context.read<TrainingCubit>();
-              cubit.userInputedWord(wordInputed);
+              cubit.userValidatedWord(wordInputed);
             }
           },
           text: "Validate",
@@ -145,6 +156,7 @@ class TrainingPage extends StatelessWidget {
         Text(
           wordToTranslate.capitalizeFirstofEach,
           style: TextStyle(fontSize: 30),
+          textAlign: TextAlign.center,
         ),
         if (comment != null) Text("Note : $comment")
       ],
@@ -164,8 +176,22 @@ class TrainingPage extends StatelessWidget {
       String translationInputed, int wordNumber, String? comment, String? grammarRule) {
     return Column(children: [
       _buildWordInfo(context, wordToTranslate, wordNumber),
-      CustomTextField(autofocus: true, initialValue: translationInputed, readOnly: true),
-      SizedBox(height: 350, child: Incorrect(correctTranslation, grammarRule))
+      CustomTextField(
+        autofocus: true,
+        initialValue: translationInputed,
+        onChanged: (String word) {
+          wordInputed = word;
+        },
+        readOnly: user != "titouan",
+      ),
+      SizedBox(
+        height: 350,
+        child: Incorrect(correctTranslation, grammarRule, () {
+          if (this.user != "titouan" || this.wordInputed == correctTranslation) {
+            context.read<TrainingCubit>().nextButtonPressed();
+          }
+        }),
+      ),
     ]);
   }
 

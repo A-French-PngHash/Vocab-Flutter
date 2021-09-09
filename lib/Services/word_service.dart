@@ -7,13 +7,10 @@ import 'package:vocab/Data/Repositories/word_repo.dart';
 class WordService {
   WordRepo _wordRepo;
   late final List<Words> _words;
-  int _currentWordIndex = -1;
-  late final int _wordCount;
+  late final int _wordCount; // Number of words that can be picked randomly.
   final int _wordDoneInSession; // The number of word the user will do in this session.
 
-  Words get current {
-    return _words[_currentWordIndex];
-  }
+  late Words current;
 
   WordService(this._wordRepo, this._wordDoneInSession, List<String> themes_chosen, Function loaded) {
     _wordRepo.get_themes(names: themes_chosen).then((value) {
@@ -30,38 +27,29 @@ class WordService {
 
   void next(bool success) {
     if (success) {
-      _words[_currentWordIndex].score -= (_wordCount / (_wordDoneInSession)) * 1;
+      current.score -= (_wordCount / (_wordDoneInSession)) * 4;
     } else {
-      _words[_currentWordIndex].score += (_wordCount / (_wordDoneInSession)) * 3;
+      current.score += (_wordCount / (_wordDoneInSession)) * 7;
     }
     _pickWord();
   }
 
   void _pickWord() {
-    double totalProbabilityCount =
-        _words.map((e) => e.score).fold(0, (previousValue, element) => previousValue + element);
+    double totalScore = _words.map((e) => e.score).fold(0, (previousValue, element) => previousValue + element);
 
-    List<double> probs = _words.map((e) => e.score / totalProbabilityCount).toList();
+    final rnd = Random();
+    double randNum = rnd.nextDouble() * totalScore;
+    double cumulativeProbability = 0.0;
 
-    double currentInterval = 0;
-    List<List<double>> probabilities = [];
-    for (final e in probs) {
-      probabilities.add([currentInterval, currentInterval + e]);
-      currentInterval += e;
-    }
-    probabilities.last[1] += 1;
-
-    int new_index = _currentWordIndex;
-    while (new_index == _currentWordIndex) {
-      final rnd = Random();
-      final randNum = Random().nextDouble();
-      for (final prob in probabilities) {
-        if (prob[0] <= randNum && randNum < prob[1]) {
-          new_index = probabilities.indexOf(prob);
-        }
+    Words new_word = Words("placeholder", "placeholder", "placeholder");
+    for (Words word in _words) {
+      cumulativeProbability += word.score;
+      if (cumulativeProbability > randNum) {
+        new_word = word;
+        break;
       }
     }
 
-    _currentWordIndex = new_index;
+    current = new_word;
   }
 }

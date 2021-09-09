@@ -2,9 +2,9 @@ class Words {
   String english;
   String spanish;
   String french;
-  double score;
+  late double score;
   String? comment;
   String? grammarRule;
 
-  Words(this.english, this.spanish, this.french, this.score, {this.comment, this.grammarRule});
+  Words(this.english, this.spanish, this.french, {this.comment, this.grammarRule});
 }

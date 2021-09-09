@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 class GradientButton extends StatelessWidget {
   String text;
   VoidCallback? onPressed;
+  bool enabled;
 
-  GradientButton({required this.text, this.onPressed});
+  GradientButton({required this.text, this.onPressed, this.enabled = true});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,11 @@ class GradientButton extends StatelessWidget {
               text,
               style: TextStyle(color: Colors.white),
             ),
-            onPressed: onPressed,
+            onPressed: () {
+              if (this.enabled && this.onPressed != null) {
+                onPressed!();
+              }
+            },
             borderRadius: BorderRadius.circular(18),
           ),
         ),
