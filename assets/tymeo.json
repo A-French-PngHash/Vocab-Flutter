@@ -344,7 +344,7 @@
                     "english": "I don't understand",
                     "french": "je ne comprends pas",
                     "spanish": "",
-                    "grammarRule": "DON'T est la contraction de DO NOT. Il s'utilise dans les phrases négatives. Attention! A la troisième personne du singulier, on dit HE DOESN'T UNDERSTAND."
+                    "grammarRule": "DON'T est la contraction de DO NOT. Il s'utilise dans les phrases négatives. Attention! A la troisième personne du singulier, on dit HE DOESN'T UNDERSTAND"
                 },
                 {
                     "english": "a map",
@@ -539,7 +539,7 @@
                     "english": "I don't know",
                     "french": "je ne sais pas",
                     "spanish": "",
-                    "grammarRule": "DON'T est la contraction de DO NOT. Il s'utilise dans les phrases négatives. Attention! A la 3ème personne du singulier, on dit HE DOESN'T KNOW."
+                    "grammarRule": "DON'T est la contraction de DO NOT. Il s'utilise dans les phrases négatives. Attention! A la 3ème personne du singulier, on dit HE DOESN'T KNOW"
                 },
                 {
                     "english": "far",
@@ -862,7 +862,7 @@
                     "english": "to make",
                     "french": "faire",
                     "spanish": "",
-                    "comment": "Souvent avec la notion de fabriquer/faire manuellement l'action."
+                    "comment": "Souvent avec la notion de fabriquer/faire manuellement l'action"
                 },
                 {
                     "english": "to do",
@@ -878,7 +878,7 @@
                     "english": "to guess",
                     "french": "deviner",
                     "spanish": "",
-                    "grammarRule": "les verbes se terminant par CH, SH, SS ou O, prendront ES à la 3ème personne du singulier. HE GUESSES."
+                    "grammarRule": "les verbes se terminant par CH, SH, SS ou O, prendront ES à la 3ème personne du singulier. HE GUESSES"
                 },
                 {
                     "english": "the side",
@@ -1069,7 +1069,7 @@
                     "english": "a salesman",
                     "french": "un vendeur",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, a SALESMAN devient SALESMEN."
+                    "grammarRule": "Au pluriel, a SALESMAN devient SALESMEN"
                 },
                 {
                     "english": "a hairdresser",
@@ -1339,7 +1339,7 @@
                 {
                     "english": "a bike",
                     "french": "un vélo",
-                    "comment": "Synonyme de BYCYCLE.",
+                    "comment": "Synonyme de BYCYCLE",
                     "spanish": ""
                 },
                 {
@@ -1375,7 +1375,7 @@
                 {
                     "english": "sweets",
                     "french": "bonbons",
-                    "comment": "Synonyme de CANDIES.",
+                    "comment": "Synonyme de CANDIES",
                     "spanish": ""
                 },
                 {
@@ -1488,7 +1488,7 @@
                 {
                     "french": "temps libre",
                     "english": "free time",
-                    "comment": "Synonyme de LEISURE TIME.",
+                    "comment": "Synonyme de LEISURE TIME",
                     "spanish": ""
                 },
                 {
@@ -1517,7 +1517,7 @@
                     "english": "i have got",
                     "french": "j'ai",
                     "spanish": "",
-                    "grammarRule": "Le mot GOT indique la possession. HAVE YOU GOT A RULER? YES, I HAVE GOT A RULER - NO, I HAVEN'T GOT A RULER - Attention, on dit HE HAS GOT - HE HASN'T GOT à la 3ème personne du singulier."
+                    "grammarRule": "Le mot GOT indique la possession. HAVE YOU GOT A RULER? YES, I HAVE GOT A RULER - NO, I HAVEN'T GOT A RULER - Attention, on dit HE HAS GOT - HE HASN'T GOT à la 3ème personne du singulier"
                 },
                 {
                     "english": "better",
@@ -1529,25 +1529,25 @@
                     "english": "i haven't got",
                     "french": "je n'ai pas",
                     "spanish": "",
-                    "grammarRule": "Le mot GOT indique la possession. HAVEN'T = contraction de HAVE NOT. HAVE YOU GOT A RULER? YES, I HAVE GOT A RULER - NO, I HAVEN'T GOT A RULER - Attention, on dit HE HAS GOT - HE HASN'T GOT à la 3ème personne du singulier."
+                    "grammarRule": "Le mot GOT indique la possession. HAVEN'T = contraction de HAVE NOT. HAVE YOU GOT A RULER? YES, I HAVE GOT A RULER - NO, I HAVEN'T GOT A RULER - Attention, on dit HE HAS GOT - HE HASN'T GOT à la 3ème personne du singulier"
                 },
                 {
                     "english": "to watch tv",
                     "french": "regarder la tv",
                     "spanish": "",
-                    "grammarRule": "les verbes se terminant par CH, SH, SS ou O, prendront ES à la 3ème personne du singulier. HE WATCHES TV."
+                    "grammarRule": "les verbes se terminant par CH, SH, SS ou O, prendront ES à la 3ème personne du singulier. HE WATCHES TV"
                 },
                 {
                     "english": "to watch a video",
                     "french": "regarder une vidéo",
                     "spanish": "",
-                    "grammarRule": "les verbes se terminant par CH, SH, SS ou O, prendront ES à la 3ème personne du singulier. HE WATCHES a video."
+                    "grammarRule": "les verbes se terminant par CH, SH, SS ou O, prendront ES à la 3ème personne du singulier. HE WATCHES a video"
                 },
                 {
                     "english": "let's do it",
                     "french": "faisons-le",
                     "spanish": "",
-                    "grammarRule": "Let's ne se traduit pas. Il s'agit de la marque de l'impératif (pour donner un ordre)."
+                    "grammarRule": "Let's ne se traduit pas. Il s'agit de la marque de l'impératif (pour donner un ordre)"
                 },
                 {
                     "english": "my",
@@ -1563,143 +1563,143 @@
                     "english": "his",
                     "french": "son",
                     "spanish": "",
-                    "comment": "Traduction de SON, SA ou SES si le possesseur est masculin.",
-                    "grammarRule": "HIS s'utilise quand le possesseur est MASCULIN. HIS pencil (le crayon appartient à un garçon)."
+                    "comment": "Traduction de SON, SA ou SES si le possesseur est masculin",
+                    "grammarRule": "HIS s'utilise quand le possesseur est MASCULIN. HIS pencil (le crayon appartient à un garçon)"
                 },
                 {
                     "english": "can",
                     "french": "pouvoir",
                     "comment": "Utilise un AUXILLIAIRE MODAL",
-                    "GrammarRule": "CAN est un auxilliaire modal. Il sert à indiquer la CAPACITE à faire quelque chose ou l'AUTORISATION de faire quelque chose.",
+                    "grammarRule": "CAN est un auxilliaire modal. Il sert à indiquer la CAPACITE à faire quelque chose ou l'AUTORISATION de faire quelque chose",
                     "spanish": ""
                 },
                 {
                     "english": "her",
                     "french": "son",
                     "spanish": "",
-                    "comment": "Traduction de SON, SA ou SES si le possesseur est féminin.",
-                    "grammarRule": "HER s'utilise quand le possesseur est FEMININ. HER pencil (le crayon appartient à une fille)."
+                    "comment": "Traduction de SON, SA ou SES si le possesseur est féminin",
+                    "grammarRule": "HER s'utilise quand le possesseur est FEMININ. HER pencil (le crayon appartient à une fille)"
                 },
                 {
                     "english": "its",
                     "french": "son",
                     "spanish": "",
-                    "comment": "Traduction de SON, SA ou SES si le possesseur est NEUTRE (chose).",
-                    "grammarRule": "ITS s'utilise quand le possesseur est NEUTRE (chose). ITS cover (la couverture d'un livre par exemple)."
+                    "comment": "Traduction de SON, SA ou SES si le possesseur est NEUTRE (chose)",
+                    "grammarRule": "ITS s'utilise quand le possesseur est NEUTRE (chose). ITS cover (la couverture d'un livre par exemple)"
                 },
                 {
                     "english": "a man",
                     "french": "un homme",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, MAN devient MEN."
+                    "grammarRule": "Au pluriel, MAN devient MEN"
                 },
                 {
                     "english": "men",
                     "french": "hommes",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, MAN devient MEN."
+                    "grammarRule": "Au pluriel, MAN devient MEN"
                 },
                 {
                     "english": "a woman",
                     "french": "une femme",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, WOMAN devient WOMEN."
+                    "grammarRule": "Au pluriel, WOMAN devient WOMEN"
                 },
                 {
                     "english": "women",
                     "french": "femmes",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, WOMAN devient WOMEN."
+                    "grammarRule": "Au pluriel, WOMAN devient WOMEN"
                 },
                 {
                     "english": "a brush",
                     "french": "une brosse",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, A BRUSH devient BRUSHES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES à la place de S."
+                    "grammarRule": "Au pluriel, A BRUSH devient BRUSHES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES à la place de S"
                 },
                 {
                     "english": "a mouse",
                     "french": "une souris",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, A MOUSE devient MICE."
+                    "grammarRule": "Au pluriel, A MOUSE devient MICE"
                 },
                 {
                     "english": "mice",
                     "french": "souris",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, A MOUSE devient MICE."
+                    "grammarRule": "Au pluriel, A MOUSE devient MICE"
                 },
                 {
                     "english": "a lady",
                     "french": "une dame",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, le Y devient IES. LADIES."
+                    "grammarRule": "Au pluriel, le Y devient IES. LADIES"
                 },
                 {
                     "english": "a watch",
                     "french": "une montre",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, A WATCH devient WATCHES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES à la place de S."
+                    "grammarRule": "Au pluriel, A WATCH devient WATCHES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES à la place de S"
                 },
                 {
                     "english": "a dress",
                     "french": "une robe",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, A DRESS devient DRESSES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES à la place de S."
+                    "grammarRule": "Au pluriel, A DRESS devient DRESSES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES à la place de S"
                 },
                 {
                     "english": "a fireman",
                     "french": "un pompier",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, a FIREMAN devient FIREMEN."
+                    "grammarRule": "Au pluriel, a FIREMAN devient FIREMEN"
                 },
                 {
                     "english": "a postman",
                     "french": "un facteur",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, a POSTMAN devient POSTMEN."
+                    "grammarRule": "Au pluriel, a POSTMAN devient POSTMEN"
                 },
                 {
                     "english": "a life",
                     "french": "une vie",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, FE se transforme en VES. A LIFE devient LIVES."
+                    "grammarRule": "Au pluriel, FE se transforme en VES. A LIFE devient LIVES"
                 },
                 {
                     "english": "lives",
                     "french": "vies",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, FE se transforme en VES. A LIFE devient LIVES."
+                    "grammarRule": "Au pluriel, FE se transforme en VES. A LIFE devient LIVES"
                 },
                 {
                     "english": "a wife",
                     "french": "une épouse",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, FE se transforme en VES. A WIFE devient WIVES."
+                    "grammarRule": "Au pluriel, FE se transforme en VES. A WIFE devient WIVES"
                 },
                 {
                     "english": "wives",
                     "french": "épouses",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, FE se transforme en VES. A WIFE devient WIVES."
+                    "grammarRule": "Au pluriel, FE se transforme en VES. A WIFE devient WIVES"
                 },
                 {
                     "english": "a child",
                     "french": "un enfant",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, CHILD devient CHILDREN."
+                    "grammarRule": "Au pluriel, CHILD devient CHILDREN"
                 },
                 {
                     "english": "children",
                     "french": "enfants",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, CHILD devient CHILDREN."
+                    "grammarRule": "Au pluriel, CHILD devient CHILDREN"
                 },
                 {
                     "english": "il a",
                     "french": "he has",
                     "spanish": "",
-                    "grammarRule": "Verbe TO HAVE se conjugue I HAVE, YOU HAVE, HE HAS."
+                    "grammarRule": "Verbe TO HAVE se conjugue I HAVE, YOU HAVE, HE HAS"
                 },
                 {
                     "english": "do you want?",
@@ -1711,100 +1711,100 @@
                     "english": "that is",
                     "french": "c'est",
                     "spanish": "",
-                    "comment": "Dans le cas où l'objet dont on parle est loin dans l'espace ou le temps.",
-                    "grammarRule": "THAT IS + SINGULIER. THOSE ARE + PLURIEL. L'objet dont on parle est loin dans l'espace ou le temps. THAT IS A BOOK. THOSE ARE BOOKS."
+                    "comment": "Dans le cas où l'objet dont on parle est loin dans l'espace ou le temps",
+                    "grammarRule": "THAT IS + SINGULIER. THOSE ARE + PLURIEL. L'objet dont on parle est loin dans l'espace ou le temps. THAT IS A BOOK. THOSE ARE BOOKS"
                 },
                 {
                     "english": "these are",
                     "french": "ce sont",
                     "spanish": "",
-                    "comment": "Dans le cas où l'objet dont on parle est loin dans l'espace ou le temps.",
-                    "grammarRule": "THAT IS + SINGULIER. THOSE ARE + PLURIEL. L'objet dont on parle est loin dans l'espace ou le temps. THAT IS A BOOK. THOSE ARE BOOKS."
+                    "comment": "Dans le cas où l'objet dont on parle est loin dans l'espace ou le temps",
+                    "grammarRule": "THAT IS + SINGULIER. THOSE ARE + PLURIEL. L'objet dont on parle est loin dans l'espace ou le temps. THAT IS A BOOK. THOSE ARE BOOKS"
                 },
                 {
                     "english": "the boy's computer",
                     "french": "l'ordinateur du garçon",
                     "spanish": "",
                     "comment": "Utilise le génétif.",
-                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand même. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE."
+                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand même. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE"
                 },
                 {
                     "english": "my parents' house",
                     "french": "la maison de mes parents",
                     "spanish": "",
                     "comment": "Utilise le génétif.",
-                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand même. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE."
+                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand même. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE"
                 },
                 {
                     "english": "my sister's house",
                     "french": "la maison de ma soeur",
                     "spanish": "",
                     "comment": "Utilise le génétif.",
-                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand même. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE."
+                    "grammarRule": "LE GENETIF indique la possession. Si le nom au singulier se termine par S, il faut rajouter 'S quand même. MATHIAS'S book. Si le possesseur est du pluriel, il faut juste rajouter '. MY PARENTS' HOUSE"
                 },
                 {
                     "english": "there is some milk",
                     "french": "il y a du lait",
                     "spanish": "",
                     "comment": "milk est indénombrable",
-                    "grammarRule": "SOME s'utilise suivi d'une quantité INDENOMBRABLE au SINGULIER ou d'une quantité DENOMBRABLE au pluriel."
+                    "grammarRule": "SOME s'utilise suivi d'une quantité INDENOMBRABLE au SINGULIER ou d'une quantité DENOMBRABLE au pluriel"
                 },
                 {
                     "english": "there are some apples",
                     "french": "il y a des pommes",
                     "spanish": "",
                     "comment": "pommes est au PLURIEL",
-                    "grammarRule": "SOME s'utilise suivi d'une quantité INDENOMBRABLE au SINGULIER ou d'une quantité DENOMBRABLE au pluriel."
+                    "grammarRule": "SOME s'utilise suivi d'une quantité INDENOMBRABLE au SINGULIER ou d'une quantité DENOMBRABLE au pluriel"
                 },
                 {
                     "english": "is there any chocolate?",
                     "french": "y a-t-il du chocolat?",
                     "spanish": "",
-                    "grammarRule": "ANY s'utilise dans une phrase interrogative pour savoir si il y a quelque chose. Peut-être suivi d'un SINGULIER ou d'un PLURIEL."
+                    "grammarRule": "ANY s'utilise dans une phrase interrogative pour savoir si il y a quelque chose. Peut-être suivi d'un SINGULIER ou d'un PLURIEL"
                 },
                 {
                     "english": "are there any apples?",
                     "french": "y a-t-il des pommes?",
                     "spanish": "",
-                    "grammarRule": "ANY s'utilise dans une phrase interrogative pour savoir si il y a quelque chose. Peut-être suivi d'un SINGULIER ou d'un PLURIEL."
+                    "grammarRule": "ANY s'utilise dans une phrase interrogative pour savoir si il y a quelque chose. Peut-être suivi d'un SINGULIER ou d'un PLURIEL"
                 },
                 {
                     "english": "there isn't any milk",
                     "french": "il n'y a pas de lait",
                     "spanish": "",
-                    "grammarRule": "There ISN'T ANY milk = There is NOT ANY milk = There is NO milk. NOT ANY ou NO s'utilise pour dire qu'il y a absence de quantité."
+                    "grammarRule": "There ISN'T ANY milk = There is NOT ANY milk = There is NO milk. NOT ANY ou NO s'utilise pour dire qu'il y a absence de quantité"
                 },
                 {
                     "english": "do you want some cake?",
                     "french": "veux-tu du gâteau?",
                     "spanish": "",
-                    "grammarRule": "SOME peut s'utiliser aussi dans une question quand on PROPOSE quelque chose à quelqu'un ou quand on est certain de la présence de l'objet."
+                    "grammarRule": "SOME peut s'utiliser aussi dans une question quand on PROPOSE quelque chose à quelqu'un ou quand on est certain de la présence de l'objet"
                 },
                 {
                     "english": "can I have some water?",
                     "french": "Puis-je avoir de l'eau?",
                     "spanish": "",
-                    "grammarRule": "SOME peut s'utiliser aussi dans une question quand on PROPOSE quelque chose à quelqu'un ou quand on est certain de la présence de l'objet."
+                    "grammarRule": "SOME peut s'utiliser aussi dans une question quand on PROPOSE quelque chose à quelqu'un ou quand on est certain de la présence de l'objet"
                 },
                 {
                     "english": "this is",
                     "french": "c'est",
                     "spanish": "",
-                    "comment": "Dans le cas où l'objet dont on parle est proche dans l'espace ou le temps.",
-                    "grammarRule": "THIS IS + SINGULIER. THESE ARE + PLURIEL. L'objet dont on parle est proche dans l'espace ou le temps. THIS IS A BOOK. THESE ARE BOOKS."
+                    "comment": "Dans le cas où l'objet dont on parle est proche dans l'espace ou le temps",
+                    "grammarRule": "THIS IS + SINGULIER. THESE ARE + PLURIEL. L'objet dont on parle est proche dans l'espace ou le temps. THIS IS A BOOK. THESE ARE BOOKS"
                 },
                 {
                     "english": "wednesday the 4th of september",
                     "french": "mercredi 4 septembre",
                     "spanish": "",
-                    "grammarRule": "on utilise les adjectifs numéros ORDINAUX (1st, 2nd, 3rd, 4th). Ne pas oublier THE et OF."
+                    "grammarRule": "on utilise les adjectifs numéros ORDINAUX (1st, 2nd, 3rd, 4th). Ne pas oublier THE et OF"
                 },
                 {
                     "english": "these are",
                     "french": "ce sont",
                     "spanish": "",
-                    "comment": "Dans le cas où l'objet dont on parle est proche dans l'espace ou le temps.",
-                    "grammarRule": "THIS IS + SINGULIER. THESE ARE + PLURIEL. L'objet dont on parle est proche dans l'espace ou le temps. THIS IS A BOOK. THESE ARE BOOKS."
+                    "comment": "Dans le cas où l'objet dont on parle est proche dans l'espace ou le temps",
+                    "grammarRule": "THIS IS + SINGULIER. THESE ARE + PLURIEL. L'objet dont on parle est proche dans l'espace ou le temps. THIS IS A BOOK. THESE ARE BOOKS"
                 },
                 {
                     "english": "our",
@@ -1820,7 +1820,7 @@
                     "english": "a headmistress",
                     "french": "une directrice",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, A HEADMISTRESS devient HEADMISTRESSES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES à la place de S."
+                    "grammarRule": "Au pluriel, A HEADMISTRESS devient HEADMISTRESSES. C'est le cas des noms se terminant par SH, CH, S ou X. On rajoute ES à la place de S"
                 },
                 {
                     "english": "whose?",
@@ -1833,21 +1833,21 @@
                     "english": "don’t play!",
                     "spanish": "",
                     "comment": "Impératif!",
-                    "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction."
+                    "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction"
                 },
                 {
                     "french": "jouer",
                     "english": "to play",
                     "spanish": "",
                     "comment": "Impératif!",
-                    "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction."
+                    "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction"
                 },
                 {
                     "french": "joue!",
                     "english": "play!",
                     "spanish": "",
                     "comment": "Impératif!",
-                    "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction."
+                    "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction"
                 },
                 {
                     "english": "farther",
@@ -1891,7 +1891,7 @@
                     "english": "let’s play!",
                     "spanish": "",
                     "comment": "Impératif!",
-                    "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction. Let’s indique que l’on parle à la 2ème personne du pluriel (nous)."
+                    "grammarRule": "L’impératif s’utilise pour donner un ordre ou une interdiction. Let’s indique que l’on parle à la 2ème personne du pluriel (nous)"
                 },
                 {
                     "english": "mine",
@@ -2080,7 +2080,7 @@
                 {
                     "french": "temps libre",
                     "english": "leasure time",
-                    "comment": "Synonyme de FREE TIME.",
+                    "comment": "Synonyme de FREE TIME",
                     "spanish": ""
                 },
                 {
@@ -2216,7 +2216,7 @@
                     "english": "physical education",
                     "french": "éducation physique et sportive",
                     "spanish": "",
-                    "grammarRule": "EPS en français, PE en anglais."
+                    "grammarRule": "EPS en français, PE en anglais"
                 },
                 {
                     "english": "a highlighter",
@@ -2278,7 +2278,7 @@
                 {
                     "english": "a blazer",
                     "french": "une veste",
-                    "Comment": "Synoyme de A JACKET.",
+                    "Comment": "Synoyme de A JACKET",
                     "spanish": ""
                 },
                 {
@@ -2401,7 +2401,7 @@
                     "english": "what is that?",
                     "french": "qu'est ce que c'est?",
                     "spanish": "",
-                    "comment": "L'objet est loin."
+                    "comment": "L'objet est loin"
                 },
                 {
                     "english": "a week",
@@ -2462,13 +2462,13 @@
                     "english": "there is",
                     "french": "il y a ",
                     "spanish": "",
-                    "comment": "Suivi d'un nom au singulier."
+                    "comment": "Suivi d'un nom au singulier"
                 },
                 {
                     "english": "there are",
                     "french": "il y a",
                     "spanish": "",
-                    "comment": "Suivi d'un nom au pluriel."
+                    "comment": "Suivi d'un nom au pluriel"
                 },
                 {
                     "english": "to ask",
@@ -2848,14 +2848,14 @@
                 {
                     "french": "une victoire",
                     "english": "a triumph",
-                    "comment": "Synonyme de A VICTORY.",
+                    "comment": "Synonyme de A VICTORY",
                     "spanish": ""
                 },
                 {
                     "french": "pendant que",
                     "english": "while",
                     "spanish": "",
-                    "comment": "Synonyme: tandis que."
+                    "comment": "Synonyme: tandis que"
                 },
                 {
                     "french": "gagner",
@@ -2878,7 +2878,7 @@
                     "french": "porter",
                     "english": "to wear",
                     "spanish": "",
-                    "comment": "Un vêtement."
+                    "comment": "Un vêtement"
                 },
                 {
                     "french": "traverser",
@@ -2910,7 +2910,7 @@
                     "french": "comme",
                     "english": "like",
                     "spanish": "",
-                    "comment": "Pas dans le sens aimer."
+                    "comment": "Pas dans le sens aimer"
                 },
                 {
                     "french": "se bagarrer",
@@ -2992,13 +2992,13 @@
                     "english": "a tooth",
                     "french": "une dent",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, TOOTH devient TEETH."
+                    "grammarRule": "Au pluriel, TOOTH devient TEETH"
                 },
                 {
                     "english": "teeth",
                     "french": "dents",
                     "spanish": "",
-                    "grammarRule": "Au pluriel, TOOTH devient TEETH."
+                    "grammarRule": "Au pluriel, TOOTH devient TEETH"
                 },
                 {
                     "english": "the skin",
@@ -3009,13 +3009,13 @@
                     "english": "a foot",
                     "french": "un pied",
                     "spanish": "",
-                    "grammarRule": "Au pluriel a FOOT devient FEET."
+                    "grammarRule": "Au pluriel a FOOT devient FEET"
                 },
                 {
                     "english": "feet",
                     "french": "pieds",
                     "spanish": "",
-                    "grammarRule": "Au pluriel a FOOT devient FEET."
+                    "grammarRule": "Au pluriel a FOOT devient FEET"
                 },
                 {
                     "english": "the blood",
@@ -3391,7 +3391,7 @@
                 {
                     "english": "a cover",
                     "french": "une couverture",
-                    "comment": "Synonyme A BLANKET.",
+                    "comment": "Synonyme A BLANKET",
                     "spanish": ""
                 },
                 {
@@ -3477,13 +3477,13 @@
                 {
                     "english": "that one",
                     "french": "celui-là",
-                    "comment": "L'objet dont on parle est loin.",
+                    "comment": "L'objet dont on parle est loin",
                     "spanish": ""
                 },
                 {
                     "english": "this one",
                     "french": "celui-ci",
-                    "comment": "L'objet dont ont parle est proche.",
+                    "comment": "L'objet dont ont parle est proche",
                     "spanish": ""
                 },
                 {
@@ -3499,7 +3499,7 @@
                 {
                     "english": "x-rays",
                     "french": "rayons laser",
-                    "comment": "Signifie aussi UNE RADIOLOGIE (médical).",
+                    "comment": "Signifie aussi UNE RADIOLOGIE (médical)",
                     "spanish": ""
                 },
                 {
@@ -3530,6 +3530,7 @@
                 {
                     "english": "to shoot",
                     "french": "tirer",
+                    "comment": "Avec un pistolet ou un ballon",
                     "spanish": ""
                 },
                 {
@@ -3555,15 +3556,15 @@
                 {
                     "english": "do you have?",
                     "french": "as-tu?",
-                    "GrammarRule": "Tu dois utiliser l'opérateur DO quand tu poses une question avec HAVE.",
-                    "Comment": "Utilise TO HAVE.",
+                    "grammarRule": "Tu dois utiliser l'opérateur DO quand tu poses une question avec HAVE",
+                    "comment": "Utilise TO HAVE",
                     "spanish": ""
                 },
                 {
                     "english": "have you got?",
                     "french": "as-tu?",
-                    "Comment": "Utilise HAVE GOT.",
-                    "GrammarRule": "Avec HAVE GOT tu n'utilises par l'opérateur DO.",
+                    "comment": "Utilise HAVE GOT",
+                    "grammarRule": "Avec HAVE GOT tu n'utilises par l'opérateur DO",
                     "spanish": ""
                 },
                 {
@@ -3645,7 +3646,7 @@
                 {
                     "english": "dark",
                     "french": "foncé",
-                    "GrammarRule": "S'utilise aussi pour la couleur de cheveux BRUN.",
+                    "grammarRule": "S'utilise aussi pour la couleur de cheveux BRUN",
                     "spanish": ""
                 },
                 {
@@ -3710,11 +3711,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "dark",
-                    "french": "foncé",
-                    "spanish": ""
-                },
-                {
                     "english": "round",
                     "french": "rond",
                     "spanish": ""
@@ -3727,11 +3723,6 @@
                 {
                     "english": "a hammer",
                     "french": "un marteau",
-                    "spanish": ""
-                },
-                {
-                    "english": "the weather",
-                    "french": "le temps",
                     "spanish": ""
                 },
                 {
@@ -3773,14 +3764,14 @@
                     "english": "can't",
                     "french": "ne peux pas",
                     "comment": "Utilise un AUXILLIAIRE MODAL à la forme négative. Forme contractée",
-                    "GrammarRule": "CAN'T indique l'INCAPACITE ou l'INTERDICTION de faire quelque chose",
+                    "grammarRule": "CAN'T indique l'INCAPACITE ou l'INTERDICTION de faire quelque chose",
                     "spanish": ""
                 },
                 {
                     "english": "cannot",
                     "french": "ne peux pas",
                     "comment": "Utilise un AUXILLIAIRE MODAL à la forme négative. Forme non contractée",
-                    "GrammarRule": "CANNOT indique l'INCAPACITE ou l'INTERDICTION de faire quelque chose",
+                    "grammarRule": "CANNOT indique l'INCAPACITE ou l'INTERDICTION de faire quelque chose",
                     "spanish": ""
                 },
                 {
@@ -3796,13 +3787,13 @@
                 {
                     "english": "nice",
                     "french": "gentil",
-                    "comment": "Synonyme de KIND.",
+                    "comment": "Synonyme de KIND",
                     "spanish": ""
                 },
                 {
                     "english": "kind",
                     "french": "gentil",
-                    "comment": "Synonyme de NICE.",
+                    "comment": "Synonyme de NICE",
                     "spanish": ""
                 },
                 {
@@ -3838,6 +3829,7 @@
                 {
                     "english": "to type",
                     "french": "écrire",
+                    "comment": "Sur un ordinateur ou une machine à écrire",
                     "spanish": ""
                 },
                 {
@@ -3898,11 +3890,6 @@
                 {
                     "english": "to control",
                     "french": "controler",
-                    "spanish": ""
-                },
-                {
-                    "english": "couragious",
-                    "french": "courageux",
                     "spanish": ""
                 },
                 {
@@ -4029,7 +4016,7 @@
                 {
                     "english": "a gift",
                     "french": "un cadeau",
-                    "comment": "Synonyme de A PRESENT.",
+                    "comment": "Synonyme de A PRESENT",
                     "spanish": ""
                 },
                 {
@@ -4060,6 +4047,7 @@
                 {
                     "english": "to pass",
                     "french": "réussir",
+                    "comment": "Réussir à un examen",
                     "spanish": ""
                 },
                 {
@@ -4070,7 +4058,7 @@
                 {
                     "english": "to be good at...",
                     "french": "être bon dans...",
-                    "comment": "... un domaine. Ex: Etre bon en Maths.",
+                    "comment": "... un domaine. Ex: Etre bon en Maths",
                     "spanish": ""
                 },
                 {
@@ -4091,7 +4079,7 @@
                 {
                     "english": "an anniversary",
                     "french": "un anniversaire",
-                    "comment": "Dans le sens une date importante.",
+                    "comment": "Dans le sens une date importante",
                     "spanish": ""
                 },
                 {
@@ -4102,49 +4090,57 @@
                 {
                     "english": "me",
                     "french": "moi",
-                    "comment": "Utilise le pronom complément (COD ou COI).",
+                    "comment": "Utilise le pronom complément (COD ou COI)",
+                    "grammarRule": "Les pronoms compléments COD ou COI sont ME YOU HIM HER IT US YOU THEM. Ils se placent toujours après le verbe",
                     "spanish": ""
                 },
                 {
                     "english": "you",
                     "french": "te",
-                    "comment": "Utilise le pronom complément (COD ou COI).",
+                    "comment": "Utilise le pronom complément (COD ou COI)",
+                    "grammarRule": "Les pronoms compléments COD ou COI sont ME YOU HIM HER IT US YOU THEM. Ils se placent toujours après le verbe",
                     "spanish": ""
                 },
                 {
                     "english": "him",
                     "french": "le/la",
-                    "comment": "Utilise le pronom complément (COD ou COI). Le possesseur est masculin.",                    
+                    "comment": "Utilise le pronom complément (COD ou COI). Le possesseur est masculin",
+                    "grammarRule": "Les pronoms compléments COD ou COI sont ME YOU HIM HER IT US YOU THEM. Ils se placent toujours après le verbe",
                     "spanish": ""
                 },
                 {
                     "english": "her",
                     "french": "le/la",
-                    "comment": "Utilise le pronom complément (COD ou COI). Le possesseur est féminin.",
+                    "comment": "Utilise le pronom complément (COD ou COI). Le possesseur est féminin",
+                    "grammarRule": "Les pronoms compléments COD ou COI sont ME YOU HIM HER IT US YOU THEM. Ils se placent toujours après le verbe",
                     "spanish": ""
                 },
                 {
                     "english": "it",
                     "french": "le/la",
-                    "comment": "Utilise le pronom complément (COD ou COI). Le possesseur n'est pas un être humain.",
+                    "comment": "Utilise le pronom complément (COD ou COI). Le possesseur n'est pas un être humain",
+                    "grammarRule": "Les pronoms compléments COD ou COI sont ME YOU HIM HER IT US YOU THEM. Ils se placent toujours après le verbe",
                     "spanish": ""
                 },
                 {
                     "english": "us",
                     "french": "nous",
-                    "comment": "Utilise le pronom complément (COD ou COI).",
+                    "comment": "Utilise le pronom complément (COD ou COI)",
+                    "grammarRule": "Les pronoms compléments COD ou COI sont ME YOU HIM HER IT US YOU THEM. Ils se placent toujours après le verbe",
                     "spanish": ""
                 },
                 {
                     "english": "you",
                     "french": "vous",
-                    "comment": "Utilise le pronom complément (COD ou COI).",
+                    "comment": "Utilise le pronom complément (COD ou COI)",
+                    "grammarRule": "Les pronoms compléments COD ou COI sont ME YOU HIM HER IT US YOU THEM. Ils se placent toujours après le verbe",
                     "spanish": ""
                 },
                 {
-                    "english": "eux",
-                    "french": "them",
-                    "comment": "Utilise le pronom complément (COD ou COI).",
+                    "english": "them",
+                    "french": "eux",
+                    "comment": "Utilise le pronom complément (COD ou COI)",
+                    "grammarRule": "Les pronoms compléments COD ou COI sont ME YOU HIM HER IT US YOU THEM. Ils se placent toujours après le verbe",
                     "spanish": ""
                 },
                 {
@@ -4240,6 +4236,108 @@
                 {
                     "english": "to invite",
                     "french": "inviter",
+                    "spanish": ""
+                },
+                {
+                    "english": "a singer",
+                    "french": "un chanteur",
+                    "spanish": ""
+                },
+                {
+                    "english": "here!",
+                    "french": "présent!",
+                    "spanish": ""
+                },
+                {
+                    "english": "absent!",
+                    "french": "absent!",
+                    "comment": "synonyme de NOT HERE!",
+                    "spanish": ""
+                },
+                {
+                    "english": "not here!",
+                    "french": "absent!",
+                    "comment": "synonyme de ABSENT!",
+                    "spanish": ""
+                },
+                {
+                    "english": "see you next week!",
+                    "french": "à la semaine prochaine!",
+                    "spanish": ""
+                },
+                {
+                    "english": "see you tomorrow!",
+                    "french": "à demain!",
+                    "spanish": ""
+                },
+                {
+                    "english": "see you on monday!",
+                    "french": "à lundi!",
+                    "spanish": ""
+                },
+                {
+                    "english": "twins",
+                    "french": "jumeaux",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name": "Collège 5ème 1er semestre",
+            "words": [
+                {
+                    "english": "open 24 hours",
+                    "french": "ouvert 24h/24",
+                    "spanish": ""
+                },
+                {
+                    "english": "time's up",
+                    "french": "temps écoulé",
+                    "spanish": ""
+                },
+                {
+                    "english": "the clock is 2 minutes slow",
+                    "french": "l'horloge retarde de 2 minutes",
+                    "spanish": ""
+                },
+                {
+                    "english": "the clock is 2 minutes fast",
+                    "french": "l'horloge avance de 2 minutes",
+                    "spanish": ""
+                },
+                {
+                    "english": "the clock",
+                    "french": "l'horloge",
+                    "spanish": ""
+                },
+                {
+                    "english": "a square",
+                    "french": "une équerre",
+                    "spanish": ""
+                },
+                {
+                    "english": "a correction mouse",
+                    "french": "une souris correctrice",
+                    "spanish": ""
+                },
+                {
+                    "english": "scotch tape",
+                    "french": "scotch",
+                    "spanish": ""
+                },
+                {
+                    "english": "a pair of compasses",
+                    "french": "un compas",
+                    "spanish": ""
+                },
+                {
+                    "english": "a protractor",
+                    "french": "un rapporteur",
+                    "spanish": ""
+                },
+                {
+                    "english": "felt pens",
+                    "french": "feutres",
                     "spanish": ""
                 }
             ]
