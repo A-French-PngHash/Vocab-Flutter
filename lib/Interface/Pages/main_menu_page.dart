@@ -17,7 +17,7 @@ class MainMenuPage extends StatelessWidget {
   final int nbTranslationToDo = 65;
 
   /// List of the users of the app.
-  final List<String> users = ["tymeo", "titouan"];
+  final List<String> users = ["tymeo", "titouan", "demo"];
 
   /// List of all languages the user can pick from.
   final List<String> languageList = ["french", "english", "spanish"];

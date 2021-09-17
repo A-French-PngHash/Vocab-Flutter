@@ -300,6 +300,36 @@
                     "spanish": "el vínculo"
                 }
             ]
+        },
+        {
+            "name": "Cahier 1er trimestre",
+            "words": [
+                {
+                    "english": "",
+                    "french": "un lac",
+                    "spanish": "un lago"
+                },
+                {
+                    "english": "",
+                    "french": "fouler la terre",
+                    "spanish": "pisar la tierra"
+                },
+                {
+                    "english": "",
+                    "french": "les rayons",
+                    "spanish": "los rayos"
+                },
+                {
+                    "english": "",
+                    "french": "les saisons",
+                    "spanish": "los estaciones"
+                },
+                {
+                    "english": "",
+                    "french": "un tambour",
+                    "spanish": "un tombor"
+                }
+            ]
         }
     ]
 }

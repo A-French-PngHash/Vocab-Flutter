@@ -61,6 +61,7 @@ flutter:
   assets:
     - assets/tymeo.json
     - assets/titouan.json
+    - assets/demo.json
 
   fonts:
     - family: SanFrancisco

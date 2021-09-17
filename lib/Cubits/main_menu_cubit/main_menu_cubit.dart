@@ -49,7 +49,7 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
     if (prefs.containsKey(userThemeChoiceKey)) {
       themesChosen = prefs.getStringList(userThemeChoiceKey)!;
     } else {
-      themesChosen = [];
+      themesChosen = [this.themes[0]];
     }
     emitState();
   }

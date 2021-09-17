@@ -105,7 +105,7 @@ class TrainingPage extends StatelessWidget {
   }
 
   Widget loadingView() {
-    return Text("Loading...");
+    return Center(child:  Text("Loading..."));
   }
 
   /// Return the word view that contains, the word info (which word to translate
@@ -182,14 +182,12 @@ class TrainingPage extends StatelessWidget {
         onChanged: (String word) {
           wordInputed = word;
         },
-        readOnly: user != "titouan",
+        readOnly: false,
       ),
       SizedBox(
         height: 350,
         child: Incorrect(correctTranslation, grammarRule, () {
-          if (this.user != "titouan" || this.wordInputed == correctTranslation) {
-            context.read<TrainingCubit>().nextButtonPressed();
-          }
+          context.read<TrainingCubit>().nextButtonPressed(wasIncorrect: true, correctionInputed: wordInputed);
         }),
       ),
     ]);
