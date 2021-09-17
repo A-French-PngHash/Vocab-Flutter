@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vocab/Cubits/training_cubit/cubit/training_cubit.dart';
-import 'package:vocab/Pages/Elements/button/gradient_button.dart';
-import 'package:vocab/Pages/Elements/correct.dart';
-import 'package:vocab/Pages/Elements/custom_text_field.dart';
-import 'package:vocab/Pages/Elements/incorrect.dart';
-import 'package:vocab/Pages/Elements/progress_bar.dart';
+import 'package:vocab/Interface/Elements/button/gradient_button.dart';
+import 'package:vocab/Interface/Elements/correct.dart';
+import 'package:vocab/Interface/Elements/custom_text_field.dart';
+import 'package:vocab/Interface/Elements/incorrect.dart';
+import 'package:vocab/Interface/Elements/progress_bar.dart';
 
 class TrainingPage extends StatelessWidget {
   /// User currently doing the word series.
