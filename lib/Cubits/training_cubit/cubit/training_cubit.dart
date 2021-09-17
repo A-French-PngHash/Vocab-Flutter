@@ -28,7 +28,7 @@ class TrainingCubit extends Cubit<TrainingState> {
   /// Return the correct translation of the current word. Note : this string is
   /// already sanitized using the [sanitizeWord] function.
   String get correctTranslation {
-    String word = "";
+    String word = "Unknown Language";
     switch (outputLanguage) {
       case "french":
         word = currentWord.french.trim();
