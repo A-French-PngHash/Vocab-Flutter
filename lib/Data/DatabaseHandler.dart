@@ -1,8 +1,13 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:vocab/Data/Model/session.dart';
+import 'package:vocab/Data/Model/word_db.dart';
 
 class DatabaseHandler {
+  static final DatabaseHandler _singleton = DatabaseHandler._internal();
+  factory DatabaseHandler() => _singleton;
+  DatabaseHandler._internal();
+
   Database? _database;
 
   Future<Database> get database async {
@@ -16,28 +21,48 @@ class DatabaseHandler {
         onCreate: (db, version) async {
           // Run the CREATE TABLE statement on the database.
           await db.execute(
-            "CREATE TABLE Session(correct INTEGER, incorrect INTEGER, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT(1));",
+            "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, correct INTEGER, incorrect INTEGER, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1));",
           );
           await db.execute(
-              "CREATE TABLE Word (wordShown TEXT NOT NULL, expectedTranslation TEXT NOT NULL, inputedTranslation  TEXT NOT NULL, scoreWhenShown DOUBLE );");
+              "CREATE TABLE Word (wordShown TEXT NOT NULL, expectedTranslation TEXT NOT NULL, inputedTranslation TEXT NOT NULL, scoreWhenShown DOUBLE, sessionId BIGINT REFERENCES Session (id) NOT NULL);");
         },
         onUpgrade: (db, oldVersion, newVersion) async {
           if (oldVersion == 1 && newVersion == 2) {
-            await db.execute("ALTER TABLE Session ADD COLUMN completed BOOLEAN NOT NULL DEFAULT(1);");
+            await db.execute("DROP TABLE IF EXISTS Word;");
+            await db.execute("DROP TABLE IF EXISTS Session;");
             await db.execute(
-                "CREATE TABLE Word (wordShown TEXT NOT NULL, expectedTranslation TEXT NOT NULL, inputedTranslation  TEXT NOT NULL, scoreWhenShown DOUBLE );");
+              "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, correct INTEGER, incorrect INTEGER, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1));",
+            );
+            await db.execute(
+                "CREATE TABLE Word (wordShown TEXT NOT NULL, expectedTranslation TEXT NOT NULL, inputedTranslation TEXT NOT NULL, scoreWhenShown DOUBLE, sessionId BIGINT REFERENCES Session (id) NOT NULL);");
           }
         },
         // Set the version. This executes the onCreate function and provides a
         // path to perform database upgrades and downgrades.
-        version: 2,
+        version: 3,
       );
     }
     return Future.value(_database);
   }
 
-  Future<void> insertNewSession(Session session) async {
+  /// Insert the given session object and returns its id in the database.
+  Future<int> insertNewSession(Session session) async {
     final db = await database;
-    await db.insert("Session", session.toJson());
+    int id = await db.insert("Session", session.toJson());
+    return id;
+  }
+
+  Future<void> insertWord(WordDb word) async {
+    final db = await database;
+    await db.insert("Word", word.toJson());
+    await printAllWord();
+  }
+
+  Future<void> printAllWord() async {
+    final db = await database;
+    List<Map<String, Object?>> result = await db.query("Word");
+    for (Map<String, Object?> e in result) {
+      print(e);
+    }
   }
 }

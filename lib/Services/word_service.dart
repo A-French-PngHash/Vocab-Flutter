@@ -59,8 +59,7 @@ class WordService {
           break;
         }
       }
-    }
-
+    } 
     current = new_word;
   }
 }
