@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vocab/Cubits/main_menu_cubit/main_menu_cubit.dart';
 import 'package:vocab/themes.dart';
 
-import 'Pages/main_menu_page.dart';
+import 'Interface/Pages/main_menu_page.dart';
 
 void main() {
   runApp(MyApp());

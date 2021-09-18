@@ -35,17 +35,24 @@ class TrainingCubit extends Cubit<TrainingState> {
     return _wordService.current;
   }
 
+  /// Return the correct translation of the current word. Note : this string is
+  /// already sanitized using the [sanitizeWord] function.
   String get correctTranslation {
+    String word = "Unknown Language";
     switch (outputLanguage) {
       case "french":
-        return currentWord.french.trim();
+        word = currentWord.french.trim();
+        break;
       case "english":
-        return currentWord.english.trim();
+        word = currentWord.english.trim();
+        break;
       case "spanish":
-        return currentWord.spanish.trim();
+        word = currentWord.spanish.trim();
+        break;
       default:
         return "Unknown Language";
     }
+    return sanitizeWord(word);
   }
 
   String get wordToTranslate {
@@ -73,17 +80,38 @@ class TrainingCubit extends Cubit<TrainingState> {
     });
   }
 
-  void userValidatedWord(String input) {
-    currentInputInTextField = input;
-    final success = input.toLowerCase().trim().replaceAll(RegExp(r"'"), '’') ==
-        correctTranslation.toLowerCase().trim().replaceAll(RegExp(r"'"), '’');
+  /// Sanitasizes the given string.
+  ///
+  /// Puts it to lower case, trims it, replaces ' with ’
+  String sanitizeWord(String word) {
+    return word.toLowerCase().trim().replaceAll(RegExp(r"'"), '’');
+  }
+
+  void userValidatedWord(String word) {
+    currentInputInTextField = word;
+    final success = sanitizeWord(word) == correctTranslation;
     if (success) {
       correct += 1;
     } else {
       incorrect += 1;
     }
+    emit(TrainingState.correction(wordToTranslate, success, correctTranslation, currentInputInTextField, wordCount,
+        currentWord.comment, currentWord.grammarRule));
+  }
 
-    // TODO : Put this code in nextButtonPressed
+  /// Called when the next button was pressed. This button appear after the
+  /// valide button. It's shown along a screen that tells the user whether he
+  /// got the word right.
+  ///
+  /// If the user got the word wrong, he has to type it again in order to
+  /// continue. In that case, set [wasIncorrect] to true and set
+  /// [correctionInputed] to the current word in the text field.
+  void nextButtonPressed({wasIncorrect = false, correctionInputed = ""}) {
+    if (wasIncorrect && sanitizeWord(correctionInputed) != correctTranslation) {
+      // Words are not matching.
+      return;
+    }
+    
     dbWordRepo.linkWordToSession(
       session: session,
       wordShown: wordToTranslate,
@@ -100,10 +128,7 @@ class TrainingCubit extends Cubit<TrainingState> {
       currentWord.comment,
       currentWord.grammarRule,
     ));
-    _wordService.next(success);
-  }
-
-  void nextButtonPressed() {
+    _wordService.next(!wasIncorrect);
     if (wordCount + 1 == nbTranslationToDo) {
       emit(TrainingState.finished(correct, incorrect));
       return;
@@ -112,10 +137,16 @@ class TrainingCubit extends Cubit<TrainingState> {
 
       emit(TrainingState.word(wordToTranslate, currentWord.comment, wordCount));
     }
+
   }
 
-  /// Called when the user changed the word currently in the text field.
-  void userChangedWord(String new_word) async {
-    currentInputInTextField = new_word;
+  void finishedSession() async {
+    await _databaseHandler.insertNewSession(Session(
+        correct: correct,
+        incorrect: incorrect,
+        wordCount: nbTranslationToDo,
+        beginDate: beginTime,
+        endDate: DateTime.now()));
+    emit(TrainingState.finished(correct, incorrect));
   }
 }

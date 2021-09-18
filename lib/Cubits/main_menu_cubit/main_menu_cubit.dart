@@ -9,7 +9,28 @@ part 'main_menu_state.dart';
 part 'main_menu_cubit.freezed.dart';
 
 class MainMenuCubit extends Cubit<MainMenuCubitState> {
-  String currentUser = "tymeo";
+  /// User used when the app is opened for the first time.
+  String defaultFirstUser = "tymeo";
+  late SharedPreferences prefs;
+
+  String? _currentUser;
+  String get currentUser {
+    if (_currentUser == null) {
+      if (prefs.containsKey(currentUserKey)) {
+        _currentUser = prefs.getString(currentUserKey)!;
+      } else {
+        currentUser = defaultFirstUser;
+      }
+    }
+
+    return _currentUser!;
+  }
+
+  set currentUser(String new_value) {
+    _currentUser = new_value;
+    prefs.setString(currentUserKey, new_value);
+  }
+
   List<String> themes = ["Loading..."];
 
   /// Original language. Default value.
@@ -18,12 +39,12 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   /// Output language. Default value.
   String outputLanguage = "english";
 
-  set themesChosen(List<String> e) {
+  set chosenThemes(List<String> e) {
     print("Changing themesChosen to $e, before : $_themesChosen");
     _themesChosen = e;
   }
 
-  List<String> get themesChosen {
+  List<String> get chosenThemes {
     return _themesChosen;
   }
 
@@ -36,20 +57,29 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
     return this.currentUser + "ThemeChoosen";
   }
 
+  /// The key to access the current selected user stored in SharedPreferences.
+  String currentUserKey = "user";
+
   MainMenuCubit() : super(MainMenuCubitState.loading()) {
-    print("Initializing cubit");
-    refreshThemes().then((value) => emitState());
+    print("Initializing main menu cubit");
+
+    this.loadAsync().then((value) => emitState());
+  }
+
+  /// All async loading code grouped into one function.
+  Future<void> loadAsync() async {
+    this.prefs = await SharedPreferences.getInstance();
+    await refreshThemes();
   }
 
   /// Refresh [themes] by fetching them from a new wordRepo instance.
   Future<void> refreshThemes() async {
     final wordRepo = WordRepo(this.currentUser);
     this.themes = await wordRepo.theme_names;
-    SharedPreferences prefs = await SharedPreferences.getInstance();
     if (prefs.containsKey(userThemeChoiceKey)) {
-      themesChosen = prefs.getStringList(userThemeChoiceKey)!;
+      chosenThemes = prefs.getStringList(userThemeChoiceKey)!;
     } else {
-      themesChosen = [];
+      chosenThemes = [this.themes[0]];
     }
     emitState();
   }
@@ -73,21 +103,19 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   }
 
   void themesSelected(List<String> themes) async {
-    this.themesChosen = themes;
+    this.chosenThemes = themes;
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setStringList(userThemeChoiceKey, this.themesChosen);
+    prefs.setStringList(userThemeChoiceKey, this.chosenThemes);
     emit(MainMenuCubitState.loading()); // Emiting this first, otherwise, view doesn't get refreshed for some reason.
     emitState();
   }
 
   /// Emit the current state by using the data available in the class.
   void emitState() {
-    print("emiting state");
-    print(themesChosen);
     emit(MainMenuCubitState.menu(
         themes: this.themes,
         currentUser: currentUser,
-        currentlySelectedTheme: themesChosen,
+        currentlySelectedTheme: chosenThemes,
         originLanguage: originLanguage,
         outputLanguage: outputLanguage));
   }

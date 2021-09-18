@@ -6,18 +6,21 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vocab/Cubits/main_menu_cubit/main_menu_cubit.dart';
 import 'package:vocab/Cubits/picker_cubit/picker_cubit.dart';
 import 'package:vocab/Cubits/training_cubit/cubit/training_cubit.dart';
+import 'package:vocab/Data/Model/theme.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
-import 'package:vocab/Pages/Elements/button/gradient_button.dart';
-import 'package:vocab/Pages/training_page.dart';
+import 'package:vocab/Interface/Elements/button/gradient_button.dart';
+import 'package:vocab/Interface/Pages/training_page.dart';
 import 'package:vocab/Services/format_strings.dart';
-import 'Elements/language_picker/picker.dart';
+import '../Elements/language_picker/picker.dart';
+import 'package:vocab/Services/capextension_string.dart';
+
 
 class MainMenuPage extends StatelessWidget {
   /// The number of translation the user will do in a series.
   final int nbTranslationToDo = 65;
 
   /// List of the users of the app.
-  final List<String> users = ["tymeo", "titouan"];
+  final List<String> users = ["tymeo", "titouan", "demo"];
 
   /// List of all languages the user can pick from.
   final List<String> languageList = ["french", "english", "spanish"];
@@ -170,8 +173,8 @@ class MainMenuPage extends StatelessWidget {
     Navigator.of(context).push(CupertinoPageRoute(builder: (_) {
       return BlocProvider(
         create: (context) => TrainingCubit(WordRepo(cubit.currentUser), cubit.originLanguage, cubit.outputLanguage,
-            nbTranslationToDo, cubit.themesChosen),
-        child: TrainingPage(language_name_for(cubit.outputLanguage), nbTranslationToDo, cubit.currentUser),
+            nbTranslationToDo, cubit.chosenThemes),
+        child: TrainingPage(language_name_for(cubit.outputLanguage), nbTranslationToDo, cubit.currentUser, ThemeModel.formatListToString(cubit.chosenThemes)),
       );
     }));
   }

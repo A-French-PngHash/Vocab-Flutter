@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_material_pickers/helpers/show_scroll_picker.dart';
-import 'package:path/path.dart';
+import 'package:vocab/Data/Model/theme.dart';
 import 'package:vocab/Cubits/picker_cubit/picker_cubit.dart';
-import 'package:vocab/Pages/Elements/language_picker/select_data.dart';
+import 'package:vocab/Interface/Elements/language_picker/select_data.dart';
 
 /// The whole picker element to pick data from a PickerData.
 ///
@@ -72,14 +71,9 @@ class Picker extends StatelessWidget {
     );
   }
 
+  /// Preview of what's currently selected. Shown when the picker is at the row
+  /// state.
   String get currentlySelectedString {
-    String currently_selected_string = "";
-    if (currentlySelected.length > 1) {
-      currently_selected_string =
-          format(currentlySelected[0]) + " +" + (currentlySelected.length - 1).toString() + " more...";
-    } else {
-      currently_selected_string = format(currentlySelected[0]);
-    }
-    return currently_selected_string;
+    return ThemeModel.formatListToString(currentlySelected);
   }
 }
