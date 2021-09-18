@@ -74,6 +74,10 @@ class Picker extends StatelessWidget {
   /// Preview of what's currently selected. Shown when the picker is at the row
   /// state.
   String get currentlySelectedString {
-    return ThemeModel.formatListToString(currentlySelected);
+    if (description == "Themes") {
+      return ThemeModel.formatListToString(currentlySelected);
+    } else {
+      return format(currentlySelected[0]);
+    }
   }
 }
