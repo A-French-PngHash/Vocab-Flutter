@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 class WordRepo {
-  List<Theme>? _themes;
+  List<ThemeModel>? _themes;
 
   /// The current user of the application. This is set by the user, and depending on
   /// this, the same words won't be loaded.
@@ -17,11 +17,11 @@ class WordRepo {
   ///
   /// Note : The theme objects contains the words in a property called words.
   /// IMPORTANT NOTICE : The score is not set for words when getting this property.
-  Future<List<Theme>> get words_with_theme async {
+  Future<List<ThemeModel>> get words_with_theme async {
     if (_themes != null) {
       return _themes!;
     } else {
-      List<Theme> _themes = [];
+      List<ThemeModel> _themes = [];
 
       final fullWord = await jsonDecode(await rootBundle.loadString("assets/${_currentUser}.json"));
       int numberOfWords = 0;
@@ -37,7 +37,7 @@ class WordRepo {
                 comment: word["comment"] as String?, grammarRule: word["grammarRule"] as String?),
           );
         }
-        _themes.add(Theme(theme["name"], _words));
+        _themes.add(ThemeModel(theme["name"], _words));
       }
       this._themes = _themes;
       return _themes;
@@ -45,14 +45,14 @@ class WordRepo {
   }
 
   /// Return a list of themes where the name matches the names provided.
-  Future<List<Theme>> get_themes({required List<String> names}) async {
+  Future<List<ThemeModel>> get_themes({required List<String> names}) async {
     final all_themes = await words_with_theme;
     final selected_themes = all_themes.where((element) => names.contains(element.name)).toList();
     int number_of_words = 0;
-    for (Theme i in selected_themes) {
+    for (ThemeModel i in selected_themes) {
       number_of_words += i.words.length;
     }
-    for (Theme i in selected_themes) {
+    for (ThemeModel i in selected_themes) {
       for (Words j in i.words) {
         j.score = number_of_words.toDouble();
       }

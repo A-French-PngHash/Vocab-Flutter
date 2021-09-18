@@ -39,12 +39,12 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   /// Output language. Default value.
   String outputLanguage = "english";
 
-  set themesChosen(List<String> e) {
+  set chosenThemes(List<String> e) {
     print("Changing themesChosen to $e, before : $_themesChosen");
     _themesChosen = e;
   }
 
-  List<String> get themesChosen {
+  List<String> get chosenThemes {
     return _themesChosen;
   }
 
@@ -77,9 +77,9 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
     final wordRepo = WordRepo(this.currentUser);
     this.themes = await wordRepo.theme_names;
     if (prefs.containsKey(userThemeChoiceKey)) {
-      themesChosen = prefs.getStringList(userThemeChoiceKey)!;
+      chosenThemes = prefs.getStringList(userThemeChoiceKey)!;
     } else {
-      themesChosen = [this.themes[0]];
+      chosenThemes = [this.themes[0]];
     }
     emitState();
   }
@@ -103,21 +103,19 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   }
 
   void themesSelected(List<String> themes) async {
-    this.themesChosen = themes;
+    this.chosenThemes = themes;
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setStringList(userThemeChoiceKey, this.themesChosen);
+    prefs.setStringList(userThemeChoiceKey, this.chosenThemes);
     emit(MainMenuCubitState.loading()); // Emiting this first, otherwise, view doesn't get refreshed for some reason.
     emitState();
   }
 
   /// Emit the current state by using the data available in the class.
   void emitState() {
-    print("emiting state");
-    print(themesChosen);
     emit(MainMenuCubitState.menu(
         themes: this.themes,
         currentUser: currentUser,
-        currentlySelectedTheme: themesChosen,
+        currentlySelectedTheme: chosenThemes,
         originLanguage: originLanguage,
         outputLanguage: outputLanguage));
   }

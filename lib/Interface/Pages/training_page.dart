@@ -7,6 +7,7 @@ import 'package:vocab/Interface/Elements/correct.dart';
 import 'package:vocab/Interface/Elements/custom_text_field.dart';
 import 'package:vocab/Interface/Elements/incorrect.dart';
 import 'package:vocab/Interface/Elements/progress_bar.dart';
+import 'package:vocab/Services/capextension_string.dart';
 
 class TrainingPage extends StatelessWidget {
   /// User currently doing the word series.
@@ -28,7 +29,10 @@ class TrainingPage extends StatelessWidget {
   /// Delay before the dialog can be dismissed. In milliseconds.
   int dialogDelay = 1500;
 
-  TrainingPage(this.translateToLanguage, this.numberOfTranslationToDo, this.user);
+  /// Title of the navigation bar.
+  String navbarTitle;
+
+  TrainingPage(this.translateToLanguage, this.numberOfTranslationToDo, this.user, this.navbarTitle);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +41,7 @@ class TrainingPage extends StatelessWidget {
       navigationBar: CupertinoNavigationBar(
         previousPageTitle: "Menu",
         middle: Text(
-          "Training",
+          navbarTitle,
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Color(0xFF121212),
@@ -241,14 +245,4 @@ class TrainingPage extends StatelessWidget {
       ],
     );
   }
-}
-
-extension CapExtension on String {
-  String get inCaps => '${this[0].toUpperCase()}${this.substring(1)}';
-  String get allInCaps => this.toUpperCase();
-  String capitalize() {
-    return "${this[0].toUpperCase()}${this.substring(1)}";
-  }
-
-  String get capitalizeFirstofEach => this.split(" ").map((str) => str.capitalize()).join(" ");
 }
