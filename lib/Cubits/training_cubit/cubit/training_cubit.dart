@@ -1,8 +1,12 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:path/path.dart';
 import 'package:vocab/Data/DatabaseHandler.dart';
 import 'package:vocab/Data/Model/session.dart';
+import 'package:vocab/Data/Model/word_db.dart';
 import 'package:vocab/Data/Model/words.dart';
+import 'package:vocab/Data/Repositories/db_session_repo.dart';
+import 'package:vocab/Data/Repositories/db_word_repo.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
 import 'package:vocab/Services/word_service.dart';
 
@@ -19,7 +23,13 @@ class TrainingCubit extends Cubit<TrainingState> {
   int nbTranslationToDo;
   String currentInputInTextField = "";
   late final DateTime beginTime;
-  final DatabaseHandler _databaseHandler = DatabaseHandler();
+
+  /// Both of these repos are used to log the sessions, and words, the user did.
+  final dbSessionRepo = DbSessionRepo();
+  final dbWordRepo = DbWordRepo();
+
+  /// Current session.
+  late Session session;
 
   Words get currentWord {
     return _wordService.current;
@@ -55,46 +65,56 @@ class TrainingCubit extends Cubit<TrainingState> {
       WordRepo _wordRepo, this.originLanguage, this.outputLanguage, this.nbTranslationToDo, List<String> themesChosen)
       : super(TrainingState.initial()) {
     this.beginTime = DateTime.now();
-    _wordService = WordService(_wordRepo, nbTranslationToDo, themesChosen, () {
+    _wordService = WordService(_wordRepo, nbTranslationToDo, themesChosen, () async {
       // The service is loaded.
+      this.session = await dbSessionRepo.beginSession(nbTranslationToDo);
+
       nextButtonPressed();
     });
   }
 
-  void userValidatedWord(String word) {
-    currentInputInTextField = word;
-    final success = word.toLowerCase().trim().replaceAll(RegExp(r"'"), '’') ==
+  void userValidatedWord(String input) {
+    currentInputInTextField = input;
+    final success = input.toLowerCase().trim().replaceAll(RegExp(r"'"), '’') ==
         correctTranslation.toLowerCase().trim().replaceAll(RegExp(r"'"), '’');
     if (success) {
       correct += 1;
     } else {
       incorrect += 1;
     }
-    emit(TrainingState.correction(wordToTranslate, success, correctTranslation, currentInputInTextField, wordCount,
-        currentWord.comment, currentWord.grammarRule));
+
+    // TODO : Put this code in nextButtonPressed
+    dbWordRepo.linkWordToSession(
+      session: session,
+      wordShown: wordToTranslate,
+      expectedTranslation: correctTranslation,
+      inputedTranslation: input,
+      scoreWhenShown: currentWord.score,
+    );
+    emit(TrainingState.correction(
+      wordToTranslate,
+      success,
+      correctTranslation,
+      currentInputInTextField,
+      wordCount,
+      currentWord.comment,
+      currentWord.grammarRule,
+    ));
     _wordService.next(success);
   }
 
   void nextButtonPressed() {
     if (wordCount + 1 == nbTranslationToDo) {
-      finishedSession();
+      emit(TrainingState.finished(correct, incorrect));
       return;
     } else {
       wordCount += 1;
+
       emit(TrainingState.word(wordToTranslate, currentWord.comment, wordCount));
     }
   }
 
-  void finishedSession() async {
-    await _databaseHandler.insertNewSession(Session(
-        correct: correct,
-        incorrect: incorrect,
-        wordCount: nbTranslationToDo,
-        beginDate: beginTime,
-        endDate: DateTime.now()));
-    emit(TrainingState.finished(correct, incorrect));
-  }
-
+  /// Called when the user changed the word currently in the text field.
   void userChangedWord(String new_word) async {
     currentInputInTextField = new_word;
   }

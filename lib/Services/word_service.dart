@@ -48,8 +48,7 @@ class WordService {
         new_word = word;
         break;
       }
-    }
-
+    } 
     current = new_word;
   }
 }
