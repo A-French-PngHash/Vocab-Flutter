@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/material.dart';
 import 'package:vocab/Data/Model/theme.dart';
 import 'package:vocab/Data/Model/words.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
@@ -15,7 +16,7 @@ class WordService {
   WordService(this._wordRepo, this._wordDoneInSession, List<String> themes_chosen, Function loaded) {
     _wordRepo.get_themes(names: themes_chosen).then((value) {
       List<Words> word_temp = [];
-      for (Theme theme in value) {
+      for (ThemeModel theme in value) {
         word_temp.addAll(theme.words);
       }
       _words = word_temp;

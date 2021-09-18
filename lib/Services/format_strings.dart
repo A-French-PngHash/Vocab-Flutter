@@ -1,4 +1,4 @@
-/// This file helps with changing string to put them in a more presentable manner
+/// Functions here helps with changing string to put them in a more presentable manner
 /// to the user.
 
 /// Returns the name of the language with its flag and capitalized.
