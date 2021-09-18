@@ -24,6 +24,8 @@ class TrainingCubit extends Cubit<TrainingState> {
   String currentInputInTextField = "";
   late final DateTime beginTime;
 
+  final _databaseHandler = DatabaseHandler();
+
   /// Both of these repos are used to log the sessions, and words, the user did.
   final dbSessionRepo = DbSessionRepo();
   final dbWordRepo = DbWordRepo();
@@ -87,14 +89,23 @@ class TrainingCubit extends Cubit<TrainingState> {
     return word.toLowerCase().trim().replaceAll(RegExp(r"'"), '’');
   }
 
-  void userValidatedWord(String word) {
-    currentInputInTextField = word;
-    final success = sanitizeWord(word) == correctTranslation;
+  void userValidatedWord(String input) {
+    currentInputInTextField = input;
+    final success = sanitizeWord(input) == correctTranslation;
     if (success) {
       correct += 1;
     } else {
       incorrect += 1;
     }
+
+    dbWordRepo.linkWordToSession(
+      session: session,
+      wordShown: wordToTranslate,
+      expectedTranslation: correctTranslation,
+      inputedTranslation: input,
+      scoreWhenShown: currentWord.score,
+    );
+
     emit(TrainingState.correction(wordToTranslate, success, correctTranslation, currentInputInTextField, wordCount,
         currentWord.comment, currentWord.grammarRule));
   }
@@ -111,23 +122,6 @@ class TrainingCubit extends Cubit<TrainingState> {
       // Words are not matching.
       return;
     }
-    
-    dbWordRepo.linkWordToSession(
-      session: session,
-      wordShown: wordToTranslate,
-      expectedTranslation: correctTranslation,
-      inputedTranslation: input,
-      scoreWhenShown: currentWord.score,
-    );
-    emit(TrainingState.correction(
-      wordToTranslate,
-      success,
-      correctTranslation,
-      currentInputInTextField,
-      wordCount,
-      currentWord.comment,
-      currentWord.grammarRule,
-    ));
     _wordService.next(!wasIncorrect);
     if (wordCount + 1 == nbTranslationToDo) {
       emit(TrainingState.finished(correct, incorrect));
@@ -137,7 +131,6 @@ class TrainingCubit extends Cubit<TrainingState> {
 
       emit(TrainingState.word(wordToTranslate, currentWord.comment, wordCount));
     }
-
   }
 
   void finishedSession() async {
