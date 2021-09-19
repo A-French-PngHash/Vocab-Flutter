@@ -1,5 +1,6 @@
 import 'package:vocab/Data/DatabaseHandler.dart';
 import 'package:vocab/Data/Model/session.dart';
+import 'package:vocab/Data/Model/word_db.dart';
 
 class DbSessionRepo {
   static final DbSessionRepo _singleton = DbSessionRepo._internal();
@@ -15,4 +16,14 @@ class DbSessionRepo {
     session.id = id;
     return session;
   }
+
+  Future<Session?> getSession(int id) async {
+    final session_map = await _databaseHandler.getSession(id);
+    if (session_map == null) {
+      return null;
+    } else {
+      return Session.fromJson(session_map);
+    }
+  }
+
 }

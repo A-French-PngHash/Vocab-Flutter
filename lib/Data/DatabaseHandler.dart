@@ -52,10 +52,25 @@ class DatabaseHandler {
     return id;
   }
 
+  Future<Map<String, Object?>?> getSession(int id) async {
+    final db = await database;
+    final result = await db.query("Session", where: "id = $id");
+    if (result.length == 0) {
+      return null;
+    }
+
+    return result[0];
+  }
+
   Future<void> insertWord(WordDb word) async {
     final db = await database;
     await db.insert("Word", word.toJson());
-    await printAllWord();
+  }
+
+  Future<List<Map<String, Object?>>> getWordList(int session_id) async {
+    final db = await database;
+    final result = db.query("Words", where: "session_id = $session_id");
+    return result;
   }
 
   Future<void> printAllWord() async {

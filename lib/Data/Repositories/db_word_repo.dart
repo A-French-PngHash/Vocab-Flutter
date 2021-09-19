@@ -28,4 +28,13 @@ class DbWordRepo {
     );
     await this._databaseHandler.insertWord(wordObj);
   }
+
+  Future<List<WordDb>> getWords(int session_id) async {
+    List<WordDb> word_list = [];
+    final raw_result = await this._databaseHandler.getWordList(session_id);
+    for (Map<String, Object?> element in raw_result) {
+      word_list.add(WordDb.fromJson(element));
+    }
+    return word_list;
+  }
 }
