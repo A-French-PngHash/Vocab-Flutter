@@ -330,6 +330,273 @@
                     "spanish": "un tombor"
                 }
             ]
+        },
+        {
+            "name": "English Toolbox Axe 1",
+            "words": [
+                {
+                    "english": "gap year",
+                    "french": "année sabatique",
+                    "spanish": ""
+                },
+                {
+                    "english": "gapper",
+                    "french": "étudiant d'année sabatique",
+                    "spanish": ""
+                },
+                {
+                    "english": "volunteer",
+                    "french": "bénévole",
+                    "spanish": ""
+                },
+                {
+                    "english": "volunteering",
+                    "french": "bénévolat",
+                    "spanish": ""
+                },
+                {
+                    "english": "relationship",
+                    "french": "relation",
+                    "spanish": ""
+                },
+                {
+                    "english": "solidarity",
+                    "french": "solidarité",
+                    "spanish": ""
+                },
+                {
+                    "english": "tolerance",
+                    "french": "tolérance",
+                    "spanish": ""
+                },
+                {
+                    "english": "customs",
+                    "french": "coutumes",
+                    "spanish": ""
+                },
+                {
+                    "english": "customs",
+                    "french": "habitudes",
+                    "spanish": ""
+                },
+                {
+                    "english": "spare time",
+                    "french": "temps libre",
+                    "spanish": ""
+                },
+                {
+                    "english": "overseas",
+                    "french": "à l'étranger",
+                    "spanish": "",
+                    "comment": "not \"abroad\""
+                },
+                {
+                    "english": "abroad",
+                    "french": "à l'étranger",
+                    "spanish": "",
+                    "comment": "not \"overseas\""
+                },
+                {
+                    "english": "multicultural",
+                    "french": "multiculturel",
+                    "spanish": ""
+                },
+                {
+                    "english": "close",
+                    "french": "proche",
+                    "spanish": ""
+                },
+                {
+                    "english": "intimate",
+                    "french": "intime",
+                    "spanish": ""
+                },
+                {
+                    "english": "understanding",
+                    "french": "comprendre",
+                    "spanish": ""
+                },
+                {
+                    "english": "open-minded",
+                    "french": "ouvert d'esprit",
+                    "spanish": ""
+                },
+                {
+                    "english": "narrow-minded",
+                    "french": "fermé d'esprit",
+                    "spanish": ""
+                },
+                {
+                    "english": "different",
+                    "french": "différent",
+                    "spanish": ""
+                },
+                {
+                    "english": "aware",
+                    "french": "au courant",
+                    "spanish": ""
+                },
+                {
+                    "english": "rewarding",
+                    "french": "enrichissant",
+                    "spanish": ""
+                },
+                {
+                    "english": "meaningful",
+                    "french": "qui a du sens",
+                    "spanish": ""
+                },
+                {
+                    "english": "thrilling",
+                    "french": "exciting",
+                    "spanish": ""
+                },
+                {
+                    "english": "cultured",
+                    "french": "cultivé",
+                    "spanish": ""
+                },
+                {
+                    "english": "travel the world",
+                    "french": "voyager le monde",
+                    "spanish": ""
+                },
+                {
+                    "english": "backpack",
+                    "french": "voyager avec un sac à dos",
+                    "spanish": ""
+                },
+                {
+                    "english": "cross cultures",
+                    "french": "passer d'une culture à l'autre",
+                    "spanish": ""
+                },
+                {
+                    "english": "go sightseeing",
+                    "french": "faire du tourisme",
+                    "spanish": ""
+                },
+                {
+                    "english": "feel concerned",
+                    "french": "se sentir concerné",
+                    "spanish": ""
+                },
+                {
+                    "english": "get involved",
+                    "french": "être impliqué",
+                    "spanish": ""
+                },
+                {
+                    "english": "socialize",
+                    "french": "fréquenter des gens",
+                    "spanish": ""
+                },
+                {
+                    "english": "broaden one's horizons",
+                    "french": "élargir ses horizons",
+                    "spanish": ""
+                },
+                {
+                    "english": "be prejudiced",
+                    "french": "avoir des préjugés",
+                    "spanish": ""
+                },
+                {
+                    "english": "be on an equal footing",
+                    "french": "être sur un pied d'égalité",
+                    "spanish": ""
+                },
+                {
+                    "english": "share",
+                    "french": "partager",
+                    "spanish": ""
+                },
+                {
+                    "english": "bridge a gap",
+                    "french": "combler un fossé",
+                    "spanish": ""
+                },
+                {
+                    "english": "break",
+                    "french": "pause",
+                    "spanish": ""
+                },
+                {
+                    "english": "high school",
+                    "french": "lycée",
+                    "spanish": ""
+                },
+                {
+                    "english": "college",
+                    "french": "université",
+                    "spanish": ""
+                },
+                {
+                    "english": "originated",
+                    "french": "originaire",
+                    "spanish": ""
+                },
+                {
+                    "english": "experience",
+                    "french": "expérience",
+                    "spanish": ""
+                },
+                {
+                    "english": "mature",
+                    "french": "devenir mature",
+                    "spanish": ""
+                },
+                {
+                    "english": "figure out",
+                    "french": "déterminer",
+                    "spanish": ""
+                },
+                {
+                    "english": "take advantage of",
+                    "french": "profiter de",
+                    "spanish": ""
+                },
+                {
+                    "english": "constructive",
+                    "french": "constructif",
+                    "spanish": ""
+                },
+                {
+                    "english": "additional time",
+                    "french": "plus de temps",
+                    "spanish": ""
+                },
+                {
+                    "english": "save some money",
+                    "french": "mettre de l'argent de côté",
+                    "spanish": ""
+                },
+                {
+                    "english": "get right back into",
+                    "french": "revenir tout de suite dedans",
+                    "spanish": ""
+                },
+                {
+                    "english": "pros",
+                    "french": "avantages",
+                    "spanish": ""
+                },
+                {
+                    "english": "cons",
+                    "french": "inconvénients",
+                    "spanish": ""
+                },
+                {
+                    "english": "pros and cons",
+                    "french": "les avantages et les inconvénients",
+                    "spanish": ""
+                },
+                {
+                    "english": "weight",
+                    "french": "peser",
+                    "spanish": ""
+                }
+            ]
         }
     ]
 }
