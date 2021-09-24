@@ -21,25 +21,23 @@ class DatabaseHandler {
         onCreate: (db, version) async {
           // Run the CREATE TABLE statement on the database.
           await db.execute(
-            "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, correct INTEGER, incorrect INTEGER, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1));",
+            "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1));",
           );
           await db.execute(
               "CREATE TABLE Word (wordShown TEXT NOT NULL, expectedTranslation TEXT NOT NULL, inputedTranslation TEXT NOT NULL, scoreWhenShown DOUBLE, sessionId BIGINT REFERENCES Session (id) NOT NULL);");
         },
         onUpgrade: (db, oldVersion, newVersion) async {
-          if (oldVersion == 1 && newVersion == 2) {
             await db.execute("DROP TABLE IF EXISTS Word;");
             await db.execute("DROP TABLE IF EXISTS Session;");
             await db.execute(
-              "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, correct INTEGER, incorrect INTEGER, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1));",
+              "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1));",
             );
             await db.execute(
                 "CREATE TABLE Word (wordShown TEXT NOT NULL, expectedTranslation TEXT NOT NULL, inputedTranslation TEXT NOT NULL, scoreWhenShown DOUBLE, sessionId BIGINT REFERENCES Session (id) NOT NULL);");
-          }
-        },
+          },
         // Set the version. This executes the onCreate function and provides a
         // path to perform database upgrades and downgrades.
-        version: 3,
+        version: 4,
       );
     }
     return Future.value(_database);
@@ -69,7 +67,7 @@ class DatabaseHandler {
 
   Future<List<Map<String, Object?>>> getWordList(int session_id) async {
     final db = await database;
-    final result = db.query("Words", where: "session_id = $session_id");
+    final result = db.query("Word", where: "sessionId = $session_id");
     return result;
   }
 

@@ -1,19 +1,18 @@
-import 'dart:math';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vocab/Cubits/main_menu_cubit/main_menu_cubit.dart';
 import 'package:vocab/Cubits/picker_cubit/picker_cubit.dart';
+import 'package:vocab/Cubits/session_recap/session_recap_cubit.dart';
 import 'package:vocab/Cubits/training_cubit/cubit/training_cubit.dart';
 import 'package:vocab/Data/Model/theme.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
 import 'package:vocab/Interface/Elements/button/gradient_button.dart';
+import 'package:vocab/Interface/Pages/session_recap.dart';
 import 'package:vocab/Interface/Pages/training_page.dart';
 import 'package:vocab/Services/format_strings.dart';
 import '../Elements/language_picker/picker.dart';
 import 'package:vocab/Services/capextension_string.dart';
-
 
 class MainMenuPage extends StatelessWidget {
   /// The number of translation the user will do in a series.
@@ -81,9 +80,9 @@ class MainMenuPage extends StatelessWidget {
           child: Column(
             children: [
               Picker(
-                onSelect: (picker_cubit) {
+                onSelect: (pickerCubit) {
                   final cubit = context.read<MainMenuCubit>();
-                  cubit.originLanguageSelected(picker_cubit.currentlySelected[0]);
+                  cubit.originLanguageSelected(pickerCubit.currentlySelected[0]);
                 },
                 elements: languageList,
                 currentlySelected: [originLanguage],
@@ -101,9 +100,9 @@ class MainMenuPage extends StatelessWidget {
                 ),
               ),
               Picker(
-                onSelect: (picker_cubit) {
+                onSelect: (pickerCubit) {
                   final cubit = context.read<MainMenuCubit>();
-                  cubit.outputLanguageSelected(picker_cubit.currentlySelected[0]);
+                  cubit.outputLanguageSelected(pickerCubit.currentlySelected[0]);
                 },
                 elements: languageList,
                 currentlySelected: [outputLanguage],
@@ -141,9 +140,9 @@ class MainMenuPage extends StatelessWidget {
                 ),
               ),
               Picker(
-                onSelect: (picker_cubit) {
+                onSelect: (pickerCubit) {
                   final cubit = context.read<MainMenuCubit>();
-                  cubit.themesSelected(picker_cubit.currentlySelected);
+                  cubit.themesSelected(pickerCubit.currentlySelected);
                 },
                 elements: themes,
                 currentlySelected: currentlySelectedTheme,
@@ -154,6 +153,21 @@ class MainMenuPage extends StatelessWidget {
               )
             ],
           ),
+        ),
+        GradientButton(
+          text: "Test",
+          onPressed: () {
+            Navigator.of(context).push(
+              CupertinoPageRoute(
+                builder: (_) {
+                  return BlocProvider(
+                    create: (context) => SessionRecapCubit(2),
+                    child: SessionRecap(2),
+                  );
+                },
+              ),
+            );
+          },
         ),
         Spacer(),
         GradientButton(
@@ -174,7 +188,8 @@ class MainMenuPage extends StatelessWidget {
       return BlocProvider(
         create: (context) => TrainingCubit(WordRepo(cubit.currentUser), cubit.originLanguage, cubit.outputLanguage,
             nbTranslationToDo, cubit.chosenThemes),
-        child: TrainingPage(language_name_for(cubit.outputLanguage), nbTranslationToDo, cubit.currentUser, ThemeModel.formatListToString(cubit.chosenThemes)),
+        child: TrainingPage(language_name_for(cubit.outputLanguage), nbTranslationToDo, cubit.currentUser,
+            ThemeModel.formatListToString(cubit.chosenThemes)),
       );
     }));
   }

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vocab/Cubits/session_recap/session_recap_cubit.dart';
@@ -7,22 +8,34 @@ import 'package:vocab/Data/Model/word_db.dart';
 /// Recap of every word shown in this session, as well as information about
 /// them.
 class SessionRecap extends StatelessWidget {
-  final int session_id;
+  final int sessionId;
 
-  SessionRecap(this.session_id);
+  SessionRecap(this.sessionId);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: BlocBuilder<SessionRecapCubit, SessionRecapState>(
-        builder: (context, state) {
-          return state.when(initial: () {
-            return buildInitial(context);
-          }, data: (Session session, List<WordDb> words) {
-            return buildDataView(context, session, words);
-          }, error: );
-        },
+      body: CupertinoPageScaffold(
+        navigationBar: CupertinoNavigationBar(
+          middle: Text(
+            "Session Recap",
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Colors.black,
+          previousPageTitle: "Menu",
+        ),
+        child: BlocBuilder<SessionRecapCubit, SessionRecapState>(
+          builder: (context, state) {
+            return state.when(initial: () {
+              return buildInitial(context);
+            }, data: (Session session, List<WordDb> words) {
+              return buildDataView(context, session, words);
+            }, error: (String errorDescription) {
+              return buildErrorView(context, errorDescription);
+            });
+          },
+        ),
       ),
     );
   }
@@ -36,9 +49,17 @@ class SessionRecap extends StatelessWidget {
   Widget buildErrorView(BuildContext context, String errorDescription) {
     return Center(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
-            children: [Icon(Icons.error), Text("Uh oh, an error occured...")],
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.error,
+                color: Colors.red,
+              ),
+              Text("Uh oh, an error occured...")
+            ],
           ),
           Text(errorDescription),
         ],
@@ -47,11 +68,13 @@ class SessionRecap extends StatelessWidget {
   }
 
   Widget buildDataView(BuildContext context, Session session, List<WordDb> words) {
+    final DateTime beginDate = session.beginDate.toLocal();
     return SingleChildScrollView(
       child: Column(
         children: [
           Text(
-            "Session started at : ${session.beginDate.toString()}",
+            "Session started on the ${beginDate.day}/${beginDate.month}/${beginDate.year} at ${beginDate.hour}:${beginDate.minute}",
+            textAlign: TextAlign.center,
             style: TextStyle(fontSize: 25),
           ),
           buildCorrectRecap(true, session.correct),
@@ -69,7 +92,7 @@ class SessionRecap extends StatelessWidget {
         Icon(
           correct ? Icons.done_rounded : Icons.close,
           size: 50,
-          color: Colors.red,
+          color: correct ? Colors.green : Colors.red,
         ),
         Text(
           " : $count",

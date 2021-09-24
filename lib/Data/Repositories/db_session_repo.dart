@@ -1,13 +1,16 @@
 import 'package:vocab/Data/DatabaseHandler.dart';
 import 'package:vocab/Data/Model/session.dart';
 import 'package:vocab/Data/Model/word_db.dart';
+import 'package:vocab/Data/Repositories/db_word_repo.dart';
+import 'package:vocab/Interface/Elements/correct.dart';
 
 class DbSessionRepo {
   static final DbSessionRepo _singleton = DbSessionRepo._internal();
   factory DbSessionRepo() => _singleton;
   DbSessionRepo._internal();
 
-  DatabaseHandler _databaseHandler = DatabaseHandler();
+  final DatabaseHandler _databaseHandler = DatabaseHandler();
+  final DbWordRepo dbWordRepo = DbWordRepo();
 
   /// Create a blank session and adds it to the database.
   Future<Session> beginSession(int nbTranslationToDo) async {
@@ -18,12 +21,22 @@ class DbSessionRepo {
   }
 
   Future<Session?> getSession(int id) async {
-    final session_map = await _databaseHandler.getSession(id);
+    var session_map = await _databaseHandler.getSession(id);
     if (session_map == null) {
       return null;
     } else {
-      return Session.fromJson(session_map);
+      final words = await dbWordRepo.getWords(id);
+      int correct = 0;
+      int incorrect = 0;
+      for (WordDb word in words) {
+        if (word.expectedTranslation == word.inputedTranslaton) {
+          correct += 1;
+        } else {
+          incorrect += 1;
+        }
+      }
+
+      return Session.fromJson(session_map, correct, incorrect);
     }
   }
-
 }

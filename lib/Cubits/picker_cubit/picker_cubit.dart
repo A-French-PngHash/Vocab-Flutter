@@ -12,8 +12,6 @@ class PickerCubit extends Cubit<PickerState> {
   /// List of elements of the picker. Not in formated state.
   final List<String> _elements;
 
-  String _description;
-
   /// List of elements currently selected. Not in formated state.
   List<String> currentlySelected;
 
@@ -32,7 +30,7 @@ class PickerCubit extends Cubit<PickerState> {
   final int _maxElements;
 
   PickerCubit(
-      this._elements, this.currentlySelected, this._format, this._description, this._minElements, this._maxElements)
+      this._elements, this.currentlySelected, this._format, this._minElements, this._maxElements)
       : super(PickerState.presented(_elements, currentlySelected)) {
     assert(_minElements <= _maxElements);
     _elementsFormated = _elements.map((e) => _format(e)).toList();

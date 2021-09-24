@@ -41,8 +41,7 @@ class SessionRecapCubit extends Cubit<SessionRecapState> {
   Future<void> emitState() async {
     if (errorMessage != null) {
       emit(SessionRecapState.error(errorMessage!));
-    }
-    if (session == null || words == null) {
+    } else if (session == null || words == null) {
       emit(SessionRecapState.initial());
     } else {
       emit(SessionRecapState.data(session!, words!));
