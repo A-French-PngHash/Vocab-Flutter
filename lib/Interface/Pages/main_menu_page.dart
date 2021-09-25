@@ -16,7 +16,7 @@ import 'package:vocab/Services/capextension_string.dart';
 
 class MainMenuPage extends StatelessWidget {
   /// The number of translation the user will do in a series.
-  final int nbTranslationToDo = 65;
+  final int nbTranslationToDo = 10;
 
   /// List of the users of the app.
   final List<String> users = ["tymeo", "titouan", "demo"];
@@ -161,8 +161,8 @@ class MainMenuPage extends StatelessWidget {
               CupertinoPageRoute(
                 builder: (_) {
                   return BlocProvider(
-                    create: (context) => SessionRecapCubit(2),
-                    child: SessionRecap(2),
+                    create: (context) => SessionRecapCubit(3),
+                    child: SessionRecap(3),
                   );
                 },
               ),
