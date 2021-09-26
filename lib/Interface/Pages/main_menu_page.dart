@@ -25,8 +25,8 @@ class MainMenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       body: CupertinoPageScaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.black,
         child: BlocBuilder<MainMenuCubit, MainMenuCubitState>(
           builder: (context, state) {
@@ -58,156 +58,175 @@ class MainMenuPage extends StatelessWidget {
     }
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
-      child: CustomScrollView(
-        slivers: [
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Column(
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: Row(
               children: [
-                Padding(
-                  padding: EdgeInsets.all(20),
-                  child: Row(
-                    children: [
-                      Text(
-                        "Vocab",
-                        style: TextStyle(fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                    mainAxisAlignment: MainAxisAlignment.start,
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Color(0xFF1C1C1E),
-                    borderRadius: BorderRadius.circular(9),
-                  ),
-                  child: Column(
-                    children: [
-                      Picker(
-                        onSelect: (pickerCubit) {
-                          final cubit = context.read<MainMenuCubit>();
-                          cubit.originLanguageSelected(pickerCubit.currentlySelected[0]);
-                        },
-                        elements: languageList,
-                        currentlySelected: [originLanguage],
-                        format: language_name_for,
-                        description: "Original Language",
-                        minElements: 1,
-                        maxElements: 1,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10),
-                        child: Divider(
-                          color: Color(0xFF2D2D2F),
-                          height: 1,
-                          thickness: 1,
-                        ),
-                      ),
-                      Picker(
-                        onSelect: (pickerCubit) {
-                          final cubit = context.read<MainMenuCubit>();
-                          cubit.outputLanguageSelected(pickerCubit.currentlySelected[0]);
-                        },
-                        elements: languageList,
-                        currentlySelected: [outputLanguage],
-                        format: language_name_for,
-                        description: "Translation Language",
-                        minElements: 1,
-                        maxElements: 1,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10),
-                        child: Divider(
-                          color: Color(0xFF2D2D2F),
-                          height: 1,
-                          thickness: 1,
-                        ),
-                      ),
-                      Picker(
-                          elements: users,
-                          currentlySelected: [currentUser],
-                          format: user_name_for,
-                          description: "Current User",
-                          minElements: 1,
-                          maxElements: 1,
-                          onSelect: (PickerCubit pCubit) {
-                            final cubit = context.read<MainMenuCubit>();
-                            final String user = pCubit.currentlySelected[0];
-                            cubit.currentUserSelected(user);
-                          }),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10),
-                        child: Divider(
-                          color: Color(0xFF2D2D2F),
-                          height: 1,
-                          thickness: 1,
-                        ),
-                      ),
-                      Picker(
-                        onSelect: (pickerCubit) {
-                          final cubit = context.read<MainMenuCubit>();
-                          cubit.themesSelected(pickerCubit.currentlySelected);
-                        },
-                        elements: themes,
-                        currentlySelected: currentlySelectedTheme,
-                        format: (e) => e.capitalize(),
-                        description: "Themes",
-                        minElements: 1,
-                        maxElements: themes.length,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10),
-                        child: Divider(
-                          color: Color(0xFF2D2D2F),
-                          height: 1,
-                          thickness: 1,
-                        ),
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 10),
-                            child: Text(
-                              "Session length",
-                              style: TextStyle(fontSize: 17),
-                            ),
-                          ),
-                          Spacer(),
-                          SizedBox(
-                            child: CustomTextField(
-                              autofocus: false,
-                              textInputType: TextInputType.number,
-                              padding: EdgeInsets.all(0),
-                              readOnly: currentUser == "tymeo",
-                              initialValue: numberOfTranslationToDo.toString(),
-                              onSubmitted: (String value) {
-                                print("submitted");
-                                final valueInt = int.tryParse(value);
-                                if (valueInt != null) {
-                                  final cubit = context.read<MainMenuCubit>();
-                                  cubit.numberOfTranslationTodoChanged(valueInt);
-                                  print("Number of translation to do changed, new value : $valueInt");
-                                }
-                              },
-                            ),
-                            width: 75,
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                Expanded(child: Container()), // Act as a spacer.
-                GradientButton(
-                    text: "Start",
-                    onPressed: () {
-                      pushTrainingView(context, numberOfTranslationToDo);
-                    }),
-                Text("By Titouan Blossier"),
+                Text(
+                  "Vocab",
+                  style: TextStyle(fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold),
+                )
               ],
+              mainAxisAlignment: MainAxisAlignment.start,
             ),
           ),
+          buildPreferencesForm(
+              context: context,
+              originLanguage: originLanguage,
+              outputLanguage: outputLanguage,
+              currentUser: currentUser,
+              themes: themes,
+              currentlySelectedThemes: currentlySelectedTheme,
+              numberOfTranslationToDo: numberOfTranslationToDo),
+          Spacer(),
+          GradientButton(
+              text: "Start",
+              onPressed: () {
+                pushTrainingView(context, numberOfTranslationToDo);
+              }),
+          Text("By Titouan Blossier"),
+        ],
+      ),
+    );
+  }
+
+  /// Build the preferences form which lets the user choose the following things :
+  /// - The original language (the language words are shown to the user).
+  /// - The translation language (the language in which the user has to
+  /// translate the words).
+  /// - The current user.
+  /// - The themes to work on.
+  /// - The number of words to translate in the next series.
+  Widget buildPreferencesForm({
+    required BuildContext context,
+    required String originLanguage,
+    required String outputLanguage,
+    required String currentUser,
+    required List<String> themes,
+    required List<String> currentlySelectedThemes,
+    required int numberOfTranslationToDo,
+  }) {
+    return Container(
+      margin: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Color(0xFF1C1C1E),
+        borderRadius: BorderRadius.circular(9),
+      ),
+      child: Column(
+        children: [
+          Picker(
+            onSelect: (pickerCubit) {
+              final cubit = context.read<MainMenuCubit>();
+              cubit.originLanguageSelected(pickerCubit.currentlySelected[0]);
+            },
+            elements: languageList,
+            currentlySelected: [originLanguage],
+            format: language_name_for,
+            description: "Original Language",
+            minElements: 1,
+            maxElements: 1,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Divider(
+              color: Color(0xFF2D2D2F),
+              height: 1,
+              thickness: 1,
+            ),
+          ),
+          Picker(
+            onSelect: (pickerCubit) {
+              final cubit = context.read<MainMenuCubit>();
+              cubit.outputLanguageSelected(pickerCubit.currentlySelected[0]);
+            },
+            elements: languageList,
+            currentlySelected: [outputLanguage],
+            format: language_name_for,
+            description: "Translation Language",
+            minElements: 1,
+            maxElements: 1,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Divider(
+              color: Color(0xFF2D2D2F),
+              height: 1,
+              thickness: 1,
+            ),
+          ),
+          Picker(
+              elements: users,
+              currentlySelected: [currentUser],
+              format: user_name_for,
+              description: "Current User",
+              minElements: 1,
+              maxElements: 1,
+              onSelect: (PickerCubit pCubit) {
+                final cubit = context.read<MainMenuCubit>();
+                final String user = pCubit.currentlySelected[0];
+                cubit.currentUserSelected(user);
+              }),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Divider(
+              color: Color(0xFF2D2D2F),
+              height: 1,
+              thickness: 1,
+            ),
+          ),
+          Picker(
+            onSelect: (pickerCubit) {
+              final cubit = context.read<MainMenuCubit>();
+              cubit.themesSelected(pickerCubit.currentlySelected);
+            },
+            elements: themes,
+            currentlySelected: currentlySelectedThemes,
+            format: (e) => e.capitalize(),
+            description: "Themes",
+            minElements: 1,
+            maxElements: themes.length,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Divider(
+              color: Color(0xFF2D2D2F),
+              height: 1,
+              thickness: 1,
+            ),
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Text(
+                  "Session length",
+                  style: TextStyle(fontSize: 17),
+                ),
+              ),
+              Spacer(),
+              SizedBox(
+                child: CustomTextField(
+                  autofocus: false,
+                  textInputType: TextInputType.number,
+                  padding: EdgeInsets.all(0),
+                  readOnly: currentUser == "tymeo",
+                  initialValue: numberOfTranslationToDo.toString(),
+                  onSubmitted: (String value) {
+                    print("submitted");
+                    final valueInt = int.tryParse(value);
+                    if (valueInt != null) {
+                      final cubit = context.read<MainMenuCubit>();
+                      cubit.numberOfTranslationTodoChanged(valueInt);
+                      print("Number of translation to do changed, new value : $valueInt");
+                    }
+                  },
+                ),
+                width: 75,
+              ),
+            ],
+          )
         ],
       ),
     );

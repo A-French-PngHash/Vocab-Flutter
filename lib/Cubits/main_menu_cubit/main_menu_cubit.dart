@@ -14,7 +14,23 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   static const int defaultNumberOfTranslationToDo = 50;
   late SharedPreferences prefs;
 
+  List<String>? themes = ["Loading..."];
+
+  /// Original language. Default value.
+  String originLanguage = "french";
+
+  /// Output language. Default value.
+  String outputLanguage = "english";
+
+  /// List of themes chosen by the user.
+  List<String>? _themesChosen;
   String? _currentUser;
+  int? _numberOfTranslationToDo;
+
+  /// ----------
+  /// Getters (for shared preferences values)
+  /// ----------
+
   String get currentUser {
     if (_currentUser == null) {
       if (prefs.containsKey(currentUserKey)) {
@@ -27,13 +43,17 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
     return _currentUser!;
   }
 
-  set currentUser(String new_value) {
-    _numberOfTranslationToDo = null;
-    _currentUser = new_value;
-    prefs.setString(currentUserKey, new_value);
+  List<String> get chosenThemes {
+    if (_themesChosen == null) {
+      if (prefs.containsKey(userThemeChoiceKey)) {
+        chosenThemes = prefs.getStringList(userThemeChoiceKey)!;
+      } else {
+        _themesChosen = [this.themes![0]];
+      }
+    }
+    return _themesChosen!;
   }
 
-  int? _numberOfTranslationToDo;
   int get numberOfTranslationToDo {
     if (_numberOfTranslationToDo == null) {
       if (prefs.containsKey(keyUserNumberOfTranslationToDo)) {
@@ -45,39 +65,33 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
     return _numberOfTranslationToDo!;
   }
 
+  /// ----------
+  /// Setters (for shared preferences values)
+  /// ----------
+
   set numberOfTranslationToDo(int newValue) {
     _numberOfTranslationToDo = newValue;
     prefs.setInt(keyUserNumberOfTranslationToDo, newValue);
   }
 
-  /// The key to access the number of translation to do for the current user in
-  /// shared preferences.
-  String get keyUserNumberOfTranslationToDo {
-    return currentUser + "nbTranslationToDo";
+  set chosenThemes(List<String> newValue) {
+    _themesChosen = newValue;
+    prefs.setStringList(userThemeChoiceKey, newValue);
   }
 
-  List<String> themes = ["Loading..."];
-
-  /// Original language. Default value.
-  String originLanguage = "french";
-
-  /// Output language. Default value.
-  String outputLanguage = "english";
-
-  set chosenThemes(List<String> e) {
-    print("Changing themesChosen to $e, before : $_themesChosen");
-    _themesChosen = e;
+  set currentUser(String newValue) {
+    _currentUser = newValue;
+    _numberOfTranslationToDo = null;
+    _themesChosen = null;
+    prefs.setString(currentUserKey, newValue);
   }
 
-  List<String> get chosenThemes {
-    return _themesChosen;
-  }
+  /// ----------
+  /// Keys for shared preferences
+  /// ----------
 
-  /// List of themes chosen by the user.
-  List<String> _themesChosen = [];
-
-  /// Return the key for current user to access the shared preferences of the
-  /// theme choice.
+  /// The key for to access the shared preferences of the chosen themes for this
+  /// user
   String get userThemeChoiceKey {
     return this.currentUser + "ThemeChoosen";
   }
@@ -85,6 +99,15 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   /// The key to access the current selected user stored in SharedPreferences.
   String currentUserKey = "user";
 
+  /// The key to access the number of translation to do for the current user in
+  /// shared preferences.
+  String get keyUserNumberOfTranslationToDo {
+    return currentUser + "nbTranslationToDo";
+  }
+
+  /// ----------
+  /// Functions
+  /// ----------
   MainMenuCubit() : super(MainMenuCubitState.loading()) {
     print("Initializing main menu cubit");
 
@@ -101,12 +124,6 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   Future<void> refreshThemes() async {
     final wordRepo = WordRepo(this.currentUser);
     this.themes = await wordRepo.theme_names;
-    if (prefs.containsKey(userThemeChoiceKey)) {
-      chosenThemes = prefs.getStringList(userThemeChoiceKey)!;
-    } else {
-      chosenThemes = [this.themes[0]];
-    }
-    emitState();
   }
 
   void outputLanguageSelected(String language) {
@@ -134,8 +151,6 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
 
   void themesSelected(List<String> themes) async {
     this.chosenThemes = themes;
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setStringList(userThemeChoiceKey, this.chosenThemes);
     emit(MainMenuCubitState.loading()); // Emiting this first, otherwise, view doesn't get refreshed for some reason.
     emitState();
   }
@@ -143,7 +158,7 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   /// Emit the current state by using the data available in the class.
   void emitState() {
     emit(MainMenuCubitState.menu(
-        themes: this.themes,
+        themes: this.themes!,
         currentUser: currentUser,
         currentlySelectedTheme: chosenThemes,
         originLanguage: originLanguage,
