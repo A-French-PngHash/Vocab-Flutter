@@ -57,7 +57,7 @@ class Picker extends StatelessWidget {
         ],
       ),
       onPressed: () async {
-        final cubit = PickerCubit(elements, currentlySelected, format, description, minElements, maxElements);
+        final cubit = PickerCubit(elements, currentlySelected, format, minElements, maxElements);
         await Navigator.of(context).push(
           CupertinoPageRoute(
             builder: (context) => BlocProvider(

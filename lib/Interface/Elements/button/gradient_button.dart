@@ -17,21 +17,17 @@ class GradientButton extends StatelessWidget {
           gradient: LinearGradient(colors: [Color(0xFFFF5F6D), Color(0xFFFFC371)]),
           borderRadius: BorderRadius.circular(8),
         ),
-        child: SizedBox(
-          height: 50,
-          width: 100,
-          child: CupertinoButton(
-            child: Text(
-              text,
-              style: TextStyle(color: Colors.white),
-            ),
-            onPressed: () {
-              if (this.enabled && this.onPressed != null) {
-                onPressed!();
-              }
-            },
-            borderRadius: BorderRadius.circular(18),
+        child: CupertinoButton(
+          child: Text(
+            text,
+            style: TextStyle(color: Colors.white),
           ),
+          onPressed: () {
+            if (this.enabled && this.onPressed != null) {
+              onPressed!();
+            }
+          },
+          borderRadius: BorderRadius.circular(18),
         ),
       ),
     );

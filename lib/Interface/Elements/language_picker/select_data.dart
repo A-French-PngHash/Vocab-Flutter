@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vocab/Cubits/main_menu_cubit/main_menu_cubit.dart';
 import 'package:vocab/Cubits/picker_cubit/picker_cubit.dart';
-import 'package:vocab/Interface/Elements/language_picker/picker.dart';
 
 /// Page that displays a list of available languages.
 ///
@@ -53,21 +51,21 @@ class SelectFromData extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        for (var data_element in elements)
+        for (var dataElement in elements)
           Form(
             child: TextButton(
               onPressed: () {
                 final cubit = context.read<PickerCubit>();
-                cubit.userTappedOnElementRow(data_element);
+                cubit.userTappedOnElementRow(dataElement);
               },
               child: Row(
                 children: [
                   Text(
-                    data_element,
+                    dataElement,
                     style: TextStyle(color: Colors.white),
                   ),
                   Spacer(),
-                  if (currentlySelected.contains(data_element)) Icon(Icons.check),
+                  if (currentlySelected.contains(dataElement)) Icon(Icons.check),
                 ],
               ),
             ),

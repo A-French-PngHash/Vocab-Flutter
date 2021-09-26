@@ -101,8 +101,8 @@ class TrainingCubit extends Cubit<TrainingState> {
     dbWordRepo.linkWordToSession(
       session: session,
       wordShown: wordToTranslate,
-      expectedTranslation: correctTranslation,
-      inputedTranslation: input,
+      expectedTranslation: sanitizeWord(correctTranslation),
+      inputedTranslation: sanitizeWord(input),
       scoreWhenShown: currentWord.score,
     );
 

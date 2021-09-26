@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vocab/Cubits/session_recap/session_recap_cubit.dart';
 import 'package:vocab/Cubits/training_cubit/cubit/training_cubit.dart';
 import 'package:vocab/Interface/Elements/button/gradient_button.dart';
 import 'package:vocab/Interface/Elements/correct.dart';
 import 'package:vocab/Interface/Elements/custom_text_field.dart';
 import 'package:vocab/Interface/Elements/incorrect.dart';
 import 'package:vocab/Interface/Elements/progress_bar.dart';
+import 'package:vocab/Interface/Pages/session_recap.dart';
 import 'package:vocab/Services/capextension_string.dart';
 
 class TrainingPage extends StatelessWidget {
@@ -109,7 +111,7 @@ class TrainingPage extends StatelessWidget {
   }
 
   Widget loadingView() {
-    return Center(child:  Text("Loading..."));
+    return Center(child: Text("Loading..."));
   }
 
   /// Return the word view that contains, the word info (which word to translate
@@ -238,11 +240,30 @@ class TrainingPage extends StatelessWidget {
                     style: TextStyle(fontSize: 20),
                   )
                 ],
+              ),
+              GradientButton(
+                text: "More Info",
+                onPressed: () => showSessionRecap(context),
               )
             ],
           ),
         ),
       ],
+    );
+  }
+
+  void showSessionRecap(BuildContext context) {
+    final cubit = context.read<TrainingCubit>();
+    final sessionId = cubit.session.id!;
+    Navigator.of(context).push(
+      CupertinoPageRoute(
+        builder: (_) {
+          return BlocProvider(
+            create: (context) => SessionRecapCubit(sessionId),
+            child: SessionRecap(sessionId),
+          );
+        },
+      ),
     );
   }
 }

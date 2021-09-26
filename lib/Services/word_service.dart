@@ -30,14 +30,18 @@ class WordService {
   }
 
   /// Pick a new word.
-  /// 
-  /// - success : Used to influence future probabilities of being picker for 
+  ///
+  /// - success : Used to influence future probabilities of being picker for
   /// this word.
   void next(bool success) {
     if (success) {
       current.score -= (_wordCount / (_wordDoneInSession)) * 4;
     } else {
       current.score += (_wordCount / (_wordDoneInSession)) * 7;
+    }
+
+    if (current.score <= 0) {
+      current.score = 0.5;
     }
     _pickWord();
   }
@@ -59,7 +63,7 @@ class WordService {
           break;
         }
       }
-    } 
+    }
     current = new_word;
   }
 }

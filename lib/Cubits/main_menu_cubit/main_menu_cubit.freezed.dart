@@ -25,13 +25,15 @@ class _$MainMenuCubitStateTearOff {
       required List<String> currentlySelectedTheme,
       required String originLanguage,
       required String outputLanguage,
-      required String currentUser}) {
+      required String currentUser,
+      required int numberOfTranslationToDo}) {
     return _MainMenuCubitState(
       themes: themes,
       currentlySelectedTheme: currentlySelectedTheme,
       originLanguage: originLanguage,
       outputLanguage: outputLanguage,
       currentUser: currentUser,
+      numberOfTranslationToDo: numberOfTranslationToDo,
     );
   }
 }
@@ -49,15 +51,21 @@ mixin _$MainMenuCubitState {
             List<String> currentlySelectedTheme,
             String originLanguage,
             String outputLanguage,
-            String currentUser)
+            String currentUser,
+            int numberOfTranslationToDo)
         menu,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<String> themes, List<String> currentlySelectedTheme,
-            String originLanguage, String outputLanguage, String currentUser)?
+    TResult Function(
+            List<String> themes,
+            List<String> currentlySelectedTheme,
+            String originLanguage,
+            String outputLanguage,
+            String currentUser,
+            int numberOfTranslationToDo)?
         menu,
     required TResult orElse(),
   }) =>
@@ -138,7 +146,8 @@ class _$_Loading implements _Loading {
             List<String> currentlySelectedTheme,
             String originLanguage,
             String outputLanguage,
-            String currentUser)
+            String currentUser,
+            int numberOfTranslationToDo)
         menu,
   }) {
     return loading();
@@ -148,8 +157,13 @@ class _$_Loading implements _Loading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<String> themes, List<String> currentlySelectedTheme,
-            String originLanguage, String outputLanguage, String currentUser)?
+    TResult Function(
+            List<String> themes,
+            List<String> currentlySelectedTheme,
+            String originLanguage,
+            String outputLanguage,
+            String currentUser,
+            int numberOfTranslationToDo)?
         menu,
     required TResult orElse(),
   }) {
@@ -196,7 +210,8 @@ abstract class _$MainMenuCubitStateCopyWith<$Res> {
       List<String> currentlySelectedTheme,
       String originLanguage,
       String outputLanguage,
-      String currentUser});
+      String currentUser,
+      int numberOfTranslationToDo});
 }
 
 /// @nodoc
@@ -217,6 +232,7 @@ class __$MainMenuCubitStateCopyWithImpl<$Res>
     Object? originLanguage = freezed,
     Object? outputLanguage = freezed,
     Object? currentUser = freezed,
+    Object? numberOfTranslationToDo = freezed,
   }) {
     return _then(_MainMenuCubitState(
       themes: themes == freezed
@@ -239,6 +255,10 @@ class __$MainMenuCubitStateCopyWithImpl<$Res>
           ? _value.currentUser
           : currentUser // ignore: cast_nullable_to_non_nullable
               as String,
+      numberOfTranslationToDo: numberOfTranslationToDo == freezed
+          ? _value.numberOfTranslationToDo
+          : numberOfTranslationToDo // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -251,7 +271,8 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
       required this.currentlySelectedTheme,
       required this.originLanguage,
       required this.outputLanguage,
-      required this.currentUser});
+      required this.currentUser,
+      required this.numberOfTranslationToDo});
 
   @override
   final List<String> themes;
@@ -263,10 +284,12 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
   final String outputLanguage;
   @override
   final String currentUser;
+  @override
+  final int numberOfTranslationToDo;
 
   @override
   String toString() {
-    return 'MainMenuCubitState.menu(themes: $themes, currentlySelectedTheme: $currentlySelectedTheme, originLanguage: $originLanguage, outputLanguage: $outputLanguage, currentUser: $currentUser)';
+    return 'MainMenuCubitState.menu(themes: $themes, currentlySelectedTheme: $currentlySelectedTheme, originLanguage: $originLanguage, outputLanguage: $outputLanguage, currentUser: $currentUser, numberOfTranslationToDo: $numberOfTranslationToDo)';
   }
 
   @override
@@ -286,7 +309,11 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
                     .equals(other.outputLanguage, outputLanguage)) &&
             (identical(other.currentUser, currentUser) ||
                 const DeepCollectionEquality()
-                    .equals(other.currentUser, currentUser)));
+                    .equals(other.currentUser, currentUser)) &&
+            (identical(
+                    other.numberOfTranslationToDo, numberOfTranslationToDo) ||
+                const DeepCollectionEquality().equals(
+                    other.numberOfTranslationToDo, numberOfTranslationToDo)));
   }
 
   @override
@@ -296,7 +323,8 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
       const DeepCollectionEquality().hash(currentlySelectedTheme) ^
       const DeepCollectionEquality().hash(originLanguage) ^
       const DeepCollectionEquality().hash(outputLanguage) ^
-      const DeepCollectionEquality().hash(currentUser);
+      const DeepCollectionEquality().hash(currentUser) ^
+      const DeepCollectionEquality().hash(numberOfTranslationToDo);
 
   @JsonKey(ignore: true)
   @override
@@ -312,25 +340,31 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
             List<String> currentlySelectedTheme,
             String originLanguage,
             String outputLanguage,
-            String currentUser)
+            String currentUser,
+            int numberOfTranslationToDo)
         menu,
   }) {
     return menu(themes, currentlySelectedTheme, originLanguage, outputLanguage,
-        currentUser);
+        currentUser, numberOfTranslationToDo);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<String> themes, List<String> currentlySelectedTheme,
-            String originLanguage, String outputLanguage, String currentUser)?
+    TResult Function(
+            List<String> themes,
+            List<String> currentlySelectedTheme,
+            String originLanguage,
+            String outputLanguage,
+            String currentUser,
+            int numberOfTranslationToDo)?
         menu,
     required TResult orElse(),
   }) {
     if (menu != null) {
       return menu(themes, currentlySelectedTheme, originLanguage,
-          outputLanguage, currentUser);
+          outputLanguage, currentUser, numberOfTranslationToDo);
     }
     return orElse();
   }
@@ -364,13 +398,15 @@ abstract class _MainMenuCubitState implements MainMenuCubitState {
       required List<String> currentlySelectedTheme,
       required String originLanguage,
       required String outputLanguage,
-      required String currentUser}) = _$_MainMenuCubitState;
+      required String currentUser,
+      required int numberOfTranslationToDo}) = _$_MainMenuCubitState;
 
   List<String> get themes => throw _privateConstructorUsedError;
   List<String> get currentlySelectedTheme => throw _privateConstructorUsedError;
   String get originLanguage => throw _privateConstructorUsedError;
   String get outputLanguage => throw _privateConstructorUsedError;
   String get currentUser => throw _privateConstructorUsedError;
+  int get numberOfTranslationToDo => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$MainMenuCubitStateCopyWith<_MainMenuCubitState> get copyWith =>
       throw _privateConstructorUsedError;
