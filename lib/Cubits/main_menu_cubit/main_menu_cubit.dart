@@ -10,7 +10,8 @@ part 'main_menu_cubit.freezed.dart';
 
 class MainMenuCubit extends Cubit<MainMenuCubitState> {
   /// User used when the app is opened for the first time.
-  String defaultFirstUser = "tymeo";
+  static const String defaultFirstUser = "tymeo";
+  static const int defaultNumberOfTranslationToDo = 50;
   late SharedPreferences prefs;
 
   String? _currentUser;
@@ -27,8 +28,32 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   }
 
   set currentUser(String new_value) {
+    _numberOfTranslationToDo = null;
     _currentUser = new_value;
     prefs.setString(currentUserKey, new_value);
+  }
+
+  int? _numberOfTranslationToDo;
+  int get numberOfTranslationToDo {
+    if (_numberOfTranslationToDo == null) {
+      if (prefs.containsKey(keyUserNumberOfTranslationToDo)) {
+        _numberOfTranslationToDo = prefs.getInt(keyUserNumberOfTranslationToDo);
+      } else {
+        numberOfTranslationToDo = defaultNumberOfTranslationToDo;
+      }
+    }
+    return _numberOfTranslationToDo!;
+  }
+
+  set numberOfTranslationToDo(int newValue) {
+    _numberOfTranslationToDo = newValue;
+    prefs.setInt(keyUserNumberOfTranslationToDo, newValue);
+  }
+
+  /// The key to access the number of translation to do for the current user in
+  /// shared preferences.
+  String get keyUserNumberOfTranslationToDo {
+    return currentUser + "nbTranslationToDo";
   }
 
   List<String> themes = ["Loading..."];
@@ -102,6 +127,11 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
     }
   }
 
+  void numberOfTranslationTodoChanged(int newValue) async {
+    numberOfTranslationToDo = newValue;
+    emitState();
+  }
+
   void themesSelected(List<String> themes) async {
     this.chosenThemes = themes;
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -117,6 +147,7 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
         currentUser: currentUser,
         currentlySelectedTheme: chosenThemes,
         originLanguage: originLanguage,
-        outputLanguage: outputLanguage));
+        outputLanguage: outputLanguage,
+        numberOfTranslationToDo: numberOfTranslationToDo));
   }
 }

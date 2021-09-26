@@ -39,6 +39,7 @@ class WordService {
     } else {
       current.score += (_wordCount / (_wordDoneInSession)) * 7;
     }
+
     if (current.score <= 0) {
       current.score = 0.5;
     }
