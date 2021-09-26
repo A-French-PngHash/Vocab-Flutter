@@ -19,7 +19,6 @@ class SessionRecapCubit extends Cubit<SessionRecapState> {
   String? errorMessage;
 
   final dbword_repo = DbWordRepo();
-  final dbsession_repo = DbSessionRepo();
 
   SessionRecapCubit(this.session_id) : super(SessionRecapState.initial()) {
     loadData().then((value) {
@@ -28,7 +27,7 @@ class SessionRecapCubit extends Cubit<SessionRecapState> {
   }
 
   Future<void> loadData() async {
-    this.session = await dbsession_repo.getSession(session_id);
+    this.session = await DbSessionRepo.getSession(session_id);
     if (session == null) {
       errorMessage = "Unknown session with id $session_id";
       await emitState();

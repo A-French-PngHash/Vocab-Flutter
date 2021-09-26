@@ -27,7 +27,6 @@ class TrainingCubit extends Cubit<TrainingState> {
   final _databaseHandler = DatabaseHandler();
 
   /// Both of these repos are used to log the sessions, and words, the user did.
-  final dbSessionRepo = DbSessionRepo();
   final dbWordRepo = DbWordRepo();
 
   /// Current session.
@@ -71,12 +70,12 @@ class TrainingCubit extends Cubit<TrainingState> {
   }
 
   TrainingCubit(
-      WordRepo _wordRepo, this.originLanguage, this.outputLanguage, this.nbTranslationToDo, List<String> themesChosen)
+      WordRepo _wordRepo, this.originLanguage, this.outputLanguage, this.nbTranslationToDo, List<String> themesChosen, String user)
       : super(TrainingState.initial()) {
     this.beginTime = DateTime.now();
     _wordService = WordService(_wordRepo, nbTranslationToDo, themesChosen, () async {
       // The service is loaded.
-      this.session = await dbSessionRepo.beginSession(nbTranslationToDo);
+      this.session = await DbSessionRepo.beginSession(nbTranslationToDo, user);
 
       nextButtonPressed();
     });
@@ -131,15 +130,5 @@ class TrainingCubit extends Cubit<TrainingState> {
 
       emit(TrainingState.word(wordToTranslate, currentWord.comment, wordCount));
     }
-  }
-
-  void finishedSession() async {
-    await _databaseHandler.insertNewSession(Session(
-        correct: correct,
-        incorrect: incorrect,
-        wordCount: nbTranslationToDo,
-        beginDate: beginTime,
-        endDate: DateTime.now()));
-    emit(TrainingState.finished(correct, incorrect));
   }
 }

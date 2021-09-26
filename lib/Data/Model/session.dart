@@ -6,12 +6,14 @@ class Session {
   DateTime beginDate;
   DateTime? endDate;
   int wordCount;
+  String user;
 
   Session(
       {required this.correct,
       required this.incorrect,
       required this.wordCount,
       required this.beginDate,
+      required this.user,
       this.endDate,
       this.id});
 
@@ -25,6 +27,7 @@ class Session {
       wordCount: json["wordCount"],
       beginDate: DateTime.parse(json["beginDate"]),
       endDate: json.containsKey("endDate") && json["endDate"] != null ? DateTime.parse(json["endDate"]) : null,
+      user: json["user"],
     );
   }
 
@@ -33,7 +36,8 @@ class Session {
       "id": id,
       "beginDate": beginDate.toIso8601String(),
       "endDate": endDate == null ? null : endDate!.toIso8601String(),
-      "wordCount": wordCount
+      "wordCount": wordCount,
+      "user" : user
     };
   }
 }
