@@ -198,22 +198,7 @@ class MainMenuPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                GradientButton(
-                  text: "Test",
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      CupertinoPageRoute(
-                        builder: (_) {
-                          return BlocProvider(
-                            create: (context) => SessionRecapCubit(3),
-                            child: SessionRecap(3),
-                          );
-                        },
-                      ),
-                    );
-                  },
-                ),
-                Expanded(child: Container()),
+                Expanded(child: Container()), // Act as a spacer.
                 GradientButton(
                     text: "Start",
                     onPressed: () {
