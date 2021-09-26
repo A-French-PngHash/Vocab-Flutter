@@ -33,7 +33,7 @@ dependencies:
   # Freezed
   freezed_annotation: ^0.14.0
 
-  flutter_bloc: ^7.1.0
+  flutter_bloc: ^7.3.0
 
   sqflite:
   path:
