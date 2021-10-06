@@ -597,6 +597,126 @@
                     "spanish": ""
                 }
             ]
+        },
+        {
+            "name": "Philosophie - Antonyme",
+            "words": [
+                {
+                    "english": "absolu",
+                    "french": "relatif",
+                    "spanish": ""
+                },
+                {
+                    "english": "abstrait",
+                    "french": "concret",
+                    "spanish": ""
+                },
+                {
+                    "english": "en acte",
+                    "french": "en puissance",
+                    "spanish": ""
+                },
+                {
+                    "english": "analyse",
+                    "french": "synthèse",
+                    "spanish": ""
+                },
+                {
+                    "english": "contingent",
+                    "french": "nécessaire",
+                    "spanish": ""
+                },
+                {
+                    "english": "croire",
+                    "french": "savoir",
+                    "spanish": ""
+                },
+                {
+                    "english": "essentiel",
+                    "french": "accidentel",
+                    "spanish": ""
+                },
+                {
+                    "english": "exemple",
+                    "french": "preuve",
+                    "spanish": ""
+                },
+                {
+                    "english": "expliquer",
+                    "french": "comprendre",
+                    "spanish": ""
+                },
+                {
+                    "english": "en fait",
+                    "french": "en droit",
+                    "spanish": ""
+                },
+                {
+                    "english": "formel",
+                    "french": "matériel",
+                    "spanish": ""
+                },
+                {
+                    "english": "idéal",
+                    "french": "réel",
+                    "spanish": ""
+                },
+                {
+                    "english": "impossible",
+                    "french": "possible",
+                    "spanish": ""
+                },
+                {
+                    "english": "intuitif",
+                    "french": "discursif",
+                    "spanish": ""
+                },
+                {
+                    "english": "légal",
+                    "french": "légitime",
+                    "spanish": ""
+                },
+                {
+                    "english": "médiat",
+                    "french": "immédiat",
+                    "spanish": ""
+                },
+                {
+                    "english": "obligation",
+                    "french": "contrainte",
+                    "spanish": ""
+                },
+                {
+                    "english": "origine",
+                    "french": "fondement",
+                    "spanish": ""
+                },
+                {
+                    "english": "persuader",
+                    "french": "convaincre",
+                    "spanish": ""
+                },
+                {
+                    "english": "public",
+                    "french": "privé",
+                    "spanish": ""
+                },
+                {
+                    "english": "ressemblance",
+                    "french": "analogie",
+                    "spanish": ""
+                },
+                {
+                    "english": "théorie",
+                    "french": "pratique",
+                    "spanish": ""
+                },
+                {
+                    "english": "transcendant",
+                    "french": "immanent",
+                    "spanish": ""
+                }
+            ]
         }
     ]
 }
