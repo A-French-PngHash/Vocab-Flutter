@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:vocab/Data/Model/theme.dart';
 import 'package:vocab/Data/Model/words.dart';
+import 'package:vocab/Data/Repositories/db_session_repo.dart';
+import 'package:vocab/Data/Repositories/db_word_repo.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
 
 class WordService {
@@ -27,6 +29,15 @@ class WordService {
       _pickWord();
       loaded();
     });
+  }
+
+  WordService.loadExistingSession(int sessionId) async {
+    final session = DbSessionRepo.getSession(sessionId);
+  }
+
+  void loadExistingSession(int sessionId) async {
+    final session = await DbSessionRepo.getSession(sessionId);
+    final words = await DbWordRepo.getWords(sessionId);
   }
 
   /// Pick a new word.

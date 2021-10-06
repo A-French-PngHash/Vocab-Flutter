@@ -37,8 +37,9 @@ class DbSessionRepo {
     return Session.fromJson(json, correctAndIncorrectCount[0], correctAndIncorrectCount[1]);
   }
 
+  /// Return the number of correct and incorrect words in the given session.
   static Future<List> _getCorrectAndIncorrectFor(int id) async {
-    final words = await dbWordRepo.getWords(id);
+    final words = await DbWordRepo.getWords(id);
     int correct = 0;
     int incorrect = 0;
     for (WordDb word in words) {

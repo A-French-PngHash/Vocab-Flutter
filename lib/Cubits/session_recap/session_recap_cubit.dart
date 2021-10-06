@@ -18,8 +18,6 @@ class SessionRecapCubit extends Cubit<SessionRecapState> {
   /// the correct state.
   String? errorMessage;
 
-  final dbword_repo = DbWordRepo();
-
   SessionRecapCubit(this.session_id) : super(SessionRecapState.initial()) {
     loadData().then((value) {
       emitState();
@@ -32,7 +30,7 @@ class SessionRecapCubit extends Cubit<SessionRecapState> {
       errorMessage = "Unknown session with id $session_id";
       await emitState();
     }
-    this.words = await dbword_repo.getWords(session_id);
+    this.words = await DbWordRepo.getWords(session_id);
   }
 
   /// Emit the current state inteligently. Uses the data stored in this cubit

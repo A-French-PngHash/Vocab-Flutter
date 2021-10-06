@@ -8,6 +8,7 @@ import 'package:vocab/Cubits/training_cubit/cubit/training_cubit.dart';
 import 'package:vocab/Data/Model/theme.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
 import 'package:vocab/Interface/Elements/button/gradient_button.dart';
+import 'package:vocab/Interface/Elements/button/gradient_button.dart';
 import 'package:vocab/Interface/Elements/custom_text_field.dart';
 import 'package:vocab/Interface/Pages/session_recap.dart';
 import 'package:vocab/Interface/Pages/training_page.dart';

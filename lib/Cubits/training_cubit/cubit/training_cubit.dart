@@ -26,9 +26,6 @@ class TrainingCubit extends Cubit<TrainingState> {
 
   final _databaseHandler = DatabaseHandler();
 
-  /// Both of these repos are used to log the sessions, and words, the user did.
-  final dbWordRepo = DbWordRepo();
-
   /// Current session.
   late Session session;
 
@@ -97,7 +94,7 @@ class TrainingCubit extends Cubit<TrainingState> {
       incorrect += 1;
     }
 
-    dbWordRepo.linkWordToSession(
+    DbWordRepo.linkWordToSession(
       session: session,
       wordShown: wordToTranslate,
       expectedTranslation: sanitizeWord(correctTranslation),

@@ -6,13 +6,7 @@ import 'package:vocab/Data/Model/word_db.dart';
 /// This is basically used to log stuff, compared to the other word repo which
 /// is used to get stuff from the jsons file.
 class DbWordRepo {
-  static final DbWordRepo _singleton = DbWordRepo._internal();
-  factory DbWordRepo() => _singleton;
-  DbWordRepo._internal();
-
-  DatabaseHandler _databaseHandler = DatabaseHandler();
-
-  Future<void> linkWordToSession({
+  static Future<void> linkWordToSession({
     required Session session,
     required String wordShown,
     required String expectedTranslation,
@@ -26,12 +20,12 @@ class DbWordRepo {
       inputedTranslaton: inputedTranslation,
       scoreWhenShown: scoreWhenShown,
     );
-    await this._databaseHandler.insertWord(wordObj);
+    await DatabaseHandler().insertWord(wordObj);
   }
 
-  Future<List<WordDb>> getWords(int session_id) async {
+  static Future<List<WordDb>> getWords(int session_id) async {
     List<WordDb> word_list = [];
-    final raw_result = await this._databaseHandler.getWordList(session_id);
+    final raw_result = await DatabaseHandler().getWordList(session_id);
     for (Map<String, Object?> element in raw_result) {
       word_list.add(WordDb.fromJson(element));
     }
