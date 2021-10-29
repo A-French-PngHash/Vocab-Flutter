@@ -715,6 +715,512 @@
                     "english": "transcendant",
                     "french": "immanent",
                     "spanish": ""
+                },
+                {
+                    "english": "vrai",
+                    "french": "probable/certain",
+                    "spanish": ""
+                },
+                {
+                    "english": "universel/général",
+                    "french": "particulier/singulier",
+                    "spanish": ""
+                },
+                {
+                    "english": "objectif",
+                    "french": "subjectif/intersubjectif",
+                    "spanish": ""
+                },
+                {
+                    "english": "identité/égalité",
+                    "french": "différence",
+                    "spanish": ""
+                },
+                {
+                    "english": "principe/cause",
+                    "french": "fin",
+                    "spanish": ""
+                },
+                {
+                    "english": "hypothèse",
+                    "french": "conséquence/conclusion",
+                    "spanish": ""
+                },
+                {
+                    "english": "genre/espèce",
+                    "french": "individu",
+                    "spanish": ""
+                },
+                {
+                    "english": "concept",
+                    "french": "image/métaphore",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name": "DIFFICILE Innovaciones Cientifica y Responsibilidad",
+            "words": [
+                {
+                    "english": "",
+                    "french": "le boycott",
+                    "spanish": "el boicot"
+                },
+                {
+                    "english": "",
+                    "french": "les déchets",
+                    "spanish": "los desechos/los residuos"
+                },
+                {
+                    "english": "",
+                    "french": "le défi",
+                    "spanish": "el desafío/el reto"
+                },
+                {
+                    "english": "",
+                    "french": "le domaine",
+                    "spanish": "el ámbito"
+                },
+                {
+                    "english": "",
+                    "french": "durable",
+                    "spanish": "sostenible"
+                },
+                {
+                    "english": "",
+                    "french": "efficace",
+                    "spanish": "eficiente/eficaz"
+                },
+                {
+                    "english": "",
+                    "french": "l'engagement/l'obstination",
+                    "spanish": "el empeño"
+                },
+                {
+                    "english": "",
+                    "french": "le future",
+                    "spanish": "el porvenir/el futuro"
+                },
+                {
+                    "english": "",
+                    "french": "environnemental",
+                    "spanish": "ambiental"
+                },
+                {
+                    "english": "",
+                    "french": "l'engagement/l'obstination",
+                    "spanish": "el empeño"
+                },
+                {
+                    "english": "",
+                    "french": "la mairie",
+                    "spanish": "el ayuntamiento"
+                },
+                {
+                    "english": "",
+                    "french": "de déplacer",
+                    "spanish": "desplazarse/circular/acceder"
+                },
+                {
+                    "english": "",
+                    "french": "avoir du succès",
+                    "spanish": "tener éxito/sobresalir"
+                },
+                {
+                    "english": "",
+                    "french": "la ville durable",
+                    "spanish": "la urbe sostenible"
+                },
+                {
+                    "english": "",
+                    "french": "le remède",
+                    "spanish": "la cura/el remedio"
+                },
+                {
+                    "english": "",
+                    "french": "le progrès",
+                    "spanish": "el adelanto"
+                },
+                {
+                    "english": "",
+                    "french": "l'outil",
+                    "spanish": "la herramienta"
+                },
+                {
+                    "english": "",
+                    "french": "sauver des espèces en voie d'extinction",
+                    "spanish": "salvar especies en vía de extinción"
+                },
+                {
+                    "english": "",
+                    "french": "réussir",
+                    "spanish": "conseguir"
+                }
+            ]
+        },
+        {
+            "name": "Innovaciones Cientifica y Responsibilidad",
+            "words": [
+                {
+                    "english": "",
+                    "french": "l'agriculture",
+                    "spanish": "la agricultura"
+                },
+                {
+                    "english": "",
+                    "french": "l'agriculture verticale",
+                    "spanish": "la agricultura vertical"
+                },
+                {
+                    "english": "",
+                    "french": "des aliments de saison",
+                    "spanish": "alimentos de temporada"
+                },
+                {
+                    "english": "",
+                    "french": "le bénéfice",
+                    "spanish": "el beneficio"
+                },
+                {
+                    "english": "",
+                    "french": "le gain",
+                    "spanish": "la ganancia"
+                },
+                {
+                    "english": "",
+                    "french": "le bien-être",
+                    "spanish": "el bienestar"
+                },
+                {
+                    "english": "",
+                    "french": "le boycott",
+                    "spanish": "el boicot"
+                },
+                {
+                    "english": "",
+                    "french": "le circuit court",
+                    "spanish": "el circuito corto"
+                },
+                {
+                    "english": "",
+                    "french": "les couloirs verts",
+                    "spanish": "los corredores verdes"
+                },
+                {
+                    "english": "",
+                    "french": "les déchets",
+                    "spanish": "los desechos/los residuos"
+                },
+                {
+                    "english": "",
+                    "french": "le défi",
+                    "spanish": "el desafío/el reto"
+                },
+                {
+                    "english": "",
+                    "french": "le dévelopement",
+                    "spanish": "el desarrollo"
+                },
+                {
+                    "english": "",
+                    "french": "le domaine",
+                    "spanish": "el ámbito"
+                },
+                {
+                    "english": "",
+                    "french": "durable",
+                    "spanish": "sostenible"
+                },
+                {
+                    "english": "",
+                    "french": "écocitoyen",
+                    "spanish": "ecociudadano"
+                },
+                {
+                    "english": "",
+                    "french": "écologique",
+                    "spanish": "ecológico"
+                },
+                {
+                    "english": "",
+                    "french": "efficace",
+                    "spanish": "eficiente/eficaz"
+                },
+                {
+                    "english": "",
+                    "french": "l'effet de serre",
+                    "spanish": "el efecto invernadero"
+                },
+                {
+                    "english": "",
+                    "french": "les embouteillages",
+                    "spanish": "los atascos"
+                },
+                {
+                    "english": "",
+                    "french": "l'efficacité",
+                    "spanish": "la eficienca"
+                },
+                {
+                    "english": "",
+                    "french": "les énergies renouvelables",
+                    "spanish": "las energías renovables"
+                },
+                {
+                    "english": "",
+                    "french": "l'engagement/l'obstination",
+                    "spanish": "el empeño"
+                },
+                {
+                    "english": "",
+                    "french": "fermés et isolés",
+                    "spanish": "cerrados y aislados"
+                },
+                {
+                    "english": "",
+                    "french": "fini le plastique !",
+                    "spanish": "¡no más plástico!"
+                },
+                {
+                    "english": "",
+                    "french": "le future",
+                    "spanish": "el porvenir/el futuro"
+                },
+                {
+                    "english": "",
+                    "french": "le gaspillage",
+                    "spanish": "el desperdicio"
+                },
+                {
+                    "english": "",
+                    "french": "l'environnement",
+                    "spanish": "el medio ambiente"
+                },
+                {
+                    "english": "",
+                    "french": "l'environnement naturel",
+                    "spanish": "el entorno natural"
+                },
+                {
+                    "english": "",
+                    "french": "environnemental",
+                    "spanish": "ambiental"
+                },
+                {
+                    "english": "",
+                    "french": "la façade",
+                    "spanish": "la fachada"
+                },
+                {
+                    "english": "",
+                    "french": "grâce à",
+                    "spanish": "au moyen de/mediante"
+                },
+                {
+                    "english": "",
+                    "french": "le lit",
+                    "spanish": "el cauce",
+                    "comment": "de rivière"
+                },
+                {
+                    "english": "",
+                    "french": "la mairie",
+                    "spanish": "el ayuntamiento"
+                },
+                {
+                    "english": "",
+                    "french": "la nouveauté",
+                    "spanish": "la novedad"
+                },
+                {
+                    "english": "",
+                    "french": "l'objectif",
+                    "spanish": "el objetivo"
+                },
+                {
+                    "english": "",
+                    "french": "le pollueur",
+                    "spanish": "el contaminante"
+                },
+                {
+                    "english": "",
+                    "french": "la qualité de vie",
+                    "spanish": "la calidad de vida"
+                },
+                {
+                    "english": "",
+                    "french": "les ressources",
+                    "spanish": "los recursos"
+                },
+                {
+                    "english": "",
+                    "french": "la terrasse",
+                    "spanish": "la azotea",
+                    "comment": "sur les toits"
+                },
+                {
+                    "english": "",
+                    "french": "l'usager",
+                    "spanish": "el usario"
+                },
+                {
+                    "english": "",
+                    "french": "ville",
+                    "spanish": "ciudad",
+                    "comment": "Pas urbe"
+                },
+                {
+                    "english": "",
+                    "french": "ville",
+                    "spanish": "urbe",
+                    "comment": "Pas ciudad"
+                },
+                {
+                    "english": "",
+                    "french": "bouger",
+                    "spanish": "moverse"
+                },
+                {
+                    "english": "",
+                    "french": "de déplacer",
+                    "spanish": "desplazarse/circular/acceder"
+                },
+                {
+                    "english": "",
+                    "french": "avoir du succès",
+                    "spanish": "tener éxito/sobresalir"
+                },
+                {
+                    "english": "",
+                    "french": "la ville durable",
+                    "spanish": "la urbe sostenible"
+                },
+                {
+                    "english": "",
+                    "french": "le remède",
+                    "spanish": "la cura/el remedio"
+                },
+                {
+                    "english": "",
+                    "french": "le progrès",
+                    "spanish": "el adelanto"
+                },
+                {
+                    "english": "",
+                    "french": "l'outil",
+                    "spanish": "la herramienta"
+                },
+                {
+                    "english": "",
+                    "french": "consommer",
+                    "spanish": "consumir"
+                },
+                {
+                    "english": "",
+                    "french": "encourager",
+                    "spanish": "fomentar"
+                },
+                {
+                    "english": "",
+                    "french": "essayer",
+                    "spanish": "probar"
+                },
+                {
+                    "english": "",
+                    "french": "inciter",
+                    "spanish": "impulsar"
+                },
+                {
+                    "english": "",
+                    "french": "lutter contre la pollution",
+                    "spanish": "luchar contra la contaminación"
+                },
+                {
+                    "english": "",
+                    "french": "nuire",
+                    "spanish": "dañar"
+                },
+                {
+                    "english": "",
+                    "french": "obtenir",
+                    "spanish": "conseguir"
+                },
+                {
+                    "english": "",
+                    "french": "endommager",
+                    "spanish": "dañar"
+                },
+                {
+                    "english": "",
+                    "french": "réussir",
+                    "spanish": "conseguir"
+                },
+                {
+                    "english": "",
+                    "french": "prouver",
+                    "spanish": "probar"
+                },
+                {
+                    "english": "",
+                    "french": "favoriser",
+                    "spanish": "fomentar"
+                },
+                {
+                    "english": "",
+                    "french": "prendre soin de",
+                    "spanish": "cuidar"
+                },
+                {
+                    "english": "",
+                    "french": "préserver",
+                    "spanish": "preservar"
+                },
+                {
+                    "english": "",
+                    "french": "restaurer",
+                    "spanish": "restaurar"
+                },
+                {
+                    "english": "",
+                    "french": "réhabiliter",
+                    "spanish": "rehabilitar"
+                },
+                {
+                    "english": "",
+                    "french": "rechercher",
+                    "spanish": "indagar"
+                },
+                {
+                    "english": "",
+                    "french": "réduire",
+                    "spanish": "disminuir",
+                    "comment": "Pas reducir"
+                },
+                {
+                    "english": "",
+                    "french": "réduire",
+                    "spanish": "reducir",
+                    "comment": "Pas disminuir"
+                },
+                {
+                    "english": "",
+                    "french": "remplacer",
+                    "spanish": "reemplazar"
+                },
+                {
+                    "english": "",
+                    "french": "sauver des espèces en voie d'extinction",
+                    "spanish": "salvar especies en vía de extinción"
+                },
+                {
+                    "english": "",
+                    "french": "réussir",
+                    "spanish": "conseguir"
+                },
+                {
+                    "english": "",
+                    "french": "sensibiliser",
+                    "spanish": "sensibilizar"
                 }
             ]
         }
