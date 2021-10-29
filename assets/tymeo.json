@@ -276,7 +276,8 @@
                 {
                     "english": "to write",
                     "french": "écrire",
-                    "spanish": ""
+                    "spanish": "",
+                    "comment": "Sur du papier ou un tableau"
                 },
                 {
                     "english": "a picture",
@@ -3326,7 +3327,8 @@
                 {
                     "english": "to think",
                     "french": "penser",
-                    "spanish": ""
+                    "spanish": "",
+                    "comment": "Synonyme de TO FIGURE"
                 },
                 {
                     "english": "comfortable",
@@ -4339,6 +4341,565 @@
                     "english": "felt pens",
                     "french": "feutres",
                     "spanish": ""
+                },
+                {
+                    "english": "on the right",
+                    "french": "sur la droite",
+                    "spanish": ""
+                },
+                {
+                    "english": "on the left",
+                    "french": "sur la gauche",
+                    "spanish": ""
+                },
+                {
+                    "english": "all",
+                    "french": "tous",
+                    "spanish": ""
+                },
+                {
+                    "english": "by the way",
+                    "french": "d'ailleurs / au fait",
+                    "spanish": ""
+                },
+                {
+                    "english": "to figure",
+                    "french": "penser",
+                    "spanish": "",
+                    "comment": "Synonyme de TO THINK"
+                },
+                {
+                    "english": "both",
+                    "french": "tous les deux",
+                    "spanish": ""
+                },
+                {
+                    "english": "to hurry up",
+                    "french": "se dépêcher",
+                    "spanish": ""
+                },
+                {
+                    "english": "to get stuck",
+                    "french": "être coincé",
+                    "spanish": ""
+                },
+                {
+                    "english": "in the back",
+                    "french": "derrière",
+                    "spanish": ""
+                },
+                {
+                    "english": "in front of",
+                    "french": "devant",
+                    "spanish": ""
+                },
+                {
+                    "english": "own",
+                    "french": "propre",
+                    "spanish": "",
+                    "comment": "Qui nous appartient"
+                },
+                {
+                    "english": "to hope",
+                    "french": "espérer",
+                    "spanish": ""
+                },
+                {
+                    "english": "a sink",
+                    "french": "un évier",
+                    "spanish": ""
+                },
+                {
+                    "english": "grade 6",
+                    "french": "6ème (année de collège)",
+                    "spanish": ""
+                },
+                {
+                    "english": "a saucepan",
+                    "french": "une casserole",
+                    "spanish": ""
+                },
+                {
+                    "english": "an oven",
+                    "french": "un four",
+                    "spanish": ""
+                },
+                {
+                    "english": "a sheep",
+                    "french": "un mouton",
+                    "spanish": "",
+                    "grammarRule": "Le pluriel de SHEEP est SHEEP"
+                },
+                {
+                    "english": "the salt",
+                    "french": "le sel",
+                    "spanish": ""
+                },
+                {
+                    "english": "a drawer",
+                    "french": "un tiroir",
+                    "spanish": ""
+                },
+                {
+                    "english": "less than",
+                    "french": "moins que",
+                    "spanish": ""
+                },
+                {
+                    "english": "one of them",
+                    "french": "l'un d'entre eux",
+                    "spanish": ""
+                },
+                {
+                    "english": "usually",
+                    "french": "habituellement",
+                    "spanish": ""
+                },
+                {
+                    "english": "sometimes",
+                    "french": "quelquefois",
+                    "spanish": ""
+                },
+                {
+                    "english": "real",
+                    "french": "vraiment",
+                    "spanish": ""
+                },
+                {
+                    "english": "to be real careful",
+                    "french": "être vraiment prudent",
+                    "spanish": ""
+                },
+                {
+                    "english": "male",
+                    "french": "\"de sexe masculin\"",
+                    "spanish": ""
+                },
+                {
+                    "english": "female",
+                    "french": "\"de sexe féminin\"",
+                    "spanish": ""
+                },
+                {
+                    "english": "to study",
+                    "french": "étudier",
+                    "spanish": ""
+                },
+                {
+                    "english": "for some of us",
+                    "french": "pour certains d'entre eux",
+                    "spanish": ""
+                },
+                {
+                    "english": "your stuff",
+                    "french": "tes affaires",
+                    "spanish": ""
+                },
+                {
+                    "english": "so",
+                    "french": "donc",
+                    "spanish": ""
+                },
+                {
+                    "english": "to pass the time",
+                    "french": "pour passer le temps",
+                    "spanish": ""
+                },
+                {
+                    "english": "on mondays in the morning",
+                    "french": "tous les lundis matins",
+                    "spanish": "",
+                    "comment": "Indique l'habitude sur le LUNDI",
+                    "grammarRule": "Le S à la fin de MONDAY signifie que cette activté a lieu TOUS les lundis matins"
+                },
+                {
+                    "english": "on monday in the mornings",
+                    "french": "tous les lundis matins",
+                    "spanish": "",
+                    "comment": "Indique l'habitude sur le MATIN",
+                    "grammarRule": "Le S à la fin de MORNING signifie que cette activté a lieu TOUS les lundis matins"
+                },
+                {
+                    "english": "recess",
+                    "french": "récréation",
+                    "spanish": ""
+                },
+                {
+                    "english": "the seating chart",
+                    "french": "le plan de salle",
+                    "spanish": ""
+                },
+                {
+                    "english": "to chat",
+                    "french": "discuter",
+                    "spanish": ""
+                },
+                {
+                    "english": "to share",
+                    "french": "partager",
+                    "spanish": ""
+                },
+                {
+                    "english": "a diary",
+                    "french": "un journal intime",
+                    "spanish": ""
+                },
+                {
+                    "english": "to be careful",
+                    "french": "être prudent",
+                    "spanish": ""
+                },
+                {
+                    "english": "to let",
+                    "french": "laisser",
+                    "spanish": ""
+                },
+                {
+                    "english": "a chat",
+                    "french": "une discussion",
+                    "spanish": ""
+                },
+                {
+                    "english": "to refresh",
+                    "french": "rafraîchir",
+                    "spanish": ""
+                },
+                {
+                    "english": "to head to",
+                    "french": "se diriger vers",
+                    "spanish": ""
+                },
+                {
+                    "english": "to leave",
+                    "french": "quitter",
+                    "spanish": ""
+                },
+                {
+                    "english": "on mondays",
+                    "french": "tous les lundis",
+                    "spanish": "",
+                    "grammarRule": "Le S à la fin de MONDAY indique que l'activité a lieu TOUS les lundis"
+                },
+                {
+                    "english": "next to",
+                    "french": "à côté de",
+                    "spanish": ""
+                },
+                {
+                    "english": "an advice",
+                    "french": "un conseil",
+                    "spanish": ""
+                },
+                {
+                    "english": "around",
+                    "french": "autour",
+                    "spanish": ""
+                },
+                {
+                    "english": "i might",
+                    "french": "je pourrai",
+                    "spanish": "",
+                    "comment": "Je pourrai EVENTUELLEMENT. Utilise un AUXILLIAIRE MODAL."
+                },
+                {
+                    "english": "to walk into",
+                    "french": "entrer dans",
+                    "spanish": ""
+                },
+                {
+                    "english": "to act out",
+                    "french": "mettre en scène",
+                    "spanish": ""
+                },
+                {
+                    "english": "the narrator",
+                    "french": "le narrateur",
+                    "spanish": ""
+                },
+                {
+                    "english": "in the middle",
+                    "french": "au milieu",
+                    "spanish": ""
+                },
+                {
+                    "english": "before",
+                    "french": "avant",
+                    "spanish": ""
+                },
+                {
+                    "english": "after",
+                    "french": "après",
+                    "spanish": ""
+                },
+                {
+                    "english": "to practice",
+                    "french": "s'entraîner",
+                    "spanish": ""
+                },
+                {
+                    "english": "the practice",
+                    "french": "l'entraînement",
+                    "spanish": ""
+                },
+                {
+                    "english": "as well",
+                    "french": "aussi bien",
+                    "spanish": ""
+                },
+                {
+                    "english": "to plunk your stuff down",
+                    "french": "ranger tes affaires",
+                    "spanish": ""
+                },
+                {
+                    "english": "careful",
+                    "french": "attention",
+                    "spanish": ""
+                },
+                {
+                    "english": "to get bored",
+                    "french": "s'ennuyer",
+                    "spanish": "",
+                    "grammarRule": "I AM BORED, YOU ARE BORED,... I GET BORED, YOU GET BORED,..."
+                },
+                {
+                    "english": "into",
+                    "french": "dans",
+                    "spanish": ""
+                },
+                {
+                    "english": "disappointing",
+                    "french": "décévant",
+                    "spanish": ""
+                },
+                {
+                    "english": "disappointed",
+                    "french": "déçu",
+                    "spanish": ""
+                },
+                {
+                    "english": "to take place",
+                    "french": "se dérouler",
+                    "spanish": ""
+                },
+                {
+                    "english": "both",
+                    "french": "tous les 2",
+                    "spanish": ""
+                },
+                {
+                    "english": "to buy",
+                    "french": "acheter",
+                    "spanish": ""
+                },
+                {
+                    "english": "at school",
+                    "french": "à l'école",
+                    "spanish": ""
+                },
+                {
+                    "english": "in class",
+                    "french": "en classe",
+                    "spanish": ""
+                },
+                {
+                    "english": "boiled eggs",
+                    "french": "oeufs durs",
+                    "spanish": ""
+                },
+                {
+                    "english": "pancakes",
+                    "french": "crêpes",
+                    "spanish": ""
+                },
+                {
+                    "english": "all around the place",
+                    "french": "tout autour / partout",
+                    "spanish": "",
+                    "grammarRule": "On peut également dire ALL AROUND"
+                },
+                {
+                    "english": "waffles",
+                    "french": "gaufres",
+                    "spanish": ""
+                },
+                {
+                    "english": "my elder brothers",
+                    "french": "mes frères ainés",
+                    "spanish": ""
+                },
+                {
+                    "english": "to tend to",
+                    "french": "avoir tendance à",
+                    "spanish": ""
+                },
+                {
+                    "english": "à côté",
+                    "french": "next door",
+                    "spanish": "",
+                    "comment": "Dans le sens, LA PORTE A CÔTE"
+                },
+                {
+                    "english": "a meal",
+                    "french": "un repas",
+                    "spanish": ""
+                },
+                {
+                    "english": "at mealtimes",
+                    "french": "aux repas",
+                    "spanish": "",
+                    "comment": "Aux heures des repas"
+                },
+                {
+                    "english": "to keep",
+                    "french": "garder",
+                    "spanish": ""
+                },
+                {
+                    "english": "at home",
+                    "french": "à la maison",
+                    "spanish": ""
+                },
+                {
+                    "english": "a mobile phone",
+                    "french": "un téléphone portable",
+                    "spanish": ""
+                },
+                {
+                    "english": "to stretch",
+                    "french": "s'étirer",
+                    "spanish": ""
+                },
+                {
+                    "english": "the garage",
+                    "french": "le garage",
+                    "spanish": ""
+                },
+                {
+                    "english": "fried eggs",
+                    "french": "oeufs sur le plat",
+                    "spanish": ""
+                },
+                {
+                    "english": "to come from",
+                    "french": "venir de",
+                    "spanish": ""
+                },
+                {
+                    "english": "scrambled eggs",
+                    "french": "omelette",
+                    "spanish": ""
+                },
+                {
+                    "english": "honest",
+                    "french": "honête",
+                    "spanish": "",
+                    "grammarRule": "Le H est muet. On dira AN honest man"
+                },
+                {
+                    "english": "to buy",
+                    "french": "acheter",
+                    "spanish": ""
+                },
+                {
+                    "english": "both",
+                    "french": "tous les 2",
+                    "spanish": ""
+                },
+                {
+                    "english": "poached eggs",
+                    "french": "oeufs pochés (à la coque)",
+                    "spanish": ""
+                },
+                {
+                    "english": "a shelf",
+                    "french": "une étagère",
+                    "spanish": "",
+                    "grammarRule": "Au pluriel, SHELVES"
+                },
+                {
+                    "english": "my nextdoor",
+                    "french": "mon voisin",
+                    "spanish": "",
+                    "comment": "Synonyme de my neighbours"
+                },
+                {
+                    "english": "a locker",
+                    "french": "un casier",
+                    "spanish": ""
+                },
+                {
+                    "english": "soccer",
+                    "french": "football",
+                    "spanish": ""
+                },
+                {
+                    "english": "to lock",
+                    "french": "fermer à clé",
+                    "spanish": ""
+                },
+                {
+                    "english": "a night table",
+                    "french": "une table de nuit",
+                    "spanish": ""
+                },
+                {
+                    "english": "the top shelf",
+                    "french": "l'étagère du haut",
+                    "spanish": "",
+                    "grammarRule": "Au pluriel, TOP SHELVES"
+                },
+                {
+                    "english": "fancy",
+                    "french": "fantaisie",
+                    "spanish": ""
+                },
+                {
+                    "english": "a holder",
+                    "french": "un pot à crayons",
+                    "spanish": ""
+                },
+                {
+                    "english": "it's up to you",
+                    "french": "cela ne tient qu'à toi",
+                    "spanish": "",
+                    "grammarRule": "On peut aussi dire IT'S ALL UP TO YOU"
+                },
+                {
+                    "english": "a whiteboard",
+                    "french": "un tableau blanc",
+                    "spanish": ""
+                },
+                {
+                    "english": "a black board",
+                    "french": "un tableau noir",
+                    "spanish": ""
+                },
+                {
+                    "english": "whole",
+                    "french": "entier",
+                    "spanish": ""
+                },
+                {
+                    "english": "under",
+                    "french": "en-dessous",
+                    "spanish": ""
+                },
+                {
+                    "english": "a water-bottle",
+                    "french": "une gourde",
+                    "spanish": ""
+                },
+                {
+                    "english": "bottom",
+                    "french": "bas",
+                    "spanish": ""
+                },
+                {
+                    "english": "the bottom shelf",
+                    "french": "l'étagère du bas",
+                    "spanish": "",
+                    "grammarRule": "Au pluriel, BOTTOM SHELVES"
                 }
             ]
         }
