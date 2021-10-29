@@ -21,7 +21,7 @@ class DatabaseHandler {
         onCreate: (db, version) async {
           // Run the CREATE TABLE statement on the database.
           await db.execute(
-            "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1), user TEXT NOT NULL, themes TEXT NOT NULL);",
+            "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1), user TEXT NOT NULL);",
           );
           await db.execute(
               "CREATE TABLE Word (wordShown TEXT NOT NULL, expectedTranslation TEXT NOT NULL, inputedTranslation TEXT NOT NULL, scoreWhenShown DOUBLE, sessionId BIGINT REFERENCES Session (id) NOT NULL);");
@@ -30,7 +30,7 @@ class DatabaseHandler {
           await db.execute("DROP TABLE IF EXISTS Word;");
           await db.execute("DROP TABLE IF EXISTS Session;");
           await db.execute(
-            "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1), user TEXT NOT NULL, themes TEXT NOT NULL);",
+            "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1), user TEXT NOT NULL);",
           );
           await db.execute(
               "CREATE TABLE Word (wordShown TEXT NOT NULL, expectedTranslation TEXT NOT NULL, inputedTranslation TEXT NOT NULL, scoreWhenShown DOUBLE, sessionId BIGINT REFERENCES Session (id) NOT NULL);");

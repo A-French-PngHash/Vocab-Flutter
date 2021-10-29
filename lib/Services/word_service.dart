@@ -31,15 +31,6 @@ class WordService {
     });
   }
 
-  WordService.loadExistingSession(int sessionId) async {
-    final session = DbSessionRepo.getSession(sessionId);
-  }
-
-  void loadExistingSession(int sessionId) async {
-    final session = await DbSessionRepo.getSession(sessionId);
-    final words = await DbWordRepo.getWords(sessionId);
-  }
-
   /// Pick a new word.
   ///
   /// - success : Used to influence future probabilities of being picker for

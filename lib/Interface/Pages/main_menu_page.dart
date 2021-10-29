@@ -78,7 +78,7 @@ class MainMenuPage extends StatelessWidget {
                     children: [
                       Text(
                         "Vocab",
-                        style: TextStyle(fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold),
+                        style: Theme.of(context).textTheme.headline1,
                       )
                     ],
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -178,7 +178,7 @@ class MainMenuPage extends StatelessWidget {
                             padding: EdgeInsets.symmetric(horizontal: 10),
                             child: Text(
                               "Session length",
-                              style: TextStyle(fontSize: 17),
+                              style: Theme.of(context).textTheme.bodyText2,
                             ),
                           ),
                           Spacer(),
@@ -210,14 +210,6 @@ class MainMenuPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (hasSessionToContinue)
-                      GradientButton(
-                        color: GradientButtonColor.blue,
-                        text: "Continue previous session",
-                        onPressed: () {
-                          print("TODO : continue the session");
-                        },
-                      ),
                     GradientButton(
                         text: "Start",
                         onPressed: () {

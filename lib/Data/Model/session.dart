@@ -7,7 +7,6 @@ class Session {
   DateTime? endDate;
   int wordCount;
   String user;
-  List<String> themes;
 
   Session(
       {required this.correct,
@@ -38,8 +37,7 @@ class Session {
       "beginDate": beginDate.toIso8601String(),
       "endDate": endDate == null ? null : endDate!.toIso8601String(),
       "wordCount": wordCount,
-      "user": user,
-      "themes" : themes.to
+      "user": user
     };
   }
 }
