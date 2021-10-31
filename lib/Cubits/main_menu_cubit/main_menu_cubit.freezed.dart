@@ -26,7 +26,8 @@ class _$MainMenuCubitStateTearOff {
       required String originLanguage,
       required String outputLanguage,
       required String currentUser,
-      required int numberOfTranslationToDo}) {
+      required int numberOfTranslationToDo,
+      required bool hasSessionToContinue}) {
     return _MainMenuCubitState(
       themes: themes,
       currentlySelectedTheme: currentlySelectedTheme,
@@ -34,6 +35,7 @@ class _$MainMenuCubitStateTearOff {
       outputLanguage: outputLanguage,
       currentUser: currentUser,
       numberOfTranslationToDo: numberOfTranslationToDo,
+      hasSessionToContinue: hasSessionToContinue,
     );
   }
 }
@@ -52,7 +54,8 @@ mixin _$MainMenuCubitState {
             String originLanguage,
             String outputLanguage,
             String currentUser,
-            int numberOfTranslationToDo)
+            int numberOfTranslationToDo,
+            bool hasSessionToContinue)
         menu,
   }) =>
       throw _privateConstructorUsedError;
@@ -65,7 +68,8 @@ mixin _$MainMenuCubitState {
             String originLanguage,
             String outputLanguage,
             String currentUser,
-            int numberOfTranslationToDo)?
+            int numberOfTranslationToDo,
+            bool hasSessionToContinue)?
         menu,
     required TResult orElse(),
   }) =>
@@ -147,7 +151,8 @@ class _$_Loading implements _Loading {
             String originLanguage,
             String outputLanguage,
             String currentUser,
-            int numberOfTranslationToDo)
+            int numberOfTranslationToDo,
+            bool hasSessionToContinue)
         menu,
   }) {
     return loading();
@@ -163,7 +168,8 @@ class _$_Loading implements _Loading {
             String originLanguage,
             String outputLanguage,
             String currentUser,
-            int numberOfTranslationToDo)?
+            int numberOfTranslationToDo,
+            bool hasSessionToContinue)?
         menu,
     required TResult orElse(),
   }) {
@@ -211,7 +217,8 @@ abstract class _$MainMenuCubitStateCopyWith<$Res> {
       String originLanguage,
       String outputLanguage,
       String currentUser,
-      int numberOfTranslationToDo});
+      int numberOfTranslationToDo,
+      bool hasSessionToContinue});
 }
 
 /// @nodoc
@@ -233,6 +240,7 @@ class __$MainMenuCubitStateCopyWithImpl<$Res>
     Object? outputLanguage = freezed,
     Object? currentUser = freezed,
     Object? numberOfTranslationToDo = freezed,
+    Object? hasSessionToContinue = freezed,
   }) {
     return _then(_MainMenuCubitState(
       themes: themes == freezed
@@ -259,6 +267,10 @@ class __$MainMenuCubitStateCopyWithImpl<$Res>
           ? _value.numberOfTranslationToDo
           : numberOfTranslationToDo // ignore: cast_nullable_to_non_nullable
               as int,
+      hasSessionToContinue: hasSessionToContinue == freezed
+          ? _value.hasSessionToContinue
+          : hasSessionToContinue // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -272,7 +284,8 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
       required this.originLanguage,
       required this.outputLanguage,
       required this.currentUser,
-      required this.numberOfTranslationToDo});
+      required this.numberOfTranslationToDo,
+      required this.hasSessionToContinue});
 
   @override
   final List<String> themes;
@@ -286,10 +299,12 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
   final String currentUser;
   @override
   final int numberOfTranslationToDo;
+  @override
+  final bool hasSessionToContinue;
 
   @override
   String toString() {
-    return 'MainMenuCubitState.menu(themes: $themes, currentlySelectedTheme: $currentlySelectedTheme, originLanguage: $originLanguage, outputLanguage: $outputLanguage, currentUser: $currentUser, numberOfTranslationToDo: $numberOfTranslationToDo)';
+    return 'MainMenuCubitState.menu(themes: $themes, currentlySelectedTheme: $currentlySelectedTheme, originLanguage: $originLanguage, outputLanguage: $outputLanguage, currentUser: $currentUser, numberOfTranslationToDo: $numberOfTranslationToDo, hasSessionToContinue: $hasSessionToContinue)';
   }
 
   @override
@@ -313,7 +328,10 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
             (identical(
                     other.numberOfTranslationToDo, numberOfTranslationToDo) ||
                 const DeepCollectionEquality().equals(
-                    other.numberOfTranslationToDo, numberOfTranslationToDo)));
+                    other.numberOfTranslationToDo, numberOfTranslationToDo)) &&
+            (identical(other.hasSessionToContinue, hasSessionToContinue) ||
+                const DeepCollectionEquality()
+                    .equals(other.hasSessionToContinue, hasSessionToContinue)));
   }
 
   @override
@@ -324,7 +342,8 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
       const DeepCollectionEquality().hash(originLanguage) ^
       const DeepCollectionEquality().hash(outputLanguage) ^
       const DeepCollectionEquality().hash(currentUser) ^
-      const DeepCollectionEquality().hash(numberOfTranslationToDo);
+      const DeepCollectionEquality().hash(numberOfTranslationToDo) ^
+      const DeepCollectionEquality().hash(hasSessionToContinue);
 
   @JsonKey(ignore: true)
   @override
@@ -341,11 +360,12 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
             String originLanguage,
             String outputLanguage,
             String currentUser,
-            int numberOfTranslationToDo)
+            int numberOfTranslationToDo,
+            bool hasSessionToContinue)
         menu,
   }) {
     return menu(themes, currentlySelectedTheme, originLanguage, outputLanguage,
-        currentUser, numberOfTranslationToDo);
+        currentUser, numberOfTranslationToDo, hasSessionToContinue);
   }
 
   @override
@@ -358,13 +378,20 @@ class _$_MainMenuCubitState implements _MainMenuCubitState {
             String originLanguage,
             String outputLanguage,
             String currentUser,
-            int numberOfTranslationToDo)?
+            int numberOfTranslationToDo,
+            bool hasSessionToContinue)?
         menu,
     required TResult orElse(),
   }) {
     if (menu != null) {
-      return menu(themes, currentlySelectedTheme, originLanguage,
-          outputLanguage, currentUser, numberOfTranslationToDo);
+      return menu(
+          themes,
+          currentlySelectedTheme,
+          originLanguage,
+          outputLanguage,
+          currentUser,
+          numberOfTranslationToDo,
+          hasSessionToContinue);
     }
     return orElse();
   }
@@ -399,7 +426,8 @@ abstract class _MainMenuCubitState implements MainMenuCubitState {
       required String originLanguage,
       required String outputLanguage,
       required String currentUser,
-      required int numberOfTranslationToDo}) = _$_MainMenuCubitState;
+      required int numberOfTranslationToDo,
+      required bool hasSessionToContinue}) = _$_MainMenuCubitState;
 
   List<String> get themes => throw _privateConstructorUsedError;
   List<String> get currentlySelectedTheme => throw _privateConstructorUsedError;
@@ -407,6 +435,7 @@ abstract class _MainMenuCubitState implements MainMenuCubitState {
   String get outputLanguage => throw _privateConstructorUsedError;
   String get currentUser => throw _privateConstructorUsedError;
   int get numberOfTranslationToDo => throw _privateConstructorUsedError;
+  bool get hasSessionToContinue => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$MainMenuCubitStateCopyWith<_MainMenuCubitState> get copyWith =>
       throw _privateConstructorUsedError;

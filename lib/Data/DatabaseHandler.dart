@@ -21,20 +21,20 @@ class DatabaseHandler {
         onCreate: (db, version) async {
           // Run the CREATE TABLE statement on the database.
           await db.execute(
-            "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1));",
+            "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1), user TEXT NOT NULL);",
           );
           await db.execute(
               "CREATE TABLE Word (wordShown TEXT NOT NULL, expectedTranslation TEXT NOT NULL, inputedTranslation TEXT NOT NULL, scoreWhenShown DOUBLE, sessionId BIGINT REFERENCES Session (id) NOT NULL);");
         },
         onUpgrade: (db, oldVersion, newVersion) async {
-            await db.execute("DROP TABLE IF EXISTS Word;");
-            await db.execute("DROP TABLE IF EXISTS Session;");
-            await db.execute(
-              "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1));",
-            );
-            await db.execute(
-                "CREATE TABLE Word (wordShown TEXT NOT NULL, expectedTranslation TEXT NOT NULL, inputedTranslation TEXT NOT NULL, scoreWhenShown DOUBLE, sessionId BIGINT REFERENCES Session (id) NOT NULL);");
-          },
+          await db.execute("DROP TABLE IF EXISTS Word;");
+          await db.execute("DROP TABLE IF EXISTS Session;");
+          await db.execute(
+            "CREATE TABLE Session ( id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, beginDate TEXT, endDate TEXT, wordCount INTEGER, completed BOOLEAN NOT NULL DEFAULT (1), user TEXT NOT NULL);",
+          );
+          await db.execute(
+              "CREATE TABLE Word (wordShown TEXT NOT NULL, expectedTranslation TEXT NOT NULL, inputedTranslation TEXT NOT NULL, scoreWhenShown DOUBLE, sessionId BIGINT REFERENCES Session (id) NOT NULL);");
+        },
         // Set the version. This executes the onCreate function and provides a
         // path to perform database upgrades and downgrades.
         version: 4,
@@ -57,6 +57,15 @@ class DatabaseHandler {
       return null;
     }
 
+    return result[0];
+  }
+
+  Future<Map<String, Object?>?> lastSessionFrom(String user) async {
+    final db = await database;
+    final result = await db.query("Session", where: "user = '$user'", limit: 1, orderBy: "beginDate DESC");
+    if (result.length == 0) {
+      return null;
+    }
     return result[0];
   }
 

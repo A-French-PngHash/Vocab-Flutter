@@ -125,18 +125,28 @@ class TrainingPage extends StatelessWidget {
           onChanged: (String word) {
             wordInputed = word;
           },
+          onSubmitted: (String word) {
+            wordInputed = word;
+            userSubmited(context);
+          },
         ),
         GradientButton(
           onPressed: () {
-            if (wordInputed.length > 0) {
-              final cubit = context.read<TrainingCubit>();
-              cubit.userValidatedWord(wordInputed);
-            }
+            userSubmited(context);
           },
           text: "Validate",
         ),
       ],
     );
+  }
+
+  /// Called when the user tapped the validate button or submited from the
+  /// keyboard.
+  void userSubmited(BuildContext context) {
+    if (wordInputed.length > 0) {
+      final cubit = context.read<TrainingCubit>();
+      cubit.userValidatedWord(wordInputed);
+    }
   }
 
   /// Return the word info column, consists of which word to translate, and in which language.
@@ -188,15 +198,25 @@ class TrainingPage extends StatelessWidget {
         onChanged: (String word) {
           wordInputed = word;
         },
+        onSubmitted: (String word) {
+          wordInputed = word;
+          goToNextWord(context);
+        },
         readOnly: false,
       ),
       SizedBox(
         height: 350,
         child: Incorrect(correctTranslation, grammarRule, () {
-          context.read<TrainingCubit>().nextButtonPressed(wasIncorrect: true, correctionInputed: wordInputed);
+          goToNextWord(context);
         }),
       ),
     ]);
+  }
+
+  /// User tapped the next button or validated from the keyboard, indicating he
+  /// wants to jump to the next word.
+  void goToNextWord(BuildContext context) {
+    context.read<TrainingCubit>().nextButtonPressed(wasIncorrect: true, correctionInputed: wordInputed);
   }
 
   Widget buildFinishedView(BuildContext context, int correct, int incorrect) {

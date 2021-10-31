@@ -2,12 +2,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:vocab/Data/Model/session.dart';
+import 'package:vocab/Data/Repositories/db_session_repo.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 part 'main_menu_state.dart';
 
 part 'main_menu_cubit.freezed.dart';
-
+//test
 class MainMenuCubit extends Cubit<MainMenuCubitState> {
   /// User used when the app is opened for the first time.
   static const String defaultFirstUser = "tymeo";
@@ -24,6 +26,7 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
 
   /// List of themes chosen by the user.
   List<String>? _themesChosen;
+  
   String? _currentUser;
   int? _numberOfTranslationToDo;
 
@@ -117,6 +120,7 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   /// All async loading code grouped into one function.
   Future<void> loadAsync() async {
     this.prefs = await SharedPreferences.getInstance();
+    this.lastSessionForUser = await DbSessionRepo.lastSessionFromUser(this.currentUser);
     await refreshThemes();
   }
 
@@ -139,6 +143,7 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
   void currentUserSelected(String user) async {
     if (this.currentUser != user) {
       this.currentUser = user;
+      this.lastSessionForUser = await DbSessionRepo.lastSessionFromUser(this.currentUser);
       await refreshThemes();
       emitState();
     }
@@ -163,6 +168,7 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
         currentlySelectedTheme: chosenThemes,
         originLanguage: originLanguage,
         outputLanguage: outputLanguage,
-        numberOfTranslationToDo: numberOfTranslationToDo));
+        numberOfTranslationToDo: numberOfTranslationToDo,
+        hasSessionToContinue : this.lastSessionForUser != null && this.lastSessionForUser!.endDate == null));
   }
 }

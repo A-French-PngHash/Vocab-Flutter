@@ -8,6 +8,7 @@ import 'package:vocab/Cubits/training_cubit/cubit/training_cubit.dart';
 import 'package:vocab/Data/Model/theme.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
 import 'package:vocab/Interface/Elements/button/gradient_button.dart';
+import 'package:vocab/Interface/Elements/button/gradient_button.dart';
 import 'package:vocab/Interface/Elements/custom_text_field.dart';
 import 'package:vocab/Interface/Pages/session_recap.dart';
 import 'package:vocab/Interface/Pages/training_page.dart';
@@ -34,9 +35,9 @@ class MainMenuPage extends StatelessWidget {
             return state.when(
               loading: buildLoadingView,
               menu: (List<String> themes, List<String> currentlySelectedTheme, String originLanguage,
-                  String outputLanguage, String currentUser, int numberOfTranslationToDo) {
+                  String outputLanguage, String currentUser, int numberOfTranslationToDo, bool hasSessionToContinue) {
                 return buildMainMenu(context, themes, currentlySelectedTheme, originLanguage, outputLanguage,
-                    currentUser, numberOfTranslationToDo);
+                    currentUser, numberOfTranslationToDo, hasSessionToContinue);
               },
             );
           },
@@ -49,8 +50,15 @@ class MainMenuPage extends StatelessWidget {
     return Container();
   }
 
-  Widget buildMainMenu(BuildContext context, List<String> themes, List<String> currentlySelectedTheme,
-      String originLanguage, String outputLanguage, String currentUser, int numberOfTranslationToDo) {
+  Widget buildMainMenu(
+      BuildContext context,
+      List<String> themes,
+      List<String> currentlySelectedTheme,
+      String originLanguage,
+      String outputLanguage,
+      String currentUser,
+      int numberOfTranslationToDo,
+      bool hasSessionToContinue) {
     print(currentlySelectedTheme);
     if (currentlySelectedTheme.length == 0) {
       // If there is no themes currently selected
@@ -239,7 +247,7 @@ class MainMenuPage extends StatelessWidget {
     Navigator.of(context).push(CupertinoPageRoute(builder: (_) {
       return BlocProvider(
         create: (context) => TrainingCubit(WordRepo(cubit.currentUser), cubit.originLanguage, cubit.outputLanguage,
-            numberOfTranslationToDo, cubit.chosenThemes),
+            numberOfTranslationToDo, cubit.chosenThemes, cubit.currentUser),
         child: TrainingPage(language_name_for(cubit.outputLanguage), numberOfTranslationToDo, cubit.currentUser,
             ThemeModel.formatListToString(cubit.chosenThemes)),
       );
