@@ -9,7 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 part 'main_menu_state.dart';
 
 part 'main_menu_cubit.freezed.dart';
-
+//test
 class MainMenuCubit extends Cubit<MainMenuCubitState> {
   /// User used when the app is opened for the first time.
   static const String defaultFirstUser = "tymeo";
