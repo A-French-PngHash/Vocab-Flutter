@@ -9,6 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 part 'main_menu_state.dart';
 
 part 'main_menu_cubit.freezed.dart';
+
 //test
 class MainMenuCubit extends Cubit<MainMenuCubitState> {
   /// User used when the app is opened for the first time.
@@ -26,9 +27,11 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
 
   /// List of themes chosen by the user.
   List<String>? _themesChosen;
-  
+
   String? _currentUser;
   int? _numberOfTranslationToDo;
+
+  Session? lastSessionForUser;
 
   /// ----------
   /// Getters (for shared preferences values)
@@ -169,6 +172,6 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
         originLanguage: originLanguage,
         outputLanguage: outputLanguage,
         numberOfTranslationToDo: numberOfTranslationToDo,
-        hasSessionToContinue : this.lastSessionForUser != null && this.lastSessionForUser!.endDate == null));
+        hasSessionToContinue: this.lastSessionForUser != null && this.lastSessionForUser!.endDate == null));
   }
 }
