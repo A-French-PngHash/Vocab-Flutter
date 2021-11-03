@@ -5,13 +5,15 @@ import 'package:vocab/Cubits/main_menu_cubit/main_menu_cubit.dart';
 import 'package:vocab/Cubits/picker_cubit/picker_cubit.dart';
 import 'package:vocab/Cubits/session_recap/session_recap_cubit.dart';
 import 'package:vocab/Cubits/training_cubit/cubit/training_cubit.dart';
-import 'package:vocab/Data/Model/theme.dart';
+import 'package:vocab/Cubits/word_list/word_list_cubit.dart';
+import 'package:vocab/Data/Model/ThemeModel.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
 import 'package:vocab/Interface/Elements/button/gradient_button.dart';
 import 'package:vocab/Interface/Elements/button/gradient_button.dart';
 import 'package:vocab/Interface/Elements/custom_text_field.dart';
 import 'package:vocab/Interface/Pages/session_recap.dart';
 import 'package:vocab/Interface/Pages/training_page.dart';
+import 'package:vocab/Interface/Pages/word_list.dart';
 import 'package:vocab/Services/format_strings.dart';
 import '../Elements/language_picker/picker.dart';
 import 'package:vocab/Services/capextension_string.dart';
@@ -28,10 +30,8 @@ class MainMenuPage extends StatelessWidget {
     return Scaffold(
       body: CupertinoPageScaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: Colors.black,
         child: BlocBuilder<MainMenuCubit, MainMenuCubitState>(
           builder: (context, state) {
-            print("builder : $state");
             return state.when(
               loading: buildLoadingView,
               menu: (List<String> themes, List<String> currentlySelectedTheme, String originLanguage,
@@ -90,10 +90,17 @@ class MainMenuPage extends StatelessWidget {
               numberOfTranslationToDo: numberOfTranslationToDo),
           Spacer(),
           GradientButton(
-              text: "Start",
-              onPressed: () {
-                pushTrainingView(context, numberOfTranslationToDo);
-              }),
+            text: "View word list",
+            onPressed: () {
+              pushWordList(context);
+            },
+          ),
+          GradientButton(
+            text: "Start",
+            onPressed: () {
+              pushTrainingView(context, numberOfTranslationToDo);
+            },
+          ),
           Text("By Titouan Blossier"),
         ],
       ),
@@ -250,6 +257,16 @@ class MainMenuPage extends StatelessWidget {
             numberOfTranslationToDo, cubit.chosenThemes, cubit.currentUser),
         child: TrainingPage(language_name_for(cubit.outputLanguage), numberOfTranslationToDo, cubit.currentUser,
             ThemeModel.formatListToString(cubit.chosenThemes)),
+      );
+    }));
+  }
+
+  void pushWordList(BuildContext context) {
+    final cubit = context.read<MainMenuCubit>();
+    Navigator.of(context).push(CupertinoPageRoute(builder: (_) {
+      return BlocProvider(
+        create: (context) => WordListCubit(cubit.chosenThemes, WordRepo(cubit.currentUser)),
+        child: WordList(cubit.originLanguage, cubit.outputLanguage),
       );
     }));
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:vocab/Data/Model/theme.dart';
+import 'package:vocab/Data/Model/ThemeModel.dart';
 import 'package:vocab/Data/Model/words.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vocab/Data/Model/theme.dart';
+import 'package:vocab/Data/Model/ThemeModel.dart';
 import 'package:vocab/Cubits/picker_cubit/picker_cubit.dart';
 import 'package:vocab/Interface/Elements/language_picker/select_data.dart';
 
