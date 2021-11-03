@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:vocab/Data/Model/theme.dart';
+import 'package:vocab/Data/Model/ThemeModel.dart';
 import 'package:vocab/Data/Model/words.dart';
 import 'package:vocab/Data/Repositories/db_session_repo.dart';
 import 'package:vocab/Data/Repositories/db_word_repo.dart';

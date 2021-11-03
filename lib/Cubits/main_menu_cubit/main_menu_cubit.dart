@@ -48,7 +48,7 @@ class MainMenuCubit extends Cubit<MainMenuCubitState> {
 
     return _currentUser!;
   }
-
+  
   List<String> get chosenThemes {
     if (_themesChosen == null) {
       if (prefs.containsKey(userThemeChoiceKey)) {
