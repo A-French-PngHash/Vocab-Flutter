@@ -4,12 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vocab/Cubits/session_recap/session_recap_cubit.dart';
 import 'package:vocab/Cubits/training_cubit/cubit/training_cubit.dart';
 import 'package:vocab/Interface/Elements/button/gradient_button.dart';
-import 'package:vocab/Interface/Elements/correct.dart';
-import 'package:vocab/Interface/Elements/custom_text_field.dart';
-import 'package:vocab/Interface/Elements/incorrect.dart';
-import 'package:vocab/Interface/Elements/progress_bar.dart';
 import 'package:vocab/Interface/Pages/session_recap.dart';
-import 'package:vocab/Services/capextension_string.dart';
 
 class TrainingPage extends StatelessWidget {
   final focusNode = FocusNode();
@@ -229,32 +224,6 @@ class TrainingPage extends StatelessWidget {
     );
   }
 
-  /// Return the word view that contains, the word info (which word to translate
-  ///  and in which language), the text field and the validation button.
-  Widget buildWordView(BuildContext context, String wordToTranslate, String? comment, int wordNumber) {
-    return Column(
-      children: [
-        _buildWordInfo(context, wordToTranslate, wordNumber, comment: comment),
-        CustomTextField(
-          autofocus: true,
-          onChanged: (String word) {
-            wordInputed = word;
-          },
-          onSubmitted: (String word) {
-            wordInputed = word;
-            userSubmited(context);
-          },
-        ),
-        GradientButton(
-          onPressed: () {
-            userSubmited(context);
-          },
-          text: "Validate",
-        ),
-      ],
-    );
-  }
-
   /// Called when the user tapped the validate button or submited from the
   /// keyboard.
   void userSubmited(BuildContext context) {
@@ -262,70 +231,6 @@ class TrainingPage extends StatelessWidget {
       final cubit = context.read<TrainingCubit>();
       cubit.keyboardSubmit(wordInputed);
     }
-  }
-
-  /// Return the word info column, consists of which word to translate, and in which language.
-  Widget _buildWordInfo(BuildContext context, String wordToTranslate, int wordNumber, {String? comment}) {
-    wordInputed = "";
-    return Column(
-      children: [
-        Row(
-          children: [Spacer()],
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(vertical: 3),
-          child: SegmentedProgressBar(
-            nbElement: numberOfTranslationToDo,
-            currentSegment: wordNumber,
-            fullWidth: MediaQuery.of(context).size.width - 50,
-          ),
-        ),
-        Text(
-          "Translate to $translateToLanguage the word : ",
-          style: TextStyle(color: Color(0xFFB1B1B1), fontSize: 15),
-        ),
-        Text(
-          wordToTranslate.capitalizeFirstofEach,
-          style: TextStyle(fontSize: 30),
-          textAlign: TextAlign.center,
-        ),
-        if (comment != null) Text("Note : $comment")
-      ],
-    );
-  }
-
-  Widget buildCorrectView(
-      BuildContext context, String wordToTranslate, String translationInputed, int wordNumber, String? comment) {
-    return Column(children: [
-      _buildWordInfo(context, wordToTranslate, wordNumber),
-      CustomTextField(autofocus: true, initialValue: translationInputed, readOnly: true),
-      SizedBox(height: 350, child: Correct()),
-    ]);
-  }
-
-  Widget buildIncorrectView(BuildContext context, String wordToTranslate, String correctTranslation,
-      String translationInputed, int wordNumber, String? comment) {
-    return Column(children: [
-      _buildWordInfo(context, wordToTranslate, wordNumber),
-      CustomTextField(
-        autofocus: true,
-        initialValue: translationInputed,
-        onChanged: (String word) {
-          wordInputed = word;
-        },
-        onSubmitted: (String word) {
-          wordInputed = word;
-          goToNextWord(context);
-        },
-        readOnly: false,
-      ),
-      SizedBox(
-        height: 350,
-        child: Incorrect(correctTranslation, () {
-          goToNextWord(context);
-        }),
-      ),
-    ]);
   }
 
   /// User tapped the next button or validated from the keyboard, indicating he

@@ -2,7 +2,6 @@ import 'package:vocab/Data/DatabaseHandler.dart';
 import 'package:vocab/Data/Model/session.dart';
 import 'package:vocab/Data/Model/word_db.dart';
 import 'package:vocab/Data/Repositories/db_word_repo.dart';
-import 'package:vocab/Interface/Elements/correct.dart';
 
 class DbSessionRepo {
   static DatabaseHandler _databaseHandler = DatabaseHandler();
