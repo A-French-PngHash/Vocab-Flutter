@@ -16,14 +16,12 @@ class SessionRecap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       body: CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
           middle: Text(
             "Session Recap",
             style: TextStyle(color: Colors.white),
           ),
-          backgroundColor: Colors.black,
           previousPageTitle: "Menu",
         ),
         child: BlocBuilder<SessionRecapCubit, SessionRecapState>(

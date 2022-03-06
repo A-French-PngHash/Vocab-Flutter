@@ -39,21 +39,13 @@ class TrainingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        previousPageTitle: "Menu",
-        middle: Text(
-          navbarTitle,
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Color(0xFF121212),
-      ),
-      child: BlocConsumer<TrainingCubit, TrainingState>(
+      body: BlocConsumer<TrainingCubit, TrainingState>(
         builder: (context, state) {
           return state.maybeWhen(initial: () {
             return loadingView();
           }, word: (String wordToTranslate, String? comment, int wordNumber) {
-            return buildWordView(context, wordToTranslate, comment, wordNumber);
+            return wordViewV2(context, wordToTranslate, comment, wordNumber);
+            //buildWordView(context, wordToTranslate, comment, wordNumber);
           }, correction: (String wordToTranslate, bool correct, String correctTranslation, String translationInputed,
               int wordNumber, String? comment, String? grammarRule) {
             if (correct) {
@@ -107,11 +99,51 @@ class TrainingPage extends StatelessWidget {
               orElse: () {});
         },
       ),
-    ));
+    );
   }
 
   Widget loadingView() {
     return Center(child: Text("Loading..."));
+  }
+
+  Widget wordViewV2(BuildContext context, String wordToTranslate, String? comment, int wordNumber) {
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.only(top: 100),
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              wordToTranslate,
+              style: TextStyle(fontSize: 30),
+            ),
+          ),
+        ),
+        Spacer(),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Column(children: [
+            TextField(
+              onChanged: (String word) {
+                wordInputed = word;
+              },
+              onSubmitted: (String word) {
+                wordInputed = word;
+                userSubmited(context);
+              },
+              autofocus: true,
+            ),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "ÉCRIRE EN ${translateToLanguage.capitalize()}",
+                style: TextStyle(color: Color.fromRGBO(149, 155, 178, 1), fontSize: 15),
+              ),
+            ),
+          ]),
+        ),
+      ],
+    );
   }
 
   /// Return the word view that contains, the word info (which word to translate

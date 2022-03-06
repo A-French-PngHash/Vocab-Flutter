@@ -67,3 +67,6 @@ flutter:
     - family: SanFrancisco
       fonts:
         - asset: assets/fonts/SF-Pro-Text-Light.otf
+    - family: HurmeGeoSans
+      fonts:
+        - asset : assets/fonts/Hurme Geo Sans Normal.ttf
