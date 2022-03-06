@@ -5,9 +5,8 @@ import 'package:provider/provider.dart';
 import 'button/gradient_button.dart';
 
 class Correct extends StatelessWidget {
-  final String? grammarRule;
 
-  Correct(this.grammarRule);
+  Correct();
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,6 @@ class Correct extends StatelessWidget {
           ),
           GradientButton(
             onPressed: () {
-              context.read<TrainingCubit>().nextButtonPressed();
             },
             text: "Next",
           )

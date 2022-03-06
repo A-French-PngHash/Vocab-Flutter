@@ -12,6 +12,8 @@ import 'package:vocab/Interface/Pages/session_recap.dart';
 import 'package:vocab/Services/capextension_string.dart';
 
 class TrainingPage extends StatelessWidget {
+  final focusNode = FocusNode();
+
   /// User currently doing the word series.
   final String user;
 
@@ -43,17 +45,29 @@ class TrainingPage extends StatelessWidget {
         builder: (context, state) {
           return state.maybeWhen(initial: () {
             return loadingView();
-          }, word: (String wordToTranslate, String? comment, int wordNumber) {
-            return wordViewV2(context, wordToTranslate, comment, wordNumber);
+          }, word:
+              (String wordToTranslate, String? comment, int wordNumber, String textUnderField, Color textFieldColor) {
+            return viewV2(context, wordToTranslate, comment, wordNumber, textUnderField, textFieldColor);
             //buildWordView(context, wordToTranslate, comment, wordNumber);
-          }, correction: (String wordToTranslate, bool correct, String correctTranslation, String translationInputed,
-              int wordNumber, String? comment, String? grammarRule) {
-            if (correct) {
-              return buildCorrectView(context, wordToTranslate, translationInputed, wordNumber, comment, grammarRule);
+          }, correction: (String wordToTranslate, bool correct, String correctTranslation, String inputedTranslation,
+              int wordNumber, String? comment, _, String textUnderField, Color textFieldColor) {
+            return viewV2(
+              context,
+              wordToTranslate,
+              comment,
+              wordNumber,
+              textUnderField,
+              textFieldColor,
+              correct: correct,
+              correctTranslation: correctTranslation,
+              inputedTranslation: inputedTranslation,
+            );
+            /*if (correct) {
+              return buildCorrectView(context, wordToTranslate, translationInputed, wordNumber, comment);
             } else {
               return buildIncorrectView(
-                  context, wordToTranslate, correctTranslation, translationInputed, wordNumber, comment, grammarRule);
-            }
+                  context, wordToTranslate, correctTranslation, translationInputed, wordNumber, comment);
+            }*/
           }, finished: (int correct, int incorrect) {
             return buildFinishedView(context, correct, incorrect);
           }, orElse: () {
@@ -63,7 +77,7 @@ class TrainingPage extends StatelessWidget {
         listener: (context, state) {
           state.maybeWhen(
               correction: (String wordToTranslate, bool correct, String correctTranslation, String translationInputed,
-                  int wordNumber, String? comment, String? grammarRule) {
+                  int wordNumber, String? comment, String? grammarRule, String textUnderField, Color textFieldColor) {
                 if (grammarRule != null) {
                   dialogShowedAt = DateTime.now().millisecondsSinceEpoch;
                   showDialog(
@@ -106,72 +120,112 @@ class TrainingPage extends StatelessWidget {
     return Center(child: Text("Loading..."));
   }
 
-  Widget wordViewV2(BuildContext context, String wordToTranslate, String? comment, int wordNumber) {
-    return Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.only(top: 50, left: 10, right: 10),
-          child: Column(
-            children: [
-              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Icon(Icons.close),
-                Container(
-                  width: 250,
-                  child: LinearProgressIndicator(
-                    value: wordNumber / numberOfTranslationToDo,
-                    color: Colors.blueGrey,
-                    backgroundColor: Colors.blueGrey.withOpacity(0.35),
-                    minHeight: 7,
-                  ),
-                ),
-                Icon(Icons.settings_outlined),
-              ]),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  wordToTranslate,
-                  style: TextStyle(fontSize: 30),
-                ),
+  /// Generate the view for the training page. [V2] because this is the new theme currently being developped.
+  ///
+  /// * context : The current BuildContext.
+  /// * wordToTranslate : The word the user has to translate.
+  /// * comment : Optional additional information helping the user with the translation.
+  /// * wordNumber : The how-manieth word this is.
+  /// * correct : Has a value only if the user has submitted a translation. If true then the submitted translation was correct, otherwise, it is false.
+  /// * correctTranslation : The right translation for the word.
+  /// * inputedTranslation : The translation submitted by the user.
+  Widget viewV2(
+    BuildContext context,
+    String wordToTranslate,
+    String? comment,
+    int wordNumber,
+    String textUnderField,
+    Color textFieldColor, {
+    bool? correct,
+    String correctTranslation = "",
+    String inputedTranslation = "",
+  }) {
+    final controller = TextEditingController(text: (correct != null && correct) ? inputedTranslation : "");
+    return Padding(
+      padding: EdgeInsets.only(left: 15, right: 15, top: 50, bottom: 20),
+      child: Column(
+        children: [
+          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            Icon(Icons.close),
+            Container(
+              width: 250,
+              child: LinearProgressIndicator(
+                value: wordNumber / numberOfTranslationToDo,
+                color: Colors.blueGrey,
+                backgroundColor: Colors.blueGrey.withOpacity(0.35),
+                minHeight: 7,
               ),
-            ],
+            ),
+            Icon(Icons.settings_outlined),
+          ]),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  wordToTranslate,
+                  style: TextStyle(fontSize: 35),
+                ),
+                if (comment != null) Text(comment),
+                if (correct != null && !correct)
+                  Padding(
+                    padding: EdgeInsets.only(top: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "VOTRE RÉPONSE",
+                          style: TextStyle(color: Colors.red),
+                        ),
+                        Text(inputedTranslation),
+                        Text("RÉPONSE CORRECTE", style: TextStyle(color: Colors.green)),
+                        Text(correctTranslation),
+                      ],
+                    ),
+                  ),
+              ],
+            ),
           ),
-        ),
-        Spacer(),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15),
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: Column(children: [
-              TextField(
-                onChanged: (String word) {
-                  wordInputed = word;
-                },
-                onSubmitted: (String word) {
+          Spacer(),
+          Column(children: [
+            TextFormField(
+              onChanged: (String word) {
+                wordInputed = word;
+              },
+              onFieldSubmitted: (String word) {
+                if (correct != null && correct == true) {
+                  controller.text = "";
+                  goToNextWord(context);
+                } else {
                   wordInputed = word;
                   userSubmited(context);
-                },
-                autofocus: true,
-                decoration: InputDecoration(
-                    focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(width: 4, color: Colors.blueGrey),
-                )),
-                cursorWidth: 0.5,
-                cursorColor: Colors.black,
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 5),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    "ÉCRIRE EN ${translateToLanguage.allInCaps}",
-                    style: TextStyle(color: Color.fromRGBO(149, 155, 178, 1), fontSize: 13),
-                  ),
+                }
+                focusNode.requestFocus();
+              },
+              controller: controller,
+              autofocus: true,
+              decoration: InputDecoration(
+                  focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(width: 4, color: textFieldColor),
+              )),
+              cursorWidth: 0.3,
+              cursorColor: Colors.black,
+              focusNode: focusNode,
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 5),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  textUnderField,
+                  style: TextStyle(color: Color.fromRGBO(149, 155, 178, 1), fontSize: 13),
                 ),
               ),
-            ]),
-          ),
-        ),
-      ],
+            ),
+          ]),
+        ],
+      ),
     );
   }
 
@@ -206,7 +260,7 @@ class TrainingPage extends StatelessWidget {
   void userSubmited(BuildContext context) {
     if (wordInputed.length > 0) {
       final cubit = context.read<TrainingCubit>();
-      cubit.userValidatedWord(wordInputed);
+      cubit.keyboardSubmit(wordInputed);
     }
   }
 
@@ -240,17 +294,17 @@ class TrainingPage extends StatelessWidget {
     );
   }
 
-  Widget buildCorrectView(BuildContext context, String wordToTranslate, String translationInputed, int wordNumber,
-      String? comment, String? grammarRule) {
+  Widget buildCorrectView(
+      BuildContext context, String wordToTranslate, String translationInputed, int wordNumber, String? comment) {
     return Column(children: [
       _buildWordInfo(context, wordToTranslate, wordNumber),
       CustomTextField(autofocus: true, initialValue: translationInputed, readOnly: true),
-      SizedBox(height: 350, child: Correct(grammarRule)),
+      SizedBox(height: 350, child: Correct()),
     ]);
   }
 
   Widget buildIncorrectView(BuildContext context, String wordToTranslate, String correctTranslation,
-      String translationInputed, int wordNumber, String? comment, String? grammarRule) {
+      String translationInputed, int wordNumber, String? comment) {
     return Column(children: [
       _buildWordInfo(context, wordToTranslate, wordNumber),
       CustomTextField(
@@ -267,7 +321,7 @@ class TrainingPage extends StatelessWidget {
       ),
       SizedBox(
         height: 350,
-        child: Incorrect(correctTranslation, grammarRule, () {
+        child: Incorrect(correctTranslation, () {
           goToNextWord(context);
         }),
       ),
@@ -277,7 +331,7 @@ class TrainingPage extends StatelessWidget {
   /// User tapped the next button or validated from the keyboard, indicating he
   /// wants to jump to the next word.
   void goToNextWord(BuildContext context) {
-    context.read<TrainingCubit>().nextButtonPressed(wasIncorrect: true, correctionInputed: wordInputed);
+    context.read<TrainingCubit>().nextWord(success: true);
   }
 
   Widget buildFinishedView(BuildContext context, int correct, int incorrect) {

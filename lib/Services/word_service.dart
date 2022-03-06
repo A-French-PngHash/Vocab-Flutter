@@ -33,7 +33,7 @@ class WordService {
 
   /// Pick a new word.
   ///
-  /// - success : Used to influence future probabilities of being picker for
+  /// - success : Used to influence future probabilities of being picked for
   /// this word.
   void next(bool success) {
     if (success) {

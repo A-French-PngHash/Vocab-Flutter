@@ -20,11 +20,14 @@ class _$TrainingStateTearOff {
     return const _Initial();
   }
 
-  _Word word(String wordToTranslate, String? comment, int wordNumber) {
+  _Word word(String wordToTranslate, String? comment, int wordNumber,
+      String textUnderField, Color textFieldColor) {
     return _Word(
       wordToTranslate,
       comment,
       wordNumber,
+      textUnderField,
+      textFieldColor,
     );
   }
 
@@ -35,7 +38,9 @@ class _$TrainingStateTearOff {
       String translationInputed,
       int wordNumber,
       String? comment,
-      String? grammarRule) {
+      String? grammarRule,
+      String textUnderField,
+      Color textFieldColor) {
     return _Correct(
       wordToTranslate,
       correct,
@@ -44,6 +49,8 @@ class _$TrainingStateTearOff {
       wordNumber,
       comment,
       grammarRule,
+      textUnderField,
+      textFieldColor,
     );
   }
 
@@ -63,8 +70,8 @@ mixin _$TrainingState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(
-            String wordToTranslate, String? comment, int wordNumber)
+    required TResult Function(String wordToTranslate, String? comment,
+            int wordNumber, String textUnderField, Color textFieldColor)
         word,
     required TResult Function(
             String wordToTranslate,
@@ -73,7 +80,9 @@ mixin _$TrainingState {
             String translationInputed,
             int wordNumber,
             String? comment,
-            String? grammarRule)
+            String? grammarRule,
+            String textUnderField,
+            Color textFieldColor)
         correction,
     required TResult Function(int nbCorrect, int nbIncorrect) finished,
   }) =>
@@ -81,7 +90,8 @@ mixin _$TrainingState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String wordToTranslate, String? comment, int wordNumber)?
+    TResult Function(String wordToTranslate, String? comment, int wordNumber,
+            String textUnderField, Color textFieldColor)?
         word,
     TResult Function(
             String wordToTranslate,
@@ -90,7 +100,9 @@ mixin _$TrainingState {
             String translationInputed,
             int wordNumber,
             String? comment,
-            String? grammarRule)?
+            String? grammarRule,
+            String textUnderField,
+            Color textFieldColor)?
         correction,
     TResult Function(int nbCorrect, int nbIncorrect)? finished,
     required TResult orElse(),
@@ -170,8 +182,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(
-            String wordToTranslate, String? comment, int wordNumber)
+    required TResult Function(String wordToTranslate, String? comment,
+            int wordNumber, String textUnderField, Color textFieldColor)
         word,
     required TResult Function(
             String wordToTranslate,
@@ -180,7 +192,9 @@ class _$_Initial implements _Initial {
             String translationInputed,
             int wordNumber,
             String? comment,
-            String? grammarRule)
+            String? grammarRule,
+            String textUnderField,
+            Color textFieldColor)
         correction,
     required TResult Function(int nbCorrect, int nbIncorrect) finished,
   }) {
@@ -191,7 +205,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String wordToTranslate, String? comment, int wordNumber)?
+    TResult Function(String wordToTranslate, String? comment, int wordNumber,
+            String textUnderField, Color textFieldColor)?
         word,
     TResult Function(
             String wordToTranslate,
@@ -200,7 +215,9 @@ class _$_Initial implements _Initial {
             String translationInputed,
             int wordNumber,
             String? comment,
-            String? grammarRule)?
+            String? grammarRule,
+            String textUnderField,
+            Color textFieldColor)?
         correction,
     TResult Function(int nbCorrect, int nbIncorrect)? finished,
     required TResult orElse(),
@@ -246,7 +263,12 @@ abstract class _Initial implements TrainingState {
 abstract class _$WordCopyWith<$Res> {
   factory _$WordCopyWith(_Word value, $Res Function(_Word) then) =
       __$WordCopyWithImpl<$Res>;
-  $Res call({String wordToTranslate, String? comment, int wordNumber});
+  $Res call(
+      {String wordToTranslate,
+      String? comment,
+      int wordNumber,
+      String textUnderField,
+      Color textFieldColor});
 }
 
 /// @nodoc
@@ -263,6 +285,8 @@ class __$WordCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
     Object? wordToTranslate = freezed,
     Object? comment = freezed,
     Object? wordNumber = freezed,
+    Object? textUnderField = freezed,
+    Object? textFieldColor = freezed,
   }) {
     return _then(_Word(
       wordToTranslate == freezed
@@ -277,6 +301,14 @@ class __$WordCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
           ? _value.wordNumber
           : wordNumber // ignore: cast_nullable_to_non_nullable
               as int,
+      textUnderField == freezed
+          ? _value.textUnderField
+          : textUnderField // ignore: cast_nullable_to_non_nullable
+              as String,
+      textFieldColor == freezed
+          ? _value.textFieldColor
+          : textFieldColor // ignore: cast_nullable_to_non_nullable
+              as Color,
     ));
   }
 }
@@ -284,7 +316,8 @@ class __$WordCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Word implements _Word {
-  _$_Word(this.wordToTranslate, this.comment, this.wordNumber);
+  _$_Word(this.wordToTranslate, this.comment, this.wordNumber,
+      this.textUnderField, this.textFieldColor);
 
   @override
   final String wordToTranslate;
@@ -292,10 +325,14 @@ class _$_Word implements _Word {
   final String? comment;
   @override
   final int wordNumber;
+  @override
+  final String textUnderField;
+  @override
+  final Color textFieldColor;
 
   @override
   String toString() {
-    return 'TrainingState.word(wordToTranslate: $wordToTranslate, comment: $comment, wordNumber: $wordNumber)';
+    return 'TrainingState.word(wordToTranslate: $wordToTranslate, comment: $comment, wordNumber: $wordNumber, textUnderField: $textUnderField, textFieldColor: $textFieldColor)';
   }
 
   @override
@@ -310,7 +347,13 @@ class _$_Word implements _Word {
                     .equals(other.comment, comment)) &&
             (identical(other.wordNumber, wordNumber) ||
                 const DeepCollectionEquality()
-                    .equals(other.wordNumber, wordNumber)));
+                    .equals(other.wordNumber, wordNumber)) &&
+            (identical(other.textUnderField, textUnderField) ||
+                const DeepCollectionEquality()
+                    .equals(other.textUnderField, textUnderField)) &&
+            (identical(other.textFieldColor, textFieldColor) ||
+                const DeepCollectionEquality()
+                    .equals(other.textFieldColor, textFieldColor)));
   }
 
   @override
@@ -318,7 +361,9 @@ class _$_Word implements _Word {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(wordToTranslate) ^
       const DeepCollectionEquality().hash(comment) ^
-      const DeepCollectionEquality().hash(wordNumber);
+      const DeepCollectionEquality().hash(wordNumber) ^
+      const DeepCollectionEquality().hash(textUnderField) ^
+      const DeepCollectionEquality().hash(textFieldColor);
 
   @JsonKey(ignore: true)
   @override
@@ -329,8 +374,8 @@ class _$_Word implements _Word {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(
-            String wordToTranslate, String? comment, int wordNumber)
+    required TResult Function(String wordToTranslate, String? comment,
+            int wordNumber, String textUnderField, Color textFieldColor)
         word,
     required TResult Function(
             String wordToTranslate,
@@ -339,18 +384,22 @@ class _$_Word implements _Word {
             String translationInputed,
             int wordNumber,
             String? comment,
-            String? grammarRule)
+            String? grammarRule,
+            String textUnderField,
+            Color textFieldColor)
         correction,
     required TResult Function(int nbCorrect, int nbIncorrect) finished,
   }) {
-    return word(wordToTranslate, comment, wordNumber);
+    return word(
+        wordToTranslate, comment, wordNumber, textUnderField, textFieldColor);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String wordToTranslate, String? comment, int wordNumber)?
+    TResult Function(String wordToTranslate, String? comment, int wordNumber,
+            String textUnderField, Color textFieldColor)?
         word,
     TResult Function(
             String wordToTranslate,
@@ -359,13 +408,16 @@ class _$_Word implements _Word {
             String translationInputed,
             int wordNumber,
             String? comment,
-            String? grammarRule)?
+            String? grammarRule,
+            String textUnderField,
+            Color textFieldColor)?
         correction,
     TResult Function(int nbCorrect, int nbIncorrect)? finished,
     required TResult orElse(),
   }) {
     if (word != null) {
-      return word(wordToTranslate, comment, wordNumber);
+      return word(
+          wordToTranslate, comment, wordNumber, textUnderField, textFieldColor);
     }
     return orElse();
   }
@@ -398,12 +450,14 @@ class _$_Word implements _Word {
 }
 
 abstract class _Word implements TrainingState {
-  factory _Word(String wordToTranslate, String? comment, int wordNumber) =
-      _$_Word;
+  factory _Word(String wordToTranslate, String? comment, int wordNumber,
+      String textUnderField, Color textFieldColor) = _$_Word;
 
   String get wordToTranslate => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
   int get wordNumber => throw _privateConstructorUsedError;
+  String get textUnderField => throw _privateConstructorUsedError;
+  Color get textFieldColor => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$WordCopyWith<_Word> get copyWith => throw _privateConstructorUsedError;
 }
@@ -419,7 +473,9 @@ abstract class _$CorrectCopyWith<$Res> {
       String translationInputed,
       int wordNumber,
       String? comment,
-      String? grammarRule});
+      String? grammarRule,
+      String textUnderField,
+      Color textFieldColor});
 }
 
 /// @nodoc
@@ -440,6 +496,8 @@ class __$CorrectCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
     Object? wordNumber = freezed,
     Object? comment = freezed,
     Object? grammarRule = freezed,
+    Object? textUnderField = freezed,
+    Object? textFieldColor = freezed,
   }) {
     return _then(_Correct(
       wordToTranslate == freezed
@@ -470,6 +528,14 @@ class __$CorrectCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
           ? _value.grammarRule
           : grammarRule // ignore: cast_nullable_to_non_nullable
               as String?,
+      textUnderField == freezed
+          ? _value.textUnderField
+          : textUnderField // ignore: cast_nullable_to_non_nullable
+              as String,
+      textFieldColor == freezed
+          ? _value.textFieldColor
+          : textFieldColor // ignore: cast_nullable_to_non_nullable
+              as Color,
     ));
   }
 }
@@ -477,8 +543,16 @@ class __$CorrectCopyWithImpl<$Res> extends _$TrainingStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Correct implements _Correct {
-  _$_Correct(this.wordToTranslate, this.correct, this.correctTranslation,
-      this.translationInputed, this.wordNumber, this.comment, this.grammarRule);
+  _$_Correct(
+      this.wordToTranslate,
+      this.correct,
+      this.correctTranslation,
+      this.translationInputed,
+      this.wordNumber,
+      this.comment,
+      this.grammarRule,
+      this.textUnderField,
+      this.textFieldColor);
 
   @override
   final String wordToTranslate;
@@ -494,10 +568,14 @@ class _$_Correct implements _Correct {
   final String? comment;
   @override
   final String? grammarRule;
+  @override
+  final String textUnderField;
+  @override
+  final Color textFieldColor;
 
   @override
   String toString() {
-    return 'TrainingState.correction(wordToTranslate: $wordToTranslate, correct: $correct, correctTranslation: $correctTranslation, translationInputed: $translationInputed, wordNumber: $wordNumber, comment: $comment, grammarRule: $grammarRule)';
+    return 'TrainingState.correction(wordToTranslate: $wordToTranslate, correct: $correct, correctTranslation: $correctTranslation, translationInputed: $translationInputed, wordNumber: $wordNumber, comment: $comment, grammarRule: $grammarRule, textUnderField: $textUnderField, textFieldColor: $textFieldColor)';
   }
 
   @override
@@ -524,7 +602,13 @@ class _$_Correct implements _Correct {
                     .equals(other.comment, comment)) &&
             (identical(other.grammarRule, grammarRule) ||
                 const DeepCollectionEquality()
-                    .equals(other.grammarRule, grammarRule)));
+                    .equals(other.grammarRule, grammarRule)) &&
+            (identical(other.textUnderField, textUnderField) ||
+                const DeepCollectionEquality()
+                    .equals(other.textUnderField, textUnderField)) &&
+            (identical(other.textFieldColor, textFieldColor) ||
+                const DeepCollectionEquality()
+                    .equals(other.textFieldColor, textFieldColor)));
   }
 
   @override
@@ -536,7 +620,9 @@ class _$_Correct implements _Correct {
       const DeepCollectionEquality().hash(translationInputed) ^
       const DeepCollectionEquality().hash(wordNumber) ^
       const DeepCollectionEquality().hash(comment) ^
-      const DeepCollectionEquality().hash(grammarRule);
+      const DeepCollectionEquality().hash(grammarRule) ^
+      const DeepCollectionEquality().hash(textUnderField) ^
+      const DeepCollectionEquality().hash(textFieldColor);
 
   @JsonKey(ignore: true)
   @override
@@ -547,8 +633,8 @@ class _$_Correct implements _Correct {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(
-            String wordToTranslate, String? comment, int wordNumber)
+    required TResult Function(String wordToTranslate, String? comment,
+            int wordNumber, String textUnderField, Color textFieldColor)
         word,
     required TResult Function(
             String wordToTranslate,
@@ -557,19 +643,30 @@ class _$_Correct implements _Correct {
             String translationInputed,
             int wordNumber,
             String? comment,
-            String? grammarRule)
+            String? grammarRule,
+            String textUnderField,
+            Color textFieldColor)
         correction,
     required TResult Function(int nbCorrect, int nbIncorrect) finished,
   }) {
-    return correction(wordToTranslate, correct, correctTranslation,
-        translationInputed, wordNumber, comment, grammarRule);
+    return correction(
+        wordToTranslate,
+        correct,
+        correctTranslation,
+        translationInputed,
+        wordNumber,
+        comment,
+        grammarRule,
+        textUnderField,
+        textFieldColor);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String wordToTranslate, String? comment, int wordNumber)?
+    TResult Function(String wordToTranslate, String? comment, int wordNumber,
+            String textUnderField, Color textFieldColor)?
         word,
     TResult Function(
             String wordToTranslate,
@@ -578,14 +675,24 @@ class _$_Correct implements _Correct {
             String translationInputed,
             int wordNumber,
             String? comment,
-            String? grammarRule)?
+            String? grammarRule,
+            String textUnderField,
+            Color textFieldColor)?
         correction,
     TResult Function(int nbCorrect, int nbIncorrect)? finished,
     required TResult orElse(),
   }) {
     if (correction != null) {
-      return correction(wordToTranslate, correct, correctTranslation,
-          translationInputed, wordNumber, comment, grammarRule);
+      return correction(
+          wordToTranslate,
+          correct,
+          correctTranslation,
+          translationInputed,
+          wordNumber,
+          comment,
+          grammarRule,
+          textUnderField,
+          textFieldColor);
     }
     return orElse();
   }
@@ -625,7 +732,9 @@ abstract class _Correct implements TrainingState {
       String translationInputed,
       int wordNumber,
       String? comment,
-      String? grammarRule) = _$_Correct;
+      String? grammarRule,
+      String textUnderField,
+      Color textFieldColor) = _$_Correct;
 
   String get wordToTranslate => throw _privateConstructorUsedError;
   bool get correct => throw _privateConstructorUsedError;
@@ -634,6 +743,8 @@ abstract class _Correct implements TrainingState {
   int get wordNumber => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
   String? get grammarRule => throw _privateConstructorUsedError;
+  String get textUnderField => throw _privateConstructorUsedError;
+  Color get textFieldColor => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$CorrectCopyWith<_Correct> get copyWith =>
       throw _privateConstructorUsedError;
@@ -715,8 +826,8 @@ class _$_Finished implements _Finished {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(
-            String wordToTranslate, String? comment, int wordNumber)
+    required TResult Function(String wordToTranslate, String? comment,
+            int wordNumber, String textUnderField, Color textFieldColor)
         word,
     required TResult Function(
             String wordToTranslate,
@@ -725,7 +836,9 @@ class _$_Finished implements _Finished {
             String translationInputed,
             int wordNumber,
             String? comment,
-            String? grammarRule)
+            String? grammarRule,
+            String textUnderField,
+            Color textFieldColor)
         correction,
     required TResult Function(int nbCorrect, int nbIncorrect) finished,
   }) {
@@ -736,7 +849,8 @@ class _$_Finished implements _Finished {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(String wordToTranslate, String? comment, int wordNumber)?
+    TResult Function(String wordToTranslate, String? comment, int wordNumber,
+            String textUnderField, Color textFieldColor)?
         word,
     TResult Function(
             String wordToTranslate,
@@ -745,7 +859,9 @@ class _$_Finished implements _Finished {
             String translationInputed,
             int wordNumber,
             String? comment,
-            String? grammarRule)?
+            String? grammarRule,
+            String textUnderField,
+            Color textFieldColor)?
         correction,
     TResult Function(int nbCorrect, int nbIncorrect)? finished,
     required TResult orElse(),

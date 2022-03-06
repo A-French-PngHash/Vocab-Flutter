@@ -5,10 +5,9 @@ import 'button/gradient_button.dart';
 
 class Incorrect extends StatelessWidget {
   final String correctWord;
-  final String? grammarRule;
   final void Function() nextButtonPressed;
 
-  Incorrect(this.correctWord, this.grammarRule, this.nextButtonPressed);
+  Incorrect(this.correctWord, this.nextButtonPressed);
 
   @override
   Widget build(BuildContext context) {

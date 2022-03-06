@@ -1,3 +1,6 @@
+import 'dart:ui';
+import 'package:flutter/material.dart';
+
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:path/path.dart';
@@ -8,6 +11,7 @@ import 'package:vocab/Data/Model/words.dart';
 import 'package:vocab/Data/Repositories/db_session_repo.dart';
 import 'package:vocab/Data/Repositories/db_word_repo.dart';
 import 'package:vocab/Data/Repositories/word_repo.dart';
+import 'package:vocab/Services/capextension_string.dart';
 import 'package:vocab/Services/word_service.dart';
 
 part 'training_state.dart';
@@ -21,10 +25,9 @@ class TrainingCubit extends Cubit<TrainingState> {
   int correct = 0;
   int incorrect = 0;
   int nbTranslationToDo;
-  String currentInputInTextField = "";
   late final DateTime beginTime;
-
-  final _databaseHandler = DatabaseHandler();
+  bool waitingCorrection =
+      false; // If the user already submitted his translation, got it wrong, and now has to input the correct translation.
 
   /// Current session.
   late Session session;
@@ -66,15 +69,15 @@ class TrainingCubit extends Cubit<TrainingState> {
     }
   }
 
-  TrainingCubit(
-      WordRepo _wordRepo, this.originLanguage, this.outputLanguage, this.nbTranslationToDo, List<String> themesChosen, String user)
+  TrainingCubit(WordRepo _wordRepo, this.originLanguage, this.outputLanguage, this.nbTranslationToDo,
+      List<String> themesChosen, String user)
       : super(TrainingState.initial()) {
     this.beginTime = DateTime.now();
     _wordService = WordService(_wordRepo, nbTranslationToDo, themesChosen, () async {
       // The service is loaded.
       this.session = await DbSessionRepo.beginSession(nbTranslationToDo, user);
 
-      nextButtonPressed();
+      nextWord(success: true);
     });
   }
 
@@ -85,13 +88,42 @@ class TrainingCubit extends Cubit<TrainingState> {
     return word.toLowerCase().trim().replaceAll(RegExp(r"'"), '’');
   }
 
-  void userValidatedWord(String input) {
-    currentInputInTextField = input;
+  void keyboardSubmit(String input) {
+    if (waitingCorrection) {
+      userSubmittedCorrection(correctionInputed: input);
+    } else {
+      userSubmittedInitialTranslation(input);
+    }
+  }
+
+  void nextWord({required bool success}) {
+    _wordService.next(success);
+    waitingCorrection = false;
+    if (wordCount + 1 == nbTranslationToDo) {
+      emit(TrainingState.finished(correct, incorrect));
+      return;
+    } else {
+      wordCount += 1;
+      String text = "ÉCRIRE EN ${outputLanguage.fullCaps}";
+
+      emit(TrainingState.word(wordToTranslate, currentWord.comment, wordCount, text, Colors.blueGrey));
+    }
+  }
+
+  void userSubmittedInitialTranslation(String input) {
     final success = sanitizeWord(input) == correctTranslation;
+    Color textFieldColor = Colors.black;
+    String textUnderTextField = "";
     if (success) {
       correct += 1;
+      textFieldColor = Colors.green;
+      textUnderTextField = "RÉPONSE CORRECTE";
+      waitingCorrection = false;
     } else {
       incorrect += 1;
+      textFieldColor = Colors.red;
+      textUnderTextField = "ÉCRIVEZ LA BONNE RÉPONSE";
+      waitingCorrection = true;
     }
 
     DbWordRepo.linkWordToSession(
@@ -102,30 +134,15 @@ class TrainingCubit extends Cubit<TrainingState> {
       scoreWhenShown: currentWord.score,
     );
 
-    emit(TrainingState.correction(wordToTranslate, success, correctTranslation, currentInputInTextField, wordCount,
-        currentWord.comment, currentWord.grammarRule));
+    emit(TrainingState.correction(wordToTranslate, success, correctTranslation, input, wordCount, currentWord.comment,
+        currentWord.grammarRule, textUnderTextField, textFieldColor));
   }
 
-  /// Called when the next button was pressed. This button appear after the
-  /// valide button. It's shown along a screen that tells the user whether he
-  /// got the word right.
-  ///
-  /// If the user got the word wrong, he has to type it again in order to
-  /// continue. In that case, set [wasIncorrect] to true and set
-  /// [correctionInputed] to the current word in the text field.
-  void nextButtonPressed({wasIncorrect = false, correctionInputed = ""}) {
-    if (wasIncorrect && sanitizeWord(correctionInputed) != correctTranslation) {
+  void userSubmittedCorrection({correctionInputed = ""}) {
+    if (sanitizeWord(correctionInputed) != correctTranslation) {
       // Words are not matching.
       return;
     }
-    _wordService.next(!wasIncorrect);
-    if (wordCount + 1 == nbTranslationToDo) {
-      emit(TrainingState.finished(correct, incorrect));
-      return;
-    } else {
-      wordCount += 1;
-
-      emit(TrainingState.word(wordToTranslate, currentWord.comment, wordCount));
-    }
+    nextWord(success: false);
   }
 }
