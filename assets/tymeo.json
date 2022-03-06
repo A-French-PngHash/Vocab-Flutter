@@ -1506,6 +1506,7 @@
                     "english": "how many?",
                     "french": "combien?",
                     "spanish": "",
+                    "comment": "Suivi d'un pluriel",
                     "grammarRule": "HOW MANY est suivi d'un nom au pluriel. HOW MANY BOOKS do you have?"
                 },
                 {
@@ -3637,7 +3638,7 @@
                 },
                 {
                     "english": "which?",
-                    "french": "quel(les)?",
+                    "french": "(le)quel(les)?",
                     "spanish": ""
                 },
                 {
@@ -4028,7 +4029,7 @@
                 },
                 {
                     "english": "the training",
-                    "french": "l'enterrement",
+                    "french": "l'entrainement",
                     "spanish": ""
                 },
                 {
@@ -4456,11 +4457,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "sometimes",
-                    "french": "quelquefois",
-                    "spanish": ""
-                },
-                {
                     "english": "real",
                     "french": "vraiment",
                     "spanish": ""
@@ -4513,7 +4509,7 @@
                     "grammarRule": "Le S à la fin de MONDAY signifie que cette activté a lieu TOUS les lundis matins"
                 },
                 {
-                    "english": "on monday in the mornings",
+                    "english": "on monday mornings",
                     "french": "tous les lundis matins",
                     "spanish": "",
                     "comment": "Indique l'habitude sur le MATIN",
@@ -4570,11 +4566,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "to leave",
-                    "french": "quitter",
-                    "spanish": ""
-                },
-                {
                     "english": "on mondays",
                     "french": "tous les lundis",
                     "spanish": "",
@@ -4583,7 +4574,8 @@
                 {
                     "english": "next to",
                     "french": "à côté de",
-                    "spanish": ""
+                    "spanish": "",
+                    "comment": "Synonyme de NEAR"
                 },
                 {
                     "english": "an advice",
@@ -4683,11 +4675,6 @@
                     "spanish": ""
                 },
                 {
-                    "english": "both",
-                    "french": "tous les 2",
-                    "spanish": ""
-                },
-                {
                     "english": "to buy",
                     "french": "acheter",
                     "spanish": ""
@@ -4737,7 +4724,7 @@
                     "english": "à côté",
                     "french": "next door",
                     "spanish": "",
-                    "comment": "Dans le sens, LA PORTE A CÔTE"
+                    "comment": "Synonyme de NEAR. Dans le sens: LA PORTE A CÔTE"
                 },
                 {
                     "english": "a meal",
@@ -4799,11 +4786,6 @@
                 {
                     "english": "to buy",
                     "french": "acheter",
-                    "spanish": ""
-                },
-                {
-                    "english": "both",
-                    "french": "tous les 2",
                     "spanish": ""
                 },
                 {
@@ -4900,6 +4882,964 @@
                     "french": "l'étagère du bas",
                     "spanish": "",
                     "grammarRule": "Au pluriel, BOTTOM SHELVES"
+                },
+                {
+                    "english": "against each other",
+                    "french": "contre les autres",
+                    "spanish": ""
+                },
+                {
+                    "english": "bright-coloured",
+                    "french": "de couleur vive",
+                    "spanish": ""
+                },
+                {
+                    "english": "without",
+                    "french": "sans",
+                    "spanish": ""
+                },
+                {
+                    "english": "traditional",
+                    "french": "traditionnel",
+                    "spanish": ""
+                },
+                {
+                    "english": "a competition",
+                    "french": "une compétition",
+                    "spanish": ""
+                },
+                {
+                    "english": "complicated",
+                    "french": "compliqué",
+                    "spanish": ""
+                },
+                {
+                    "english": "to keep fit",
+                    "french": "garder la forme",
+                    "spanish": ""
+                },
+                {
+                    "english": "for a living",
+                    "french": "pour gagner sa vie",
+                    "spanish": ""
+                },
+                {
+                    "english": "along",
+                    "french": "le long",
+                    "spanish": ""
+                },
+                {
+                    "english": "by",
+                    "french": "par",
+                    "spanish": ""
+                },
+                {
+                    "english": "a dance club",
+                    "french": "un club de danse",
+                    "spanish": ""
+                },
+                {
+                    "english": "against",
+                    "french": "contre",
+                    "spanish": ""
+                },
+                {
+                    "english": "a century",
+                    "french": "un siècle",
+                    "spanish": ""
+                },
+                {
+                    "english": "to stand",
+                    "french": "se tenir",
+                    "spanish": ""
+                },
+                {
+                    "english": "a step",
+                    "french": "une marche",
+                    "spanish": ""
+                },
+                {
+                    "english": "a hobby",
+                    "french": "un loisir",
+                    "spanish": ""
+                },
+                {
+                    "english": "7 minus 4 equals 3",
+                    "french": "7 - 4 = 3",
+                    "spanish": ""
+                },
+                {
+                    "english": "a high school",
+                    "french": "un lycée",
+                    "spanish": ""
+                },
+                {
+                    "english": "a playground",
+                    "french": "une aire de jeux",
+                    "spanish": ""
+                },
+                {
+                    "english": "missing",
+                    "french": "manquant",
+                    "spanish": ""
+                },
+                {
+                    "english": "4 and 3 equals 7",
+                    "french": "4 + 3 = 7",
+                    "spanish": "",
+                    "grammarRule": "EQUALS ou MAKES ou IS"
+                },
+                {
+                    "english": "ten sixty six",
+                    "french": "1066",
+                    "spanish": "",
+                    "comment": "Pour une année"
+                },
+                {
+                    "english": "too much flour",
+                    "french": "trop de farine",
+                    "spanish": "",
+                    "grammarRule": "TOO MUCH + Indénombrable au SINGULIER. TOO MANY + Dénombrable au PLURIEL"
+                },
+                {
+                    "english": "too many cars",
+                    "french": "trop de voitures",
+                    "spanish": "",
+                    "grammarRule": "TOO MUCH + Indénombrable au SINGULIER. TOO MANY + Dénombrable au PLURIEL"
+                },
+                {
+                    "english": "a language laboratory",
+                    "french": "un laboratoire de langue",
+                    "spanish": ""
+                },
+                {
+                    "english": "finally",
+                    "french": "finalement",
+                    "spanish": ""
+                },
+                {
+                    "english": "to meet",
+                    "french": "rencontrer",
+                    "spanish": ""
+                },
+                {
+                    "english": "an assembly hall",
+                    "french": "une salle de réunion",
+                    "spanish": ""
+                },
+                {
+                    "english": "the corridor",
+                    "french": "le couloir",
+                    "spanish": ""
+                },
+                {
+                    "english": "to cross",
+                    "french": "traverser",
+                    "spanish": ""
+                },
+                {
+                    "english": "much flour",
+                    "french": "beaucoup de farine",
+                    "spanish": "",
+                    "comment": "Synonyme de A LOT OF ou LOTS OF",
+                    "grammarRule": "MUCH + Indénombrable au SINGULIER. MANY + Dénombrable au PLURIEL"
+                },
+                {
+                    "english": "many cars",
+                    "french": "beaucoup de voitures",
+                    "spanish": "",
+                    "comment": "Synonyme de A LOT OF ou LOTS OF",
+                    "grammarRule": "MUCH + Indénombrable au SINGULIER. MANY + Dénombrable au PLURIEL"
+                },
+                {
+                    "english": "a lot of cars",
+                    "french": "beaucoup de voiture",
+                    "spanish": "",
+                    "comment": "Synonyme de LOTS OF, MUCH ou MANY",
+                    "grammarRule": "A LOT OF et LOTS OF remplacent MUCH ou MANY"
+                },
+                {
+                    "english": "a lot of flour",
+                    "french": "beaucoup de farine",
+                    "spanish": "",
+                    "comment": "Synonyme de LOTS OF, MUCH ou MANY",
+                    "grammarRule": "A LOT OF et LOTS OF remplacent MUCH ou MANY"
+                },
+                {
+                    "english": "lots of flour",
+                    "french": "beaucoup de farine",
+                    "spanish": "",
+                    "comment": "Synonyme de A LOT OF, MUCH ou MANY",
+                    "grammarRule": "A LOT OF et LOTS OF remplacent MUCH ou MANY"
+                },
+                {
+                    "english": "lots of cars",
+                    "french": "beaucoup de voitures",
+                    "spanish": "",
+                    "comment": "Synonyme de A LOT OF, MUCH ou MANY",
+                    "grammarRule": "A LOT OF et LOTS OF remplacent MUCH ou MANY"
+                },
+                {
+                    "english": "a little flour",
+                    "french": "un peu de farine",
+                    "spanish": "",
+                    "grammarRule": " A LITTLE + Indénombrable au SINGULIER. A FEW + Dénombrable au PLURIEL"
+                },
+                {
+                    "english": "a few cars",
+                    "french": "un peu de voitures (quelques voitures)",
+                    "spanish": "",
+                    "grammarRule": " A LITTLE + Indénombrable au SINGULIER. A FEW + Dénombrable au PLURIEL"
+                },
+                {
+                    "english": "to rest",
+                    "french": "se reposer",
+                    "spanish": ""
+                },
+                {
+                    "english": "the staffroom",
+                    "french": "la salle du personnel",
+                    "spanish": ""
+                },
+                {
+                    "english": "the staff",
+                    "french": "le personnel",
+                    "spanish": ""
+                },
+                {
+                    "english": "the headteacher",
+                    "french": "le principal / le proviseur",
+                    "spanish": ""
+                },
+                {
+                    "english": "to send",
+                    "french": "envoyer",
+                    "spanish": ""
+                },
+                {
+                    "english": "an office",
+                    "french": "un bureau (pièce)",
+                    "spanish": ""
+                },
+                {
+                    "english": "ill",
+                    "french": "malade",
+                    "spanish": "",
+                    "comment": "Synonyme de SICK"
+                },
+                {
+                    "english": "sick",
+                    "french": "malade",
+                    "spanish": "",
+                    "comment": "Synonyme de ILL"
+                },
+                {
+                    "english": "a firework",
+                    "french": "un feu d'artifice",
+                    "spanish": ""
+                },
+                {
+                    "english": "to hurt",
+                    "french": "blesser",
+                    "spanish": ""
+                },
+                {
+                    "english": "the medical room",
+                    "french": "l'infirmerie",
+                    "spanish": ""
+                },
+                {
+                    "english": "the reception",
+                    "french": "la réception",
+                    "spanish": ""
+                },
+                {
+                    "english": "4 times 3 equals 12",
+                    "french": "4 * 3 = 12",
+                    "spanish": "",
+                    "grammarRule": "EQUALS ou MAKES ou IS"
+                },
+                {
+                    "english": "12 divided by 4 equals 3",
+                    "french": "12 / 4 = 3",
+                    "spanish": "",
+                    "grammarRule": "EQUALS ou MAKES ou IS"
+                },
+                {
+                    "english": "three point one four six",
+                    "french": "1,146",
+                    "spanish": ""
+                },
+                {
+                    "english": "nineteen hundred",
+                    "french": "1900",
+                    "spanish": "",
+                    "comment": "Pour une année"
+                },
+                {
+                    "english": "already",
+                    "french": "déjà",
+                    "spanish": ""
+                },
+                {
+                    "english": "there is not much flour",
+                    "french": "il n'y a pas beaucoup de farine",
+                    "spanish": "",
+                    "grammarRule": "NOT MUCH + Indénombrable au SINGULIER. NOT MANY + Dénombrable au PLURIEL"
+                },
+                {
+                    "english": "there are not many cars",
+                    "french": "il n'y a pas beaucoup de voitures",
+                    "spanish": "",
+                    "grammarRule": "NOT MUCH + Indénombrable au SINGULIER. NOT MANY + Dénombrable au PLURIEL"
+                },
+                {
+                    "english": "how much flour is there?",
+                    "french": "combien de farine y a-t-il?",
+                    "spanish": "",
+                    "grammarRule": "HOW MUCH + NOM indénombrable au SINGULIER. HOW MANY + NOM dénombrable au PLURIEL"
+                },
+                {
+                    "english": "how many cars are there?",
+                    "french": "combien de voitures y a-t-il?",
+                    "spanish": "",
+                    "grammarRule": "HOW MUCH + NOM indénombrable au SINGULIER. HOW MANY + NOM dénombrable au PLURIEL"
+                },
+                {
+                    "english": "three point one four six",
+                    "french": "3,146",
+                    "spanish": ""
+                },
+                {
+                    "english": "waffles",
+                    "french": "gaufres",
+                    "spanish": ""
+                },
+                {
+                    "english": "least",
+                    "french": "moins",
+                    "spanish": ""
+                },
+                {
+                    "english": "experiments",
+                    "french": "expériences",
+                    "spanish": ""
+                },
+                {
+                    "english": "poetry",
+                    "french": "poésie",
+                    "spanish": ""
+                },
+                {
+                    "english": "to need",
+                    "french": "avoir besoin",
+                    "spanish": ""
+                },
+                {
+                    "english": "shy",
+                    "french": "timide",
+                    "spanish": ""
+                },
+                {
+                    "english": "dumb",
+                    "french": "idiot",
+                    "spanish": ""
+                },
+                {
+                    "english": "cocky",
+                    "french": "insolent, arrogant, présomptueux",
+                    "spanish": ""
+                },
+                {
+                    "english": "lazy",
+                    "french": "paresseux",
+                    "spanish": ""
+                },
+                {
+                    "english": "i'm sure",
+                    "french": "je suis certain",
+                    "spanish": ""
+                },
+                {
+                    "english": "what else?",
+                    "french": "quoi d'autre?",
+                    "spanish": ""
+                },
+                {
+                    "english": "to try",
+                    "french": "essayer",
+                    "spanish": ""
+                },
+                {
+                    "english": "modest",
+                    "french": "modeste",
+                    "spanish": ""
+                },
+                {
+                    "english": "clever",
+                    "french": "intelligent",
+                    "spanish": "",
+                    "comment": "Synonyme de BRIGHT et SMART"
+                },
+                {
+                    "english": "to draw",
+                    "french": "dessiner",
+                    "spanish": ""
+                },
+                {
+                    "english": "a story",
+                    "french": "une histoire",
+                    "spanish": ""
+                },
+                {
+                    "english": "hard-working",
+                    "french": "travailleur",
+                    "spanish": ""
+                },
+                {
+                    "english": "how much is it?",
+                    "french": "combien ça coûte?",
+                    "spanish": "",
+                    "grammarRule": "On peut aussi dire HOW MUCH DOES IT COST?"
+                },
+                {
+                    "english": "food",
+                    "french": "nourriture",
+                    "spanish": ""
+                },
+                {
+                    "english": "to record",
+                    "french": "enregistrer",
+                    "spanish": ""
+                },
+                {
+                    "english": "drums",
+                    "french": "batterie",
+                    "spanish": ""
+                },
+                {
+                    "english": "to prefer",
+                    "french": "préférer",
+                    "spanish": ""
+                },
+                {
+                    "english": "it doesn't matter to me",
+                    "french": "ça m'est égal",
+                    "spanish": ""
+                },
+                {
+                    "english": "a talent",
+                    "french": "un talent",
+                    "spanish": ""
+                },
+                {
+                    "english": "a contest",
+                    "french": "un concours",
+                    "spanish": ""
+                },
+                {
+                    "english": "to win",
+                    "french": "gagner",
+                    "spanish": ""
+                },
+                {
+                    "english": "over",
+                    "french": "au-dessus",
+                    "spanish": ""
+                },
+                {
+                    "english": "a flat",
+                    "french": "un appartement",
+                    "spanish": ""
+                },
+                {
+                    "english": "near",
+                    "french": "à côté de",
+                    "spanish": "",
+                    "comment": "Synonyme de NEXT TO"
+                },
+                {
+                    "english": "a family tree",
+                    "french": "un arbre généalogique",
+                    "spanish": ""
+                },
+                {
+                    "english": "all",
+                    "french": "tout / tous",
+                    "spanish": "",
+                    "comment": "Suivi d'un nom dénombrable au pluriel",
+                    "grammarRule": "ALL + PLURIEL - EVERY + SINGULIER"
+                },
+                {
+                    "english": "every",
+                    "french": "tout / tous",
+                    "spanish": "",
+                    "comment": "Suivi d'un nom indénombrable au singulier",
+                    "grammarRule": "ALL + PLURIEL - EVERY + SINGULIER"
+                },
+                {
+                    "english": "the movie",
+                    "french": "le film",
+                    "spanish": ""
+                },
+                {
+                    "english": "a movie theatre",
+                    "french": "un cinéma",
+                    "spanish": ""
+                },
+                {
+                    "english": "upstairs",
+                    "french": "en haut",
+                    "spanish": ""
+                },
+                {
+                    "english": "downstairs",
+                    "french": "en bas",
+                    "spanish": ""
+                },
+                {
+                    "english": "narrow-minded",
+                    "french": "étroit d'esprit",
+                    "spanish": ""
+                },
+                {
+                    "english": "outgoing",
+                    "french": "sociable",
+                    "spanish": ""
+                },
+                {
+                    "english": "a grocery store",
+                    "french": "un supermarché",
+                    "spanish": ""
+                },
+                {
+                    "english": "a supermarket",
+                    "french": "un supermarché",
+                    "spanish": ""
+                },
+                {
+                    "english": "there",
+                    "french": "là-bas",
+                    "spanish": ""
+                },
+                {
+                    "english": "here",
+                    "french": "ici",
+                    "spanish": ""
+                },
+                {
+                    "english": "quite well",
+                    "french": "assez bien",
+                    "spanish": ""
+                },
+                {
+                    "english": "inside",
+                    "french": "à l'intérieur",
+                    "spanish": ""
+                },
+                {
+                    "english": "outside",
+                    "french": "à l'extérieur",
+                    "spanish": ""
+                },
+                {
+                    "english": "i don't care",
+                    "french": "je m'en fiche",
+                    "spanish": ""
+                },
+                {
+                    "english": "i don't mind",
+                    "french": "je m'en fiche",
+                    "spanish": ""
+                },
+                {
+                    "english": "a bakery",
+                    "french": "une boulangerie",
+                    "spanish": ""
+                },
+                {
+                    "english": "to stay",
+                    "french": "rester",
+                    "spanish": ""
+                },
+                {
+                    "english": "open-minded",
+                    "french": "ouvert d'esprit",
+                    "spanish": ""
+                },
+                {
+                    "english": "to spend money",
+                    "french": "dépenser de l'argent",
+                    "spanish": ""
+                },
+                {
+                    "english": "to spend time",
+                    "french": "passer du temps",
+                    "spanish": ""
+                },
+                {
+                    "english": "average",
+                    "french": "moyen",
+                    "spanish": ""
+                },
+                {
+                    "english": "i am going to play basketball",
+                    "french": "je vais jouer au basket",
+                    "spanish": "",
+                    "comment": "Utilise le FUTUR PROCHE",
+                    "grammarRule": "Tu dois utiliser la forme I AM GOING TO + Verbe"
+                },
+                {
+                    "english": "i am playing basketball tomorrow",
+                    "french": "je vais jouer au basket demain",
+                    "spanish": "",
+                    "comment": "Utilise le futur proche. ATTENTION, il y a une indication de temps (tomorrow)",
+                    "grammarRule": "Tu peux utiliser la même forme que le présent continu pour parler d'une action dans le futur car tu as rajouté dans ta phrase une indication de temps TOMORROW."
+                },
+                {
+                    "english": "i would like to play",
+                    "french": "je voudrai jouer",
+                    "spanish": "",
+                    "comment": "Utlise un AUXILLIAIRE MODAL pour exprimer un SOUHAIT",
+                    "grammarRule": "I WOULD LIKE TO + Verbe"
+                },
+                {
+                    "english": "i want to play",
+                    "french": "je veux jouer",
+                    "spanish": "",
+                    "comment": "Utilise un AUXILLIAIRE MODAL pour exprimer une VOLONTE",
+                    "grammarRule": "I WANT TO + Verbe"
+                },
+                {
+                    "english": "clumsy",
+                    "french": "maladroit",
+                    "spanish": ""
+                },
+                {
+                    "english": "absent-minded",
+                    "french": "rêveur",
+                    "spanish": ""
+                },
+                {
+                    "english": "selfish",
+                    "french": "égoïste",
+                    "spanish": ""
+                },
+                {
+                    "english": "what are you like?",
+                    "french": "comment te décris-tu?",
+                    "spanish": ""
+                },
+                {
+                    "english": "pessimistic",
+                    "french": "pessimiste",
+                    "spanish": ""
+                },
+                {
+                    "english": "rude",
+                    "french": "malpoli",
+                    "spanish": ""
+                },
+                {
+                    "english": "easter",
+                    "french": "pâques",
+                    "spanish": ""
+                },
+                {
+                    "english": "patient",
+                    "french": "patient",
+                    "spanish": ""
+                },
+                {
+                    "english": "messy",
+                    "french": "bordélique",
+                    "spanish": ""
+                },
+                {
+                    "english": "quick-tempered",
+                    "french": "tempéré",
+                    "spanish": ""
+                },
+                {
+                    "english": "easy going",
+                    "french": "facile à vivre",
+                    "spanish": ""
+                },
+                {
+                    "english": "for instance",
+                    "french": "par exemple",
+                    "spanish": ""
+                },
+                {
+                    "english": "talkative",
+                    "french": "bavard",
+                    "spanish": ""
+                },
+                {
+                    "english": "he is crazy about",
+                    "french": "il est fou de",
+                    "spanish": "",
+                    "comment": "Synonyme de HE IS MAD ABOUT"
+                },
+                {
+                    "english": "he is mad about",
+                    "french": "il est fou de",
+                    "spanish": "",
+                    "comment": "Synonyme de  HE IS CRAZY ABOUT"
+                },
+                {
+                    "english": "i am fond of",
+                    "french": "je suis passionné par",
+                    "spanish": ""
+                },
+                {
+                    "english": "to ask",
+                    "french": "demander",
+                    "spanish": ""
+                },
+                {
+                    "english": "disorderly",
+                    "french": "désorganisé",
+                    "spanish": ""
+                },
+                {
+                    "english": "early",
+                    "french": "tôt",
+                    "spanish": ""
+                },
+                {
+                    "english": "late",
+                    "french": "tard",
+                    "spanish": ""
+                },
+                {
+                    "english": "i can't stand",
+                    "french": "je ne supporte pas",
+                    "spanish": ""
+                },
+                {
+                    "english": "the noise",
+                    "french": "le bruit",
+                    "spanish": ""
+                },
+                {
+                    "english": "stubborn",
+                    "french": "têtu",
+                    "spanish": ""
+                },
+                {
+                    "english": "to be keen on",
+                    "french": "être passionné par",
+                    "spanish": ""
+                },
+                {
+                    "english": "most of all",
+                    "french": "surtout",
+                    "spanish": ""
+                },
+                {
+                    "english": "actually",
+                    "french": "en fait",
+                    "spanish": ""
+                },
+                {
+                    "english": "i must play",
+                    "french": "je dois jouer",
+                    "spanish": "",
+                    "comment": "Utilise un AUXILLIAIRE MODAL pour indiquer une OBLIGATION"
+                },
+                {
+                    "english": "i musn't play",
+                    "french": "je ne dois pas jouer",
+                    "spanish": "",
+                    "comment": "Utilise un AUXILLIAIRE MODAL pour indiquer l'INTERDICTION"
+                },
+                {
+                    "english": "to tell somebody something",
+                    "french": "dire quelquechose à quelqu'un",
+                    "spanish": "",
+                    "grammarRule": "Avec TO TELL tu dois indiquer à qui tu parles obligatoirement"
+                },
+                {
+                    "english": "to say something",
+                    "french": "dire quelquechose",
+                    "spanish": "",
+                    "grammarRule": "Avec TO SAY tu n'as pas besoin d'indiquer à qui tu parles. Si tu veux le rajouter, tu dois introduire la personne à qui tu parles avec le mot TO SOMEBODY"
+                },
+                {
+                    "english": "play!",
+                    "french": "joue!",
+                    "spanish": "",
+                    "comment": "Conjugue à l'impératif, 2ème personne du singulier"
+                },
+                {
+                    "english": "let's play!",
+                    "french": "jouons!",
+                    "spanish": "",
+                    "comment": "Conjugue à l'impératif, 1ère personne du pluriel"
+                },
+                {
+                    "english": "play!",
+                    "french": "jouez!",
+                    "spanish": "",
+                    "comment": "Conjugue à l'impératif, 2ème personne du pluriel"
+                },
+                {
+                    "english": "to wait for",
+                    "french": "attendre (qqch, qq'un)",
+                    "spanish": ""
+                },
+                {
+                    "english": "to talk to",
+                    "french": "parler (à qq'un)",
+                    "spanish": "",
+                    "comment": "Synonyme de TO SPEAK TO"
+                },
+                {
+                    "english": "to listen to",
+                    "french": "écouter (qq'un ou qqch)",
+                    "spanish": ""
+                },
+                {
+                    "english": "early march",
+                    "french": "début mars",
+                    "spanish": ""
+                },
+                {
+                    "english": "fin mai",
+                    "french": "late may",
+                    "spanish": ""
+                },
+                {
+                    "english": "a home game",
+                    "french": "un match à domicile",
+                    "spanish": ""
+                },
+                {
+                    "english": "either",
+                    "french": "soit",
+                    "spanish": ""
+                },
+                {
+                    "english": "how often?",
+                    "french": "a quelle fréquence?",
+                    "spanish": ""
+                },
+                {
+                    "english": "a field",
+                    "french": "un terrain / un champ",
+                    "spanish": ""
+                },
+                {
+                    "english": "a racket",
+                    "french": "une raquette",
+                    "spanish": ""
+                },
+                {
+                    "english": "to take off",
+                    "french": "ôter",
+                    "spanish": ""
+                },
+                {
+                    "english": "to come in",
+                    "french": "rentrer",
+                    "spanish": ""
+                },
+                {
+                    "english": "to stand up",
+                    "french": "se mettre debout",
+                    "spanish": ""
+                },
+                {
+                    "english": "a team",
+                    "french": "une équipe",
+                    "spanish": ""
+                },
+                {
+                    "english": "to look at",
+                    "french": "regarder (qq'un)",
+                    "spanish": ""
+                },
+                {
+                    "english": "an expression",
+                    "french": "une expression",
+                    "spanish": ""
+                },
+                {
+                    "english": "to switch off",
+                    "french": "éteindre",
+                    "spanish": ""
+                },
+                {
+                    "english": "a circle",
+                    "french": "un cercle",
+                    "spanish": ""
+                },
+                {
+                    "english": "to circle",
+                    "french": "entourer",
+                    "spanish": ""
+                },
+                {
+                    "english": "protective eye gear",
+                    "french": "équipement occulaire de protection",
+                    "spanish": ""
+                },
+                {
+                    "english": "a mouth guard",
+                    "french": "un protège-dents",
+                    "spanish": ""
+                },
+                {
+                    "english": "shoulder pads",
+                    "french": "épaulettes",
+                    "spanish": ""
+                },
+                {
+                    "english": "to switch on",
+                    "french": "allumer",
+                    "spanish": ""
+                },
+                {
+                    "english": "to move away",
+                    "french": "déménager / partir",
+                    "spanish": ""
+                },
+                {
+                    "english": "arm pads",
+                    "french": "coussinets de bras",
+                    "spanish": ""
+                },
+                {
+                    "english": "the season",
+                    "french": "la saison",
+                    "spanish": ""
+                },
+                {
+                    "english": "to begin",
+                    "french": "commencer",
+                    "spanish": "",
+                    "comment": "synonyme de TO START"
+                },
+                {
+                    "english": "to run out",
+                    "french": "sortir en courant",
+                    "spanish": ""
+                },
+                {
+                    "english": "to move along",
+                    "french": "avancer / circuler",
+                    "spanish": ""
+                },
+                {
+                    "english": "to look after",
+                    "french": "s'occuper de qq'un",
+                    "spanish": ""
+                },
+                {
+                    "english": "to walk back",
+                    "french": "rentrer à pied",
+                    "spanish": ""
                 }
             ]
         }
