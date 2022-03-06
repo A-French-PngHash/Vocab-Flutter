@@ -110,37 +110,66 @@ class TrainingPage extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.only(top: 100),
-          child: Align(
-            alignment: Alignment.topLeft,
-            child: Text(
-              wordToTranslate,
-              style: TextStyle(fontSize: 30),
-            ),
+          padding: EdgeInsets.only(top: 50, left: 10, right: 10),
+          child: Column(
+            children: [
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Icon(Icons.close),
+                Container(
+                  width: 250,
+                  child: LinearProgressIndicator(
+                    value: wordNumber / numberOfTranslationToDo,
+                    color: Colors.blueGrey,
+                    backgroundColor: Colors.blueGrey.withOpacity(0.35),
+                    minHeight: 7,
+                  ),
+                ),
+                Icon(Icons.settings_outlined),
+              ]),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  wordToTranslate,
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ],
           ),
         ),
         Spacer(),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Column(children: [
-            TextField(
-              onChanged: (String word) {
-                wordInputed = word;
-              },
-              onSubmitted: (String word) {
-                wordInputed = word;
-                userSubmited(context);
-              },
-              autofocus: true,
-            ),
-            Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "ÉCRIRE EN ${translateToLanguage.capitalize()}",
-                style: TextStyle(color: Color.fromRGBO(149, 155, 178, 1), fontSize: 15),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Column(children: [
+              TextField(
+                onChanged: (String word) {
+                  wordInputed = word;
+                },
+                onSubmitted: (String word) {
+                  wordInputed = word;
+                  userSubmited(context);
+                },
+                autofocus: true,
+                decoration: InputDecoration(
+                    focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(width: 4, color: Colors.blueGrey),
+                )),
+                cursorWidth: 0.5,
+                cursorColor: Colors.black,
               ),
-            ),
-          ]),
+              Padding(
+                padding: EdgeInsets.only(top: 5),
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "ÉCRIRE EN ${translateToLanguage.allInCaps}",
+                    style: TextStyle(color: Color.fromRGBO(149, 155, 178, 1), fontSize: 13),
+                  ),
+                ),
+              ),
+            ]),
+          ),
         ),
       ],
     );
