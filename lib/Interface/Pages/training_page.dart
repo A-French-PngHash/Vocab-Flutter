@@ -43,7 +43,6 @@ class TrainingPage extends StatelessWidget {
           }, word:
               (String wordToTranslate, String? comment, int wordNumber, String textUnderField, Color textFieldColor) {
             return viewV2(context, wordToTranslate, comment, wordNumber, textUnderField, textFieldColor);
-            //buildWordView(context, wordToTranslate, comment, wordNumber);
           }, correction: (String wordToTranslate, bool correct, String correctTranslation, String inputedTranslation,
               int wordNumber, String? comment, _, String textUnderField, Color textFieldColor) {
             return viewV2(
@@ -57,12 +56,6 @@ class TrainingPage extends StatelessWidget {
               correctTranslation: correctTranslation,
               inputedTranslation: inputedTranslation,
             );
-            /*if (correct) {
-              return buildCorrectView(context, wordToTranslate, translationInputed, wordNumber, comment);
-            } else {
-              return buildIncorrectView(
-                  context, wordToTranslate, correctTranslation, translationInputed, wordNumber, comment);
-            }*/
           }, finished: (int correct, int incorrect) {
             return buildFinishedView(context, correct, incorrect);
           }, orElse: () {
@@ -141,7 +134,11 @@ class TrainingPage extends StatelessWidget {
       child: Column(
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Icon(Icons.close),
+            IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.close)),
             Container(
               width: 250,
               child: LinearProgressIndicator(

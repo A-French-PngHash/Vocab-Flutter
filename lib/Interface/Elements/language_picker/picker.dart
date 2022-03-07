@@ -45,7 +45,7 @@ class Picker extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyText2,
           ), // Text describing what the picker is selecting.
           Spacer(),
-          Text(currently_selected, style: TextStyle(color: Color(0xFF94949B), fontSize: 17)),
+          Text(currently_selected, style: TextStyle(fontSize: 17)),
           Icon(Icons.keyboard_arrow_right_rounded),
         ],
       ),

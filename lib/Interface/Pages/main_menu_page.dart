@@ -74,7 +74,7 @@ class MainMenuPage extends StatelessWidget {
               children: [
                 Text(
                   "Vocab",
-                  style: TextStyle(fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                 )
               ],
               mainAxisAlignment: MainAxisAlignment.start,
@@ -89,17 +89,19 @@ class MainMenuPage extends StatelessWidget {
               currentlySelectedThemes: currentlySelectedTheme,
               numberOfTranslationToDo: numberOfTranslationToDo),
           Spacer(),
-          GradientButton(
-            text: "View word list",
+          ElevatedButton(
             onPressed: () {
               pushWordList(context);
             },
+            child: Text("View word list"),
+            style: ElevatedButton.styleFrom(primary: Colors.blue),
           ),
-          GradientButton(
-            text: "Start",
+          ElevatedButton(
             onPressed: () {
               pushTrainingView(context, numberOfTranslationToDo);
             },
+            child: Text("Start"),
+            style: ElevatedButton.styleFrom(primary: Colors.blue),
           ),
           Text("By Titouan Blossier"),
         ],
@@ -126,7 +128,6 @@ class MainMenuPage extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: Color(0xFF1C1C1E),
         borderRadius: BorderRadius.circular(9),
       ),
       child: Column(
@@ -222,12 +223,11 @@ class MainMenuPage extends StatelessWidget {
               ),
               Spacer(),
               SizedBox(
-                child: CustomTextField(
+                child: TextField(
                   autofocus: false,
-                  textInputType: TextInputType.number,
-                  padding: EdgeInsets.all(0),
+                  keyboardType: TextInputType.number,
                   readOnly: currentUser == "tymeo",
-                  initialValue: numberOfTranslationToDo.toString(),
+                  controller: TextEditingController(text: numberOfTranslationToDo.toString()),
                   onSubmitted: (String value) {
                     print("submitted");
                     final valueInt = int.tryParse(value);

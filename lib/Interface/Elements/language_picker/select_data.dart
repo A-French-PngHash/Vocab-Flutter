@@ -12,10 +12,8 @@ class SelectFromData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       body: CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
-          backgroundColor: Colors.black,
           leading: CupertinoNavigationBarBackButton(
             previousPageTitle: "Menu",
             onPressed: () {
@@ -62,7 +60,7 @@ class SelectFromData extends StatelessWidget {
                 children: [
                   Text(
                     dataElement,
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.black),
                   ),
                   Spacer(),
                   if (currentlySelected.contains(dataElement)) Icon(Icons.check),
