@@ -7,6 +7,8 @@ import 'package:vocab/Interface/Elements/button/gradient_button.dart';
 import 'package:vocab/Interface/Pages/session_recap.dart';
 
 class TrainingPage extends StatelessWidget {
+  static const double correctionFontSize = 20;
+
   final focusNode = FocusNode();
 
   /// User currently doing the word series.
@@ -135,10 +137,12 @@ class TrainingPage extends StatelessWidget {
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(Icons.close)),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.close),
+              iconSize: 40,
+            ),
             Container(
               width: 250,
               child: LinearProgressIndicator(
@@ -148,7 +152,10 @@ class TrainingPage extends StatelessWidget {
                 minHeight: 7,
               ),
             ),
-            Icon(Icons.settings_outlined),
+            Icon(
+              Icons.settings_outlined,
+              size: 40,
+            ),
           ]),
           Align(
             alignment: Alignment.topLeft,
@@ -157,7 +164,7 @@ class TrainingPage extends StatelessWidget {
               children: [
                 Text(
                   wordToTranslate,
-                  style: TextStyle(fontSize: 35),
+                  style: TextStyle(fontSize: 45),
                 ),
                 if (comment != null) Text(comment),
                 if (correct != null && !correct)
@@ -168,11 +175,12 @@ class TrainingPage extends StatelessWidget {
                       children: [
                         Text(
                           "VOTRE RÉPONSE",
-                          style: TextStyle(color: Colors.red),
+                          style: TextStyle(color: Colors.red, fontSize: correctionFontSize),
                         ),
-                        Text(inputedTranslation),
-                        Text("RÉPONSE CORRECTE", style: TextStyle(color: Colors.green)),
-                        Text(correctTranslation),
+                        Text(inputedTranslation, style: TextStyle(fontSize: correctionFontSize)),
+                        Text("RÉPONSE CORRECTE",
+                            style: TextStyle(color: Colors.green, fontSize: correctionFontSize + 10)),
+                        Text(correctTranslation, style: TextStyle(fontSize: correctionFontSize + 10)),
                       ],
                     ),
                   ),
