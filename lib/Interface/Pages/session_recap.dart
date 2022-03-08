@@ -20,7 +20,6 @@ class SessionRecap extends StatelessWidget {
         navigationBar: CupertinoNavigationBar(
           middle: Text(
             "Session Recap",
-            style: TextStyle(color: Colors.white),
           ),
           previousPageTitle: "Menu",
         ),
@@ -65,15 +64,17 @@ class SessionRecap extends StatelessWidget {
       ),
     );
   }
-
   Widget buildDataView(BuildContext context, Session session, List<WordDb> words) {
     final DateTime beginDate = session.beginDate.toLocal();
     return Column(
       children: [
-        Text(
-          "Session started on the ${beginDate.day}/${beginDate.month}/${beginDate.year} at ${beginDate.hour}:${beginDate.minute}",
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 25),
+        Padding(
+          padding: EdgeInsets.only(top: 80, left: 10, right: 10),
+          child: Text(
+            "Session started on the ${beginDate.day}/${beginDate.month}/${beginDate.year} at ${beginDate.hour}:${beginDate.minute}",
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 25),
+          ),
         ),
         buildCorrectRecap(true, session.correct),
         buildCorrectRecap(false, session.incorrect),
@@ -92,7 +93,7 @@ class SessionRecap extends StatelessWidget {
                       children: [
                         stateIcon(element.expectedTranslation == element.inputedTranslaton, size: 30),
                         Padding(
-                          padding: EdgeInsets.only(left: 5, right: 40),
+                          padding: EdgeInsets.only(left: 5, right: 5),
                           child: Text(
                             element.wordShown.capitalize(),
                             style: TextStyle(fontSize: 18),
@@ -126,9 +127,7 @@ class SessionRecap extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
-                      color: Colors.blueGrey,
-                    )
+                    Divider()
                   ],
                 ),
               );

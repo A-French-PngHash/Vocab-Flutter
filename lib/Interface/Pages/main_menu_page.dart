@@ -94,14 +94,12 @@ class MainMenuPage extends StatelessWidget {
               pushWordList(context);
             },
             child: Text("View word list"),
-            style: ElevatedButton.styleFrom(primary: Colors.blue),
           ),
           ElevatedButton(
             onPressed: () {
               pushTrainingView(context, numberOfTranslationToDo);
             },
             child: Text("Start"),
-            style: ElevatedButton.styleFrom(primary: Colors.blue),
           ),
           Text("By Titouan Blossier"),
         ],

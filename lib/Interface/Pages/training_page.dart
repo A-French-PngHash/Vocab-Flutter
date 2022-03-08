@@ -147,8 +147,7 @@ class TrainingPage extends StatelessWidget {
               width: 250,
               child: LinearProgressIndicator(
                 value: wordNumber / numberOfTranslationToDo,
-                color: Colors.blueGrey,
-                backgroundColor: Colors.blueGrey.withOpacity(0.35),
+                backgroundColor: Colors.teal.withOpacity(0.30),
                 minHeight: 7,
               ),
             ),
@@ -245,55 +244,67 @@ class TrainingPage extends StatelessWidget {
   }
 
   Widget buildFinishedView(BuildContext context, int correct, int incorrect) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          width: MediaQuery.of(context).size.width,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Vous avez terminé votre série de $numberOfTranslationToDo mots!",
-                style: TextStyle(fontSize: 30),
-                textAlign: TextAlign.center,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.done_rounded,
-                    size: 50,
-                    color: Colors.green,
-                  ),
-                  Text(
-                    " : $correct",
-                    style: TextStyle(fontSize: 20),
-                  )
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.close,
-                    size: 50,
-                    color: Colors.red,
-                  ),
-                  Text(
-                    " : $incorrect",
-                    style: TextStyle(fontSize: 20),
-                  )
-                ],
-              ),
-              GradientButton(
-                text: "More Info",
-                onPressed: () => showSessionRecap(context),
-              )
-            ],
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      child: Column(
+        children: [
+          Align(
+            alignment: Alignment.topLeft,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.close),
+              iconSize: 40,
+              padding: EdgeInsets.only(top: 30),
+            ),
           ),
-        ),
-      ],
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Vous avez terminé votre série de $numberOfTranslationToDo mots!",
+                  style: TextStyle(fontSize: 30),
+                  textAlign: TextAlign.center,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.done_rounded,
+                      size: 50,
+                      color: Colors.green,
+                    ),
+                    Text(
+                      " : $correct",
+                      style: TextStyle(fontSize: 20),
+                    )
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.close,
+                      size: 50,
+                      color: Colors.red,
+                    ),
+                    Text(
+                      " : $incorrect",
+                      style: TextStyle(fontSize: 20),
+                    )
+                  ],
+                ),
+                ElevatedButton(
+                  child: Text("More Info"),
+                  onPressed: () => showSessionRecap(context),
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 
