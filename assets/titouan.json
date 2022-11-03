@@ -1,2593 +1,946 @@
 {
     "themes": [
         {
-            "name": "Las indígenas",
+            "name": "Accord et Désaccord Lentsch M1",
             "words": [
                 {
-                    "english": "",
-                    "french": "s'éloigner de",
-                    "spanish": "alejarse de"
-                },
-                {
-                    "english": "",
-                    "french": "enraciner",
-                    "spanish": "arraigar"
-                },
-                {
-                    "english": "",
-                    "french": "déraciner",
-                    "spanish": "desarraigar"
-                },
-                {
-                    "english": "",
-                    "french": "attirer l'attention",
-                    "spanish": "atraer la atención"
-                },
-                {
-                    "english": "",
-                    "french": "disparaître",
-                    "spanish": "desaparecer"
-                },
-                {
-                    "english": "",
-                    "french": "s'éteindre",
-                    "spanish": "extinguirse"
-                },
-                {
-                    "english": "",
-                    "french": "encourager",
-                    "spanish": "fomentar"
-                },
-                {
-                    "english": "",
-                    "french": "imposer une langue",
-                    "spanish": "imponer una lengua"
-                },
-                {
-                    "english": "",
-                    "french": "lutter poula multiculturalité",
-                    "spanish": "luchar por la multiculturalidad"
-                },
-                {
-                    "english": "",
-                    "french": "nier",
-                    "spanish": "negar"
-                },
-                {
-                    "english": "",
-                    "french": "interdire l'usage d'une langue",
-                    "spanish": "prohibir el uso de una lengua"
-                },
-                {
-                    "english": "",
-                    "french": "se rebeller",
-                    "spanish": "rebelarse"
-                },
-                {
-                    "english": "",
-                    "french": "reconnaître",
-                    "spanish": "reconocer"
-                },
-                {
-                    "english": "",
-                    "french": "revendiquer ses droits",
-                    "spanish": "reivindicar sus derechos"
-                },
-                {
-                    "english": "",
-                    "french": "respecter",
-                    "spanish": "respetar"
-                },
-                {
-                    "english": "",
-                    "french": "soutenir",
-                    "spanish": "respaldar"
-                },
-                {
-                    "english": "",
-                    "french": "revaloriser",
-                    "spanish": "revalorizar"
-                },
-                {
-                    "english": "",
-                    "french": "briser les moules",
-                    "spanish": "romper moldes"
-                },
-                {
-                    "english": "",
-                    "french": "se sentir",
-                    "spanish": "sentirse"
-                },
-                {
-                    "english": "",
-                    "french": "se montrer",
-                    "spanish": "mostrarse"
-                },
-                {
-                    "english": "",
-                    "french": "fiert",
-                    "spanish": "orgulloso"
-                },
-                {
-                    "english": "",
-                    "french": "honteux",
-                    "spanish": "avergonzado"
-                },
-                {
-                    "english": "",
-                    "french": "subir la discrimination",
-                    "spanish": "sufrir discriminación"
-                },
-                {
-                    "english": "",
-                    "french": "transmettre une langue",
-                    "spanish": "transmitir una lengua"
-                },
-                {
-                    "english": "",
-                    "french": "être menacés",
-                    "spanish": "ser amenazados"
-                },
-                {
-                    "english": "",
-                    "french": "les ancêtres",
-                    "spanish": "los antepasados"
-                },
-                {
-                    "english": "",
-                    "french": "l'attachement",
-                    "spanish": "el apego"
-                },
-                {
-                    "english": "",
-                    "french": "l'appropriation",
-                    "spanish": "la apropiación"
-                },
-                {
-                    "english": "",
-                    "french": "l'enracinement",
-                    "spanish": "el arraigo"
-                },
-                {
-                    "english": "",
-                    "french": "le désenracinement",
-                    "spanish": "el desarraigo"
-                },
-                {
-                    "english": "",
-                    "french": "autochtone",
-                    "spanish": "autóctono"
-                },
-                {
-                    "english": "",
-                    "french": "les colonisateurs",
-                    "spanish": "los colonizadores"
-                },
-                {
-                    "english": "",
-                    "french": "la cohabitation",
-                    "spanish": "la convivencia"
-                },
-                {
-                    "english": "",
-                    "french": "cohabiter",
-                    "spanish": "convivir"
-                },
-                {
-                    "english": "",
-                    "french": "les coutumes",
-                    "spanish": "las costumbres"
-                },
-                {
-                    "english": "",
-                    "french": "la baisse",
-                    "spanish": "el descenso"
-                },
-                {
-                    "english": "",
-                    "french": "les maladies",
-                    "spanish": "las enfermedades"
-                },
-                {
-                    "english": "",
-                    "french": "l'environnement",
-                    "spanish": "el entorno",
-                    "comment": "rural - urbano"
-                },
-                {
-                    "english": "",
-                    "french": "l'esprit",
-                    "spanish": "el espíritu"
-                },
-                {
-                    "english": "",
-                    "french": "étranger",
-                    "spanish": "forastero"
-                },
-                {
-                    "english": "",
-                    "french": "les indigènes",
-                    "spanish": "los indígenas"
-                },
-                {
-                    "english": "",
-                    "french": "l'héritage",
-                    "spanish": "el legado"
-                },
-                {
-                    "english": "",
-                    "french": "la langue indigène",
-                    "spanish": "la lengua indígena"
-                },
-                {
-                    "english": "",
-                    "french": "l'environnement naturel",
-                    "spanish": "et medio ambiante"
-                },
-                {
-                    "english": "",
-                    "french": "l'origine",
-                    "spanish": "el origen"
-                },
-                {
-                    "english": "",
-                    "french": "le chômage",
-                    "spanish": "el paro"
-                },
-                {
-                    "english": "",
-                    "french": "un passeur",
-                    "spanish": "un pollero"
-                },
-                {
-                    "english": "",
-                    "french": "la racine",
-                    "spanish": "la raíz"
-                },
-                {
-                    "english": "",
-                    "french": "la rébellion",
-                    "spanish": "la rebeldía"
-                },
-                {
-                    "english": "",
-                    "french": "la résistance",
-                    "spanish": "la resistencia"
-                },
-                {
-                    "english": "",
-                    "french": "les réseaux sociaux",
-                    "spanish": "las redes sociales"
-                },
-                {
-                    "english": "",
-                    "french": "soumis",
-                    "spanish": "sumiso"
-                },
-                {
-                    "english": "",
-                    "french": "insoumis",
-                    "spanish": "indómito"
-                },
-                {
-                    "english": "",
-                    "french": "la mort",
-                    "spanish": "la muerte"
-                },
-                {
-                    "english": "",
-                    "french": "la survie",
-                    "spanish": "la supervivencia"
-                },
-                {
-                    "english": "",
-                    "french": "survivre",
-                    "spanish": "sobrevivir"
-                },
-                {
-                    "english": "",
-                    "french": "le costume typique",
-                    "spanish": "el traje típico"
-                },
-                {
-                    "english": "",
-                    "french": "les tissus",
-                    "spanish": "los tejidos"
-                },
-                {
-                    "english": "",
-                    "french": "le lien",
-                    "spanish": "el vínculo"
-                }
-            ]
-        },
-        {
-            "name": "Espagnol - Cahier 1er trimestre",
-            "words": [
-                {
-                    "english": "",
-                    "french": "un lac",
-                    "spanish": "un lago"
-                },
-                {
-                    "english": "",
-                    "french": "fouler la terre",
-                    "spanish": "pisar la tierra"
-                },
-                {
-                    "english": "",
-                    "french": "les rayons",
-                    "spanish": "los rayos"
-                },
-                {
-                    "english": "",
-                    "french": "les saisons",
-                    "spanish": "los estaciones"
-                },
-                {
-                    "english": "",
-                    "french": "un tambour",
-                    "spanish": "un tombor"
-                }
-            ]
-        },
-        {
-            "name": "English Toolbox Axe 1",
-            "words": [
-                {
-                    "english": "gap year",
-                    "french": "année sabatique",
+                    "english": "i do not gainsay it",
+                    "french": "je ne le nie pas",
                     "spanish": ""
                 },
                 {
-                    "english": "gapper",
-                    "french": "étudiant d'année sabatique",
+                    "english": "it brooks no agreement",
+                    "french": "c'est indéniable",
                     "spanish": ""
                 },
                 {
-                    "english": "volunteer",
-                    "french": "bénévole",
+                    "english": "it goes unchallenged",
+                    "french": "personne ne le conteste",
                     "spanish": ""
                 },
                 {
-                    "english": "volunteering",
-                    "french": "bénévolat",
+                    "english": "opinions converge",
+                    "french": "il y a une convergence de vues",
                     "spanish": ""
                 },
                 {
-                    "english": "relationship",
-                    "french": "relation",
+                    "english": "there is no dispute about this",
+                    "french": "personne ne conteste cela",
                     "spanish": ""
                 },
                 {
-                    "english": "solidarity",
-                    "french": "solidarité",
+                    "english": "there is some consensus about this",
+                    "french": "il y en à qui sont d'accord sur ce point",
                     "spanish": ""
                 },
                 {
-                    "english": "tolerance",
-                    "french": "tolérance",
+                    "english": "there is widespread agreement",
+                    "french": "tout le monde est d'accord sur le fait que",
                     "spanish": ""
                 },
                 {
-                    "english": "customs",
-                    "french": "coutumes",
+                    "english": "to agree to a proposal",
+                    "french": "accepter une proposition",
                     "spanish": ""
                 },
                 {
-                    "english": "customs",
-                    "french": "habitudes",
+                    "english": "to agree to do something",
+                    "french": "être d'accord pour faire quelque chose",
                     "spanish": ""
                 },
                 {
-                    "english": "spare time",
-                    "french": "temps libre",
+                    "english": "to agree with someone on something",
+                    "french": "être d'accord avec quelqu'un sur quelque chose",
                     "spanish": ""
                 },
                 {
-                    "english": "overseas",
-                    "french": "à l'étranger",
-                    "spanish": "",
-                    "comment": "not \"abroad\""
-                },
-                {
-                    "english": "abroad",
-                    "french": "à l'étranger",
-                    "spanish": "",
-                    "comment": "not \"overseas\""
-                },
-                {
-                    "english": "multicultural",
-                    "french": "multiculturel",
+                    "english": "to be at odds/at loggerheads with someone",
+                    "french": "être en désaccord avec quelqu'un",
                     "spanish": ""
                 },
                 {
-                    "english": "close",
-                    "french": "proche",
+                    "english": "to frown on something",
+                    "french": "désapprouver quelque chose",
                     "spanish": ""
                 },
                 {
-                    "english": "intimate",
-                    "french": "intime",
-                    "spanish": ""
-                },
-                {
-                    "english": "understanding",
-                    "french": "comprendre",
-                    "spanish": ""
-                },
-                {
-                    "english": "open-minded",
-                    "french": "ouvert d'esprit",
-                    "spanish": ""
-                },
-                {
-                    "english": "narrow-minded",
-                    "french": "fermé d'esprit",
-                    "spanish": ""
-                },
-                {
-                    "english": "different",
-                    "french": "différent",
-                    "spanish": ""
-                },
-                {
-                    "english": "aware",
-                    "french": "au courant",
-                    "spanish": ""
-                },
-                {
-                    "english": "rewarding",
-                    "french": "enrichissant",
-                    "spanish": ""
-                },
-                {
-                    "english": "meaningful",
-                    "french": "qui a du sens",
-                    "spanish": ""
-                },
-                {
-                    "english": "thrilling",
-                    "french": "exciting",
-                    "spanish": ""
-                },
-                {
-                    "english": "cultured",
-                    "french": "cultivé",
-                    "spanish": ""
-                },
-                {
-                    "english": "travel the world",
-                    "french": "voyager le monde",
-                    "spanish": ""
-                },
-                {
-                    "english": "backpack",
-                    "french": "voyager avec un sac à dos",
-                    "spanish": ""
-                },
-                {
-                    "english": "cross cultures",
-                    "french": "passer d'une culture à l'autre",
-                    "spanish": ""
-                },
-                {
-                    "english": "go sightseeing",
-                    "french": "faire du tourisme",
-                    "spanish": ""
-                },
-                {
-                    "english": "feel concerned",
-                    "french": "se sentir concerné",
-                    "spanish": ""
-                },
-                {
-                    "english": "get involved",
-                    "french": "être impliqué",
-                    "spanish": ""
-                },
-                {
-                    "english": "socialize",
-                    "french": "fréquenter des gens",
-                    "spanish": ""
-                },
-                {
-                    "english": "broaden one's horizons",
-                    "french": "élargir ses horizons",
-                    "spanish": ""
-                },
-                {
-                    "english": "be prejudiced",
-                    "french": "avoir des préjugés",
-                    "spanish": ""
-                },
-                {
-                    "english": "be on an equal footing",
-                    "french": "être sur un pied d'égalité",
-                    "spanish": ""
-                },
-                {
-                    "english": "share",
-                    "french": "partager",
-                    "spanish": ""
-                },
-                {
-                    "english": "bridge a gap",
-                    "french": "combler un fossé",
-                    "spanish": ""
-                },
-                {
-                    "english": "break",
-                    "french": "pause",
-                    "spanish": ""
-                },
-                {
-                    "english": "high school",
-                    "french": "lycée",
-                    "spanish": ""
-                },
-                {
-                    "english": "college",
-                    "french": "université",
-                    "spanish": ""
-                },
-                {
-                    "english": "originated",
-                    "french": "originaire",
-                    "spanish": ""
-                },
-                {
-                    "english": "experience",
-                    "french": "expérience",
-                    "spanish": ""
-                },
-                {
-                    "english": "mature",
-                    "french": "devenir mature",
-                    "spanish": ""
-                },
-                {
-                    "english": "figure out",
-                    "french": "déterminer",
-                    "spanish": ""
-                },
-                {
-                    "english": "take advantage of",
-                    "french": "profiter de",
-                    "spanish": ""
-                },
-                {
-                    "english": "constructive",
-                    "french": "constructif",
-                    "spanish": ""
-                },
-                {
-                    "english": "additional time",
-                    "french": "plus de temps",
-                    "spanish": ""
-                },
-                {
-                    "english": "save some money",
-                    "french": "mettre de l'argent de côté",
-                    "spanish": ""
-                },
-                {
-                    "english": "get right back into",
-                    "french": "revenir tout de suite dedans",
-                    "spanish": ""
-                },
-                {
-                    "english": "pros",
-                    "french": "avantages",
-                    "spanish": ""
-                },
-                {
-                    "english": "cons",
-                    "french": "inconvénients",
-                    "spanish": ""
-                },
-                {
-                    "english": "pros and cons",
-                    "french": "les avantages et les inconvénients",
-                    "spanish": ""
-                },
-                {
-                    "english": "weight",
-                    "french": "peser",
+                    "english": "to spurn the idea",
+                    "french": "rejeter l'idée de",
                     "spanish": ""
                 }
             ]
         },
         {
-            "name": "Philosophie - Antonyme",
+            "name": "Accusations Lentsh M1",
             "words": [
                 {
-                    "english": "absolu",
-                    "french": "relatif",
+                    "english": "he is not solely to blame for this",
+                    "french": "il n'est pas le seul responsable",
                     "spanish": ""
                 },
                 {
-                    "english": "abstrait",
-                    "french": "concret",
+                    "english": "he is partly to blame for this",
+                    "french": "il est en partie responsable",
                     "spanish": ""
                 },
                 {
-                    "english": "en acte",
-                    "french": "en puissance",
+                    "english": "they have no one to blame but themselves",
+                    "french": "ils ne peuvent s'en prendre qu'à eux mêmes",
                     "spanish": ""
                 },
                 {
-                    "english": "analyse",
-                    "french": "synthèse",
+                    "english": "to accuse someone of something",
+                    "french": "accuser quelqu'un de quelque chose",
                     "spanish": ""
                 },
                 {
-                    "english": "contingent",
-                    "french": "nécessaire",
+                    "english": "to charge someone with something",
+                    "french": "accuser quelqu'un de quelque chose",
                     "spanish": ""
                 },
                 {
-                    "english": "croire",
-                    "french": "savoir",
+                    "english": "to put/to pin the blame on someone",
+                    "french": "rejeter la responabilité sur quelqu'un",
                     "spanish": ""
                 },
                 {
-                    "english": "essentiel",
-                    "french": "accidentel",
+                    "english": "to rebut/reflect accusations",
+                    "french": "rejeter des accusations",
                     "spanish": ""
                 },
                 {
-                    "english": "exemple",
-                    "french": "preuve",
-                    "spanish": ""
-                },
-                {
-                    "english": "expliquer",
-                    "french": "comprendre",
-                    "spanish": ""
-                },
-                {
-                    "english": "en fait",
-                    "french": "en droit",
-                    "spanish": ""
-                },
-                {
-                    "english": "formel",
-                    "french": "matériel",
-                    "spanish": ""
-                },
-                {
-                    "english": "idéal",
-                    "french": "réel",
-                    "spanish": ""
-                },
-                {
-                    "english": "impossible",
-                    "french": "possible",
-                    "spanish": ""
-                },
-                {
-                    "english": "intuitif",
-                    "french": "discursif",
-                    "spanish": ""
-                },
-                {
-                    "english": "légal",
-                    "french": "légitime",
-                    "spanish": ""
-                },
-                {
-                    "english": "médiat",
-                    "french": "immédiat",
-                    "spanish": ""
-                },
-                {
-                    "english": "obligation",
-                    "french": "contrainte",
-                    "spanish": ""
-                },
-                {
-                    "english": "origine",
-                    "french": "fondement",
-                    "spanish": ""
-                },
-                {
-                    "english": "persuader",
-                    "french": "convaincre",
-                    "spanish": ""
-                },
-                {
-                    "english": "public",
-                    "french": "privé",
-                    "spanish": ""
-                },
-                {
-                    "english": "ressemblance",
-                    "french": "analogie",
-                    "spanish": ""
-                },
-                {
-                    "english": "théorie",
-                    "french": "pratique",
-                    "spanish": ""
-                },
-                {
-                    "english": "transcendant",
-                    "french": "immanent",
-                    "spanish": ""
-                },
-                {
-                    "english": "vrai",
-                    "french": "probable/certain",
-                    "spanish": ""
-                },
-                {
-                    "english": "universel/général",
-                    "french": "particulier/singulier",
-                    "spanish": ""
-                },
-                {
-                    "english": "objectif",
-                    "french": "subjectif/intersubjectif",
-                    "spanish": ""
-                },
-                {
-                    "english": "identité/égalité",
-                    "french": "différence",
-                    "spanish": ""
-                },
-                {
-                    "english": "principe/cause",
-                    "french": "fin",
-                    "spanish": ""
-                },
-                {
-                    "english": "hypothèse",
-                    "french": "conséquence/conclusion",
-                    "spanish": ""
-                },
-                {
-                    "english": "genre/espèce",
-                    "french": "individu",
-                    "spanish": ""
-                },
-                {
-                    "english": "concept",
-                    "french": "image/métaphore",
+                    "english": "to shrug off allegations",
+                    "french": "réfuter des accusations",
                     "spanish": ""
                 }
             ]
         },
         {
-            "name": "Innovaciones Cientifica y Responsibilidad",
+            "name": "Buts Objectifs Lensh M1",
             "words": [
                 {
-                    "english": "",
-                    "french": "l'agriculture",
-                    "spanish": "la agricultura"
+                    "english": "a means to an end",
+                    "french": "un moyen pour parvenir à une fin",
+                    "spanish": ""
                 },
                 {
-                    "english": "",
-                    "french": "l'agriculture verticale",
-                    "spanish": "la agricultura vertical"
+                    "english": "to pursue objectives",
+                    "french": "poursuivre des objectifs",
+                    "spanish": ""
                 },
                 {
-                    "english": "",
-                    "french": "des aliments de saison",
-                    "spanish": "alimentos de temporada"
-                },
-                {
-                    "english": "",
-                    "french": "le bénéfice",
-                    "spanish": "el beneficio"
-                },
-                {
-                    "english": "",
-                    "french": "le gain",
-                    "spanish": "la ganancia"
-                },
-                {
-                    "english": "",
-                    "french": "le bien-être",
-                    "spanish": "el bienestar"
-                },
-                {
-                    "english": "",
-                    "french": "le boycott",
-                    "spanish": "el boicot"
-                },
-                {
-                    "english": "",
-                    "french": "le circuit court",
-                    "spanish": "el circuito corto"
-                },
-                {
-                    "english": "",
-                    "french": "les couloirs verts",
-                    "spanish": "los corredores verdes"
-                },
-                {
-                    "english": "",
-                    "french": "les déchets",
-                    "spanish": "los desechos/los residuos"
-                },
-                {
-                    "english": "",
-                    "french": "le défi",
-                    "spanish": "el desafío/el reto"
-                },
-                {
-                    "english": "",
-                    "french": "le dévelopement",
-                    "spanish": "el desarrollo"
-                },
-                {
-                    "english": "",
-                    "french": "le domaine",
-                    "spanish": "el ámbito"
-                },
-                {
-                    "english": "",
-                    "french": "durable",
-                    "spanish": "sostenible"
-                },
-                {
-                    "english": "",
-                    "french": "écocitoyen",
-                    "spanish": "ecociudadano"
-                },
-                {
-                    "english": "",
-                    "french": "écologique",
-                    "spanish": "ecológico"
-                },
-                {
-                    "english": "",
-                    "french": "efficace",
-                    "spanish": "eficiente/eficaz"
-                },
-                {
-                    "english": "",
-                    "french": "l'effet de serre",
-                    "spanish": "el efecto invernadero"
-                },
-                {
-                    "english": "",
-                    "french": "les embouteillages",
-                    "spanish": "los astascos"
-                },
-                {
-                    "english": "",
-                    "french": "l'efficacité",
-                    "spanish": "la eficienca"
-                },
-                {
-                    "english": "",
-                    "french": "les énergies renouvelables",
-                    "spanish": "las energías renovables"
-                },
-                {
-                    "english": "",
-                    "french": "l'engagement/l'obstination",
-                    "spanish": "el empeño"
-                },
-                {
-                    "english": "",
-                    "french": "fermés et isolés",
-                    "spanish": "cerrados y aislados"
-                },
-                {
-                    "english": "",
-                    "french": "fini le plastique !",
-                    "spanish": "¡no más plástico!"
-                },
-                {
-                    "english": "",
-                    "french": "le future",
-                    "spanish": "el porvenir/el futuro"
-                },
-                {
-                    "english": "",
-                    "french": "le gaspillage",
-                    "spanish": "el desperdicio"
-                },
-                {
-                    "english": "",
-                    "french": "l'environnement",
-                    "spanish": "el medio ambiente"
-                },
-                {
-                    "english": "",
-                    "french": "l'environnement naturel",
-                    "spanish": "el entorno natural"
-                },
-                {
-                    "english": "",
-                    "french": "environnemental",
-                    "spanish": "ambiental"
-                },
-                {
-                    "english": "",
-                    "french": "la façade",
-                    "spanish": "la fachada"
-                },
-                {
-                    "english": "",
-                    "french": "grâce à",
-                    "spanish": "au moyen de/mediante"
-                },
-                {
-                    "english": "",
-                    "french": "le lit",
-                    "spanish": "el cauce",
-                    "comment": "de rivière"
-                },
-                {
-                    "english": "",
-                    "french": "la mairie",
-                    "spanish": "el ayuntamiento"
-                },
-                {
-                    "english": "",
-                    "french": "la nouveauté",
-                    "spanish": "la novedad"
-                },
-                {
-                    "english": "",
-                    "french": "l'objectif",
-                    "spanish": "el objetivo"
-                },
-                {
-                    "english": "",
-                    "french": "l'outil",
-                    "spanish": "la herramienta"
-                },
-                {
-                    "english": "",
-                    "french": "le pollueur",
-                    "spanish": "el contaminante"
-                },
-                {
-                    "english": "",
-                    "french": "le progrès",
-                    "spanish": "el adelanto"
-                },
-                {
-                    "english": "",
-                    "french": "la qualité de vie",
-                    "spanish": "la calidad de vida"
-                },
-                {
-                    "english": "",
-                    "french": "le remède",
-                    "spanish": "la cura/el remedio"
-                },
-                {
-                    "english": "",
-                    "french": "les ressources",
-                    "spanish": "los recursos"
-                },
-                {
-                    "english": "",
-                    "french": "la terrasse",
-                    "spanish": "la azotea",
-                    "comment": "sur les toits"
-                },
-                {
-                    "english": "",
-                    "french": "l'usager",
-                    "spanish": "el usario"
-                },
-                {
-                    "english": "",
-                    "french": "la ville durable",
-                    "spanish": "la urbe sostenible"
-                },
-                {
-                    "english": "",
-                    "french": "ville",
-                    "spanish": "ciudad",
-                    "comment": "Pas urbe"
-                },
-                {
-                    "english": "",
-                    "french": "ville",
-                    "spanish": "urbe",
-                    "comment": "Pas ciudad"
-                },
-                {
-                    "english": "",
-                    "french": "avoir du succès",
-                    "spanish": "tener éxito/sobresalir"
-                },
-                {
-                    "english": "",
-                    "french": "bouger",
-                    "spanish": "moverse"
-                },
-                {
-                    "english": "",
-                    "french": "de déplacer",
-                    "spanish": "desplazarse/circular/acceder"
-                },
-                {
-                    "english": "",
-                    "french": "consommer",
-                    "spanish": "consumir"
-                },
-                {
-                    "english": "",
-                    "french": "encourager",
-                    "spanish": "fomentar"
-                },
-                {
-                    "english": "",
-                    "french": "essayer",
-                    "spanish": "probar"
-                },
-                {
-                    "english": "",
-                    "french": "inciter",
-                    "spanish": "impulsar"
-                },
-                {
-                    "english": "",
-                    "french": "lutter contre la pollution",
-                    "spanish": "luchar contra la contaminación"
-                },
-                {
-                    "english": "",
-                    "french": "nuire",
-                    "spanish": "dañar"
-                },
-                {
-                    "english": "",
-                    "french": "obtenir",
-                    "spanish": "conseguir"
-                },
-                {
-                    "english": "",
-                    "french": "endommager",
-                    "spanish": "dañar"
-                },
-                {
-                    "english": "",
-                    "french": "réussir",
-                    "spanish": "conseguir"
-                },
-                {
-                    "english": "",
-                    "french": "prouver",
-                    "spanish": "probar"
-                },
-                {
-                    "english": "",
-                    "french": "favoriser",
-                    "spanish": "fomentar"
-                },
-                {
-                    "english": "",
-                    "french": "prendre soin de",
-                    "spanish": "cuidar"
-                },
-                {
-                    "english": "",
-                    "french": "préserver",
-                    "spanish": "preservar"
-                },
-                {
-                    "english": "",
-                    "french": "restaurer",
-                    "spanish": "restaurar"
-                },
-                {
-                    "english": "",
-                    "french": "réhabiliter",
-                    "spanish": "rehabilitar"
-                },
-                {
-                    "english": "",
-                    "french": "rechercher",
-                    "spanish": "indagar"
-                },
-                {
-                    "english": "",
-                    "french": "réduire",
-                    "spanish": "disminuir",
-                    "comment": "Pas reducir"
-                },
-                {
-                    "english": "",
-                    "french": "réduire",
-                    "spanish": "reducir",
-                    "comment": "Pas disminuir"
-                },
-                {
-                    "english": "",
-                    "french": "remplacer",
-                    "spanish": "reemplazar"
-                },
-                {
-                    "english": "",
-                    "french": "sauver des espèces en voie d'extinction",
-                    "spanish": "salvar especies en vía de extinción"
-                },
-                {
-                    "english": "",
-                    "french": "sensibiliser",
-                    "spanish": "sensibilizar"
+                    "english": "to set clear goals/targets",
+                    "french": "fixer des objectifs clairs",
+                    "spanish": ""
                 }
             ]
         },
         {
-            "name": "EE - Formulations",
+            "name": "Comparaisons Lentsh M1",
             "words": [
                 {
-                    "english": "",
-                    "french": "d'abord",
-                    "spanish": "primero"
-                },
-                {
-                    "english": "",
-                    "french": "luego",
-                    "spanish": "ensuite"
-                },
-                {
-                    "english": "",
-                    "french": "enfin",
-                    "spanish": "para terminar"
-                },
-                {
-                    "english": "",
-                    "french": "en premier lieu",
-                    "spanish": "en primer lugar"
-                },
-                {
-                    "english": "",
-                    "french": "en second lieu",
-                    "spanish": "en segundo lugar"
-                },
-                {
-                    "english": "",
-                    "french": "d'une part",
-                    "spanish": "por una parte"
-                },
-                {
-                    "english": "",
-                    "french": "d'autre part",
-                    "spanish": "por otra parte"
-                },
-                {
-                    "english": "",
-                    "french": "pour conclure",
-                    "spanish": "para concluir"
-                },
-                {
-                    "english": "",
-                    "french": "en fin de compte",
-                    "spanish": "al fin y al cabo"
-                },
-                {
-                    "english": "",
-                    "french": "de même",
-                    "spanish": "asimismo"
-                },
-                {
-                    "english": "",
-                    "french": "de plus",
-                    "spanish": "además"
-                },
-                {
-                    "english": "",
-                    "french": "pour ce qui est de",
-                    "spanish": "en cuanto a"
-                },
-                {
-                    "english": "",
-                    "french": "y compris",
-                    "spanish": "incluso"
-                },
-                {
-                    "english": "",
-                    "french": "aussi",
-                    "spanish": "también"
-                },
-                {
-                    "english": "",
-                    "french": "par contre/en revanche",
-                    "spanish": "en cambio"
-                },
-                {
-                    "english": "",
-                    "french": "ceci dit",
-                    "spanish": "ahora bien"
-                },
-                {
-                    "english": "",
+                    "english": "by contrast/conversely",
                     "french": "au contraire",
-                    "spanish": "al contrario"
-                },
-                {
-                    "english": "",
-                    "french": "excepté",
-                    "spanish": "excepto"
-                },
-                {
-                    "english": "",
-                    "french": "sauf",
-                    "spanish": "salvo"
-                },
-                {
-                    "english": "",
-                    "french": "à moins que",
-                    "spanish": "a no ser que + subjonctif"
-                },
-                {
-                    "english": "",
-                    "french": "alors que",
-                    "spanish": "mientras que"
-                },
-                {
-                    "english": "",
-                    "french": "si cela se trouve",
-                    "spanish": "igual + indicatif"
-                },
-                {
-                    "english": "",
-                    "french": "peut être que",
-                    "spanish": "quizás/quizá/acaso/tal vez + subjonctif"
-                },
-                {
-                    "english": "",
-                    "french": "apparemment",
-                    "spanish": "por lo visto"
-                },
-                {
-                    "english": "",
-                    "french": "il se peut que",
-                    "spanish": "puede (ser) que"
-                },
-                {
-                    "english": "",
-                    "french": "j'imagine que",
-                    "spanish": "imagino que"
-                },
-                {
-                    "english": "",
-                    "french": "je suppose que",
-                    "spanish": "supongo que"
-                },
-                {
-                    "english": "",
-                    "french": "on peut supposer que",
-                    "spanish": "se puede suponer que"
-                },
-                {
-                    "english": "",
-                    "french": "en supposant que",
-                    "spanish": "suponiendo que"
-                },
-                {
-                    "english": "",
-                    "french": "pour que",
-                    "spanish": "para que + subjonctif"
-                },
-                {
-                    "english": "",
-                    "french": "de sorte que",
-                    "spanish": "de modo que"
-                },
-                {
-                    "english": "",
-                    "french": "ainsi",
-                    "spanish": "así que"
-                },
-                {
-                    "english": "",
-                    "french": "alors",
-                    "spanish": "entonces"
-                },
-                {
-                    "english": "",
-                    "french": "pour cela",
-                    "spanish": "por eso"
-                },
-                {
-                    "english": "",
-                    "french": "étant donné que",
-                    "spanish": "dado que"
-                },
-                {
-                    "english": "",
-                    "french": "en fait",
-                    "spanish": "de hecho"
-                },
-                {
-                    "english": "",
-                    "french": "puisque",
-                    "spanish": "ya que/puesto que"
-                },
-                {
-                    "english": "",
-                    "french": "parce que",
-                    "spanish": "porque"
-                },
-                {
-                    "english": "",
-                    "french": "du fait que",
-                    "spanish": "debido a que"
-                },
-                {
-                    "english": "",
-                    "french": "à l'occasion de",
-                    "spanish": "con motivo de"
-                },
-                {
-                    "english": "",
-                    "french": "grâce à",
-                    "spanish": "gracias a"
-                },
-                {
-                    "english": "",
-                    "french": "c'est-à-dire",
-                    "spanish": "es decir/o sea"
-                },
-                {
-                    "english": "",
-                    "french": "d'ailleurs",
-                    "spanish": "por cierto"
-                },
-                {
-                    "english": "",
-                    "french": "dans la mesure où",
-                    "spanish": "en la medida en que"
-                },
-                {
-                    "english": "",
-                    "french": "plutôt/plus exactement",
-                    "spanish": "mejor dicho"
-                },
-                {
-                    "english": "",
-                    "french": "autrement dit",
-                    "spanish": "dicho de otra manera"
-                },
-                {
-                    "english": "",
-                    "french": "soit... soit...",
-                    "spanish": "sea... sea..."
-                },
-                {
-                    "english": "",
-                    "french": "ainsi",
-                    "spanish": "así"
-                },
-                {
-                    "english": "",
-                    "french": "l'un comme l'autre",
-                    "spanish": "tanto el uno como el otro"
-                },
-                {
-                    "english": "",
-                    "french": "à la différence de",
-                    "spanish": "a diferencia de"
-                },
-                {
-                    "english": "",
-                    "french": "en tout cas",
-                    "spanish": "en cualquier cosa"
-                },
-                {
-                    "english": "",
-                    "french": "d'autant plus que",
-                    "spanish": "tanto más cuanto que"
-                },
-                {
-                    "english": "",
-                    "french": "d'autant plus que",
-                    "spanish": "tanto más cuanto"
-                },
-                {
-                    "english": "",
-                    "french": "bien que",
-                    "spanish": "aunque + indicatif"
-                },
-                {
-                    "english": "",
-                    "french": "même si",
-                    "spanish": "aunque + subjonctif"
-                },
-                {
-                    "english": "",
-                    "french": "bien que",
-                    "spanish": "a pesar de que + indicatif"
-                },
-                {
-                    "english": "",
-                    "french": "cependant",
-                    "spanish": "sin embargo"
-                },
-                {
-                    "english": "",
-                    "french": "néanmoins",
-                    "spanish": "no obstante"
-                },
-                {
-                    "english": "",
-                    "french": "malgré/en dépit de",
-                    "spanish": "a pesar de/pese a"
-                },
-                {
-                    "english": "",
-                    "french": "je crois que",
-                    "spanish": "opino que"
-                },
-                {
-                    "english": "",
-                    "french": "il est évident que",
-                    "spanish": "resulta evidente que"
-                },
-                {
-                    "english": "",
-                    "french": "il est évident que",
-                    "spanish": "es evidente que"
-                },
-                {
-                    "english": "",
-                    "french": "à dire vrai",
-                    "spanish": "a decir verdad"
-                },
-                {
-                    "english": "",
-                    "french": "à mon avis",
-                    "spanish": "en mi opinión"
-                },
-                {
-                    "english": "",
-                    "french": "à mon avis",
-                    "spanish": "me parece que/a mi parecer"
-                },
-                {
-                    "english": "",
-                    "french": "pour moi",
-                    "spanish": "para mí"
-                },
-                {
-                    "english": "",
-                    "french": "il est certain que",
-                    "spanish": "es cierto que"
-                },
-                {
-                    "english": "",
-                    "french": "je suis convaincu(e) que",
-                    "spanish": "estoy convencido/a de que"
-                },
-                {
-                    "english": "",
-                    "french": "c'est bien/mal",
-                    "spanish": "es una buena/mala cosa"
-                },
-                {
-                    "english": "",
-                    "french": "ce qui m'émeut le plus",
-                    "spanish": "lo que más me conmueve/emociona"
-                },
-                {
-                    "english": "",
-                    "french": "je ne suis pas d'accord avec toi/avec vous parce que",
-                    "spanish": "no estoy de acuerdo contigo/con usted porque"
-                },
-                {
-                    "english": "",
-                    "french": "je suis contre",
-                    "spanish": "estoy en contra de"
-                },
-                {
-                    "english": "",
-                    "french": "je suis pour",
-                    "spanish": "estoy a favor de"
-                },
-                {
-                    "english": "",
-                    "french": "je ne partage (pas du tout) ton/votre opinion vu que",
-                    "spanish": "no comparto (en absoluto) tu/su opinión ya que"
-                },
-                {
-                    "english": "",
-                    "french": "d'habitude",
-                    "spanish": "generalmente/usualmente"
-                },
-                {
-                    "english": "",
-                    "french": "normalement",
-                    "spanish": "normalmente"
-                },
-                {
-                    "english": "",
-                    "french": "comme on a l'habitude de",
-                    "spanish": "como se suele + infinitif"
-                },
-                {
-                    "english": "",
-                    "french": "ce que j'aime",
-                    "spanish": "lo que me gusta"
-                },
-                {
-                    "english": "",
-                    "french": "ce qui m'amuse",
-                    "spanish": "lo que me hace gracia"
-                },
-                {
-                    "english": "",
-                    "french": "ce qui est agréable",
-                    "spanish": "lo agradable"
-                },
-                {
-                    "english": "",
-                    "french": "ce qui m'intéresse",
-                    "spanish": "lo que me interesa"
-                },
-                {
-                    "english": "",
-                    "french": "j'adore",
-                    "spanish": "me encanta"
-                },
-                {
-                    "english": "",
-                    "french": "ce qui est incroyable",
-                    "spanish": "lo incríble"
-                },
-                {
-                    "english": "",
-                    "french": "cela semble incroyable de",
-                    "spanish": "parece increíble/mentira que + subj"
-                },
-                {
-                    "english": "",
-                    "french": "il est difficile de croire que",
-                    "spanish": "cuesta creer que + subj"
-                },
-                {
-                    "english": "",
-                    "french": "il est surprenant de",
-                    "spanish": "es sorprendente"
-                },
-                {
-                    "english": "",
-                    "french": "le plus impressionnant de tout",
-                    "spanish": "le más impresionante de todo"
-                },
-                {
-                    "english": "",
-                    "french": "ce qui est triste dans cette histoire c'est que",
-                    "spanish": "lo triste del caso es que"
-                },
-                {
-                    "english": "",
-                    "french": "cela me déplaît",
-                    "spanish": "me disgusta"
-                },
-                {
-                    "english": "",
-                    "french": "cela me gêne de",
-                    "spanish": "me molesta"
-                },
-                {
-                    "english": "",
-                    "french": "je ne peux admettre de",
-                    "spanish": "no puedo admitir"
-                },
-                {
-                    "english": "",
-                    "french": "cela m'indigne de/je suis indigné",
-                    "spanish": "me indigna"
-                },
-                {
-                    "english": "",
-                    "french": "il est inadmissible que",
-                    "spanish": "es inadmisible que + subjonctif"
-                }
-            ]
-        },
-        {
-            "name": "South Africa Key Dates",
-            "words": [
-                {
-                    "english": "1488",
-                    "french": "discovery cape of good hope",
                     "spanish": ""
                 },
                 {
-                    "english": "1652",
-                    "french": "first dutch ettlers from holland",
+                    "english": "by the same token",
+                    "french": "de même",
                     "spanish": ""
                 },
                 {
-                    "english": "1948",
-                    "french": "instauration of apartheid",
+                    "english": "in the wake of",
+                    "french": "dans le sillage de",
                     "spanish": ""
                 },
                 {
-                    "english": "1948",
-                    "french": "right wing extremists won election.",
+                    "english": "only in a few odd cases",
+                    "french": "seulement dans quelques cas isolés",
                     "spanish": ""
                 },
                 {
-                    "english": "1960",
-                    "french": "sharpeville incident. police opened fire on a demonstration against the pass-law. 69 demonstrators killed.",
+                    "english": "other things being equal",
+                    "french": "toutes choses égales par ailleurs",
                     "spanish": ""
                 },
                 {
-                    "english": "1964",
-                    "french": "nelson mandela imprisoned (life sentence)",
+                    "english": "similar to",
+                    "french": "semblable à",
                     "spanish": ""
                 },
                 {
-                    "english": "1980-1990",
-                    "french": "end of many unfair acts under growing international pressure.",
+                    "english": "that aside",
+                    "french": "cela mis à part",
                     "spanish": ""
                 },
                 {
-                    "english": "1990",
-                    "french": "nelson mandela released by f.w. de klerk.",
+                    "english": "the reverse",
+                    "french": "le contraire",
                     "spanish": ""
                 },
                 {
-                    "english": "1994",
-                    "french": "mandela elected president.",
+                    "english": "there is a distinction to be drawn between",
+                    "french": "il faut faire une différence entre",
+                    "spanish": ""
+                },
+                {
+                    "english": "to set like against like",
+                    "french": "comparer ce qui est comparable",
+                    "spanish": ""
+                },
+                {
+                    "english": "with one glaring exception",
+                    "french": "hormis un cas remarquable",
                     "spanish": ""
                 }
             ]
         },
         {
-            "name": "ENGLISH - Voc Apartheid",
+            "name": "Compromis",
             "words": [
                 {
-                    "english": "bantustans",
-                    "french": "bantoustans",
+                    "english": "there must be a certain amount of give and take",
+                    "french": "il faut faire un minimum de concessions",
                     "spanish": ""
                 },
                 {
-                    "english": "crumbled",
-                    "french": "en miettes",
+                    "english": "to adopt a tough stance",
+                    "french": "être intransigeant",
                     "spanish": ""
                 },
                 {
-                    "english": "citizenship",
-                    "french": "citoyenneté",
+                    "english": "to be adamant about",
+                    "french": "être intransigeant sur",
                     "spanish": ""
                 },
                 {
-                    "english": "democracy",
-                    "french": "démocratie",
+                    "english": "to be susceptible of explanations",
+                    "french": "cela peut s'expliquer",
                     "spanish": ""
                 },
                 {
-                    "english": "equality",
-                    "french": "égalité",
+                    "english": "to be susceptible to do something",
+                    "french": "être suceptible de faire quelque chose",
                     "spanish": ""
                 },
                 {
-                    "english": "reconciliation",
-                    "french": "réconciliation",
+                    "english": "to be willing to do something",
+                    "french": "être disposé à faire quelque chose",
                     "spanish": ""
                 },
                 {
-                    "english": "establishment",
-                    "french": "établissement",
+                    "english": "to paper over/gloss over differences",
+                    "french": "ne pas tenir compte des divergens de point de vue",
                     "spanish": ""
                 },
                 {
-                    "english": "inégalité",
-                    "french": "inequality",
-                    "spanish": ""
-                },
-                {
-                    "english": "political regime",
-                    "french": "régime politique",
-                    "spanish": ""
-                },
-                {
-                    "english": "segregation",
-                    "french": "ségrégation",
-                    "spanish": ""
-                },
-                {
-                    "english": "unfairness",
-                    "french": "injustice",
-                    "spanish": ""
-                },
-                {
-                    "english": "coloured people",
-                    "french": "gens de couleur",
-                    "spanish": ""
-                },
-                {
-                    "english": "mixed-race people",
-                    "french": "métis",
-                    "spanish": ""
-                },
-                {
-                    "english": "minority",
-                    "french": "minorité",
-                    "spanish": ""
-                },
-                {
-                    "english": "privileged",
-                    "french": "privilégié",
-                    "spanish": ""
-                },
-                {
-                    "english": "underprivileged",
-                    "french": "défavorisé",
-                    "spanish": ""
-                },
-                {
-                    "english": "downtown",
-                    "french": "centre ville",
-                    "spanish": ""
-                },
-                {
-                    "english": "exclusive neighbourhood",
-                    "french": "quartier exclusif",
-                    "spanish": ""
-                },
-                {
-                    "english": "shack = tin hut",
-                    "french": "cabane en tôle",
-                    "spanish": ""
-                },
-                {
-                    "english": "suburbs",
-                    "french": "banlieue",
-                    "spanish": ""
-                },
-                {
-                    "english": "township = slum",
-                    "french": "bidonville",
-                    "spanish": ""
-                },
-                {
-                    "english": "fee",
-                    "french": "frais",
-                    "spanish": ""
-                },
-                {
-                    "english": "registration",
-                    "french": "enregistrement",
-                    "spanish": ""
-                },
-                {
-                    "english": "scholarship",
-                    "french": "bourse d'étude",
-                    "spanish": ""
-                },
-                {
-                    "english": "well-educated elite",
-                    "french": "élite bien éduquée",
-                    "spanish": ""
-                },
-                {
-                    "english": "have access to",
-                    "french": "avoir accès à",
-                    "spanish": ""
-                },
-                {
-                    "english": "demonstrate = protest",
-                    "french": "manifester = protester",
-                    "spanish": ""
-                },
-                {
-                    "english": "denounce",
-                    "french": "dénoncer",
-                    "spanish": ""
-                },
-                {
-                    "english": "fight for",
-                    "french": "se battre pour",
-                    "spanish": ""
-                },
-                {
-                    "english": "stand up for/against",
-                    "french": "se lever pour/contre",
-                    "spanish": ""
-                },
-                {
-                    "english": "take a stand for/against",
-                    "french": "prendre position pour/contre",
-                    "spanish": ""
-                },
-                {
-                    "english": "low-income",
-                    "french": "faible revenu",
-                    "spanish": ""
-                },
-                {
-                    "english": "low-paid jobs",
-                    "french": "faible revenu",
-                    "spanish": ""
-                },
-                {
-                    "english": "poverty",
-                    "french": "pauvreté",
-                    "spanish": ""
-                },
-                {
-                    "english": "unemployment",
-                    "french": "chômage",
-                    "spanish": ""
-                },
-                {
-                    "english": "wealth",
-                    "french": "richesse",
-                    "spanish": ""
-                },
-                {
-                    "english": "bribery = corruption",
-                    "french": "pots-de-vin = corruption",
-                    "spanish": ""
-                },
-                {
-                    "english": "politician",
-                    "french": "politicien",
-                    "spanish": ""
-                },
-                {
-                    "english": "democratically elected",
-                    "french": "élu démocratiquement",
-                    "spanish": ""
-                },
-                {
-                    "english": "abolish",
-                    "french": "abolir",
-                    "spanish": ""
-                },
-                {
-                    "english": "re-establish = restore",
-                    "french": "rétablir = restaurer",
-                    "spanish": ""
-                },
-                {
-                    "english": "build a new identity",
-                    "french": "construire une nouvelle identité",
-                    "spanish": ""
-                },
-                {
-                    "english": "carry on one's dream",
-                    "french": "poursuivre son rêve",
-                    "spanish": ""
-                },
-                {
-                    "english": "found a unified nation",
-                    "french": "fonder une nation unifiée",
-                    "spanish": ""
-                },
-                {
-                    "english": "heal the nation",
-                    "french": "guérir la nation",
-                    "spanish": ""
-                },
-                {
-                    "english": "hope for a better future",
-                    "french": "espérer un avenir meilleur",
-                    "spanish": ""
-                },
-                {
-                    "english": "turn the page",
-                    "french": "tourner la page",
-                    "spanish": ""
-                },
-                {
-                    "english": "riot",
-                    "french": "émeute",
-                    "spanish": ""
-                },
-                {
-                    "english": "claim",
-                    "french": "revendiquer",
-                    "spanish": ""
-                },
-                {
-                    "english": "struggle",
-                    "french": "lutter",
-                    "spanish": ""
-                },
-                {
-                    "english": "get committed",
-                    "french": "s'engager",
-                    "spanish": ""
-                },
-                {
-                    "english": "urge",
-                    "french": "exhorter",
-                    "spanish": ""
-                },
-                {
-                    "english": "salary",
-                    "french": "salaire",
-                    "spanish": ""
-                },
-                {
-                    "english": "neighbourhood",
-                    "french": "quartier",
-                    "spanish": ""
-                },
-                {
-                    "english": "grants",
-                    "french": "subventions",
-                    "spanish": ""
-                },
-                {
-                    "english": "lack of equality",
-                    "french": "manque d'égalité",
-                    "spanish": ""
-                },
-                {
-                    "english": "vote",
-                    "french": "voter",
-                    "spanish": ""
-                },
-                {
-                    "english": "claim",
-                    "french": "réclamer",
-                    "spanish": ""
-                },
-                {
-                    "english": "election",
-                    "french": "élection",
-                    "spanish": ""
-                },
-                {
-                    "english": "democratic",
-                    "french": "démocratique",
-                    "spanish": ""
-                },
-                {
-                    "english": "law",
-                    "french": "loi",
-                    "spanish": ""
-                },
-                {
-                    "english": "tag",
-                    "french": "étiqueter",
-                    "spanish": ""
-                },
-                {
-                    "english": "regime",
-                    "french": "régime",
-                    "spanish": ""
-                },
-                {
-                    "english": "exhibition",
-                    "french": "exposition",
-                    "spanish": ""
-                },
-                {
-                    "english": "influencer",
-                    "french": "influenceur",
-                    "spanish": ""
-                },
-                {
-                    "english": "inspiring",
-                    "french": "inspirant",
-                    "spanish": ""
-                },
-                {
-                    "english": "politician",
-                    "french": "politicien",
-                    "spanish": ""
-                },
-                {
-                    "english": "artist",
-                    "french": "artiste",
+                    "english": "you can't have it both ways",
+                    "french": "on ne peut pas tout avoir",
                     "spanish": ""
                 }
             ]
         },
         {
-            "name": "espagnol vendredi 14",
+            "name": "Critiques",
             "words": [
                 {
-                    "english": "",
-                    "french": "",
-                    "spanish": "la faute"
-                },
-                {
-                    "english": "",
-                    "french": "la culpa",
-                    "spanish": "la nudité"
-                },
-                {
-                    "english": "",
-                    "french": "la desnudez",
-                    "spanish": "l'hommage"
-                },
-                {
-                    "english": "",
-                    "french": "el homenaje",
-                    "spanish": "l'oubli"
-                },
-                {
-                    "english": "",
-                    "french": "el olvido",
-                    "spanish": "le souvenir"
-                },
-                {
-                    "english": "",
-                    "french": "el recuerdo",
-                    "spanish": "supposer"
-                },
-                {
-                    "english": "",
-                    "french": "asumir",
-                    "spanish": "changer de sujet"
-                },
-                {
-                    "english": "",
-                    "french": "cambiar de tema",
-                    "spanish": "accorder"
-                },
-                {
-                    "english": "",
-                    "french": "conceder",
-                    "spanish": "être en faveur"
-                },
-                {
-                    "english": "",
-                    "french": "estar a favor",
-                    "spanish": "être contre"
-                },
-                {
-                    "english": "",
-                    "french": "estar en contra",
-                    "spanish": "éviter"
-                },
-                {
-                    "english": "",
-                    "french": "evitar",
-                    "spanish": "jouer les ignorants"
-                },
-                {
-                    "english": "",
-                    "french": "hacerse el desentendido",
-                    "spanish": "imposer"
-                },
-                {
-                    "english": "",
-                    "french": "imponer",
-                    "spanish": "accorder"
-                }
-            ]
-        },
-        {
-            "name": "Histoire - Seconde Guerre Mondiale",
-            "words": [
-                {
-                    "english": "1 septembre 1939",
-                    "french": "invasion de la pologne par l'allemagne et l'urss. déclaration de gueerre de la france.",
+                    "english": "a bogus argument",
+                    "french": "un argument sans valeur",
                     "spanish": ""
                 },
                 {
-                    "english": "10 mai 1940",
-                    "french": "offensive allemande sur la france",
+                    "english": "a misconception",
+                    "french": "une idée recue",
                     "spanish": ""
                 },
                 {
-                    "english": "22 juin 1940",
-                    "french": "armistice signé, défaite et fin des combats",
+                    "english": "a sweeping statement",
+                    "french": "une déclaration radicale",
                     "spanish": ""
                 },
                 {
-                    "english": "22 juin 1940",
-                    "french": "offensive allemande sur l'urss",
+                    "english": "in the teeth of",
+                    "french": "en dépit de",
                     "spanish": ""
                 },
                 {
-                    "english": "2 février 1943",
-                    "french": "défaite à stalingrad. fin de l'avancée allemande en europe",
+                    "english": "invidious",
+                    "french": "injuste, déplaisant",
                     "spanish": ""
                 },
                 {
-                    "english": "7 décembre 1941",
-                    "french": "entrée en guerre des états-unis",
+                    "english": "it is time the myth was dispelled",
+                    "french": "il est temps de dénoncer des idées reçues",
                     "spanish": ""
                 },
                 {
-                    "english": "8 mai 1945",
-                    "french": "capitulation allemande",
+                    "english": "notwithstanding the objections",
+                    "french": "en dépit des objections",
                     "spanish": ""
                 },
                 {
-                    "english": "6 aout 1945",
-                    "french": "bombe atomique hiroshima",
+                    "english": "overblown",
+                    "french": "excessif",
                     "spanish": ""
                 },
                 {
-                    "english": "2 septembre 1945",
-                    "french": "capitulation du japon",
+                    "english": "snide comments",
+                    "french": "commentaires sarcastiques",
                     "spanish": ""
                 },
                 {
-                    "english": "1939-1940",
-                    "french": "programme t4 : euthanasier handicapées",
+                    "english": "this is wishful thinking",
+                    "french": "prendre ses désirs pour des réalités",
                     "spanish": ""
                 },
                 {
-                    "english": "1941",
-                    "french": "einsatzgruppen en urss pour éxecuter par balle juifs et communistes",
+                    "english": "to lie outside the scope of",
+                    "french": "être hors-sujet",
                     "spanish": ""
                 },
                 {
-                    "english": "1942-1944",
-                    "french": "camps d'extermination",
+                    "english": "to misconstrue",
+                    "french": "mal interpréter",
                     "spanish": ""
                 },
                 {
-                    "english": "14 juin 1940",
-                    "french": "offensive de paris",
+                    "english": "to scoff at and idea",
+                    "french": "se moquer de, mépriser une idée",
                     "spanish": ""
                 },
                 {
-                    "english": "20 juin 1940",
-                    "french": "pétain demande armistice à la radio.",
+                    "english": "to sneer at something",
+                    "french": "tourner quelque chose en dérision",
                     "spanish": ""
                 },
                 {
-                    "english": "22 juin 1940",
-                    "french": "armistice signée",
+                    "english": "a blip",
+                    "french": "anomalie",
                     "spanish": ""
                 },
                 {
-                    "english": "10 juillet 1940",
-                    "french": "plein pouvoirs au maréchal pétain",
+                    "english": "a contigency plan",
+                    "french": "un plan d'urgence",
                     "spanish": ""
                 },
                 {
-                    "english": "début 1942",
-                    "french": "mission rex, jean moulin doit unir les mouvements de résistance",
+                    "english": "a drubbing/a troucing",
+                    "french": "une raclée (élections)",
+                    "spanish": ""
+                },
+                {
+                    "english": "a hitch",
+                    "french": "petit problème",
+                    "spanish": ""
+                },
+                {
+                    "english": "a setback",
+                    "french": "contretemps",
+                    "spanish": ""
+                },
+                {
+                    "english": "to be way off the mark",
+                    "french": "être loin du compte",
+                    "spanish": ""
+                },
+                {
+                    "english": "to countermand",
+                    "french": "annuler",
+                    "spanish": ""
+                },
+                {
+                    "english": "to fail to make the case for",
+                    "french": "ne pas réussir à défendre la position de",
+                    "spanish": ""
+                },
+                {
+                    "english": "to peter out",
+                    "french": "tourner court",
+                    "spanish": ""
+                },
+                {
+                    "english": "to scrap a scheme",
+                    "french": "abandonner un projet",
+                    "spanish": ""
+                },
+                {
+                    "english": "unless countermanded",
+                    "french": "sauf contre ordre",
                     "spanish": ""
                 }
             ]
         },
         {
-            "name": "Art & Power",
+            "name": "Examiner",
             "words": [
                 {
-                    "english": "bloody",
-                    "french": "foutu",
+                    "english": "among otheer things",
+                    "french": "entre aautres",
                     "spanish": ""
                 },
                 {
-                    "english": "bloody",
-                    "french": "sanglant",
+                    "english": "at first sight",
+                    "french": "à première vue",
                     "spanish": ""
                 },
                 {
-                    "english": "strewn",
-                    "french": "parsemée",
+                    "english": "by implication",
+                    "french": "implicitement",
                     "spanish": ""
                 },
                 {
-                    "english": "heed",
-                    "french": "tenir compte de",
+                    "english": "in a backdrop of",
+                    "french": "dans un contexte de",
                     "spanish": ""
                 },
                 {
-                    "english": "trench",
-                    "french": "tranchée",
+                    "english": "in the light of",
+                    "french": "à la lumière de",
                     "spanish": ""
                 },
                 {
-                    "english": "anthem",
-                    "french": "hymne",
+                    "english": "it hinges on",
+                    "french": "cela dépend de",
+                    "spanish": ""
+                },
+                {
+                    "english": "on second thoughts",
+                    "french": "réflexion faite",
+                    "spanish": ""
+                },
+                {
+                    "english": "the core argument",
+                    "french": "l'argument de fond",
+                    "spanish": ""
+                },
+                {
+                    "english": "the essence of it is",
+                    "french": "l'essentiel, c'est",
+                    "spanish": ""
+                },
+                {
+                    "english": "the main thrust of the argument",
+                    "french": "le fondement essentiel de l'argumentation",
+                    "spanish": ""
+                },
+                {
+                    "english": "thus far",
+                    "french": "jusqu'ici",
+                    "spanish": ""
+                },
+                {
+                    "english": "to be under scrutiny",
+                    "french": "faire l'objet d'un examen minutieux",
+                    "spanish": ""
+                },
+                {
+                    "english": "to look afresh at something",
+                    "french": "examiner quelque chose d'un regard neuf",
+                    "spanish": ""
+                },
+                {
+                    "english": "to look at the background",
+                    "french": "examiner le contexte",
+                    "spanish": ""
+                },
+                {
+                    "english": "to scrutinise",
+                    "french": "examiner minutieusement",
+                    "spanish": ""
+                },
+                {
+                    "english": "with the benefit of hindsight",
+                    "french": "avec du recul",
                     "spanish": ""
                 }
             ]
         },
         {
-            "name": "English - Axe 3",
+            "name": "Hypothèses",
             "words": [
                 {
-                    "english": "bravery",
-                    "french": "courage",
+                    "english": "allegedly",
+                    "french": "on prétend que",
                     "spanish": ""
                 },
                 {
-                    "english": "devotion",
-                    "french": "determination",
+                    "english": "arguably",
+                    "french": "on soutient que, on peut arguer que",
                     "spanish": ""
                 },
                 {
-                    "english": "behaviour",
-                    "french": "comportement",
+                    "english": "bar accidents",
+                    "french": "sauf imprévu",
                     "spanish": ""
                 },
                 {
-                    "english": "fight",
-                    "french": "combat",
-                    "spanish": "",
-                    "comment": "Not struggle"
-                },
-                {
-                    "english": "struggle",
-                    "french": "combat",
-                    "spanish": "",
-                    "comment": "Not struggle"
-                },
-                {
-                    "english": "prejudice",
-                    "french": "préjugé",
+                    "english": "evidence suggests that",
+                    "french": "les faites semblent indiquer que",
                     "spanish": ""
                 },
                 {
-                    "english": "deep-rooted",
-                    "french": "fortement ancré",
+                    "english": "reportedly",
+                    "french": "on dit que",
                     "spanish": ""
                 },
                 {
-                    "english": "scapegoat",
-                    "french": "bouc émissaire",
+                    "english": "supposedly",
+                    "french": "on suppose que",
                     "spanish": ""
                 },
                 {
-                    "english": "faith",
-                    "french": "foi",
+                    "english": "to allege/to contend",
+                    "french": "soutenir, prétendre",
                     "spanish": ""
                 },
                 {
-                    "english": "threat",
-                    "french": "menace",
+                    "english": "to hint",
+                    "french": "suggérer",
                     "spanish": ""
                 },
                 {
-                    "english": "trial",
-                    "french": "procès",
+                    "english": "to propound",
+                    "french": "proposer",
                     "spanish": ""
                 },
                 {
-                    "english": "examination",
-                    "french": "interrogatoire",
+                    "english": "undoubtedly",
+                    "french": "sans aucun doute",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name": "Jugements",
+            "words": [
+                {
+                    "english": "a litmus test",
+                    "french": "un test décisif",
                     "spanish": ""
                 },
                 {
-                    "english": "court",
-                    "french": "tribunal",
+                    "english": "an unremitting drive",
+                    "french": "un effort incessant",
                     "spanish": ""
                 },
                 {
-                    "english": "discrimination",
-                    "french": "discrimination",
+                    "english": "it is a qualified success",
+                    "french": "les résultats sont mitigés",
                     "spanish": ""
                 },
                 {
-                    "english": "segregation",
-                    "french": "ségrégation",
+                    "english": "results are skewed because",
+                    "french": "les résultats sont biaisés du fait de",
                     "spanish": ""
                 },
                 {
-                    "english": "reconciliation",
-                    "french": "réconciliation",
+                    "english": "so far the reaction has been muted",
+                    "french": "jusqu'a présent, les réactions ont été modérées",
                     "spanish": ""
                 },
                 {
-                    "english": "the oprressed",
-                    "french": "oprimés",
+                    "english": "to be judged on results",
+                    "french": "être jugé sur les résultats",
                     "spanish": ""
                 },
                 {
-                    "english": "the wealthy",
-                    "french": "les riches",
+                    "english": "to move in step",
+                    "french": "être en phase",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name": "Limites",
+            "words": [
+                {
+                    "english": "provided that",
+                    "french": "à condition que",
                     "spanish": ""
                 },
                 {
-                    "english": "cruel",
-                    "french": "sans pitié",
-                    "spanish": "",
-                    "comment": "Not pitiless nor heartless"
-                },
-                {
-                    "english": "pitiless",
-                    "french": "sans pitié",
-                    "spanish": "",
-                    "comment": "Not cruel nor heartless"
-                },
-                {
-                    "english": "heartless",
-                    "french": "sans pitié",
-                    "spanish": "",
-                    "comment": "Not cruel nor pitiless"
-                },
-                {
-                    "english": "spiteful/scornful/contemptuous",
-                    "french": "méprisant",
+                    "english": "to put limits on",
+                    "french": "limiter",
                     "spanish": ""
                 },
                 {
-                    "english": "daring",
-                    "french": "audacieux",
-                    "spanish": "",
-                    "comment": "Not audacious"
-                },
-                {
-                    "english": "audacious",
-                    "french": "audacieux",
-                    "spanish": "",
-                    "comment": "Not daring"
-                },
-                {
-                    "english": "submissive",
-                    "french": "soumis",
+                    "english": "to step across the line",
+                    "french": "dépaser les limites",
                     "spanish": ""
                 },
                 {
-                    "english": "helpless",
-                    "french": "impuissant",
-                    "spanish": "",
-                    "comment": "Not powerless"
-                },
-                {
-                    "english": "powerless",
-                    "french": "impuissant",
-                    "spanish": "",
-                    "comment": "Not Helpess"
-                },
-                {
-                    "english": "powerful",
-                    "french": "engagé",
-                    "spanish": "",
-                    "comment": "Not committed to"
-                },
-                {
-                    "english": "committed to",
-                    "french": "engagé",
-                    "spanish": "",
-                    "comment": "Not powerful"
-                },
-                {
-                    "english": "devoted",
-                    "french": "dévoué",
+                    "english": "to strike the right balance",
+                    "french": "trouver le juste milieu",
                     "spanish": ""
                 },
                 {
-                    "english": "brave",
-                    "french": "brave",
+                    "english": "to walk a middle line",
+                    "french": "adopter une position modérée",
                     "spanish": ""
                 },
                 {
-                    "english": "rebellious",
-                    "french": "rebelle",
+                    "english": "where do you draw the line",
+                    "french": "ou est la limite ?",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name": "Opinions",
+            "words": [
+                {
+                    "english": "a prevailing opinion",
+                    "french": "une opinion couramment répandue",
                     "spanish": ""
                 },
                 {
-                    "english": "subservient",
-                    "french": "asservi",
+                    "english": "in good faith",
+                    "french": "en toute bonne foi",
                     "spanish": ""
                 },
                 {
-                    "english": "despicable",
-                    "french": "méprisable",
+                    "english": "long standing attitudes",
+                    "french": "des comportements bien ancrés",
                     "spanish": ""
                 },
                 {
-                    "english": "narrow-minded",
-                    "french": "fermé d'esprit",
+                    "english": "obduracy",
+                    "french": "opiniâtreté",
                     "spanish": ""
                 },
                 {
-                    "english": "open-minded",
-                    "french": "ouvert d'esprit",
+                    "english": "to aire views",
+                    "french": "exprimer une opinion",
                     "spanish": ""
                 },
                 {
-                    "english": "intolerant",
-                    "french": "intolérant",
+                    "english": "to allay fears",
+                    "french": "dissiper les craintes",
                     "spanish": ""
                 },
                 {
-                    "english": "tolerant",
-                    "french": "tolérant",
+                    "english": "to aver",
+                    "french": "affirmer",
                     "spanish": ""
                 },
                 {
-                    "english": "resilient",
-                    "french": "résistant",
+                    "english": "to cause dismay",
+                    "french": "causer la consternation",
                     "spanish": ""
                 },
                 {
-                    "english": "downtrodden",
-                    "french": "opprimé",
+                    "english": "to couch arguments in broad terms",
+                    "french": "formuler des arguments de facon générale",
                     "spanish": ""
                 },
                 {
-                    "english": "faire",
-                    "french": "juste",
+                    "english": "to endorse",
+                    "french": "approuver",
                     "spanish": ""
                 },
                 {
-                    "english": "unfaire",
-                    "french": "injuste",
+                    "english": "to pitch a notion",
+                    "french": "lancer une idée",
                     "spanish": ""
                 },
                 {
-                    "english": "innocent",
-                    "french": "innocent",
+                    "english": "to proffer advice",
+                    "french": "donner des conseils",
                     "spanish": ""
                 },
                 {
-                    "english": "unjust guilty",
-                    "french": "injustement coupable",
+                    "english": "to ram the point home",
+                    "french": "insister fortement sur un point",
                     "spanish": ""
                 },
                 {
-                    "english": "wrongfully",
-                    "french": "à tort",
+                    "english": "to reckon",
+                    "french": "considérer",
                     "spanish": ""
                 },
                 {
-                    "english": "rebel against",
-                    "french": "se rebeller contre",
-                    "spanish": "",
-                    "comment" : "not revolt nor rise"
-                },
+                    "english": "to table proposals",
+                    "french": "faire des propositions",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name": "Parti pris",
+            "words": [
                 {
-                    "english": "revolt against",
-                    "french": "se rebeller contre",
-                    "spanish": "",
-                    "comment" : "not rise nor rebel"
-                },
-                {
-                    "english": "rise up against",
-                    "french": "se rebeller contre",
-                    "spanish": "",
-                    "comment" : "not revolt nor rebel"
-                },
-                {
-                    "english": "challenge somebody",
-                    "french": "challenger quelqu'un",
+                    "english": "a biased view",
+                    "french": "un point de vue partial",
                     "spanish": ""
                 },
                 {
-                    "english": "defy somebody",
-                    "french": "défier quelqu'un",
+                    "english": "to be biased",
+                    "french": "être partial",
                     "spanish": ""
                 },
                 {
-                    "english": "stand up to",
-                    "french": "résister",
-                    "spanish": "",
-                    "comment" : "not oppose"
-                },
-                {
-                    "english": "oppose",
-                    "french": "résister",
-                    "spanish": "",
-                    "comment" : "not stand up to"
-                },
-                {
-                    "english": "stand up for",
-                    "french": "défendre",
+                    "english": "to have a bias in favour of",
+                    "french": "avoir un préjugé faborable en faveur de",
                     "spanish": ""
                 },
                 {
-                    "english": "demonstrate",
-                    "french": "manifester",
+                    "english": "to let some consideration to the fore",
+                    "french": "donner la priorité à un aspect particulier",
                     "spanish": ""
                 },
                 {
-                    "english": "go on strike",
-                    "french": "faire grève",
+                    "english": "to sidestep important questions",
+                    "french": "éluder des problèmes importants",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name": "Prudence",
+            "words": [
+                {
+                    "english": "a caveat",
+                    "french": "un avertissement",
                     "spanish": ""
                 },
                 {
-                    "english": "deliver a speech",
-                    "french": "faire un discours",
+                    "english": "all this cannot be achieved in a single leap",
+                    "french": "on ne peut pas tout régler en un court laps de temps",
                     "spanish": ""
                 },
                 {
-                    "english": "dedicate one's life to",
-                    "french": "dédier sa vie à",
+                    "english": "it carries a risk",
+                    "french": "cela comporte un rique",
                     "spanish": ""
                 },
                 {
-                    "english": "threaten",
-                    "french": "menacer",
+                    "english": "it remains to be seen",
+                    "french": "cela reste à voir",
                     "spanish": ""
                 },
                 {
-                    "english": "be trialed",
-                    "french": "être jugé",
+                    "english": "there is quite a way to go yet",
+                    "french": "il y a encore du chemin à faire",
                     "spanish": ""
                 },
                 {
-                    "english": "be convicted",
-                    "french": "être reconnu coupable de",
+                    "english": "this argument cannot be lightly dismissed",
+                    "french": "il ne faut pas rejeter cet argument trop rapidement",
                     "spanish": ""
                 },
                 {
-                    "english": "send to prison",
-                    "french": "envoyé en prison",
+                    "english": "to be wary of something",
+                    "french": "se méfier de quelque chose",
                     "spanish": ""
                 },
                 {
-                    "english": "confess",
-                    "french": "avouer",
+                    "english": "to err on the side of caution",
+                    "french": "pécher par excès de prudence",
                     "spanish": ""
                 },
                 {
-                    "english": "be prejudiced against",
-                    "french": "avoir des préjugés",
+                    "english": "to give a cautious welcome to something",
+                    "french": "acceuillier quelque chose de façcon réservée",
                     "spanish": ""
                 },
                 {
-                    "english": "charge someone with",
-                    "french": "accuser quelqu'un de",
+                    "english": "to steer clear of",
+                    "french": "se tenir à l'écart de",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name": "Quantités",
+            "words": [
+                {
+                    "english": "a dearth of",
+                    "french": "une pénurie de",
                     "spanish": ""
                 },
                 {
-                    "english": "hold somebody responsible",
-                    "french": "tenir quelqu'un pour responsable",
+                    "english": "a host of reasons why",
+                    "french": "toute une série de raisons qui expliquent que",
                     "spanish": ""
                 },
                 {
-                    "english": "claim lives",
-                    "french": "faire des victimes",
+                    "english": "a spate of statistics",
+                    "french": "une avalanche de statisiques",
                     "spanish": ""
                 },
                 {
-                    "english": "be on an equal footing",
-                    "french": "être sur un pied d'égalité",
+                    "english": "a welter of statistics",
+                    "french": "un tas de statistiques",
                     "spanish": ""
                 },
                 {
-                    "english": "take a stance against",
-                    "french": "prendre position contre",
+                    "english": "at a conservative estimate",
+                    "french": "au bas mot",
                     "spanish": ""
                 },
                 {
-                    "english": "blame somebody for something",
-                    "french": "reprocher quelque chose à quelqu'un",
-                    "spanish": "",
-                    "comment" : "not criticise"
-                },
-                {
-                    "english": "criticise somebody for something",
-                    "french": "reprocher quelque chose à quelqu'un",
-                    "spanish": "",
-                    "comment" : "not blame"
-                },
-                {
-                    "english": "hold in bondage",
-                    "french": "tenir en esclavage",
+                    "english": "by far",
+                    "french": "de loin",
                     "spanish": ""
                 },
                 {
-                    "english": "be enslaved by",
-                    "french": "être asservi par",
+                    "english": "rouglhy",
+                    "french": "en gros",
                     "spanish": ""
                 },
                 {
-                    "english": "scorn",
-                    "french": "mépris",
+                    "english": "the figures did not budge",
+                    "french": "les chiffres n'ont par bougé d'un pouce",
                     "spanish": ""
                 },
                 {
-                    "english": "look down on somebody",
-                    "french": "mépriser quelqu'un",
+                    "english": "to cook figurees",
+                    "french": "manipuler des chiffres",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name": "Querelles",
+            "words": [
+                {
+                    "english": "a blistering attack",
+                    "french": "attaque virulente",
                     "spanish": ""
                 },
                 {
-                    "english": "despise",
-                    "french": "mépriser",
+                    "english": "a slanging match",
+                    "french": "jooute verbale",
                     "spanish": ""
                 },
                 {
-                    "english": "can't bear/stand/endure/put ut with",
-                    "french": "ne pas supporter",
+                    "english": "grudgingly",
+                    "french": "à contre coeur",
                     "spanish": ""
                 },
                 {
-                    "english": "speak one's mind",
-                    "french": "dire ce que l'on pense",
+                    "english": "musdlinging",
+                    "french": "étalage de calomnie",
+                    "spanish": ""
+                },
+                {
+                    "english": "no holds barred",
+                    "french": "tous les coups sont permis",
+                    "spanish": ""
+                },
+                {
+                    "english": "to balk at",
+                    "french": "regimber",
+                    "spanish": ""
+                },
+                {
+                    "english": "to buck the trend",
+                    "french": "aller à contre courant",
+                    "spanish": ""
+                },
+                {
+                    "english": "to deal a underhand blow",
+                    "french": "taper sous la ceinture",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name": "Résultats",
+            "words": [
+                {
+                    "english": "a deleterious effect",
+                    "french": "un eeffet nuisible",
+                    "spanish": ""
+                },
+                {
+                    "english": "a knock-on-effect",
+                    "french": "une réaction en chaine",
+                    "spanish": ""
+                },
+                {
+                    "english": "an anticipated side effect",
+                    "french": "un effet secondaire prévisible",
+                    "spanish": ""
+                },
+                {
+                    "english": "as a result",
+                    "french": "par conséquent",
+                    "spanish": ""
+                },
+                {
+                    "english": "as anticipated",
+                    "french": "comme prévu",
+                    "spanish": ""
+                },
+                {
+                    "english": "devastating consequences for",
+                    "french": "des résultats désastreux pour",
+                    "spanish": ""
+                },
+                {
+                    "english": "eventually",
+                    "french": "finalement",
+                    "spanish": ""
+                },
+                {
+                    "english": "it betokens a shift in strategy",
+                    "french": "cela traduit un changement de stratégie",
+                    "spanish": ""
+                },
+                {
+                    "english": "part of this can be attributed to",
+                    "french": "on peut partiellement l'expliquer en",
+                    "spanish": ""
+                },
+                {
+                    "english": "the outcome",
+                    "french": "le résultat",
+                    "spanish": ""
+                },
+                {
+                    "english": "to bear out",
+                    "french": "corroborer",
+                    "spanish": ""
+                },
+                {
+                    "english": "to belie",
+                    "french": "démentir",
+                    "spanish": ""
+                }
+            ]
+        },
+        {
+            "name": "Changement de situation",
+            "words": [
+                {
+                    "english": "a climbdown",
+                    "french": "une reculade",
+                    "spanish": ""
+                },
+                {
+                    "english": "increasingly",
+                    "french": "de plus en plus",
+                    "spanish": ""
+                },
+                {
+                    "english": "to beat a humiliating retreat",
+                    "french": "battre honteusement en retraite",
+                    "spanish": ""
+                },
+                {
+                    "english": "to ditch a plan",
+                    "french": "abandonner un projet",
+                    "spanish": ""
+                },
+                {
+                    "english": "to eschew",
+                    "french": "esquiver",
+                    "spanish": ""
+                },
+                {
+                    "english": "to renege on a promise",
+                    "french": "revenir sur une promesse",
                     "spanish": ""
                 }
             ]

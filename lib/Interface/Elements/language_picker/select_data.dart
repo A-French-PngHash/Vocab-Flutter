@@ -46,29 +46,31 @@ class SelectFromData extends StatelessWidget {
   }
 
   Widget buildSelectView(BuildContext context, List<String> elements, List<String> currentlySelected) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        for (var dataElement in elements)
-          Form(
-            child: TextButton(
-              onPressed: () {
-                final cubit = context.read<PickerCubit>();
-                cubit.userTappedOnElementRow(dataElement);
-              },
-              child: Row(
-                children: [
-                  Text(
-                    dataElement,
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  Spacer(),
-                  if (currentlySelected.contains(dataElement)) Icon(Icons.check),
-                ],
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          for (var dataElement in elements)
+            Form(
+              child: TextButton(
+                onPressed: () {
+                  final cubit = context.read<PickerCubit>();
+                  cubit.userTappedOnElementRow(dataElement);
+                },
+                child: Row(
+                  children: [
+                    Text(
+                      dataElement,
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    Spacer(),
+                    if (currentlySelected.contains(dataElement)) Icon(Icons.check),
+                  ],
+                ),
               ),
             ),
-          ),
-      ],
+        ],
+      ),
     );
   }
 }
